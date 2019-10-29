@@ -1,2 +1,2 @@
-# masenocu
- Maseno University Christian Union Website
+# Maseno-University-CU
+This a website For The Christian Union Of Maseno University.
