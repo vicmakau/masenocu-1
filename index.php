@@ -1,7 +1,7 @@
 <?php
 
     include("includes/databaseClass.php");
-	include("includes/fetchingnews.php");
+	  include("includes/fetchingnews.php");
 
 ?>
 
@@ -13,22 +13,13 @@
  ?>
     <!-- END header -->
 
-    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);">
-      <div class="container">
-        <div class="row align-items-center justify-content-center site-hero-inner">
-          <div class="col-md-8 text-center">
-  
-            <div class="mb-5 element-animate">
-              <div class="block-17">
-                <h1 class="heading mb-4">One Gospel, One Saviour,Here we stand <br> Gal 1:8 </br></h1>
-                <p><a href="#" class="btn btn-primary-white py-3 px-5">About Us</a> <a href="#" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);position:relative;"  >
+               <div class=" w3-animate-bottom" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">           
+                <h1 class="heading w3-text-white">Living for God </h1> <br> <p>Ephesians 4:21-24</p>
+                <p><a href="#" class="btn btn-primary-white py-3 px-5">About Us</a> <a href="#" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p> 
+                </div>
     </section>
+   
     <!-- END section -->
 
     <section class="block-42 overlap">

@@ -23,14 +23,14 @@
   </head>
   <body>
 
-    <div class="wrap">
+    <!-- <div class="wrap"> -->
     
-    <div class="block-45">
+    <!-- <div class="block-45">
       <div class="container">
         <div class="row">
           <div style = "text-align:center;">
             <h3 style = "color:white;text-align:center;"> <b>Maseno University Christian Union .</b></h3>
-          </div>
+          </div> -->
           <!-- <div class="col-md-6 text-md-right">
             <ul class="block-45-icons">
               <li><a href="3"><span class="fa fa-facebook"></span></a></li>
@@ -39,10 +39,10 @@
               <li><a href="3"><span class="fa fa-instagram"></span></a></li>
             </ul>
           </div> -->
-        </div>
+        <!-- </div>
       </div>
-    </div>
-    <header role="banner">
+    </div> -->
+    <!-- <header role="banner">
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -79,7 +79,7 @@
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="events.php">Events</a>
+                <a class="nav-link" href="events.html">Events</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -93,7 +93,8 @@
           </div>
         </div>
       </nav>
-    </header>
+    </header> -->
+    <?php include 'includes/header.php'?>
     <!-- END header -->
 
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);">
@@ -103,7 +104,8 @@
   
             <div class="mb-5 element-animate">
               <div class="block-17">
-                <h1 class="heading mb-4">Contact Us</h1>
+                <h1 class="heading mb-4">Sermons</h1>
+                <div class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde doloremque necessitatibus quidem itaque illum nulla dolores, tempora corporis eius, fuga natus esse rem animi. Doloribus animi, reiciendis voluptatum eum ullam.</div>
               </div>
             </div>
             
@@ -120,54 +122,171 @@
     <section class="site-section bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 pr-md-5">
-            <form action="#" method="post">
-                  <div class="row">
-                    <div class="col-md-4 form-group">
-                      <label for="name">Name</label>
-                      <input type="text" id="name" class="form-control py-2">
-                    </div>
-                    <div class="col-md-4 form-group">
-                      <label for="phone">Phone</label>
-                      <input type="text" id="phone" class="form-control py-2">
-                    </div>
-                    <div class="col-md-4 form-group">
-                      <label for="email">Email</label>
-                      <input type="email" id="email" class="form-control py-2">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="message">Write Message</label>
-                      <textarea name="message" id="message" class="form-control py-2" cols="30" rows="8"></textarea>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-                    </div>
-                  </div>
-                </form>
-          </div>
           <div class="col-md-4">
-            
-            <div class="block-23">
-              <h3 class="heading mb-5">Contact Information</h3>
+            <div class="block-36">
+              <h3 class="block-36-heading">Sermon Links</h3>
               <ul>
-                <li><span class="icon ion-android-pin"></span><span class="text">P.O BOX 416 ,MASENO, KENYA</span></li>
-                <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+2 392 3929 210</span></a></li>
-                <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">masenocu015@gmail.com</span></a></li>
+                <li class="active"><a>Daily Sermon</a></li>
+                <li><a href="sermon.html">Music</a></li>
+                <li><a href="sermon.html">Audio</a></li>
+                <li><a href="sermon.html">Video</a></li> 
               </ul>
             </div>
           </div>
-          
-        </div>
+          <div class="col-md-8 pl-md-5">
 
+
+            <div class="block-44 d-flex mb-3">
+              <div class="block-44-image"><img src="images/image_tall_1.jpg" alt="Image placeholder"></div>
+              <div class="block-44-text">
+                <h3 class="block-44-heading"><a href="sermon-single.html">Rebuilding The Walls Edition 2</a></h3>
+                <div class="block-44-meta">Posted on June 28, 2018, Pastor Gregg Smith</div>
+                <div class="block-44-icons">
+                  <a href="#" class=""><span class="fa fa-video-camera"></span></a>
+                  <a href="#" class=""><span class="fa fa-headphones"></span></a>
+                  <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
+                  <a href="#" class=""><span class="fa fa-book"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-44 d-flex mb-3">
+              <div class="block-44-image"><img src="images/image_tall_2.jpg" alt="Image placeholder"></div>
+              <div class="block-44-text">
+                <h3 class="block-44-heading"><a href="sermon-single.html">Rebuilding The Walls</a></h3>
+                <div class="block-44-meta">Posted on June 28, 2018, Pastor Gregg Smith</div>
+                <div class="block-44-icons">
+                  <a href="#" class=""><span class="fa fa-video-camera"></span></a>
+                  <a href="#" class=""><span class="fa fa-headphones"></span></a>
+                  <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
+                  <a href="#" class=""><span class="fa fa-book"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-44 d-flex mb-3">
+              <div class="block-44-image"><img src="images/image_tall_3.jpg" alt="Image placeholder"></div>
+              <div class="block-44-text">
+                <h3 class="block-44-heading"><a href="sermon-single.html">Rebuilding The Walls</a></h3>
+                <div class="block-44-meta">Posted on June 28, 2018, Pastor Gregg Smith</div>
+                <div class="block-44-icons">
+                  <a href="#" class=""><span class="fa fa-video-camera"></span></a>
+                  <a href="#" class=""><span class="fa fa-headphones"></span></a>
+                  <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
+                  <a href="#" class=""><span class="fa fa-book"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-44 d-flex mb-3">
+              <div class="block-44-image"><img src="images/image_tall_1.jpg" alt="Image placeholder"></div>
+              <div class="block-44-text">
+                <h3 class="block-44-heading"><a href="sermon-single.html">Rebuilding The Walls</a></h3>
+                <div class="block-44-meta">Posted on June 28, 2018, Pastor Gregg Smith</div>
+                <div class="block-44-icons">
+                  <a href="#" class=""><span class="fa fa-video-camera"></span></a>
+                  <a href="#" class=""><span class="fa fa-headphones"></span></a>
+                  <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
+                  <a href="#" class=""><span class="fa fa-book"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="site-section">
+              <div class="section-heading">
+                <h2 class="heading">Popular Sermons</h2>
+              </div>
+
+              <div class="block-44 d-flex mb-3">
+                <div class="block-44-image"><img src="images/image_tall_1.jpg" alt="Image placeholder"></div>
+                <div class="block-44-text">
+                  <h3 class="block-44-heading"><a href="sermon-single.html">Rebuilding The Walls</a></h3>
+                  <div class="block-44-meta">Posted on June 28, 2018, Pastor Gregg Smith</div>
+                  <div class="block-44-icons">
+                    <a href="#" class=""><span class="fa fa-video-camera"></span></a>
+                    <a href="#" class=""><span class="fa fa-headphones"></span></a>
+                    <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
+                    <a href="#" class=""><span class="fa fa-book"></span></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block-44 d-flex mb-3">
+                <div class="block-44-image"><img src="images/image_tall_2.jpg" alt="Image placeholder"></div>
+                <div class="block-44-text">
+                  <h3 class="block-44-heading"><a href="sermon-single.html">Jonah's Message To Neniveh</a></h3>
+                  <div class="block-44-meta">June 28, 2018, Pastor Gregg Smith</div>
+                  <div class="block-44-icons">
+                    <a href="#" class=""><span class="fa fa-video-camera"></span></a>
+                    <a href="#" class=""><span class="fa fa-headphones"></span></a>
+                    <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
+                    <a href="#" class=""><span class="fa fa-book"></span></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block-44 d-flex mb-3">
+                <div class="block-44-image"><img src="images/image_tall_3.jpg" alt="Image placeholder"></div>
+                <div class="block-44-text">
+                  <h3 class="block-44-heading"><a href="sermon-single.html">New Jerusalem</a></h3>
+                  <div class="block-44-meta">June 28, 2018, Pastor Gregg Smith</div>
+                  <div class="block-44-icons">
+                    <a href="#" class=""><span class="fa fa-video-camera"></span></a>
+                    <a href="#" class=""><span class="fa fa-headphones"></span></a>
+                    <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
+                    <a href="#" class=""><span class="fa fa-book"></span></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block-44 d-flex mb-3">
+                <div class="block-44-image"><img src="images/image_tall_1.jpg" alt="Image placeholder"></div>
+                <div class="block-44-text">
+                  <h3 class="block-44-heading"><a href="sermon-single.html">Rebuilding The Walls</a></h3>
+                  <div class="block-44-meta">Posted on June 28, 2018, Pastor Gregg Smith</div>
+                  <div class="block-44-icons">
+                    <a href="#" class=""><span class="fa fa-video-camera"></span></a>
+                    <a href="#" class=""><span class="fa fa-headphones"></span></a>
+                    <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
+                    <a href="#" class=""><span class="fa fa-book"></span></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block-44 d-flex mb-3">
+                <div class="block-44-image"><img src="images/image_tall_2.jpg" alt="Image placeholder"></div>
+                <div class="block-44-text">
+                  <h3 class="block-44-heading"><a href="sermon-single.html">Jonah's Message To Neniveh</a></h3>
+                  <div class="block-44-meta">June 28, 2018, Pastor Gregg Smith</div>
+                  <div class="block-44-icons">
+                    <a href="#" class=""><span class="fa fa-video-camera"></span></a>
+                    <a href="#" class=""><span class="fa fa-headphones"></span></a>
+                    <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
+                    <a href="#" class=""><span class="fa fa-book"></span></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block-44 d-flex mb-3">
+                <div class="block-44-image"><img src="images/image_tall_3.jpg" alt="Image placeholder"></div>
+                <div class="block-44-text">
+                  <h3 class="block-44-heading"><a href="sermon-single.html">New Jerusalem</a></h3>
+                  <div class="block-44-meta">June 28, 2018, Pastor Gregg Smith</div>
+                  <div class="block-44-icons">
+                    <a href="#" class=""><span class="fa fa-video-camera"></span></a>
+                    <a href="#" class=""><span class="fa fa-headphones"></span></a>
+                    <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
+                    <a href="#" class=""><span class="fa fa-book"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
       </div>
     </section>
-    <!-- END section -->
-
-    <div id="map"></div>
 
     
   
@@ -242,7 +361,7 @@
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <h3 class="heading">Contact Information</h3>
             <div class="block-23">
-               <ul>
+<ul>
                 <li><span class="icon ion-android-pin"></span><span class="text">Maseno University Christian Union Sermon LH 15.</span></li>
                 <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">Secretary's Number.</span></a></li>
                 <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">cu email.</span></a></li>
@@ -286,9 +405,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery.magnific-popup.min.js"></script>
 
     <script src="js/main.js"></script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>    
-
   </body>
 </html>

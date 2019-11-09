@@ -6,11 +6,11 @@
             <div class="row">
               <div class="col-md-6">
                 <ul class="list-unstyled">
-                  <li><a href="ministry.html">Board Ministry</a></li>
-                  <li><a href="ministry.html">Media and IT Ministry</a></li>
-                  <li><a  href="ministry.html">High school Ministry</a></li>
-                  <li><a  href="ministry.html">Hospitality Ministry</a></li>
-                  <li><a  href="ministry.html">Intercessory Ministry</a></li>
+                  <li><a href="ministry.php">Board Ministry</a></li>
+                  <li><a href="ministry.php">Media and IT Ministry</a></li>
+                  <li><a  href="ministry.php">High school Ministry</a></li>
+                  <li><a  href="ministry.php">Hospitality Ministry</a></li>
+                  <li><a  href="ministry.php">Intercessory Ministry</a></li>
                 </ul>
               </div>
  
