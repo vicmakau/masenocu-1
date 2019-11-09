@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="en">
   <head>
     <title>Maseno University Christian Union.</title>
     <meta charset="utf-8">

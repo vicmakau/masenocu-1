@@ -1,40 +1,30 @@
 <?php
 include('includes/databaseConnectivity.php');
-    include("includes/databaseClass.php");
-	include("includes/fetchingnews.php");
-if($_SERVER['REQUEST_METHOD'] == "POST"){
-	$error = null;
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	
-	echo $username;
-	echo $password;
-	
-	
-	$sql = "select id from login where username ='". $username ."' and password ='". $password . "';";
-	
-	if($conn-> query($sql)){
-		echo "query fine";
-		
-		$result = $conn-> query($sql);
-		
-		$number = $result->num_rows;
-		echo $number;
-		
-		if($number == 1){
-			header('Location:superAdmin.php');
-		}
-		else{
-			// SETTIN THE ARRAY IF AN ERROR IS EXPERIENCED.
-			$error = array();
-			array_push($error, "Wrong Credentials.");
+include("includes/databaseClass.php");
+include("includes/fetchingnews.php");
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $error = null;
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    echo $username;
+    echo $password;
+    $sql = "select id from login where username ='" . $username . "' and password ='" . $password . "';";
+    if ($conn->query($sql)) {
+        echo "query fine";
+        $result = $conn->query($sql);
+        $number = $result->num_rows;
+        echo $number;
 
-		}
-	}
-	else{
-		
-		echo $conn->error ."error registered.";
-	}
+        if ($number == 1) {
+            header('Location:superAdmin.php');
+        } else {
+            // SETTIN THE ARRAY IF AN ERROR IS EXPERIENCED.
+            $error = array();
+            array_push($error, "Wrong Credentials.");
+        }
+    } else {
+        echo $conn->error . "error registered.";
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -52,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-<title>Maseno university christian union Bootstrap 4 Template by Colorlib</title>
+    <title>Maseno university christian union Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -75,31 +65,31 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <div style="margin-bottom:0px;">
         <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button" style="background-color:#6c5b7b;height:100px;">
             <div class="container"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><img src="assets/img/cu.png">Maseno Christian Union</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div
-                    class="collapse navbar-collapse" id="navcol-1">
-                    
-    </div>
-    </nav>
+                <div class="collapse navbar-collapse" id="navcol-1">
+
+                </div>
+        </nav>
     </div>
     <div class="login-dark" style="background-image:url(&quot;assets/img/church2.jpeg&quot;);">
         <form action="login.php" method="post">
             <h2 class="text-center" style="font-family:times new roman;color:rgb(249,249,249);">Log In Page</h2>
-			 <?php
-			     if(isset($error)){
-                      echo "<div class=\"alert alert-danger\">
+            <?php
+            if (isset($error)) {
+                echo "<div class=\"alert alert-danger\">
   <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
   $error[0]
-</div>";					 
-				 }
-			 ?>
+</div>";
+            }
+            ?>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
             <div class="form-group"><input class="form-control" type="text" name="username" required="" placeholder="username"></div>
             <div class="form-group"><input class="form-control" type="password" name="password" required="" placeholder="Password"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot">Forgot your email or password?</a></form>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot">Forgot your email or password?</a>
+        </form>
     </div>
-        <?php
-		   include("includes/footer.php");
-		?>
+    <?php
+    include("includes/footer.php");
+    ?>
     <!-- END f
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
