@@ -87,14 +87,31 @@
  <script src="js/jquery.waypoints.min.js"></script>
  <script src="js/jquery.stellar.min.js"></script>
  <script src="js/jquery.animateNumber.min.js"></script>
-
  <script src="js/jquery.magnific-popup.min.js"></script>
-
  <script src="js/main.js"></script>
 
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
- <script src="js/google-map.js"></script>
-
+ <!-- Maps API -->
+ <script>
+   "use strict";
+   function initMap() {
+     var hq = {
+       lat: -25.344,
+       lng: 131.036
+     };
+     var map = new google.maps.Map(
+       document.getElementById('map'), {
+         zoom: 4,
+         center: hq
+       });
+     var marker = new google.maps.Marker({
+       position: hq,
+       map: map
+     });
+   }
+ </script>
+ <?php $apiKey = "AIzaSyAYV_46rKLC9XAyVJteBHnlCpQiEAmCibA"; ?>
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYV_46rKLC9XAyVJteBHnlCpQiEAmCibA&callback=initMap">
+ </script>
  </body>
 
  </html>
