@@ -23,6 +23,8 @@
   </head>
   <body>
 
+  <?php include 'includes/header.php'?>
+<!-- 
     <div class="wrap">
     
     <div class="block-45">
@@ -31,18 +33,18 @@
           <div style = "text-align:center;">
             <h3 style = "color:white;text-align:center;"> <b>Maseno University Christian Union .</b></h3>
           </div>
-          <!-- <div class="col-md-6 text-md-right">
+          <div class="col-md-6 text-md-right">
             <ul class="block-45-icons">
               <li><a href="3"><span class="fa fa-facebook"></span></a></li>
               <li><a href="3"><span class="fa fa-twitter"></span></a></li>
               <li><a href="3"><span class="fa fa-linkedin"></span></a></li>
               <li><a href="3"><span class="fa fa-instagram"></span></a></li>
             </ul>
-          </div> -->
+          </div>
         </div>
       </div>
-    </div>
-    <header role="banner">
+    </div> -->
+    <!-- <header role="banner">
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -93,18 +95,17 @@
           </div>
         </div>
       </nav>
-    </header>
+    </header> -->
     <!-- END header -->
 
-    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);">
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);">
       <div class="container">
         <div class="row align-items-center justify-content-center site-hero-inner">
           <div class="col-md-8 text-center">
   
             <div class="mb-5 element-animate">
               <div class="block-17">
-                <h1 class="heading mb-4">Outreach Ministry</h1>
-                <div class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde doloremque necessitatibus quidem itaque illum nulla dolores, tempora corporis eius, fuga natus esse rem animi. Doloribus animi, reiciendis voluptatum eum ullam.</div>
+                <h1 class="heading mb-4">Contact Us</h1>
               </div>
             </div>
             
@@ -121,29 +122,54 @@
     <section class="site-section bg-light">
       <div class="container">
         <div class="row">
+          <div class="col-md-8 pr-md-5">
+            <form action="#" method="post">
+                  <div class="row">
+                    <div class="col-md-4 form-group">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" class="form-control py-2">
+                    </div>
+                    <div class="col-md-4 form-group">
+                      <label for="phone">Phone</label>
+                      <input type="text" id="phone" class="form-control py-2">
+                    </div>
+                    <div class="col-md-4 form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" class="form-control py-2">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="message">Write Message</label>
+                      <textarea name="message" id="message" class="form-control py-2" cols="30" rows="8"></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                    </div>
+                  </div>
+                </form>
+          </div>
           <div class="col-md-4">
-            <div class="block-36">
-              <h3 class="block-36-heading">Ministries Links</h3>
+            
+            <div class="block-23">
+              <h3 class="heading mb-5">Contact Information</h3>
               <ul>
-                <li class="active"><a>Outreach Ministry</a></li>
-                <li><a href="ministry.html">Men's Ministry</a></li>
-                <li><a href="ministry.html">Women's Ministry</a></li>
-                <li><a href="ministry.html">Children's Ministry</a></li> 
-                <li><a href="ministry.html">Youth Ministry</a></li>
+                <li><span class="icon ion-android-pin"></span><span class="text">P.O BOX 416 ,MASENO, KENYA</span></li>
+                <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+2 392 3929 210</span></a></li>
+                <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">masenocu015@gmail.com</span></a></li>
               </ul>
             </div>
           </div>
-          <div class="col-md-8 pl-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus animi explicabo asperiores accusantium laborum distinctio quos, placeat eligendi nesciunt aliquid ut corrupti id sapiente libero, quod doloremque minima odit debitis minus. Sequi enim quibusdam, doloremque iste iure? Excepturi, ad, ratione!</p>
-            <p><img src="images/big_image_1.jpg" alt="Image placeholder" class="img-fluid"></p>
-            <p>Deleniti asperiores delectus, nemo consequatur omnis dolorum vel voluptatem? Consequuntur doloribus iusto adipisci quam eos fugiat, hic architecto. Consequatur ipsa error architecto? Deserunt id, consectetur non labore odio accusantium veritatis incidunt? Molestias velit deserunt harum, quibusdam est minus, sapiente modi.</p>
-            <p>Adipisci tempore soluta, sed aperiam consequatur error dolorem, repellendus quos minima rem ex ipsum possimus maiores reiciendis quo, accusantium officia omnis! Porro quidem ullam architecto, sapiente, a consequatur ex nostrum eos culpa vitae tenetur voluptates, nobis temporibus, fuga facilis pariatur.</p>
-            <p>Rerum, molestias ipsa doloremque velit distinctio laboriosam quidem ratione minima inventore. Blanditiis quaerat ipsa nobis fugit repudiandae, at repellendus itaque odit! Quibusdam ducimus exercitationem optio dolore, modi repudiandae beatae enim incidunt, saepe atque amet suscipit, aliquam placeat pariatur ipsam facilis.</p>
-            <p>A suscipit facilis minima fugiat ipsum provident pariatur, culpa! Quia fuga aperiam, error beatae vel dolorem velit eos incidunt ducimus animi nostrum, ipsa impedit praesentium libero voluptatem est magni doloribus! Atque illum, aut deleniti adipisci natus quas, beatae nihil sit!</p>
-          </div>
+          
         </div>
+
       </div>
     </section>
+    <!-- END section -->
+
+    <div id="map"></div>
 
     
   
@@ -218,7 +244,7 @@
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <h3 class="heading">Contact Information</h3>
             <div class="block-23">
-<ul>
+               <ul>
                 <li><span class="icon ion-android-pin"></span><span class="text">Maseno University Christian Union Sermon LH 15.</span></li>
                 <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">Secretary's Number.</span></a></li>
                 <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">cu email.</span></a></li>
@@ -262,5 +288,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery.magnific-popup.min.js"></script>
 
     <script src="js/main.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>    
+
   </body>
 </html>
