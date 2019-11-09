@@ -1,81 +1,78 @@
 <?php session_start();
-   include('includes/databaseClass.php');
-   include('includes/fetchingnews.php');
-   include('includes/insertngNews.php');
-   $id = null;
-   // on submitting to make the new event.
-   if(isset($_POST['submitevent'])){
-	    $subject = $_POST['subject'];
-	   $message = $_POST['message'];
-	   
-	   $insertingNewsObject = new AddNewNews();
-	   
-	   $insertingNewsObject->addnews($subject,$message,"newsDashboard.php");
-   }
-   
-   if(isset($_POST['edit'])){
-	
-	     $editid = $_GET['id'];
-	   $_SESSION['editid'] = $editid;
-	  echo " <script src=\"assets/js/jquery.min.js\"></script>";
-	  echo "<script> $(function(){
+include('includes/databaseClass.php');
+include('includes/fetchingnews.php');
+include('includes/insertngNews.php');
+$id = null;
+// on submitting to make the new event.
+if (isset($_POST['submitevent'])) {
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    $insertingNewsObject = new AddNewNews();
+
+    $insertingNewsObject->addnews($subject, $message, "newsDashboard.php");
+}
+
+if (isset($_POST['edit'])) {
+
+    $editid = $_GET['id'];
+    $_SESSION['editid'] = $editid;
+    echo " <script src=\"assets/js/jquery.min.js\"></script>";
+    echo "<script> $(function(){
 		$(\"#edit\").modal();
-	});</script>";  
-   }
-   if(isset($_POST['delete'])){
-	
-	      $id = $_GET['id'];
-		  $_SESSION['id'] = $id;
-	  echo " <script src=\"assets/js/jquery.min.js\"></script>";
-	echo "<script> $(function(){
+	});</script>";
+}
+if (isset($_POST['delete'])) {
+
+    $id = $_GET['id'];
+    $_SESSION['id'] = $id;
+    echo " <script src=\"assets/js/jquery.min.js\"></script>";
+    echo "<script> $(function(){
 		$(\"#mymodal\").modal();
 	});</script>";
-   }
-   
-   if(isset($_POST['view'])){
-	   $viewid = $_GET['id'];
-	   $_SESSION['viewid'] = $viewid;
-	  echo " <script src=\"assets/js/jquery.min.js\"></script>";
-	  echo "<script> $(function(){
+}
+
+if (isset($_POST['view'])) {
+    $viewid = $_GET['id'];
+    $_SESSION['viewid'] = $viewid;
+    echo " <script src=\"assets/js/jquery.min.js\"></script>";
+    echo "<script> $(function(){
 		$(\"#view\").modal();
-	});</script>"; 
-   } 
-   
-   if(isset($_POST['deleteRecord'])){
-	   $databasedelete = new database();
-	   $databasedelete->connect();
-	   $sql3 = "delete from newsboard where newsid =". $_SESSION['id'].";";
-	   //$result = ($databasedelete->conn)->query($sql3);
-	   
-	   if($result = ($databasedelete->conn)->query($sql3)){
-		    echo " <script src=\"assets/js/jquery.min.js\"></script>";
-	echo "<script> $(function(){
+	});</script>";
+}
+
+if (isset($_POST['deleteRecord'])) {
+    $databasedelete = new database();
+    $databasedelete->connect();
+    $sql3 = "delete from newsboard where newsid =" . $_SESSION['id'] . ";";
+    //$result = ($databasedelete->conn)->query($sql3);
+
+    if ($result = ($databasedelete->conn)->query($sql3)) {
+        echo " <script src=\"assets/js/jquery.min.js\"></script>";
+        echo "<script> $(function(){
 		$(\"#modaldeletionsuccess\").modal();
 	});</script>";
-		   
-	   }
-	   else{
-		  echo "sql query error". $databasedelete->conn->error;
-	   }
-   }
-   
-   // BEGIN FROM EDITING THE EVENTS.
-   
-   if(isset($_POST['editrecord'])){
-	   $newSubject = $_POST['newSubject'];
-	   $newMessage = $_POST['newMessage'];
-	   $sql5 = "update newsboard set subject = '".$newSubject.".', message = '". $newMessage ."' where newsid = ". $_SESSION['editid'] .";";
-	   
-	                  $upadtedatabase = new database();
-					  $upadtedatabase->connect();
-					  
-					  if($upadtedatabase->conn->query($sql5)){
-						  echo "update done.";
-					  }
-					  else{
-						  echo $upadtedatabase->conn->error;
-					  }
-   }
+    } else {
+        echo "sql query error" . $databasedelete->conn->error;
+    }
+}
+
+// BEGIN FROM EDITING THE EVENTS.
+
+if (isset($_POST['editrecord'])) {
+    $newSubject = $_POST['newSubject'];
+    $newMessage = $_POST['newMessage'];
+    $sql5 = "update newsboard set subject = '" . $newSubject . ".', message = '" . $newMessage . "' where newsid = " . $_SESSION['editid'] . ";";
+
+    $upadtedatabase = new database();
+    $upadtedatabase->connect();
+
+    if ($upadtedatabase->conn->query($sql5)) {
+        echo "update done.";
+    } else {
+        echo $upadtedatabase->conn->error;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -93,7 +90,7 @@
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-<title>Maseno university christian union Bootstrap 4 Template by Colorlib</title>
+    <title>Maseno university christian union Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -116,11 +113,11 @@
     <div style="margin-bottom:110px;">
         <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button" style="background-color:#6c5b7b;height:100px;">
             <div class="container"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><img src="assets/img/cu.png">Maseno Christian Union</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div
-                    class="collapse navbar-collapse" id="navcol-1">
-                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Welcome ?? Admin Name ??&nbsp;</strong></p><span class="ml-auto navbar-text actions"> <a class="btn btn-light action-button" role="button" href="#"><strong>Log Out</strong></a></span></div>
-    </div>
-    </nav>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Welcome ?? Admin Name ??&nbsp;</strong></p><span class="ml-auto navbar-text actions"> <a class="btn btn-light action-button" role="button" href="#"><strong>Log Out</strong></a></span>
+                </div>
+            </div>
+        </nav>
     </div>
     <div class="container">
         <div class="row">
@@ -144,7 +141,7 @@
             </div>
             <div class="col">
                 <div class="row">
-                    <div class="col-3 offset-6"><button class="btn btn-primary btn-lg"  type="submit" data-toggle= "modal" data-target = "#addnews"><i class="fa fa-plus"></i><strong>ADD EVENT.</strong></button></div>
+                    <div class="col-3 offset-6"><button class="btn btn-primary btn-lg" type="submit" data-toggle="modal" data-target="#addnews"><i class="fa fa-plus"></i><strong>ADD EVENT.</strong></button></div>
                 </div>
             </div>
         </div>
@@ -162,12 +159,12 @@
                     </tr>
                 </thead>
                 <tbody>
-				<?php
-				                $fechObject = new FetchNews();
-								
-								$fechObject->fetchNewsfuction(2);
-				?>
-				       
+                    <?php
+                    $fechObject = new FetchNews();
+
+                    $fechObject->fetchNewsfuction(2);
+                    ?>
+
                     <!--tr>
                         <td>1</td>
                         <td>Maureen Koech</td>
@@ -202,73 +199,77 @@
             </table>
         </div>
     </div>
-	
-		<div role="dialog" tabindex="-1" class="modal fade" id="addnews">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color:#f9d44f;">
-                <h4 class="modal-title">Add Event ...</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-            <div class="modal-body" style="background-color:#f9d44f;">
-                <form action="newsDashboard.php" method="post">
-                    <div class="form-group"><label><strong>Subject:</strong></label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div><input type="text" name="subject" placeholder="subject" class="form-control" style="background-color:#f7eaba;" />
-                            <div class="input-group-append"></div>
+
+    <div role="dialog" tabindex="-1" class="modal fade" id="addnews">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#f9d44f;">
+                    <h4 class="modal-title">Add Event ...</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" style="background-color:#f9d44f;">
+                    <form action="newsDashboard.php" method="post">
+                        <div class="form-group"><label><strong>Subject:</strong></label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div><input type="text" name="subject" placeholder="subject" class="form-control" style="background-color:#f7eaba;" />
+                                <div class="input-group-append"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group"><label><strong>Message :</strong></label><textarea rows="7" name="message" placeholder="message" class="form-control" style="background-color:#f7eaba;"></textarea></div><button class="btn btn-success btn-block" type="submit" name="submitevent"><strong>ADD EVENT.</strong></button></form>
+                        <div class="form-group"><label><strong>Message :</strong></label><textarea rows="7" name="message" placeholder="message" class="form-control" style="background-color:#f7eaba;"></textarea></div><button class="btn btn-success btn-block" type="submit" name="submitevent"><strong>ADD EVENT.</strong></button>
+                    </form>
+                </div>
+                <div class="modal-footer" style="background-color:#f9d44f;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
             </div>
-            <div class="modal-footer" style="background-color:#f9d44f;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
         </div>
     </div>
-</div>
-<div role="dialog" tabindex="-1" class="modal fade" id = "mymodal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style = "background-color:#f7c9c9;">
-                <h4 class="modal-title">Confirm !!!!</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-            <div class="modal-body" style = "text-align:center;">
-                <p> Do you want to delete this event ???</p>
-				 <!--div class = "row">
+    <div role="dialog" tabindex="-1" class="modal fade" id="mymodal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#f7c9c9;">
+                    <h4 class="modal-title">Confirm !!!!</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" style="text-align:center;">
+                    <p> Do you want to delete this event ???</p>
+                    <!--div class = "row">
 				   <div class = "col-3 offset-5"></div>
-				</div--> 
-				<form action = "newsDashboard.php" method = "post">
-				<button class="btn btn-success" type="submit" style = "color:white" name = "deleteRecord"><span class = "fa fa-thumbs-up"></span>OK !!</button>
-				</form>
+				</div-->
+                    <form action="newsDashboard.php" method="post">
+                        <button class="btn btn-success" type="submit" style="color:white" name="deleteRecord"><span class="fa fa-thumbs-up"></span>OK !!</button>
+                    </form>
+                </div>
+                <div class="modal-footer" style="background-color:#f7c9c9;color:white;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
             </div>
-            <div class="modal-footer" style = "background-color:#f7c9c9;color:white;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
         </div>
     </div>
-</div>
 
 
-<div role="dialog" tabindex="-1" class="modal fade" id = "edit">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style = "background-color:#f7c9c9;">
-                <h4 class="modal-title">Confirm !!!!</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-            <div class="modal-body" style = "color:black;">
-                <p> Do you want to edit this event ???</p> 
-				<form action = "newsDashboard.php" method = "post">
-				
-				<?php
-					  $sql4 = "SELECT datePosted,subject,message from newsboard where newsid = '" .$_SESSION['editid']. "';";
-					  
-					  $viewdatabase = new database();
-					  $viewdatabase->connect();
-					  
-					  if($result = ($viewdatabase->conn)->query($sql4)){
-						  $number = $result->num_rows;
-						  if($number == 1){
-							   while($rows = $result->fetch_object()){
-							  $date = $rows->datePosted;
-							  $subject = $rows->subject;
-							  $message = $rows->message;
-							  
-							  //echo $subject."This is subject.";
-							  
-							 echo "<p>Subject:</p>
-				<textarea name = \" newSubject\"rows=\"2\" cols=\"50\" placeholder = \"". $subject."\"></textarea>
+    <div role="dialog" tabindex="-1" class="modal fade" id="edit">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#f7c9c9;">
+                    <h4 class="modal-title">Confirm !!!!</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" style="color:black;">
+                    <p> Do you want to edit this event ???</p>
+                    <form action="newsDashboard.php" method="post">
+
+                        <?php
+                        $sql4 = "SELECT datePosted,subject,message from newsboard where newsid = '" . $_SESSION['editid'] . "';";
+
+                        $viewdatabase = new database();
+                        $viewdatabase->connect();
+
+                        if ($result = ($viewdatabase->conn)->query($sql4)) {
+                            $number = $result->num_rows;
+                            if ($number == 1) {
+                                while ($rows = $result->fetch_object()) {
+                                    $date = $rows->datePosted;
+                                    $subject = $rows->subject;
+                                    $message = $rows->message;
+
+                                    //echo $subject."This is subject.";
+
+                                    echo "<p>Subject:</p>
+				<textarea name = \" newSubject\"rows=\"2\" cols=\"50\" placeholder = \"" . $subject . "\"></textarea>
 				<p>Message:</p>
 				<textarea name = \"newMessage\"rows=\"6\" cols=\"50\" placeholder = \"$message\"></textarea>
 				<div class = \"row\">
@@ -276,78 +277,73 @@
 					       <button class=\"btn btn-success\" type=\"submit\" style = \"color:white\" name = \"editrecord\"><span class = \"fa fa-thumbs-up\"></span>OK !!</button>
 					 </div>
 				</div>";
-						  } 
-						  }
-						
-					  }
-					  else{
-						  echo $conn->error;
-					  }
-					  ?>
-				
-				
-				</form>
+                                }
+                            }
+                        } else {
+                            echo $conn->error;
+                        }
+                        ?>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer" style="background-color:#f7c9c9;color:white;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
             </div>
-            <div class="modal-footer" style = "background-color:#f7c9c9;color:white;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
         </div>
     </div>
-</div>
 
 
 
- <div role="dialog" tabindex="-1" class="modal fade" id = "view">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style = "background-color:#f7c9c9;">
-                <h4 class="modal-title">View !! </h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-            <div class="modal-body" style = "font-family:'Times new roman'">
-                 <?php
-					  $sql4 = "SELECT datePosted,subject,message from newsboard where newsid = '" .$_SESSION['viewid']. "';";
-					  
-					  $viewdatabase = new database();
-					  $viewdatabase->connect();
-					  
-					  if($result = ($viewdatabase->conn)->query($sql4)){
-						  $number = $result->num_rows;
-						  if($number == 1){
-							   while($rows = $result->fetch_object()){
-							  $date = $rows->datePosted;
-							  $subject = $rows->subject;
-							  $message = $rows->message;
-							  echo "<b>DATE:</b>   ".$date."</br>";
-							  echo "<b>SUBJECT:</b>   ".$subject."</br>";
-							  echo "<b>MESSAGE:</b>   ".$message."</br>";
-						  } 
-						  }
-						
-					  }
-					  else{
-						  echo $conn->error;
-					  }
-				?>
+    <div role="dialog" tabindex="-1" class="modal fade" id="view">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#f7c9c9;">
+                    <h4 class="modal-title">View !! </h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" style="font-family:'Times new roman'">
+                    <?php
+                    $sql4 = "SELECT datePosted,subject,message from newsboard where newsid = '" . $_SESSION['viewid'] . "';";
+
+                    $viewdatabase = new database();
+                    $viewdatabase->connect();
+
+                    if ($result = ($viewdatabase->conn)->query($sql4)) {
+                        $number = $result->num_rows;
+                        if ($number == 1) {
+                            while ($rows = $result->fetch_object()) {
+                                $date = $rows->datePosted;
+                                $subject = $rows->subject;
+                                $message = $rows->message;
+                                echo "<b>DATE:</b>   " . $date . "</br>";
+                                echo "<b>SUBJECT:</b>   " . $subject . "</br>";
+                                echo "<b>MESSAGE:</b>   " . $message . "</br>";
+                            }
+                        }
+                    } else {
+                        echo $conn->error;
+                    }
+                    ?>
+                </div>
+                <div class="modal-footer" style="background-color:#f7c9c9;color:white;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
             </div>
-            <div class="modal-footer" style = "background-color:#f7c9c9;color:white;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
         </div>
     </div>
-</div>
 
-<div role="dialog" tabindex="-1" class="modal fade" id = "modaldeletionsuccess">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style = "background-color:#f7c9c9;">
-                <h4 class="modal-title">Confirm !!!!</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-            <div class="modal-body" style = "text-align:center;">
-                <p> The record has successfully been deleted</p>
+    <div role="dialog" tabindex="-1" class="modal fade" id="modaldeletionsuccess">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#f7c9c9;">
+                    <h4 class="modal-title">Confirm !!!!</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" style="text-align:center;">
+                    <p> The record has successfully been deleted</p>
+                </div>
+                <div class="modal-footer" style="background-color:#f7c9c9;color:white;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
             </div>
-            <div class="modal-footer" style = "background-color:#f7c9c9;color:white;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
         </div>
     </div>
-</div>
-   <?php
-		
-		   include("includes/footer.php");
-		?>
-		
+    <?php include("includes/footer.php"); ?>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/modalHide.js"></script>

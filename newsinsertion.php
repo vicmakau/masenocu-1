@@ -24,10 +24,5 @@ include('includes/databaseConnectivity.php');
 	   }
 	   else{
 		   echo $conn -> error . "This is the error in insertion.";
-	   }
-	   
-	   
-	   
+	   }	   
    }
-   ?>
-   
