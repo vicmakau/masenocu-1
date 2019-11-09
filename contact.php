@@ -54,9 +54,36 @@
          <div class="block-23">
            <h3 class="heading mb-5">Contact Information</h3>
            <ul>
-             <li><span class="icon ion-android-pin"></span><span class="text">P.O BOX 416 ,MASENO, KENYA</span></li>
-             <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+2 392 3929 210</span></a></li>
-             <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">masenocu015@gmail.com</span></a></li>
+             <li>
+               <a href="#map">
+                  <span class="fa fa-map-marker px-3"></span>
+                  <span class="text">P.O BOX 416, MASENO, KENYA</span>
+               </a>
+              </li>
+             <li>
+               <a href="tel:+254-797-484-904">
+                 <span class="fa fa-phone px-3"></span>
+                 <span class="text">+254-797-484-904</span>
+                </a>
+              </li>
+             <li>
+               <a href="mailto:masenocu015@gmail.com">
+                 <span class="fa fa-envelope px-3"></span>
+                 <span class="text">masenocu015@gmail.com</span>
+                </a>
+              </li>
+              <li>
+               <a href="https://www.facebook.com/masenocu/">
+               <i class="fa fa-facebook px-3" aria-hidden="true"></i>
+                 <span class="text">The Christian Union Maseno University</span>
+                </a>
+              </li>
+              <li>
+               <a href="https://twitter.com/maseno_cu">
+                 <i class="fa fa-twitter px-3" aria-hidden="true"></i>
+                 <span class="text">@maseno_cu</span>
+                </a>
+              </li>
            </ul>
          </div>
        </div>
@@ -95,12 +122,12 @@
    "use strict";
    function initMap() {
      var hq = {
-       lat: -25.344,
-       lng: 131.036
+       lat: -0.0048,
+       lng: 34.6004
      };
      var map = new google.maps.Map(
        document.getElementById('map'), {
-         zoom: 4,
+         zoom: 14,
          center: hq
        });
      var marker = new google.maps.Marker({
@@ -110,7 +137,7 @@
    }
  </script>
  <?php $apiKey = "AIzaSyAYV_46rKLC9XAyVJteBHnlCpQiEAmCibA"; ?>
- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYV_46rKLC9XAyVJteBHnlCpQiEAmCibA&callback=initMap">
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=<?= $apiKey; ?>&callback=initMap">
  </script>
  </body>
 

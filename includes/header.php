@@ -22,10 +22,7 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body> 
-
-  
-    
+  <body>     
     <div class="block-45">
       <div class="container">
         <div class="row">
