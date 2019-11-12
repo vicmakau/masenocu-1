@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
-      <link rel="icon" 
-      type="image/png" 
+      <link rel="icon"
+      type="image/png"
       href="images/cu.png">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -17,15 +17,15 @@
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-  
+
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body> 
+  <body>
 
-  
-    
+
+
     <div class="block-45">
       <div class="container">
         <div class="row">
@@ -36,7 +36,7 @@
       </div>
     </div>
     <header role="banner">
-     
+
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand absolute" href="index.php"><img src = "images/cu.png"/>  </a>
@@ -81,8 +81,8 @@
                 <a class="nav-link" href="contact.php">Contact</a>
               </li>
             </ul>
-            
-            
+
+
           </div>
         </div>
       </nav>
