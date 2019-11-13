@@ -9,7 +9,7 @@
 		    $this->databaseObject2 -> connect(); 
 			 $sql = "select news.newsid,news.datePosted as dates,news.subject, news.message,concat(admin.fName, ' ', admin.Lname) as name, admin.title from newsboard as news inner join admindetails as admin on news.adminid = admin.adminId ;";
 								 							 
-								 if($result = (($this->databaseObject2)->conn)->query($sql)){
+								 if($result = $this->databaseObject2->conn->query($sql)){
 									 $sno = 0;
 									 $number = $result-> num_rows;
 									 if($number>0){
@@ -100,7 +100,7 @@
 									 }									 
 								 }
 								 else{
-									 echo (($this->databaseObject2)->conn)->error . "Is the problem when doing the etting of the record.";
+									 echo $this->databaseObject2->conn->error . "Is the problem when doing the etting of the record.";
 								 }
 		 }
 		      function fetchNewsForBlog($id){
