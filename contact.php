@@ -1,4 +1,31 @@
- <?php include 'includes/header.php' ?>
+<?php 
+  $feedback = "masenocu015@gmail.com";
+  include 'includes/header.php';
+  if (isset($_POST['message'])) {
+    extract($_POST);
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+    $message = filter_var($field, FILTER_SANITIZE_STRING);
+    $subject = "Maseno CU Site Feedback";
+    $mail = buildMail($name, $phone, $email, $message);
+    sendMail($to, $subject, $mail);
+  }
+
+  function buildMail($name, $phone, $email, $message) {
+    $name == ''? '[Undefined]': $name;
+    $phone == ''? '[Undefined]': $phone;
+    return 
+      "New feedback recieved from $email. <br>" +
+      "Name: $name <br> Phone: $phone <br>" +
+      "Message: <br> $message";
+  }
+
+  function sendMail($to, $subject, $mail) { 
+    $headers = 'From: noreply@masenocu.com';
+    $parameters = "";
+    mail($to, $subject, $mail, [$headers], [$parameters]);
+  }
+?>
 
  <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);">
    <div class="container">
@@ -7,7 +34,7 @@
 
          <div class="mb-5 element-animate">
            <div class="block-17">
-             <h1 class="heading mb-4">Contact Us</h1>
+             <h1 class="heading mb-4">Talk To Maseno Christian Union</h1>
            </div>
          </div>
 
@@ -21,25 +48,25 @@
    <div class="container">
      <div class="row">
        <div class="col-md-8 pr-md-5">
-         <form action="#" method="post">
+         <form method="post">
            <div class="row">
              <div class="col-md-4 form-group">
                <label for="name">Name</label>
-               <input type="text" id="name" class="form-control py-2">
+               <input type="text" id="name" name="name" class="form-control py-2" placeholder="e.g John Doe">
              </div>
              <div class="col-md-4 form-group">
                <label for="phone">Phone</label>
-               <input type="text" id="phone" class="form-control py-2">
+               <input type="text" id="phone" name="phone" class="form-control py-2" placeholder="e.g 0712 345 678">
              </div>
              <div class="col-md-4 form-group">
                <label for="email">Email</label>
-               <input type="email" id="email" class="form-control py-2">
+               <input type="email" id="email" name="email" class="form-control py-2" placeholder="e.g name@site.com" required>
              </div>
            </div>
            <div class="row">
              <div class="col-md-12 form-group">
                <label for="message">Write Message</label>
-               <textarea name="message" id="message" class="form-control py-2" cols="30" rows="8"></textarea>
+               <textarea name="message" id="message" name="message" class="form-control py-2" cols="30" rows="8" placeholder="Write your message here..." required></textarea>
              </div>
            </div>
            <div class="row">
@@ -73,13 +100,13 @@
                 </a>
               </li>
               <li>
-               <a href="https://www.facebook.com/masenocu/">
+               <a href="https://www.facebook.com/masenocu/" target="_blank">
                <i class="fa fa-facebook px-3" aria-hidden="true"></i>
                  <span class="text">The Christian Union Maseno University</span>
                 </a>
               </li>
               <li>
-               <a href="https://twitter.com/maseno_cu">
+               <a href="https://twitter.com/maseno_cu" target="_blank">
                  <i class="fa fa-twitter px-3" aria-hidden="true"></i>
                  <span class="text">@maseno_cu</span>
                 </a>
