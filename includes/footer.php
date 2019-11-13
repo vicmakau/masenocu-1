@@ -28,7 +28,7 @@
         <h3 class="heading">Events</h3>
         <?php
         $datainClient = new FetchNews();
-        $datainClient->fetchNewsfuction(4);
+        // $datainClient->fetchNewsfuction(4);
         ?>
       </div>
       <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">

@@ -5,13 +5,34 @@ include("includes/header.php");
 ?>
 <!-- END header -->
 
-<section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);position:relative;">
+
+
+<section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);">
+  <div class="container">
+    <div class="row align-items-center justify-content-center site-hero-inner">
+      <div class="col-md-8 text-center">
+
+        <div class="mb-5 element-animate">
+          <div class="block-17">
+            <h1 class="heading mb-4">Living For God.</h1>
+            <div class="lead">Ephesians 4:21-24 </div><br>
+            <p><a href="#" class="btn btn-primary-white py-3 px-5">About Us</a> <a href="#" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);position:relative;">
   <div class=" w3-animate-bottom" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
     <h1 class="heading w3-text-white">Living for God </h1> <br>
     <p>Ephesians 4:21-24</p>
     <p><a href="#" class="btn btn-primary-white py-3 px-5">About Us</a> <a href="#" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
   </div>
-</section>
+</section> -->
 
 <!-- END section -->
 
@@ -44,7 +65,7 @@ include("includes/header.php");
       <div class="col-md-6 order-md-2">
         <div class="block-16">
           <figure>
-            <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid img-shadow">
+            <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-9/50777239_603421963436284_4389557804596199424_n.jpg?_nc_cat=110&_nc_oc=AQn-iWrqopvF6gPwgR0URNjObQxqSB2z4ZNeRd_wgwXCm3Y3XD0beuIy0xozz8pgkvc&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=82d12530a575823bd10725a93127d406&oe=5E57F8D0" alt="Image placeholder" class="img-fluid img-shadow">
           </figure>
         </div>
       </div>
@@ -55,8 +76,7 @@ include("includes/header.php");
             <h2>Welcome To Maseno University Christian Union</h2>
           </div>
           <div class="text mb-5">
-            <p class="mb-4">Our Motto:Pursuing Holiness</p>
-            <p class="text-black">Chairman <strong>Dennis Mwaniki</strong></p>
+            <h3 class="mb-4 text-muted">Our Motto:Pursuing Holiness</h3>
           </div>
         </div>
       </div>
@@ -67,7 +87,7 @@ include("includes/header.php");
 
 <section class="site-section pt-0">
   <div class="container">
-    <div class="row">
+    <div class="row ">
       <div class="col-md-6 col-lg-4 mb-5">
         <div class="block-43">
           <div class="block-43-icon">
@@ -77,8 +97,8 @@ include("includes/header.php");
 
           </div>
           <div class="block-43-text">
-            <h3 class="block-43-heading">Connect With God</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam nisi eos accusantium eligendi velit deleniti nihil ad deserunt rerum.</p>
+            <h3 class="block-43-heading">MISSION</h3>
+            <h4 class="text-muted"> Naturing beliefs and developing Christ like character amongst students and communities.</h4>
           </div>
         </div>
       </div>
@@ -91,8 +111,8 @@ include("includes/header.php");
 
           </div>
           <div class="block-43-text">
-            <h3 class="block-43-heading">Come As You Are</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam nisi eos accusantium eligendi velit deleniti nihil ad deserunt rerum.</p>
+            <h3 class="block-43-heading">VISION</h3>
+            <h4 class="text-muted">Living as true disciples of Jesus Christ.</h4>
           </div>
         </div>
       </div>
@@ -105,8 +125,8 @@ include("includes/header.php");
 
           </div>
           <div class="block-43-text">
-            <h3 class="block-43-heading">Brotherly Love</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam nisi eos accusantium eligendi velit deleniti nihil ad deserunt rerum.</p>
+            <h3 class="block-43-heading">MOTTO</h3>
+            <h4 class="text-muted">Pursuing Holiness.</h4>
           </div>
         </div>
       </div>
@@ -119,11 +139,12 @@ include("includes/header.php");
     <div class="row">
       <div class="col-md-12">
         <div class="section-heading">
-          <h2 class="heading">Church Services</h2>
+          <h2 class="heading">Church Ministry</h2>
         </div>
       </div>
     </div>
   </div>
+
 
   <div class="block-13">
     <div class="nonloop-block-13 owl-carousel">
@@ -133,9 +154,9 @@ include("includes/header.php");
             <a href="#"><img src="images/image_3.jpg" alt="Image placeholder" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
-            <h3 class="heading"><a href="#">The Truth will set us free</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia natus asperiores exercitationem cupiditate!</p>
-            <p><a href="#">Read More</a></p>
+            <h3 class="heading"><a href="#">Media and IT</a></h3>
+            <p> Covers technical activities including videography,photography,projection and publicity. </p>
+            <!-- <p><a href="#">Read More</a></p> -->
           </div>
         </div>
       </div>
@@ -145,21 +166,87 @@ include("includes/header.php");
             <a href="#"><img src="images/image_2.jpg" alt="Image placeholder" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
-            <h3 class="heading"><a href="#">Piano Lesson for Children</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia natus asperiores exercitationem cupiditate!</p>
-            <p><a href="#">Read More</a></p>
+            <h3 class="heading"><a href="#">Praise and Worship Ministry</a></h3>
+            <p> We are called to serve using our voices,leading in praise and worship. </p>
+            <!-- <p><a href="#">Read More</a></p> -->
           </div>
         </div>
       </div>
+      <!-- Creative Ministry -->
       <div class="item">
         <div class="block-20">
           <figure>
             <a href="#"><img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
-            <h3 class="heading"><a href="#">Bible studies like Bereans did</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia natus asperiores exercitationem cupiditate!</p>
-            <p><a href="#">Read More</a></p>
+            <h3 class="heading"><a href="#">Creative Ministry</a></h3>
+            <p> We explore the word of God, delivering our talents through arts and entertainment.</p>
+            <!-- <p><a href="#">Read More</a></p> -->
+          </div>
+        </div>
+      </div>
+<!-- Hospitality ministry -->
+      <div class="item">
+        <div class="block-20">
+          <figure>
+            <a href="#"><img src="images/image_3.jpg" alt="Image placeholder" class="img-fluid"></a>
+          </figure>
+          <div class="text text-center">
+            <h3 class="heading"><a href="#">Hospitality Ministry</a></h3>
+            <p> Cordinates members welfare ,catering and ushering as well as nurturing into resoponsible adults.</p>
+            <!-- <p><a href="#">Read More</a></p> -->
+          </div>
+        </div>
+      </div>
+      <!-- High school Ministry -->
+      <div class="item">
+        <div class="block-20">
+          <figure>
+            <a href="#"><img src="images/image_2.jpg" alt="Image placeholder" class="img-fluid"></a>
+          </figure>
+          <div class="text text-center">
+            <h3 class="heading"><a href="#">High School Ministry</a></h3>
+            <p>We want to help middle school and high school students thrive in  their spiritual journey.</p>
+            <!-- <p><a href="#">Read More</a></p> -->
+          </div>
+        </div>
+      </div>
+<!-- Instrumentalists -->
+      <div class="item">
+        <div class="block-20">
+          <figure>
+            <a href="#"><img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+          </figure>
+          <div class="text text-center">
+            <h3 class="heading"><a href="#">Instrumentalists Ministry</a></h3>
+            <p>Participation through gospel music, training and setting up of Instruments .</p>
+            <!-- <p><a href="#">Read More</a></p> -->
+          </div>
+        </div>
+      </div>
+<!-- Sunday School -->
+      <div class="item">
+        <div class="block-20">
+          <figure>
+            <a href="#"><img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+          </figure>
+          <div class="text text-center">
+            <h3 class="heading"><a href="#">Sunday School Ministry</a></h3>
+            <p>Teaching, Giving, Directing and Sharing Knowledge of Jesus Christ to Children.</p>
+            <!-- <p><a href="#">Read More</a></p> -->
+          </div>
+        </div>
+      </div>
+<!--  -->
+      <div class="item">
+        <div class="block-20">
+          <figure>
+            <a href="#"><img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+          </figure>
+          <div class="text text-center">
+            <h3 class="heading"><a href="#">Discipleship Ministry</a></h3>
+            <p>We spread the good news,teach the word and reaching souls through missions and evangelism.</p>
+            <!-- <p><a href="#">Read More</a></p> -->
           </div>
         </div>
       </div>
@@ -167,39 +254,17 @@ include("includes/header.php");
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="images/image_3.jpg" alt="Image placeholder" class="img-fluid"></a>
-          </figure>
-          <div class="text text-center">
-            <h3 class="heading"><a href="#">The Truth will set us free</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia natus asperiores exercitationem cupiditate!</p>
-            <p><a href="#">Read More</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="block-20">
-          <figure>
-            <a href="#"><img src="images/image_2.jpg" alt="Image placeholder" class="img-fluid"></a>
-          </figure>
-          <div class="text text-center">
-            <h3 class="heading"><a href="#">Piano Lesson for Children</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia natus asperiores exercitationem cupiditate!</p>
-            <p><a href="#">Read More</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="block-20">
-          <figure>
             <a href="#"><img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
-            <h3 class="heading"><a href="#">Bible studies like Bereans did</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia natus asperiores exercitationem cupiditate!</p>
-            <p><a href="#">Read More</a></p>
+            <h3 class="heading"><a href="#">Intercessory Ministry</a></h3>
+            <p>We have fellowship through prayer presenting needs and petitions individually and the church as a whole.</p>
+            <!-- <p><a href="#">Read More</a></p> -->
           </div>
         </div>
       </div>
+
+
 
     </div>
   </div>
@@ -266,7 +331,7 @@ include("includes/header.php");
             <h3 class="block-44-heading"><a href="#">Weekend Outreach</a></h3>
             <div class="block-44-meta mb-2">Posted on June 28, 2018, Pastor Gregg Smith</div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias dolore voluptate.</p>
-            <p><a href="#">Read More</a></p>
+            <!-- <p><a href="#">Read More</a></p> -->
           </div>
         </div>
 
@@ -276,7 +341,7 @@ include("includes/header.php");
             <h3 class="block-44-heading"><a href="#">No Longer Slave To Sin</a></h3>
             <div class="block-44-meta mb-2">Posted on June 28, 2018, Pastor Gregg Smith</div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias dolore voluptate.</p>
-            <p><a href="#">Read More</a></p>
+            <!-- <p><a href="#">Read More</a></p> -->
           </div>
         </div>
 
