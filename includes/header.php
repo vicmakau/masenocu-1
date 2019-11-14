@@ -23,9 +23,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
-
-
     <div class="block-45">
       <div class="container">
         <div class="row">
