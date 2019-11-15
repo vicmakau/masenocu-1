@@ -1,5 +1,5 @@
 <?php
-     class FetchNews{
+   /*  class FetchNews{
 		 
            public $databaseObject = null;
 		   
@@ -149,4 +149,5 @@
 				  
 			  }
 	 }
+	 */
 			?>

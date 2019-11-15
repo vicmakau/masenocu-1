@@ -27,7 +27,7 @@
       <div class="container">
         <div class="row">
           <div style = "text-align:center;">
-            <h3 style = "color:white;text-align:center;"> <b>Maseno University Christian Union .</b></h3>
+            <h3 style = "color:white;text-align:center; "> Maseno University Christian Union </h3> <!-- Removed the Bold tags -->
           </div>
         </div>
       </div>

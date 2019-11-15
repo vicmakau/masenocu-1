@@ -16,7 +16,7 @@ include("includes/header.php");
           <div class="block-17">
             <h1 class="heading mb-4">Living For God.</h1>
             <div class="lead">Ephesians 4:21-24 </div><br>
-            <p><a href="#" class="btn btn-primary-white py-3 px-5">About Us</a> <a href="#" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
+            <p><a href="#" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <a href="#" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
 
           </div>
         </div>
@@ -44,8 +44,8 @@ include("includes/header.php");
 
         <div class="block-42-text">
           <div class="block-42-label">Latest Sermon:</div>
-          <div class="block-42-title mx-2"><a href="#"><strong>Rebuilding The Walls</strong></a></div>
-          <div class="block-42-meta">Posted on June 28, 2018, <strong>Pastor John Smith</strong> </div>
+          <div class="block-42-title mx-2"><a href="#"><strong>Confronting corruption</strong></a></div>
+          <div class="block-42-meta">Posted on November 10, 2018, <strong>Elly Ochieng</strong> </div>
         </div>
         <div class="block-42-icons ml-auto">
           <a href="#" class="fa fa-video-camera pl-0"></a>
@@ -280,8 +280,8 @@ include("includes/header.php");
         <div class="block-44 d-flex mb-3">
           <div class="block-44-image"><img src="images/image_tall_1.jpg" alt="Image placeholder"></div>
           <div class="block-44-text">
-            <h3 class="block-44-heading"><a href="#">Rebuilding The Walls</a></h3>
-            <div class="block-44-meta">Posted on June 28, 2018, Pastor Gregg Smith</div>
+            <h3 class="block-44-heading"><a href="#">Confronting corruption</a></h3>
+            <div class="block-44-meta">Posted on November 10th, 2019, Elly Ochieng</div>
             <div class="block-44-icons">
               <a href="#" class=""><span class="fa fa-video-camera"></span></a>
               <a href="#" class=""><span class="fa fa-headphones"></span></a>
@@ -294,8 +294,8 @@ include("includes/header.php");
         <div class="block-44 d-flex mb-3">
           <div class="block-44-image"><img src="images/image_tall_2.jpg" alt="Image placeholder"></div>
           <div class="block-44-text">
-            <h3 class="block-44-heading"><a href="#">Jonah's Message To Neniveh</a></h3>
-            <div class="block-44-meta">June 28, 2018, Pastor Gregg Smith</div>
+            <h3 class="block-44-heading"><a href="#">Humility</a></h3>
+            <div class="block-44-meta">Posted on November 8th, 2019, Shadrack Andido</div>
             <div class="block-44-icons">
               <a href="#" class=""><span class="fa fa-video-camera"></span></a>
               <a href="#" class=""><span class="fa fa-headphones"></span></a>
@@ -308,8 +308,8 @@ include("includes/header.php");
         <div class="block-44 d-flex mb-3">
           <div class="block-44-image"><img src="images/image_tall_3.jpg" alt="Image placeholder"></div>
           <div class="block-44-text">
-            <h3 class="block-44-heading"><a href="#">New Jerusalem</a></h3>
-            <div class="block-44-meta">June 28, 2018, Pastor Gregg Smith</div>
+            <h3 class="block-44-heading"><a href="#">Boundaries to Christian dating</a></h3>
+            <div class="block-44-meta">October 15th, Margaret Cokumu</div>
             <div class="block-44-icons">
               <a href="#" class=""><span class="fa fa-video-camera"></span></a>
               <a href="#" class=""><span class="fa fa-headphones"></span></a>
@@ -328,9 +328,9 @@ include("includes/header.php");
         <div class="block-44 d-flex mb-3">
           <div class="block-44-image"><img src="images/image_tall_4_large.jpg" alt="Image placeholder"></div>
           <div class="block-44-text">
-            <h3 class="block-44-heading"><a href="#">Weekend Outreach</a></h3>
-            <div class="block-44-meta mb-2">Posted on June 28, 2018, Pastor Gregg Smith</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias dolore voluptate.</p>
+            <h3 class="block-44-heading"><a href="#">Leaders Training</a></h3>
+            <div class="block-44-meta mb-2">November 9th 2019, The whole church: leaders</div>
+            <p>A session to bring the newly selected leaders into norms and customs of the church, dedicating them unto God for service</p>
             <!-- <p><a href="#">Read More</a></p> -->
           </div>
         </div>
@@ -338,9 +338,9 @@ include("includes/header.php");
         <div class="block-44 d-flex mb-3">
           <div class="block-44-image"><img src="images/image_tall_5_large.jpg" alt="Image placeholder"></div>
           <div class="block-44-text">
-            <h3 class="block-44-heading"><a href="#">No Longer Slave To Sin</a></h3>
-            <div class="block-44-meta mb-2">Posted on June 28, 2018, Pastor Gregg Smith</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias dolore voluptate.</p>
+            <h3 class="block-44-heading"><a href="#">Zions weekend</a></h3>
+            <div class="block-44-meta mb-2">November 16, 2019|Zions </div>
+            <p>The Zions(4th Years) to participate actively in the curch because it their weekend</p>
             <!-- <p><a href="#">Read More</a></p> -->
           </div>
         </div>
@@ -366,14 +366,14 @@ include("includes/header.php");
         <div class="block-33">
           <div class="text mb-5">
             <blockquote>
-              <p>&rdquo; Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid. Atque dolore esse veritatis iusto eaque perferendis non dolorem fugiat voluptatibus vitae error ad itaque inventore accusantium tempore dolores sunt. &ldquo;</p>
+              <p>&rdquo; I've been a devoted Christian all along. Coming to this Christian union has been of great impact to my life. It has helped me keeping the zeal and containment in the Lord. Its a nice place for everyone to connect with God &ldquo;</p>
             </blockquote>
           </div>
           <div class="vcard d-flex">
             <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_3.jpg" alt="Person here"></div>
             <div class="name-text align-self-center ml-auto order-1 text-right">
-              <h2 class="heading">Martin Newmansfield</h2>
-              <span class="meta">New York</span>
+              <h2 class="heading">Simon Nyongesa</h2>
+              <span class="meta">WESO</span>
             </div>
           </div>
         </div>
@@ -383,14 +383,14 @@ include("includes/header.php");
         <div class="block-33">
           <div class="text mb-5">
             <blockquote>
-              <p>&rdquo; Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid. Atque dolore esse veritatis iusto eaque perferendis non dolorem fugiat voluptatibus vitae error ad itaque inventore accusantium tempore dolores sunt. &ldquo;</p>
+              <p>&rdquo; The CU has given me confidence. I can testify Christ wherever I am. The missions and inreaches has helped me groW to another level. I have grown alot the way I associate with other people. Even outside church. I am not as I was before. &ldquo;</p>
             </blockquote>
           </div>
           <div class="vcard d-flex">
             <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_2.jpg" alt="Person here"></div>
             <div class="name-text align-self-center ml-auto order-1 text-right">
-              <h2 class="heading">Evan Roosbelt</h2>
-              <span class="meta">London</span>
+              <h2 class="heading">Vicky  Makau</h2>
+              <span class="meta">UET</span>
             </div>
           </div>
         </div>
@@ -400,14 +400,14 @@ include("includes/header.php");
         <div class="block-33">
           <div class="text mb-5">
             <blockquote>
-              <p>&rdquo; Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid. Atque dolore esse veritatis iusto eaque perferendis non dolorem fugiat voluptatibus vitae error ad itaque inventore accusantium tempore dolores sunt. &ldquo;</p>
+              <p>&rdquo; A friend took me to the church. Thats when I met my salvation. By the grace of the Saviour Jesus christ, I acknowldge to be saved, and this is the place I keep growing my faith. I expect to grow more in faith as days goes by. Indeed thats my quest &ldquo;</p>
             </blockquote>
           </div>
           <div class="vcard d-flex">
             <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_1.jpg" alt="Person here"></div>
             <div class="name-text align-self-center ml-auto order-1 text-right">
-              <h2 class="heading">Marilyn Smith</h2>
-              <span class="meta">London</span>
+              <h2 class="heading">Maria Nkatha</h2>
+              <span class="meta">CET</span>
             </div>
           </div>
         </div>
