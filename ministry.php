@@ -1,4 +1,16 @@
-    <?php include 'includes/header.php' ?>
+    <?php include 'includes/header.php';
+    $ministries = array(
+      "mit" => "Media and IT",
+      "praise" => "Praise and Worship",
+      "creative" => "Creative",
+      "hospitality" => "Hospitality",
+      "high-school" => "High School",
+      "instrumentalist" => "Instrumentalist",
+      "sunday-school" => "Sunday School",
+      "discipleship" => "Discipleship",
+      "intercessory" => "Intercessory"
+    );
+    ?>
 
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);">
       <div class="container">
@@ -7,8 +19,8 @@
 
             <div class="mb-5 element-animate">
               <div class="block-17">
-                <h1 class="heading mb-4">Outreach Ministry</h1>
-                <div class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde doloremque necessitatibus quidem itaque illum nulla dolores, tempora corporis eius, fuga natus esse rem animi. Doloribus animi, reiciendis voluptatum eum ullam.</div>
+                <h1 class="heading mb-4">Ministries</h1>
+                <div class="lead">Ministries provides service to the church through devotion. We do all the the church activities pertaining the welfare of the brethrens and all inclusions</div>
               </div>
             </div>
 
@@ -25,11 +37,11 @@
             <div class="block-36">
               <h3 class="block-36-heading">Ministries Links</h3>
               <ul>
-                <li class="active"><a>Outreach Ministry</a></li>
-                <li><a href="ministry.html">Men's Ministry</a></li>
-                <li><a href="ministry.html">Women's Ministry</a></li>
-                <li><a href="ministry.html">Children's Ministry</a></li>
-                <li><a href="ministry.html">Youth Ministry</a></li>
+                <?php foreach ($ministries as $id => $name) : ?>
+                  <li <?= (isset($_GET['id'])) && ($_GET['id'] == $id)? 'class="active disabled"' : '' ?>>
+                    <a href="ministry.php?id=<?= $id; ?>"><?= $name; ?></a>
+                  </li>
+                <?php endforeach; ?>
               </ul>
             </div>
           </div>
