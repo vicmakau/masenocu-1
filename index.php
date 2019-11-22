@@ -456,7 +456,6 @@ include("includes/header.php");
 <script src="js/jquery.waypoints.min.js"></script>
 <script src="js/jquery.stellar.min.js"></script>
 <script src="js/jquery.animateNumber.min.js"></script>
-<script src="new.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 
 <script src="js/main.js"></script>
