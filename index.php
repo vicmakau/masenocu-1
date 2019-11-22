@@ -16,7 +16,7 @@ include("includes/header.php");
           <div class="block-17">
             <h1 class="heading mb-4">Living For God.</h1>
             <div class="lead">Ephesians 4:21-24 </div><br>
-            <p><a href="#" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <a href="#" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
+            <p><a href="about.php" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <a href="" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
 
           </div>
         </div>
@@ -44,7 +44,7 @@ include("includes/header.php");
 
         <div class="block-42-text">
           <div class="block-42-label">Latest Sermon:</div>
-          <div class="block-42-title mx-2"><a href="#"><strong>Confronting corruption</strong></a></div>
+          <div class="block-42-title mx-2"><a href="about.php"><strong>Confronting corruption</strong></a></div>
           <div class="block-42-meta">Posted on November 10, 2018, <strong>Elly Ochieng</strong> </div>
         </div>
         <div class="block-42-icons ml-auto">
