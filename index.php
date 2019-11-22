@@ -104,10 +104,10 @@ include("includes/header.php");
       </div>
       <div class="col-md-6 col-lg-4 mb-5">
         <div class="block-43">
-          <div class="block-43-icon">
-            <!-- <span class="icon-wrapper"> -->
+          <div class="block-43-icon ">
+            <!-- <div class="" id="hexagon" > -->
               <span class="w3-xxlarge fa fa-user text-primary"></span>
-            <!-- </span> -->
+            <!-- </div> -->
 
           </div>
           <div class="block-43-text">
@@ -373,7 +373,8 @@ include("includes/header.php");
                   </blockquote>
                 </div>
                 <div class="vcard d-flex">
-                  <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_3.jpg" alt="Person here"></div>
+                  <div class="image align-self-center ml-auto order-2 ml-3">
+                    <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104509532/in/dateposted-public/" title="booban"><img src="https://live.staticflickr.com/65535/49104509532_4c19dd89b7.jpg"alt="booban"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" target="_blank"></script></div>
                     <div class="name-text align-self-center ml-auto order-1 text-right">
                         <h2 class="heading">Simon Nyongesa</h2>
                         <span class="meta">WESO</span>
@@ -389,7 +390,7 @@ include("includes/header.php");
                 </blockquote>
               </div>
               <div class="vcard d-flex">
-                <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_1.jpg" alt="Person here"></div>
+                <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_1.jpg" alt="Person here" target="_blank"></div>
                 <div class="name-text align-self-center ml-auto order-1 text-right">
                   <h2 class="heading">Maria Nkatha</h2>
                   <span class="meta">CET</span>
