@@ -27,8 +27,8 @@ include("includes/header.php");
   <div class="container">
     <div class="row">
       <?php
-      $datainClient = new FetchNews();
-      $datainClient->fetchNewsfuction(3);
+      // $datainClient = new FetchNews();
+      // $datainClient->fetchNewsfuction(3);
       ?>
     </div>
 
