@@ -34,7 +34,7 @@
     </div>
     <header role="banner">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand absolute" href="index.php"><img src = "images/cu.png"/>  </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
