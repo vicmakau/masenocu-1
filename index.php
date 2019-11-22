@@ -151,7 +151,7 @@ include("includes/header.php");
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="images/image_3.jpg" alt="Image placeholder" class="img-fluid"></a>
+            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49671095_590680258043788_8824584078608039936_n.jpg?_nc_cat=111&_nc_ohc=rDCKJhB-e08AQm5pBk3d5EoDPnrbgKc7xB_sUZfsnWcO4COvL3WJniAig&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=cd93cd292d7da10cb2a7d3f8bc0c4770&oe=5E4E9106" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Media and IT</a></h3>
@@ -163,7 +163,7 @@ include("includes/header.php");
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="images/image_2.jpg" alt="Image placeholder" class="img-fluid"></a>
+            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49575841_590680248043789_2850377306805895168_n.jpg?_nc_cat=108&_nc_ohc=_pfxAry3C_wAQmceNT40qF-SQY5VbmS5Ys-eCxYinOnb4V6dBpQioWmPQ&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=6101f1751f64ee82df1f076d53557aea&oe=5E87E5FF" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Praise and Worship Ministry</a></h3>
@@ -176,7 +176,7 @@ include("includes/header.php");
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c116.0.200.200a/p200x200/49664823_590680311377116_8953141232985440256_o.jpg?_nc_cat=107&_nc_ohc=JbWA7iGxSVcAQnYkwmsDfjod14J05GDtljPOzWvfYk0yaPdzbSuxqXS0Q&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=343e0e66cbb6abff7f91dc66582cc7bd&oe=5E4E2C77" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Creative Ministry</a></h3>
@@ -189,7 +189,7 @@ include("includes/header.php");
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="images/image_3.jpg" alt="Image placeholder" class="img-fluid"></a>
+            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Hospitality Ministry</a></h3>
@@ -202,7 +202,7 @@ include("includes/header.php");
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="images/image_2.jpg" alt="Image placeholder" class="img-fluid"></a>
+            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">High School Ministry</a></h3>
@@ -215,7 +215,7 @@ include("includes/header.php");
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49620968_590680288043785_7400181088540164096_n.jpg?_nc_cat=110&_nc_ohc=uhUc6RUT5LsAQmUz7XfD_cfDJOlmImIhHPY-3MYk8VDKTnrJ40NYVB70w&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=cb8abb89b17de6c7a0dec5735145e7e9&oe=5E4DBFAF" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Instrumentalists Ministry</a></h3>
@@ -228,7 +228,7 @@ include("includes/header.php");
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Sunday School Ministry</a></h3>
@@ -241,7 +241,7 @@ include("includes/header.php");
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Discipleship Ministry</a></h3>
@@ -254,7 +254,7 @@ include("includes/header.php");
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Intercessory Ministry</a></h3>
