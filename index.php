@@ -85,15 +85,15 @@ include("includes/header.php");
 </section>
 <!-- END section -->
 
-<section class="site-section pt-0">
-  <div class="container">
+<section class="site-section pt-0 center">
+  <div class="container w3-center">
     <div class="row ">
       <div class="col-md-6 col-lg-4 mb-5">
         <div class="block-43">
           <div class="block-43-icon">
-            <span class="icon-wrapper">
-              <span class="icon fa fa-book text-primary"></span>
-            </span>
+            <!-- <span class="icon-wrapper"> -->
+              <span class="w3-xxlarge  fa fa-book text-primary"></span>
+            <!-- </span> -->
 
           </div>
           <div class="block-43-text">
@@ -105,9 +105,9 @@ include("includes/header.php");
       <div class="col-md-6 col-lg-4 mb-5">
         <div class="block-43">
           <div class="block-43-icon">
-            <span class="icon-wrapper">
-              <span class="icon fa fa-user text-primary"></span>
-            </span>
+            <!-- <span class="icon-wrapper"> -->
+              <span class="w3-xxlarge fa fa-user text-primary"></span>
+            <!-- </span> -->
 
           </div>
           <div class="block-43-text">
@@ -119,9 +119,9 @@ include("includes/header.php");
       <div class="col-md-6 col-lg-4 mb-5">
         <div class="block-43">
           <div class="block-43-icon">
-            <span class="icon-wrapper">
-              <span class="icon fa fa-heart text-primary"></span>
-            </span>
+            <!-- <span class="icon-wrapper"> -->
+              <span class="w3-xxlarge icon fa fa-heart text-primary"></span>
+            <!-- </span> -->
 
           </div>
           <div class="block-43-text">
@@ -350,6 +350,7 @@ include("includes/header.php");
     </div>
   </div>
 </section>
+<!-- testimonials -->
 
 <div class="site-section bg-light">
   <div class="container">
@@ -360,63 +361,65 @@ include("includes/header.php");
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 mb-5">
+<!-- begin -->
+      <div class="block-13">
+        <div class="nonloop-block-13 owl-carousel">
 
-        <div class="block-33">
-          <div class="text mb-5">
-            <blockquote>
-              <p>&rdquo; I've been a devoted Christian all along. Coming to this Christian union has been of great impact to my life. It has helped me keeping the zeal and containment in the Lord. Its a nice place for everyone to connect with God &ldquo;</p>
-            </blockquote>
+          <div class="item">
+              <div class="block-33">
+                <div class="text mb-5">
+                  <blockquote>
+                      <p>&rdquo; I've been a devoted Christian all along. Coming to this Christian union has been of great impact to my life. It has helped me keeping the zeal and containment in the Lord. Its a nice place for everyone to connect with God &ldquo;</p>
+                  </blockquote>
+                </div>
+                <div class="vcard d-flex">
+                  <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_3.jpg" alt="Person here"></div>
+                    <div class="name-text align-self-center ml-auto order-1 text-right">
+                        <h2 class="heading">Simon Nyongesa</h2>
+                        <span class="meta">WESO</span>
+                    </div>
+                  </div>
+              </div>
           </div>
-          <div class="vcard d-flex">
-            <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_3.jpg" alt="Person here"></div>
-            <div class="name-text align-self-center ml-auto order-1 text-right">
-              <h2 class="heading">Simon Nyongesa</h2>
-              <span class="meta">WESO</span>
+          <div class="item">
+            <div class="block-33">
+              <div class="text mb-5">
+                <blockquote>
+                  <p>&rdquo; A friend took me to the church. Thats when I met my salvation. By the grace of the Saviour Jesus christ, I acknowldge to be saved, and this is the place I keep growing my faith. I expect to grow more in faith as days goes by. Indeed thats my quest &ldquo;</p>
+                </blockquote>
+              </div>
+              <div class="vcard d-flex">
+                <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_1.jpg" alt="Person here"></div>
+                <div class="name-text align-self-center ml-auto order-1 text-right">
+                  <h2 class="heading">Maria Nkatha</h2>
+                  <span class="meta">CET</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="block-33">
+              <div class="text mb-5">
+                <blockquote>
+                  <p>&rdquo; The CU has given me confidence. I can testify Christ wherever I am. The missions and inreaches has helped me groW to another level. I have grown alot the way I associate with other people. Even outside church. I am not as I was before. &ldquo;</p>
+                </blockquote>
+              </div>
+              <div class="vcard d-flex">
+                <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_2.jpg" alt="Person here"></div>
+                <div class="name-text align-self-center ml-auto order-1 text-right">
+                  <h2 class="heading">Vicky  Makau</h2>
+                  <span class="meta">UET</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
-      <div class="col-md-6 col-lg-4 mb-5">
-        <div class="block-33">
-          <div class="text mb-5">
-            <blockquote>
-              <p>&rdquo; The CU has given me confidence. I can testify Christ wherever I am. The missions and inreaches has helped me groW to another level. I have grown alot the way I associate with other people. Even outside church. I am not as I was before. &ldquo;</p>
-            </blockquote>
-          </div>
-          <div class="vcard d-flex">
-            <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_2.jpg" alt="Person here"></div>
-            <div class="name-text align-self-center ml-auto order-1 text-right">
-              <h2 class="heading">Vicky  Makau</h2>
-              <span class="meta">UET</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-5">
-
-        <div class="block-33">
-          <div class="text mb-5">
-            <blockquote>
-              <p>&rdquo; A friend took me to the church. Thats when I met my salvation. By the grace of the Saviour Jesus christ, I acknowldge to be saved, and this is the place I keep growing my faith. I expect to grow more in faith as days goes by. Indeed thats my quest &ldquo;</p>
-            </blockquote>
-          </div>
-          <div class="vcard d-flex">
-            <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_1.jpg" alt="Person here"></div>
-            <div class="name-text align-self-center ml-auto order-1 text-right">
-              <h2 class="heading">Maria Nkatha</h2>
-              <span class="meta">CET</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
   </div>
 </div>
-
+<!-- testimonials -->
 
 <div role="dialog" tabindex="-1" class="modal fade" id="modal">
   <div class="modal-dialog" role="document">
