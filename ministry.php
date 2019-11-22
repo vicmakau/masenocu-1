@@ -10,6 +10,13 @@
       "discipleship" => "Discipleship",
       "intercessory" => "Intercessory"
     );
+
+    // Read ministries.json
+    $filename = "ministries.json";
+    $configfile = fopen($filename, 'r') or die("Unable to open config file $filename");
+    $json = fread($configfile, filesize($filename));
+    fclose($configfile);
+    $ministry_descriptions = json_decode($json);
     ?>
 
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);">
@@ -38,7 +45,7 @@
               <h3 class="block-36-heading">Ministries Links</h3>
               <ul>
                 <?php foreach ($ministries as $id => $name) : ?>
-                  <li <?= (isset($_GET['id'])) && ($_GET['id'] == $id)? 'class="active disabled"' : '' ?>>
+                  <li <?= (isset($_GET['id'])) && ($_GET['id'] == $id) ? 'class="active disabled"' : '' ?>>
                     <a href="ministry.php?id=<?= $id; ?>"><?= $name; ?></a>
                   </li>
                 <?php endforeach; ?>
@@ -46,12 +53,16 @@
             </div>
           </div>
           <div class="col-md-8 pl-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus animi explicabo asperiores accusantium laborum distinctio quos, placeat eligendi nesciunt aliquid ut corrupti id sapiente libero, quod doloremque minima odit debitis minus. Sequi enim quibusdam, doloremque iste iure? Excepturi, ad, ratione!</p>
-            <p><img src="images/big_image_1.jpg" alt="Image placeholder" class="img-fluid"></p>
-            <p>Deleniti asperiores delectus, nemo consequatur omnis dolorum vel voluptatem? Consequuntur doloribus iusto adipisci quam eos fugiat, hic architecto. Consequatur ipsa error architecto? Deserunt id, consectetur non labore odio accusantium veritatis incidunt? Molestias velit deserunt harum, quibusdam est minus, sapiente modi.</p>
-            <p>Adipisci tempore soluta, sed aperiam consequatur error dolorem, repellendus quos minima rem ex ipsum possimus maiores reiciendis quo, accusantium officia omnis! Porro quidem ullam architecto, sapiente, a consequatur ex nostrum eos culpa vitae tenetur voluptates, nobis temporibus, fuga facilis pariatur.</p>
-            <p>Rerum, molestias ipsa doloremque velit distinctio laboriosam quidem ratione minima inventore. Blanditiis quaerat ipsa nobis fugit repudiandae, at repellendus itaque odit! Quibusdam ducimus exercitationem optio dolore, modi repudiandae beatae enim incidunt, saepe atque amet suscipit, aliquam placeat pariatur ipsam facilis.</p>
-            <p>A suscipit facilis minima fugiat ipsum provident pariatur, culpa! Quia fuga aperiam, error beatae vel dolorem velit eos incidunt ducimus animi nostrum, ipsa impedit praesentium libero voluptatem est magni doloribus! Atque illum, aut deleniti adipisci natus quas, beatae nihil sit!</p>
+            <?php if (isset($_GET['id'])) :
+              $ministry_id = $_GET['id'];
+              $ministry = $ministry_descriptions->$ministry_id; ?>
+              <div class="section-heading">
+                <h2 class="heading"><?= $ministry->name; ?></h2>
+              </div>
+              <p><?= $ministry->intro; ?></p>
+              <p><img src="<?= $ministry->image; ?>" alt="<?= $ministry->name; ?>" class="img-fluid"></p>
+              <p><?= $ministry->text; ?></p>
+            <?php endif; ?>
           </div>
         </div>
       </div>
