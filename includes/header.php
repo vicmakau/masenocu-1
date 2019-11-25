@@ -41,7 +41,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+          <div class="w3-animate-top collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home</a>
@@ -78,14 +78,12 @@
                 <a class="nav-link" href="contact.php">Contact</a>
               </li>
             </ul>
-
-
           </div>
         </div>
       </nav>
     </header>
     </div>
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -94,6 +92,6 @@
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src = "new.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script> -->
 
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
