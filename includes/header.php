@@ -46,25 +46,24 @@
               <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home</a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" class="nav-link" href="ministry.php">
                 <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ministries</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="ministry.php">Board Ministry</a>
-                  <a class="dropdown-item" href="ministry.php">Media and IT Ministry</a>
-                  <a class="dropdown-item" href="ministry.php">High school Ministry</a>
-                  <a class="dropdown-item" href="ministry.php">Hospitality Ministry</a>
-                  <a class="dropdown-item" href="ministry.php">Intercessory Ministry</a>
-                </div>
-
+                  <a class="dropdown-item" href="ministry.php">Media and IT</a>
+                  <a class="dropdown-item" href="ministry.php">Praise and Worship  </a>
+                  <a class="dropdown-item" href="ministry.php">Creative Ministry</a>
+                  <a class="dropdown-item" href="ministry.php">Hospitality</a>
+                  <a class="dropdown-item" href="ministry.php">Instrumentalist</a>
+                  <a class="dropdown-item" href="ministry.php">Sunday School</a>
+                  <a class="dropdown-item" href="ministry.php">Discipleship</a>
+                  <a class="dropdown-item" href="ministry.php">Intercessory</a>
               </li>
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="sermon.php" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sermons</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="sermon.php">Daily Sermon</a>
-                  <a class="dropdown-item" href="sermon.php">Music</a>
-                  <a class="dropdown-item" href="sermon.php">Audio</a>
-                  <a class="dropdown-item" href="sermon.php">Video</a>
+                  <a class="dropdown-item" href="sermon.php">Previous Sermon</a>
+                  <a class="dropdown-item" href="sermon.php">Other past sermons</a>
                 </div>
 
               </li>

@@ -6,11 +6,16 @@
         <div class="row">
           <div class="col-md-6">
             <ul class="list-unstyled">
-              <li><a href="ministry.php">Board Ministry</a></li>
-              <li><a href="ministry.php">Media and IT Ministry</a></li>
-              <li><a href="ministry.php">High school Ministry</a></li>
-              <li><a href="ministry.php">Hospitality Ministry</a></li>
-              <li><a href="ministry.php">Intercessory Ministry</a></li>
+            
+                  <li><a href="ministry.php?id=mit">Media and IT</a></li>
+                  <li><a   href="ministry.php?id=praise">Praise and Worship  </a></li>
+                  <li><a   href="ministry.php?id=creative">Creative Ministry</a></li>
+                  <li><a   href="ministry.php">Hospitality</a></li>
+                  <li><a   href="ministry.php">Instrumentalist</a></li>
+                  <li><a   href="ministry.php">Sunday School</a></li>
+                  <li><a   href="ministry.php">Discipleship</a></li>
+                  <li><a   href="ministry.php">Intercessory</a></li>
+
             </ul>
           </div>
 

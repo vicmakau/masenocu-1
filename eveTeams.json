@@ -1,0 +1,52 @@
+{
+    "weso": {
+        "name": "Western Student Outreach",
+        "logo": "",
+        "image": "",
+        "intro": "Lorem Ipsum",
+        "text": "Dollar sit amet lorem Ipsum"
+    },
+    "net": {
+        "name": "Nyanza Evangelical Team",
+        "logo": "",
+        "image": "",
+        "intro": "We are called to serve using our voices, leading in praise and worship.",
+        "text": ""
+    },
+    "noret": {
+        "name": "North Rift Evangelical Team",
+        "logo": "",
+        "image": "",
+        "intro": "Lorem Ipsum",
+        "text": "Lorem Ipsum Dolla sit amet"
+    },
+    "soret": {
+        "name": "South Rift Evangelical Team",
+        "logo": "",
+        "image": "",
+        "intro": "Lorem Ipsum",
+        "text": "Lorem Ipsum Dolla sit amet"
+    },
+    "cet": {
+        "name": "Central Evangelical Team",
+        "logo": "",
+        "image": "",
+        "intro": "Lorem Ipsum",
+        "text": "Lorem Ipsum Dolla sit amet"
+    },
+    "emceta": {
+        "name": "Eastert Movement Student Association",
+        "logo": "",
+        "image": "",
+        "intro": "Lorem Ipsum",
+        "text": "Lorem Ipsum Dolla sit amet"
+    },
+    "noret": {
+        "name": "North Rift Evangelical Team",
+        "logo": "",
+        "image": "",
+        "intro": "Lorem Ipsum",
+        "text": "Lorem Ipsum Dolla sit amet"
+    }
+
+}    
