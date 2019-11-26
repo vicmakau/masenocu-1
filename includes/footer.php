@@ -22,7 +22,7 @@
           <div class="col-md-6">
             <ul class="list-unstyled">
               <li><a href="about.php">About Us</a></li>
-              <li><a href="contacts.php">Contact</a></li>
+              <li><a href="contact.php">Contact</a></li>
               <li><a href="#">Privacy &amp; Policy</a></li>
             </ul>
           </div>
@@ -41,7 +41,7 @@
         <div class="block-23">
           <ul>
             <li><span class="icon ion-android-pin"></span><span class="text">P.O BOX 416 ,MASENO, KENYA</span></li>
-            <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+2 392 3929 210</span></a></li>
+            <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+254-797-484-904</span></a></li>
             <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">masenocu015@gmail.com</span></a></li>
             <li><a href="login.php"><span class="icon ion-android-lock"></span><span class="text">LogIn</span></a></li>
           </ul>
