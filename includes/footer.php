@@ -10,11 +10,11 @@
                   <li><a href="ministry.php?id=mit">Media and IT</a></li>
                   <li><a   href="ministry.php?id=praise">Praise and Worship  </a></li>
                   <li><a   href="ministry.php?id=creative">Creative Ministry</a></li>
-                  <li><a   href="ministry.php">Hospitality</a></li>
-                  <li><a   href="ministry.php">Instrumentalist</a></li>
-                  <li><a   href="ministry.php">Sunday School</a></li>
-                  <li><a   href="ministry.php">Discipleship</a></li>
-                  <li><a   href="ministry.php">Intercessory</a></li>
+                  <li><a   href="ministry.php?id=hospitality">Hospitality</a></li>
+                  <li><a   href="ministry.php?id=instrumentalist">Instrumentalist</a></li>
+                  <li><a   href="ministry.php?id=sunday-school">Sunday School</a></li>
+                  <li><a   href="ministry.php?id=discipleship">Discipleship</a></li>
+                  <li><a   href="ministry.php?id=intercessory">Intercessory</a></li>
 
             </ul>
           </div>

@@ -4,7 +4,7 @@
       "net" => "Nyanza Evangelical Team",
       "soret" => "South Rift Evangelical Team",
       "cet" => "Central Evangelical Team",
-      "cet" => "Eastern Movement Student Association",
+      "uet" => "Uttermost Evangelistic Team",
       
    );
 
