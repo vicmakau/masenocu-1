@@ -47,7 +47,7 @@
                 <a class="nav-link" href="index.php">Home</a>
               </li>
               <li class="nav-item dropdown" class="nav-link" href="ministry.php">
-                <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ministries</a>
+                <a class="nav-link dropdown-toggle"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ministries</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="ministry.php?id=mit">Media and IT</a>
                   <a class="dropdown-item" href="ministry.php?id=mit">Praise and Worship  </a>
@@ -61,14 +61,14 @@
               <li class="nav-item dropdown" class="nav-link" href="ministry.php">
                 <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eve Teams</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="ministry.php">WESO</a>
-                  <a class="dropdown-item" href="ministry.php">NET</a>
-                  <a class="dropdown-item" href="ministry.php">UET</a>
-                  <a class="dropdown-item" href="ministry.php">MUBET</a>
-                  <a class="dropdown-item" href="ministry.php">CET</a>
-                  <a class="dropdown-item" href="ministry.php">NORET</a>
-                  <a class="dropdown-item" href="ministry.php">MCETA</a>
-                  <a class="dropdown-item" href="ministry.php">SORET</a>
+                  <a class="dropdown-item" href="eveteams.php?id=weso">WESO</a>
+                  <a class="dropdown-item" href="eveteams.php?id=net">NET</a>
+                  <a class="dropdown-item" href="eveteams.php?id=uet">UET</a>
+                  <a class="dropdown-item" href="eveteams.php?id=mubet">MUBET</a>
+                  <a class="dropdown-item" href="eveteams.php?id=cet">CET</a>
+                  <a class="dropdown-item" href="eveteams.php?id=noret">NORET</a>
+                  <a class="dropdown-item" href="eveteams.php?id=mceta">MCETA</a>
+                  <a class="dropdown-item" href="eveteams.php?id=soret">SORET</a>
               </li>
 
               <li class="nav-item dropdown">

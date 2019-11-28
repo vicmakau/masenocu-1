@@ -13,7 +13,7 @@ include("includes/header.php");
         <div class="mb-5 element-animate">
           <div class="block-17">
             <h1 class="heading mb-4">News &amp; Events</h1>
-            <div class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde doloremque necessitatibus quidem itaque illum nulla dolores, tempora corporis eius, fuga natus esse rem animi. Doloribus animi, reiciendis voluptatum eum ullam.</div>
+            <div class="lead">View all our Upcoming events here</div>
           </div>
         </div>
 

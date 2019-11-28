@@ -9,7 +9,10 @@
             <div class="mb-5 element-animate">
               <div class="block-17">
                 <h1 class="heading mb-4">Sermons</h1>
-                <div class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde doloremque necessitatibus quidem itaque illum nulla dolores, tempora corporis eius, fuga natus esse rem animi. Doloribus animi, reiciendis voluptatum eum ullam.</div>
+                <div class="lead"> 
+                   Get all the previous sermons incase you missed, or you need them. Growing in the word is the desire of every believer!
+                  
+                  </div>
               </div>
             </div>
 

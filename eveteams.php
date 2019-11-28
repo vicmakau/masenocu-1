@@ -16,14 +16,14 @@
     $eveTeam_description = json_decode($json);
     ?>
 
-    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);">
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/image_1.jpg);">
       <div class="container">
         <div class="row align-items-center justify-content-center site-hero-inner">
           <div class="col-md-8 text-center">
 
             <div class="mb-5 element-animate">
               <div class="block-17">
-                <h1 class="heading mb-4">Evangelical Teams</h1>
+                <h1 class="heading mb-4">Evangelistic Teams</h1>
                 <div class="lead">Eveangelical Teams are subgroups of the Maseno University Chrisian Union from specific reagions all over the country</div> 
                 <div class="lead">Main aim is to spread the word of God into the ethnoc regions where the members comes from. This proves to be verry effective</div>
               </div>
@@ -45,7 +45,7 @@
               <ul>
                        <?php foreach ($eveTeams as $id => $name) : ?>
                   <li <?= (isset($_GET['id'])) && ($_GET['id'] == $id) ? 'class="active disabled"' : 'disabled' ?>>
-                    <a href="evangelicalteams.php?id=<?= $id; ?>"><?= $name; ?></a>
+                    <a href="eveteams.php?id=<?= $id; ?>"><?= $name; ?></a>
                   </li>
                 <?php endforeach; ?>
               </ul>

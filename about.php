@@ -13,7 +13,7 @@ include("includes/header.php");
         <div class="mb-5 element-animate">
           <div class="block-17">
             <h1 class="heading mb-4">About Maseno University Christian Union.</h1>
-            <div class="lead">Our vision is :To live as true disciples of Jesus Christ, and our mission :To nurture belief in Christ-like character amongst students and communities </div>
+            <div class="lead">Our vision is to live as true disciples of Jesus Christ. Our Mission is to nurture belief in Christ-like character amongst students and communities </div>
           </div>
         </div>
 
@@ -44,7 +44,7 @@ include("includes/header.php");
           </div>
           <div class="text">
             <p>
-              Maseno University Christian union constitutes a group of committed young men and women living for God and pursue a holy life.Christian Union was started in 1978 when Maseno was still an affiliate of Moi University, then called Maseno University College.The Christian Union has from then undergone rapid growth in population which is accounted by large number of converts every year.The Union has full mandate to administer discipleship care to the new converts as well maintaining stability in christian faith amongst its members.
+              Maseno University Christian union constitutes a group of committed young men and women living for God and pursue a holy life. Christian Union was started in 1978 when Maseno was still an affiliate of Moi University, then called Maseno University College. The Christian Union has from then undergone rapid growth in population which is accounted by large number of converts every year.The Union has full mandate to administer discipleship care to the new converts as well maintaining stability in christian faith amongst its members.
               Membership to the Christian Union is open to everyone who is born again and profess Jesus Christ. Within the Christian Union there are various ministries in which members engage in, in their service to God
             </p>
           </div>

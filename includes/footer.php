@@ -15,17 +15,34 @@
                   <li><a   href="ministry.php?id=sunday-school">Sunday School</a></li>
                   <li><a   href="ministry.php?id=discipleship">Discipleship</a></li>
                   <li><a   href="ministry.php?id=intercessory">Intercessory</a></li>
+                  <hr width="100px">
+                  <li><a href="about.php">About Us</a></li>
 
             </ul>
-          </div>
 
-          <div class="col-md-6">
-            <ul class="list-unstyled">
-              <li><a href="about.php">About Us</a></li>
-              <li><a href="contact.php">Contact</a></li>
-              <li><a href="#">Privacy &amp; Policy</a></li>
-            </ul>
+            <!-- adding eve teams quick links -->
+
           </div>
+          <div class="col-md-4">
+                
+                <ul class="list-unstyled">
+                      <li><a  href="eveteams.php?id=weso">WESO</a> </li>
+                      <li><a  href="eveteams.php?id=net">NET</a> </li>
+                      <li><a  href="eveteams.php?id=uet">UET</a></li>
+                      <li><a  href="eveteams.php?id=mubet">MUBET</a></li>
+                      <li><a  href="eveteams.php?id=cet">CET</a></li>
+                      <li><a  href="eveteams.php?id=noret">NORET</a></li>
+                      <li><a  href="eveteams.php?id=mceta">MCETA</a></li>
+                      <li><a  href="eveteams.php?id=soret">SORET</a></li>
+                      <hr width="100px">
+
+                      <li><a href="contact.php">Contact</a></li>
+
+
+                </ul>
+              </div>
+
+          
         </div>
       </div>
 
@@ -40,10 +57,13 @@
         <h3 class="heading">Contact Information</h3>
         <div class="block-23">
           <ul>
-            <li><span class="icon ion-android-pin"></span><span class="text">P.O BOX 416 ,MASENO, KENYA</span></li>
-            <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+254-797-484-904</span></a></li>
+            <li><span class="icon ion-android-pin"></span><span class="text">P.O BOX 416, MASENO, KENYA</span></li>
+            <li><a href="tel:+254-797-484-904"><span class="icon ion-ios-telephone"></span><span class="text">+254-797-484-904</span></a></li>
             <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">masenocu015@gmail.com</span></a></li>
-            <li><a href="login.php"><span class="icon ion-android-lock"></span><span class="text">LogIn</span></a></li>
+
+              <!-- prompt user login will come soon -->
+                     
+            <li><a onclick="alert('You wil be able to log in soon')"><span class="icon ion-android-lock"></span><span class="text">LogIn</span></a></li>
           </ul>
           </ul>
         </div>
