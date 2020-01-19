@@ -46,8 +46,8 @@
               <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home</a>
               </li>
-              <li class="nav-item dropdown" class="nav-link" href="ministry.php">
-                <a class="nav-link dropdown-toggle"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ministries</a>
+              <li class="nav-item dropdown" class="nav-link" >
+                <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" aria-haspopup="true" aria-expanded="false">Ministries</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="ministry.php?id=mit">Media and IT</a>
                   <a class="dropdown-item" href="ministry.php?id=mit">Praise and Worship  </a>
