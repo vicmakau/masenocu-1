@@ -43,7 +43,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="block-36">
-              <h3 class="block-36-heading">Ministries Links</h3>
+              <h3 class="block-36-heading">Ministries</h3>
               <ul>
               
                 <?php foreach ($ministries as $id => $name) : ?>
@@ -87,9 +87,9 @@
 
             <table class="table table-borderless table-hover">
             <tr>
+                <th>Docket</th>
                 <th>Name</th>
-                <th>City</th>
-                <th>Company</th>
+                <th>Contact</th>
             </tr>
             <tr>
                 <td>Booban Times</td>

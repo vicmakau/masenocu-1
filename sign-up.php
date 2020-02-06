@@ -1,37 +1,40 @@
-    <?php 
+<?php 
       include 'includes/header.php';
     ?>
 <!-- Body -->
 <div class="form-1">
 <div class="right">
             <div class="banner">
-                <span class="sign-in-banner">Sign In</span>
-                <span class="sign-up-banner">
+                <span class="sign-up-banner">Sign In</span>
+                <span class="sign-in-banner">
                    <a href="sign-up.php">Sign up</a>
                 </span>
             </div>
             <br>
             <div class="header-label">
-                <span class="sign-in-text">Sign In </span>
-                <span class="sign-in-text-or">or</span>
                 <span class="sign-up-text">
-                <a href="sign-up.php">Sign Up</a>
-                </span>
+                    <a href="login.php">Sign In</a>
+                 </span>
+                <span class="sign-in-text-or">or</span>
+                <span  class="sign-in-text">Sign Up</span>
             </div>
             
 
             <div class="forms">
-
-                 <label class="label">EMAIL/USER-NAME</label><br>
+                <label class="label">EMAIL</label><br>
                  <input class="text-area" type="email" placeholder="eg example@masenocu.com"> <br>
+                 <label class="label">PHONE</label><br>
+                 <input class="text-area" type="text" placeholder="eg 07-12-345-678"> <br>
                  <label class="label">PASSWORD</label><br>
                  <input class="text-area" type="password" placeholder="use a strong passsword"> <br>
+                 <label class="label">COFIRM PASSWORD</label><br>
+                 <input class="text-area" type="password" placeholder="re-type you password to comfirm"> <br>
             </div>
             
             <div class="refuses">
-                <button style="color: white"  class="btn btn-primary-white py-3 px-5">Sign In</button>
+                <button style="color: white" class="btn btn-primary-white py-3 px-5">Sign Up</button>
                 <span class="text-final">
-                  <a href="sign-up.php">I am already a member</a>
+                <a href="login.php">I have an account</a>
                 </span>
             
             </div>

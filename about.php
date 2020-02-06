@@ -1,6 +1,4 @@
 <?php
-include("includes/databaseClass.php");
-include("includes/fetchingnews.php");
 include("includes/header.php");
 ?>
 <!-- END header -->

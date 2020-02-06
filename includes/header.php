@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- separate css for table -->
-    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/sign.css">
+    <!-- separate css for login and sigup -->
+    lin
 
 
     <!-- Theme Style -->
@@ -90,7 +92,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact</a>
               </li>
+              
+              <li class="nav-item">
+                <a class="nav-link " href="login.php"><button  class="btn btn-outline-info" >Login</button></a>
+              </li>
             </ul>
+
           </div>
         </div>
       </nav>
