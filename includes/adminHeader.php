@@ -27,11 +27,11 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div style="background-color:#6c5b7b;" class="block-45">
+    <div class="block-45">
       <div class="container">
         <div class="row">
           <div style = "text-align:center;">
-            <h3 style = "color:white;text-align:center; "> Maseno University Christian Union </h3> 
+            <h3 style = "color:white;text-align:center; "> Maseno University Christian Union </h3> <!-- Removed the Bold tags -->
           </div>
         </div>
       </div>
