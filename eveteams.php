@@ -60,6 +60,16 @@
               </div>
               <p><?= $eveTeam->intro; ?></p>
               <p><img src="<?= $eveTeam->image; ?>" alt="<?= $eveTeam->name; ?>" class="img-fluid"></p>
+
+
+              <!-- director pics -->
+
+              <div class="image align-self-center ml-auto order-2 ml-3">
+                    <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104509532/in/dateposted-public/" title="booban"><img style="height: 100px; " src="https://live.staticflickr.com/65535/49104509532_4c19dd89b7.jpg"alt="booban"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" target="_blank"></script></div>
+                    <div class="name-text align-self-center ml-auto order-1 text-right">
+                        <h2 class="heading">Simon Nyongesa</h2>
+                        <span class="meta">WESO</span>
+                    </div>
               <p><?= $eveTeam->text; ?></p>
             <?php endif; ?>
           </div>

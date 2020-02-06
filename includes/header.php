@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- separate css for table -->
+    <link rel="stylesheet" href="css/table.css">
 
 
     <!-- Theme Style -->

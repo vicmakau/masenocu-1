@@ -30,6 +30,7 @@
                 <div class="lead">Ministries provides service to the church through devotion. We do all the the church activities pertaining the welfare of the brethrens and all inclusions</div>
               </div>
             </div>
+            
 
           </div>
         </div>
@@ -44,28 +45,78 @@
             <div class="block-36">
               <h3 class="block-36-heading">Ministries Links</h3>
               <ul>
+              
                 <?php foreach ($ministries as $id => $name) : ?>
                   <li <?= (isset($_GET['id'])) && ($_GET['id'] == $id) ? 'class="active disabled"' : '' ?>>
                     <a href="ministry.php?id=<?= $id; ?>"><?= $name; ?></a>
                   </li>
                 <?php endforeach; ?>
               </ul>
+              
             </div>
+            
           </div>
           <div class="col-md-8 pl-md-5">
+
+
+
             <?php if (isset($_GET['id'])) :
               $ministry_id = $_GET['id'];
               $ministry = $ministry_descriptions->$ministry_id; ?>
               <div class="section-heading">
                 <h2 class="heading"><?= $ministry->name; ?></h2>
               </div>
+
+                
+
               <p><?= $ministry->intro; ?></p>
               <p><img src="<?= $ministry->image; ?>" alt="<?= $ministry->name; ?>" class="img-fluid"></p>
+              <!-- director pics -->
+
+              <div class="image align-self-center ml-auto order-2 ml-3">
+                    <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104509532/in/dateposted-public/" title="booban"><img style="height: 100px; " src="https://live.staticflickr.com/65535/49104509532_4c19dd89b7.jpg"alt="booban"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" target="_blank"></script></div>
+                    <div class="name-text align-self-center ml-auto order-1 text-right">
+                        <h2 class="heading">Simon Nyongesa</h2>
+                        <span class="meta">WESO</span>
+                    </div>
+
               <p><?= $ministry->text; ?></p>
             <?php endif; ?>
+
+            <!-- table display -->
+
+            <table class="table table-borderless table-hover">
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Company</th>
+            </tr>
+            <tr>
+                <td>Booban Times</td>
+                <td>Kisumu</td>
+                <td>Perfecto designs</td>
+            </tr>
+            <tr>
+                 <td>Steve Kings</td>
+                 <td>Nairobi</td>
+                 <td>Writing Channel</td>
+            </tr>
+            <tr>
+                <td>Booban Times</td>
+                <td>Kisumu</td>
+                <td>Perfecto designs</td>
+             </tr>
+            <tr>
+                <td>Steve Kings</td>
+                <td>Nairobi</td>
+                <td>Writing Channel</td>
+            </tr>
+        </table>
           </div>
+          
         </div>
       </div>
+      
     </section>
 
     <?php include 'includes/footer.php'; ?>
