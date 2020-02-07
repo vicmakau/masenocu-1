@@ -34,20 +34,14 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
-    <style>
-.event {display:none;}
-li{
-  list-style-type: none;
-}
-.activity-image {
- width: 100px
-}
-    </style>
+    <!-- super admin css -->
+    <link rel="stylesheet" href="css/superAdmin.css">
+
 </head>
 
 
-<body style="background-color:#C8C8C8;">
-    <div style="margin-bottom:110px;">
+<body class="super-admin-body" >
+    <div class="div-holder">
         <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button" style="background-color:#6c5b7b;height:100px;">
             <div class="container"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><img src="assets/img/cu.png">Maseno Christian Union</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div
@@ -56,42 +50,40 @@ li{
     </div>
     </nav>
     </div>
-    <div class="container w3-border " style="margin:50px; padding: 50px; background:#E2E2E2">
+    <div class="container w3-border tab-View " >
         <div class="w3-center">
-            <h1>Welcome to Admin section</h1>
+            <h1 id="head">Welcome to Admin section</h1>
         </div>
       <div class="row">
         <div class="col-md-3"  >
           <nav class="w3-white   w3-border " style="padding:0px;">
-              <div class="w3-container w3-center">
+              <div class="w3-container w3-center w3-card-2">
                  <h5>Admin Panel</h5>
-              <!-- </div><head>
 
-              </head> -->
           <ul style="margin-right:10px; margin-left: 0px;">
-            <li>
-              <a href="#" class="tablink" onclick="openEvent(event, 'Activities')">Activities</a>
+            <li  class="tablink" onclick="openEvent(event, 'Activities')">
+              Activities
             </li>
-            <li>
-              <a href="#" class="tablink" onclick="openEvent(event, 'sermon')">Sermon</a>
+            <li  class="tablink" onclick="openEvent(event, 'sermon')">
+              Sermon
             </li>
-            <li>
-              <a href="#" class="tablink" onclick="openEvent(event, 'Leadership')">Leadership</a>
+            <li class="tablink" onclick="openEvent(event, 'Leadership')">
+              Leadership
             </li>
             <li  class="tablink"  onclick="openEvent(event, 'gallery')">
-              <a href="#" class="">Gallery</a>
+            Gallery
             </li>
-            <li>
-              <a href="#" class="tablink" onclick="openEvent(event, 'upload')">Upload Documents</a>
+            <li  class="tablink" onclick="openEvent(event, 'upload')">
+              Upload Documents
             </li>
-            <li>
-              <a href="#" class="tablink" onclick="openEvent(event, 'castMessage')">Cast Message</a>
+            <li class="tablink" onclick="openEvent(event, 'castMessage')">
+              Cast Message
             </li>
-            <li>
-              <a href="#" class="tablink" onclick="openEvent(event, 'testimonials')">Review testiomonials</a>
+            <li class="tablink" onclick="openEvent(event, 'testimonials')">
+              Review testiomonials
             </li>
-            <li>
-              <a href="#" class="tablink" onclick="openEvent(event, 'semTheme')">Semesters Theme</a>
+            <li  class="tablink" onclick="openEvent(event, 'semTheme')">
+              Semesters Theme
             </li>
           </ul>
         </nav>
@@ -124,15 +116,16 @@ li{
                     <label for="Summary">Summary</label>
                   <textarea id="Summary" class="form-control" name="Summary" rows="3" cols="47" placeholder="something here"></textarea>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <div class="w3-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
                 </form>
               </div>
-
             </div>
 
           </div>
 
-          <div id="sermon" class="w3-container event w3-animate-opaevent">
+          <div id="sermon" class="w3-container event w3-animate-left">
             <div class="row">
               <div class="col-md-3">
                 <div class=" w3-border">
@@ -180,17 +173,19 @@ li{
             </div>
           </div>
 
-          <div id="castMessage" class="w3-container  event w3-animate-zoom">
+          <div id="castMessage" class="w3-container  event w3-animate-left">
             <div class="row">
               <div class="col-md-8">
                 <form action="">
-                  <label for="sel1">Select list:</label>
-                    <select class="form-control" id="sel1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                    </select>
+                  <div class="form-group">
+                  <label for="groupId">Select Receiver</label>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId">
+                    <option data-tokens="ketchup mustard">CET</option>
+                    <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                    <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                  </select>
+                  </div>
+
                   <div class="form-group">
                     <label for="title">Subject</label>
                     <input type="text" class="form-control" placeholder="Enter Title" id="email">
@@ -217,22 +212,32 @@ li{
               <div class="col-md-8">
                 <form action="">
                   <div class="form-group">
-                    <label for="title">Title:</label>
-                    <input type="text" class="form-control" placeholder="Enter Title" id="email">
+                  <label for="groupId">Select group</label>
+                  <select class="selectpicker form-control" id="groupId">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                  </select>
                   </div>
                   <div class="form-group">
-                    <label for="pwd">Date</label>
-                    <input type="date" class="form-control" placeholder="Enter Date" id="pwd">
+                  <label for="groupId">Person</label>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId">
+                    <option data-tokens="ketchup mustard">CET</option>
+                    <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                    <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                  </select>
                   </div>
                   <div class="form-group">
-                    <label for="Venue">Venue</label>
-                    <input type="text" class="form-control" placeholder="Entervenue" id="venue">
+                  <label for="groupId">Docket</label>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId">
+                    <option data-tokens="ketchup mustard">Chairman</option>
+                    <option data-tokens="mustard">Treasurer</option>
+                    <option data-tokens="frosting">Hospitality</option>
+                  </select>
                   </div>
-                  <div class="form-group">
-                    <label for="Summary">Summary</label>
-                  <textarea id="Summary" class="form-control" name="Summary" rows="3" cols="47" placeholder="something here"></textarea>
+                  <div class="w3-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
               </div>
 
@@ -263,8 +268,9 @@ li{
                     <label for="Venue">Venue</label>
                     <input type="text" class="form-control" placeholder="Entervenue" id="venue">
                   </div>
-
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <div class="w3-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -369,13 +375,15 @@ li{
                 <form action="">
                   <div class="form-group">
                     <label for="title">Theme</label>
-                    <input type="text" class="form-control" placeholder="Enter Title" id="email">
+                    <input type="text" class="form-control" placeholder="Enter Sem theme" id="email">
                   </div>
                     <div class="form-group">
                         <label for="bibleVerse">from</label>
                         <input type="text"  class="form-control" placeholder="" id="bibleVerse">
                     </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="w3-center">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </form>
               </div>
             </div>
@@ -390,28 +398,16 @@ li{
 
 		   include("includes/footer.php");
 		?>
-    <script>
-    function openEvent(evt, eventType) {
-      var i, x, tablinks;
-      x = document.getElementsByClassName("event");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < x.length; i++) {
-         tablinks[i].classList.remove("w3-red");
-      }
-      document.getElementById(eventType).style.display = "block";
-      evt.currentTarget.classList.add("w3-red");
-    }
-    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="js/superAdmin.js"></script>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
 
     <!-- (Optional) Latest compiled and minified JavaScript translation files -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/modalHide.js"></script>
 </body>
 
