@@ -64,11 +64,7 @@
 
               <!-- director pics -->
 
-              <div class="image align-self-center ml-auto order-2 ml-3">
-                    <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104509532/in/dateposted-public/" title="booban"><img style="height: 100px; " src="https://live.staticflickr.com/65535/49104509532_4c19dd89b7.jpg"alt="booban"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" target="_blank"></script></div>
-                    <div class="name-text align-self-center ml-auto order-1 text-right">
-                        <h2 class="heading">Simon Nyongesa</h2>
-                        <span class="meta">WESO</span>
+             
                     </div>
               <p><?= $eveTeam->text; ?></p>
             <?php endif; ?>
@@ -76,6 +72,36 @@
         </div>
       </div>
     </section>
+<!-- leader -->
+<h1 class="heading mb-4">Leadership</h1>
+
+<table class="table table-borderless table-hover">
+            <tr>
+                <th>Docket</th>
+                <th>Name</th>
+                <th>Contact</th>
+            </tr>
+            <tr>
+                <td>Director</td>
+                <td>Name Name</td>
+                <td>Contact  designs</td>
+            </tr>
+          </table>
+<!-- events -->
+<h1 class="heading mb-4">Activities</h1>
+
+<table class="table table-borderless table-hover">
+            <tr>
+                <th>Activity</th>
+                <th>Date</th>
+                <th>Summary</th>
+            </tr>
+            <tr>
+                <td>Acitvity 1</td>
+                <td>Date date</td>
+                <td>This is an Activity this is an activity</td>
+            </tr>
+          </table>
 
     <?php include 'includes/footer.php'; ?>
     <!-- END footer -->
