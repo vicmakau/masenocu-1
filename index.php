@@ -1,9 +1,14 @@
 <?php
 include("includes/header.php");
+
+$sql = "SELECT * FROM sermons ORDER BY date DESC LIMIT 3";
+$res = mysqli_query($db, $sql);
+$latest_sermons = [];
+if (mysqli_num_rows($res) > 0)
+  while ($row = mysqli_fetch_assoc($res))
+    array_push($latest_sermons, $row);
 ?>
 <!-- END header -->
-
-
 
 <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);">
   <div class="container">
@@ -33,15 +38,14 @@ include("includes/header.php");
         <div class="block-42-text">
           <div class="block-42-label">Latest Sermon:</div>
           <div class="block-42-title mx-2">
-            <a href="about.php"><strong>Confronting corruption</strong></a>
+            <a href="sermon-single.php?id=<?php echo $latest_sermons[0]['id']; ?>"><strong><?php echo $latest_sermons[0]['title']; ?></strong></a>
           </div>
-          <div class="block-42-meta">Posted on November 10, 2018, <strong>Elly Ochieng</strong> </div>
+          <div class="block-42-meta">Posted on <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $latest_sermons[0]['date'])->format('F j, Y'); ?>, <strong><?php echo $latest_sermons[0]['speaker']; ?></strong> </div>
         </div>
         <div class="block-42-icons ml-auto">
-          <a href="#" class="fa fa-video-camera pl-0"></a>
-          <a href="#" class="fa fa-headphones"></a>
-          <a href="#" class="fa fa-cloud-download"></a>
-          <a href="#" class="fa fa-book"></a>
+          <a href="<?php echo $latest_sermons[0]['video']; ?>" class="fa fa-video-camera pl-0"></a>
+          <a href="<?php echo $latest_sermons[0]['audio']; ?>" class="fa fa-headphones"></a>
+          <a href="<?php echo $latest_sermons[0]['document']; ?>" class="fa fa-book"></a>
         </div>
 
       </div>
@@ -82,7 +86,7 @@ include("includes/header.php");
         <div class="block-43">
           <div class="block-43-icon">
             <!-- <span class="icon-wrapper"> -->
-              <span class="w3-xxlarge  fa fa-book text-primary"></span>
+            <span class="w3-xxlarge  fa fa-book text-primary"></span>
             <!-- </span> -->
 
           </div>
@@ -95,7 +99,7 @@ include("includes/header.php");
       <div class="col-md-6 col-lg-4 mb-5">
         <div class="block-43">
           <div class="block-43-icon ">
-            <div class="" id="hexagon" >
+            <div class="" id="hexagon">
               <span class="w3-xxlarge fa fa-user text-primary"></span>
             </div>
 
@@ -110,7 +114,7 @@ include("includes/header.php");
         <div class="block-43">
           <div class="block-43-icon">
             <!-- <span class="icon-wrapper"> -->
-              <span class="w3-xxlarge icon fa fa-heart text-primary"></span>
+            <span class="w3-xxlarge icon fa fa-heart text-primary"></span>
             <!-- </span> -->
 
           </div>
@@ -175,7 +179,7 @@ include("includes/header.php");
           </div>
         </div>
       </div>
-<!-- Hospitality ministry -->
+      <!-- Hospitality ministry -->
       <div class="item">
         <div class="block-20">
           <figure>
@@ -196,12 +200,12 @@ include("includes/header.php");
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">High School Ministry</a></h3>
-            <p>We want to help middle school and high school students thrive in  their spiritual journey.</p>
+            <p>We want to help middle school and high school students thrive in their spiritual journey.</p>
             <!-- <p><a href="#">Read More</a></p> -->
           </div>
         </div>
       </div>
-<!-- Instrumentalists -->
+      <!-- Instrumentalists -->
       <div class="item">
         <div class="block-20">
           <figure>
@@ -214,7 +218,7 @@ include("includes/header.php");
           </div>
         </div>
       </div>
-<!-- Sunday School -->
+      <!-- Sunday School -->
       <div class="item">
         <div class="block-20">
           <figure>
@@ -227,7 +231,7 @@ include("includes/header.php");
           </div>
         </div>
       </div>
-<!--  -->
+      <!--  -->
       <div class="item">
         <div class="block-20">
           <figure>
@@ -267,47 +271,21 @@ include("includes/header.php");
         <div class="section-heading mb-5">
           <h2 class="heading">Latest Sermons</h2>
         </div>
-        <div class="block-44 d-flex mb-3">
-          <div class="block-44-image"><img src="images/image_tall_1.jpg" alt="Image placeholder"></div>
-          <div class="block-44-text">
-            <h3 class="block-44-heading"><a href="#">Confronting corruption</a></h3>
-            <div class="block-44-meta">Posted on November 10th, 2019, Elly Ochieng</div>
-            <div class="block-44-icons">
-              <a href="#" class=""><span class="fa fa-video-camera"></span></a>
-              <a href="#" class=""><span class="fa fa-headphones"></span></a>
-              <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
-              <a href="#" class=""><span class="fa fa-book"></span></a>
-            </div>
-          </div>
-        </div>
 
-        <div class="block-44 d-flex mb-3">
-          <div class="block-44-image"><img src="images/image_tall_2.jpg" alt="Image placeholder"></div>
-          <div class="block-44-text">
-            <h3 class="block-44-heading"><a href="#">Humility</a></h3>
-            <div class="block-44-meta">Posted on November 8th, 2019, Shadrack Andido</div>
-            <div class="block-44-icons">
-              <a href="#" class=""><span class="fa fa-video-camera"></span></a>
-              <a href="#" class=""><span class="fa fa-headphones"></span></a>
-              <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
-              <a href="#" class=""><span class="fa fa-book"></span></a>
+        <?php foreach ($latest_sermons as $i => $sermon) : ?>
+          <div class="block-44 d-flex mb-3">
+            <div class="block-44-image"><img src="images/image_tall_<?php echo $i + 1; ?>.jpg" alt="Image placeholder"></div>
+            <div class="block-44-text">
+              <h3 class="block-44-heading"><a href="sermon-single.php?id=<?php echo $sermon['id']; ?>"><?php echo $sermon['title']; ?>]</a></h3>
+              <div class="block-44-meta">Posted on <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $sermon['date'])->format('F j, Y'); ?>, <?php echo $sermon['speaker']; ?></div>
+              <div class="block-44-icons">
+                <a href="<?php echo $sermon['video']; ?>" class="fa fa-video-camera"></a>
+                <a href="<?php echo $sermon['audio']; ?>" class="fa fa-headphones"></a>
+                <a href="<?php echo $sermon['document']; ?>" class="fa fa-book"></a>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="block-44 d-flex mb-3">
-          <div class="block-44-image"><img src="images/image_tall_3.jpg" alt="Image placeholder"></div>
-          <div class="block-44-text">
-            <h3 class="block-44-heading"><a href="#">Boundaries to Christian dating</a></h3>
-            <div class="block-44-meta">October 15th, Margaret Cokumu</div>
-            <div class="block-44-icons">
-              <a href="#" class=""><span class="fa fa-video-camera"></span></a>
-              <a href="#" class=""><span class="fa fa-headphones"></span></a>
-              <a href="#" class=""><span class="fa fa-cloud-download"></span></a>
-              <a href="#" class=""><span class="fa fa-book"></span></a>
-            </div>
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
       <div class="col-md-6 mb-5">
 
@@ -334,8 +312,6 @@ include("includes/header.php");
             <!-- <p><a href="#">Read More</a></p> -->
           </div>
         </div>
-
-
       </div>
     </div>
   </div>
@@ -351,63 +327,65 @@ include("includes/header.php");
         </div>
       </div>
     </div>
-<!-- begin -->
-      <div class="block-13">
-        <div class="nonloop-block-13 owl-carousel">
+    <!-- begin -->
+    <div class="block-13">
+      <div class="nonloop-block-13 owl-carousel">
 
-          <div class="item">
-              <div class="block-33">
-                <div class="text mb-5">
-                  <blockquote>
-                      <p>&rdquo; I've been a devoted Christian all along. Coming to this Christian union has been of great impact to my life. It has helped me keeping the zeal and containment in the Lord. Its a nice place for everyone to connect with God &ldquo;</p>
-                  </blockquote>
-                </div>
-                <div class="vcard d-flex">
-                  <div class="image align-self-center ml-auto order-2 ml-3">
-                    <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104509532/in/dateposted-public/" title="booban"><img src="https://live.staticflickr.com/65535/49104509532_4c19dd89b7.jpg"alt="booban"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" target="_blank"></script></div>
-                    <div class="name-text align-self-center ml-auto order-1 text-right">
-                        <h2 class="heading">Simon Nyongesa</h2>
-                        <span class="meta">WESO</span>
-                    </div>
-                  </div>
+        <div class="item">
+          <div class="block-33">
+            <div class="text mb-5">
+              <blockquote>
+                <p>&rdquo; I've been a devoted Christian all along. Coming to this Christian union has been of great impact to my life. It has helped me keeping the zeal and containment in the Lord. Its a nice place for everyone to connect with God &ldquo;</p>
+              </blockquote>
+            </div>
+            <div class="vcard d-flex">
+              <div class="image align-self-center ml-auto order-2 ml-3">
+                <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104509532/in/dateposted-public/" title="booban"><img src="https://live.staticflickr.com/65535/49104509532_4c19dd89b7.jpg" alt="booban"></a>
+                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" target="_blank"></script>
               </div>
-          </div>
-          <div class="item">
-            <div class="block-33">
-              <div class="text mb-5">
-                <blockquote>
-                  <p>&rdquo; A friend took me to the church. Thats when I met my salvation. By the grace of the Saviour Jesus christ, I acknowldge to be saved, and this is the place I keep growing my faith. I expect to grow more in faith as days goes by. Indeed thats my quest &ldquo;</p>
-                </blockquote>
-              </div>
-              <div class="vcard d-flex">
-                <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_1.jpg" alt="Person here" target="_blank"></div>
-                <div class="name-text align-self-center ml-auto order-1 text-right">
-                  <h2 class="heading">Maria Nkatha</h2>
-                  <span class="meta">CET</span>
-                </div>
+              <div class="name-text align-self-center ml-auto order-1 text-right">
+                <h2 class="heading">Simon Nyongesa</h2>
+                <span class="meta">WESO</span>
               </div>
             </div>
           </div>
-
-
-          <div class="item">
-            <div class="block-33">
-              <div class="text mb-5">
-                <blockquote>
-                  <p>&rdquo; The CU has given me confidence. I can testify Christ wherever I am. The missions and inreaches has helped me groW to another level. I have grown alot the way I associate with other people. Even outside church. I am not as I was before. &ldquo;</p>
-                </blockquote>
+        </div>
+        <div class="item">
+          <div class="block-33">
+            <div class="text mb-5">
+              <blockquote>
+                <p>&rdquo; A friend took me to the church. Thats when I met my salvation. By the grace of the Saviour Jesus christ, I acknowldge to be saved, and this is the place I keep growing my faith. I expect to grow more in faith as days goes by. Indeed thats my quest &ldquo;</p>
+              </blockquote>
+            </div>
+            <div class="vcard d-flex">
+              <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_1.jpg" alt="Person here" target="_blank"></div>
+              <div class="name-text align-self-center ml-auto order-1 text-right">
+                <h2 class="heading">Maria Nkatha</h2>
+                <span class="meta">CET</span>
               </div>
-              <div class="vcard d-flex">
-                <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_2.jpg" alt="Person here"></div>
-                <div class="name-text align-self-center ml-auto order-1 text-right">
-                  <h2 class="heading">Vicky  Makau</h2>
-                  <span class="meta">UET</span>
-                </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <div class="block-33">
+            <div class="text mb-5">
+              <blockquote>
+                <p>&rdquo; The CU has given me confidence. I can testify Christ wherever I am. The missions and inreaches has helped me groW to another level. I have grown alot the way I associate with other people. Even outside church. I am not as I was before. &ldquo;</p>
+              </blockquote>
+            </div>
+            <div class="vcard d-flex">
+              <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_2.jpg" alt="Person here"></div>
+              <div class="name-text align-self-center ml-auto order-1 text-right">
+                <h2 class="heading">Vicky Makau</h2>
+                <span class="meta">UET</span>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </div>
 <!-- testimonials -->

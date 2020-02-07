@@ -6,7 +6,6 @@
         <div class="row">
           <div class="col-md-6">
             <ul class="list-unstyled">
-            
                   <li><a href="ministry.php?id=mit">Media and IT</a></li>
                   <li><a   href="ministry.php?id=praise">Praise and Worship  </a></li>
                   <li><a   href="ministry.php?id=creative">Creative Ministry</a></li>
@@ -17,14 +16,11 @@
                   <li><a   href="ministry.php?id=intercessory">Intercessory</a></li>
                   <hr width="100px">
                   <li><a href="about.php">About Us</a></li>
-
             </ul>
-
             <!-- adding eve teams quick links -->
 
           </div>
           <div class="col-md-4">
-                
                 <ul class="list-unstyled">
                       <li><a  href="eveteams.php?id=weso">WESO</a> </li>
                       <li><a  href="eveteams.php?id=net">NET</a> </li>
@@ -35,14 +31,9 @@
                       <li><a  href="eveteams.php?id=mceta">MCETA</a></li>
                       <li><a  href="eveteams.php?id=soret">SORET</a></li>
                       <hr width="100px">
-
                       <li><a href="contact.php">Contact</a></li>
-
-
                 </ul>
               </div>
-
-          
         </div>
       </div>
 
@@ -71,12 +62,9 @@
     </div>
     <div class="row pt-5">
       <div class="col-md-12 text-center copyright">
-
         <p class="float-md-left">
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;<script>
-            document.write(new Date().getFullYear());
-          </script> All rights reserved | This site was created and is maintained <i class="fa fa-heart" aria-hidden="true"></i> by <a target="_blank" class="text-primary">Maseno CU Media and IT dept. 2019.</a>
+          Copyright &copy;<?php echo date('Y'); ?> All rights reserved | This site was created and is maintained with <i class="fa fa-heart" aria-hidden="true"></i> by <a target="_blank" class="text-primary">Maseno CU Media and IT dept.</a>
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
         <p class="float-md-right">
