@@ -1,14 +1,18 @@
-<?php 
+<?php
       include 'includes/header.php';
     ?>
 <!-- Body -->
 <div class="form-1">
 <div class="right">
             <div class="banner">
-                <span class="sign-up-banner">Sign In</span>
-                <span class="sign-in-banner">
-                   <a href="sign-up.php">Sign up</a>
+                <span class="sign-in-banner-2">
+                  <a href="login.php">Sign In</a>
+
                 </span>
+                <span class="sign-up-banner-2">
+                  <a href="sign-up.php">Sign up</a>
+                </span>
+
             </div>
             <br>
             <div class="header-label">
@@ -18,7 +22,7 @@
                 <span class="sign-in-text-or">or</span>
                 <span  class="sign-in-text">Sign Up</span>
             </div>
-            
+
 
             <div class="forms">
                 <label class="label">EMAIL</label><br>
@@ -30,19 +34,19 @@
                  <label class="label">COFIRM PASSWORD</label><br>
                  <input class="text-area" type="password" placeholder="re-type you password to comfirm"> <br>
             </div>
-            
+
             <div class="refuses">
                 <button style="color: white" class="btn btn-primary-white py-3 px-5">Sign Up</button>
                 <span class="text-final">
                 <a href="login.php">I have an account</a>
                 </span>
-            
+
             </div>
- 
+
         </div>
   </div>
 <?php
-//  include 'includes/footer.php'; 
+//  include 'includes/footer.php';
  ?>
     <!-- END footer -->
 
