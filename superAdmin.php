@@ -99,25 +99,33 @@
                 </div>
               </div>
               <div class="col-md-8">
-                <form action="">
+                <form action="includes/connection.php" method="post">
                   <div class="form-group">
                     <label for="title">Title:</label>
-                    <input type="text" class="form-control" placeholder="Enter Title" id="email">
+                    <input type="text" name="activityTitle" class="form-control" placeholder="Enter Title" id="email" required>
                   </div>
                   <div class="form-group">
                     <label for="pwd">Date</label>
-                    <input type="date" class="form-control" placeholder="Enter Date" id="pwd">
+                    <input type="date" name="activityDate" class="form-control" placeholder="Enter Date" id="pwd" required>>
+                  </div>
+                  <div class="form-group">
+                  <label for="groupId">Select group</label>
+                  <select class="selectpicker form-control" name="activityCategory" id="groupId">
+                    <option value="Christian Union">Christian Union</option>
+                    <option value="Eve Teams">Eve Teams</option>
+                    <option value="Ministry">Ministry</option>
+                  </select>
                   </div>
                   <div class="form-group">
                     <label for="Venue">Venue</label>
-                    <input type="text" class="form-control" placeholder="Entervenue" id="venue">
+                    <input type="text" class="form-control" name="activityVenue"placeholder="Entervenue" id="venue" required>
                   </div>
                   <div class="form-group">
                     <label for="Summary">Summary</label>
-                  <textarea id="Summary" class="form-control" name="Summary" rows="3" cols="47" placeholder="something here"></textarea>
+                  <textarea id="Summary" class="form-control" name="activitySummary" rows="3" cols="47" placeholder="something here" required></textarea>
                   </div>
                   <div class="w3-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" name="activity" class="btn btn-primary">Submit</button>
                   </div>
                 </form>
               </div>
@@ -133,38 +141,46 @@
                 </div>
               </div>
               <div class="col-md-8">
-                <form action="">
+                <form action="includes/connection.php" method="post">
                   <div class="form-group">
                     <label for="title">Title:</label>
-                    <input type="text" class="form-control" placeholder="Enter Title" id="email">
+                    <input type="text" name="sermonTitle" class="form-control" placeholder="Enter Title" id="email" required>
                   </div>
                   <div class="form-group">
                     <label for="pwd">Date</label>
-                    <input type="date" class="form-control" placeholder="Enter Date" id="pwd">
+                    <input type="date" name="sermonDate"  class="form-control" placeholder="Enter Date" id="pwd" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Time</label>
+                    <input type="time" name="sermonTime"  class="form-control" placeholder="Enter Date" id="pwd" required>
                   </div>
                   <div class="form-group">
                     <label for="Venue">Venue</label>
-                    <input type="text" class="form-control" placeholder="Entervenue" id="venue">
+                    <input type="text"  name="sermonVenue"  class="form-control" placeholder="Entervenue" id="venue" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="Speaker">Speaker</label>
+                    <input type="text" required name="sermonSpeaker"  class="form-control" placeholder="Entervenue" id="venue" required>
                   </div>
                   <div class="form-group">
                     <label for="audio">Audio url</label>
-                    <input type="text" class="form-control" placeholder="Enter audio url" id="audio">
+                    <input type="text"  name="sermonAudio" class="form-control" placeholder="Enter audio url" id="audio">
                   </div>
                   <div class="form-group">
                     <label for="Video">Video url</label>
-                    <input type="text" class="form-control" placeholder="Enter Video url" id="Video">
+                    <input type="text" name="sermonVideo"  class="form-control" placeholder="Enter Video url" id="Video">
                   </div>
                   <div class="form-group">
                     <label for="pdf">Pdf url</label>
-                    <input type="text" class="form-control" placeholder="Enter pdf url" id="pdf">
+                    <input type="text" name="sermonDocument"  class="form-control" placeholder="Enter pdf url" id="pdf">
                   </div>
                   <div class="form-group">
                     <label for="Summary">Summary</label>
-                  <textarea id="Summary" class="form-control" name="Summary" rows="3" cols="47" placeholder="something here"></textarea>
+                  <textarea id="Summary"  class="form-control" name="sermonSummarry"  rows="3" cols="47" placeholder="something here" required></textarea>
                   </div>
                   <div class="w3-center">
                     <button type="" class="btn btn-primary">Preview</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit"name="sermon" class="btn btn-primary">Submit</button>
                   </div>
 
                 </form>
@@ -179,10 +195,9 @@
                 <form action="">
                   <div class="form-group">
                   <label for="groupId">Select Receiver</label>
-                  <select class="selectpicker form-control" data-live-search="true" id="groupId">
-                    <option data-tokens="ketchup mustard">CET</option>
-                    <option data-tokens="mustard">Burger, Shake and a Smile</option>
-                    <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId" multiple>
+                    <option data-tokens="ketchup mustard">Members</option>
+                    <option data-tokens="mustard">Leaders</option>
                   </select>
                   </div>
 
