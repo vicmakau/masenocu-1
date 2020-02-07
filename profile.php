@@ -78,8 +78,29 @@
 
         </div>
         <div class="w3-center mt-5">
-          <a class="nav-link " href="login.php"><button  class="btn btn-outline-info w-25 btnStyle"  > Edit </button></a>
+          <a class="nav-link " href="login.php"><button  class="btn btn-outline-info w-25 btnStyle"  > Edit Profile </button></a>
         </div>
+        <hr>
+
+        <!-- collapse for testmial -->
+
+                    <p>
+                <button class="btn btn-outline-info w-25 btnStyle" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Add Testimonial
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <form class="form">
+              <div class="form-group">
+                <label for="testimonial">Testimonial</label>
+                <textarea class="form-control" name="testimonial" id="testimonial" cols="20" rows="5">
+                </textarea>
+              </div>
+              <button class="btn btn-outline-info w-25 btnStyle" type="submit" >Submit</button>
+              </form>
+
+          </div>
+        <!-- collapse ends herer -->
 
       </div>
     </div>
@@ -87,4 +108,19 @@
     </div>
 
   </div>
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+    <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+    <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.0.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+
+<script src="js/main.js"></script>
 </body>

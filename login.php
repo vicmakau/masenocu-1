@@ -31,7 +31,7 @@
             <div class="refuses">
                 <button style="color: white"  class="btn btn-primary-white py-3 px-5">Sign In</button>
                 <span class="text-final">
-                  <a href="sign-up.php">I am already a member</a>
+                  <a href="sign-up.php">I dont have an account</a>
                 </span>
             
             </div>
