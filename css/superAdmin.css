@@ -1,0 +1,21 @@
+.event {display:none;}
+li{
+  list-style-type: none;
+}
+.activity-image {
+ width: 100px
+}
+.super-admin-body{
+background-color:#C8C8C8;
+}
+.div-holder{
+  margin-bottom:110px;
+}
+.tab-View{
+  margin:50px;
+   padding: 50px;
+   background:#E2E2E2;
+}
+.tablink:hover{
+  cursor: pointer;
+}

@@ -1,3 +1,8 @@
+<?php 
+  $db = mysqli_connect('localhost', 'root', '', 'masenocu_db', '3306'); 
+  $sql = "SELECT id FROM sermons ORDER BY date DESC LIMIT 1";
+  $latest_sermon_id = mysqli_fetch_assoc(mysqli_query($db, $sql))['id'];
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,11 +22,10 @@
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/pagination.css">
     <!-- separate css for table -->
     <link rel="stylesheet" href="css/sign.css">
-    <!-- separate css for login and sigup -->
-    lin
-
+    <!-- separate css for login and signup -->
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
@@ -78,8 +82,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="sermon.php" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sermons</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="sermon.php">Previous Sermon</a>
-                  <a class="dropdown-item" href="sermon.php">Other past sermons</a>
+                  <a class="dropdown-item" href="sermon-single.php?id=<?php echo $latest_sermon_id; ?>">Latest Sermon</a>
+                  <a class="dropdown-item" href="sermon.php">Past Sermons</a>
                 </div>
 
               </li>
