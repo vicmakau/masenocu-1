@@ -1,3 +1,6 @@
+<?php
+include 'includes/connection.php';
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -196,8 +199,8 @@
                   <div class="form-group">
                   <label for="groupId">Select Receiver</label>
                   <select class="selectpicker form-control" data-live-search="true" id="groupId" multiple>
-                    <option data-tokens="ketchup mustard">Members</option>
-                    <option data-tokens="mustard">Leaders</option>
+                    <option data-tokens="Members">Members</option>
+                    <option data-tokens="Leaders">Leaders</option>
                   </select>
                   </div>
 
@@ -225,33 +228,48 @@
                 </div>
               </div>
               <div class="col-md-8">
-                <form action="">
+                <form action="includes/connection.php" method="post">
                   <div class="form-group">
                   <label for="groupId">Select group</label>
-                  <select class="selectpicker form-control" id="groupId">
-                    <option>Mustard</option>
-                    <option>Ketchup</option>
-                    <option>Relish</option>
+                  <select class="selectpicker form-control" id="groupId"  name="leaderGid">
+                    <?php
+                    $groupquery = "SELECT * FROM `groups`";
+                    $group_result = $conn->query($groupquery);
+                    if ($group_result->num_rows > 0) :
+                        while($group_row = $group_result->fetch_assoc()) :?>
+                        <option data-tokens="" value="<?= $group_row['id'] ?>"><?= $group_row['name'] ?></option>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
                   </select>
                   </div>
                   <div class="form-group">
                   <label for="groupId">Person</label>
-                  <select class="selectpicker form-control" data-live-search="true" id="groupId">
-                    <option data-tokens="ketchup mustard">CET</option>
-                    <option data-tokens="mustard">Burger, Shake and a Smile</option>
-                    <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId"  name="leaderMId">
+                    <?php
+                    $userquery = "SELECT * FROM `members`";
+                    $user_result = $conn->query($userquery);
+                    if ($user_result->num_rows > 0) :
+                        while($user_row = $user_result->fetch_assoc()) :?>
+                        <option data-tokens="" value="<?= $user_row['id'] ?>"><?= $user_row['email'] ?></option>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
+
                   </select>
                   </div>
                   <div class="form-group">
                   <label for="groupId">Docket</label>
-                  <select class="selectpicker form-control" data-live-search="true" id="groupId">
-                    <option data-tokens="ketchup mustard">Chairman</option>
-                    <option data-tokens="mustard">Treasurer</option>
-                    <option data-tokens="frosting">Hospitality</option>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId" name="leaderDocket">
+                    <option data-tokens="" value="chairman">Chairman</option>
+                    <option data-tokens="" value="treasurer">Treasurer</option>
+                    <option data-tokens="" value="hospitality">Hospitality</option>
                   </select>
                   </div>
                   <div class="w3-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" name="Leaders" class="btn btn-primary">Submit</button>
                   </div>
                 </form>
               </div>
@@ -333,45 +351,33 @@
                       <th>Admin</th>
                     </tr>
                     </thead>
-                    <tr>
-                      <td id="uploadBy">Jill</td>
-                      <td id="message"> Lorem ipsum dolor sit amet, consectetur  </td>
-                      <td id="">
-                        <form class="form" action="" method="post">
-                         <div class="w3-center">
-                           <button class="w3-btn w3-white w3-border w3-border-green  w3-round-xlarge">Allow</button>
-                           <button class="w3-btn w3-white w3-border w3-border-red   w3-round-xlarge">Discard</button>
-                         </div>
-                        </form>
 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td id="uploadBy">Jill</td>
-                      <td id="message"> Lorem ipsum dolor sit amet, consectetur  </td>
-                      <td id="">
-                        <form class="form" action="" method="post">
-                         <div class="w3-center">
-                           <button class="w3-btn w3-white w3-border w3-border-green  w3-round-xlarge">Allow</button>
-                           <button class="w3-btn w3-white w3-border w3-border-red   w3-round-xlarge">Discard</button>
-                         </div>
-                        </form>
+                      <?php
+                      $testimonialquery =  "SELECT members.first_name ,testimonials.message , testimonials.id FROM `testimonials` INNER JOIN  members ON members.id=testimonials.member_id";
+                      $testimonial_result = $conn->query($testimonialquery);
+                      // include 'includes/connection.php';
 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td id="uploadBy">Jill</td>
-                      <td id="message"> Lorem ipsum dolor sit amet, consectetur  </td>
-                      <td id="">
-                        <form class="form" action="" method="post">
-                         <div class="w3-center">
-                           <button class="w3-btn w3-white w3-border w3-border-green  w3-round-xlarge">Allow</button>
-                           <button class="w3-btn w3-white w3-border w3-border-red   w3-round-xlarge">Discard</button>
-                         </div>
-                        </form>
+                      if ($testimonial_result->num_rows > 0) :
+                          while($testimonial_row = $testimonial_result->fetch_assoc()):
+                            testimonial($testimonial_row['id'])
+                             ?>
+                             <tr>
+                          <td id="uploadBy"><?= $testimonial_row['first_name'] ?></td>
+                          <td id="message"><?= $testimonial_row['message'] ?>  </td>
+                          <td id="">
+                            <form class="form" action="includes/connection.php" method="post">
+                             <div class="w3-center">
+                               <button type="button" onclick="alert('<?php echo "allow".$testimonial_row['id']; ?>)" name="<?php echo "allow".$testimonial_row['id']; ?>" class="w3-btn w3-white w3-border w3-border-green  w3-round-xlarge">Allow</button>
+                               <button type="button" name="<?php echo "discard".$testimonial_row['id']; ?>" class="w3-btn w3-white w3-border w3-border-red  w3-round-xlarge">Discard</button>
+                             </div>
+                            </form>
+                          </td>
+                        </tr>
+                      <?php
+                      endwhile;
+                      endif;
+                      ?>
 
-                      </td>
-                    </tr>
                     </table>
               </div>
 
@@ -387,17 +393,21 @@
                 </div>
               </div>
               <div class="col-md-8">
-                <form action="">
+                <form action="includes/connection.php" method="post">
                   <div class="form-group">
                     <label for="title">Theme</label>
-                    <input type="text" class="form-control" placeholder="Enter Sem theme" id="email">
+                    <input type="text" name="semTheme" class="form-control" placeholder="Enter Semesters theme" id="email" required>
                   </div>
                     <div class="form-group">
                         <label for="bibleVerse">from</label>
-                        <input type="text"  class="form-control" placeholder="" id="bibleVerse">
+                        <input type="text" name="verse" class="form-control" placeholder="From bible verse" id="bibleVerse" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="semester">Semester</label>
+                        <input type="text" name="semester" class="form-control" placeholder="SEM 2 2020" id="semester" required>
                     </div>
                     <div class="w3-center">
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="submit"  name="theme" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
               </div>

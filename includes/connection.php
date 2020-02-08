@@ -22,7 +22,7 @@ if(isset($_POST['activity'])){
   } else {
       echo "Error: " . $sql . "<br>" . $conn->error;
   }
-  $conn->close();
+  // $conn->close();
 }
 // sermon php
 
@@ -47,11 +47,71 @@ if(isset($_POST['sermon'])){
   } else {
       echo "Error: " . $sermonsql . "<br>" . $conn->error;
   }
-  $conn->close();
+  // $conn->close();
 }
 
+// Leadership
+if(isset($_POST['Leaders'])){
+    $leaderGid=$_POST['leaderGid'];
+    $leaderMId=(int)$_POST['leaderMId'];
+    $leaderDocket=$_POST['leaderDocket'];
+  $leadersql = "INSERT INTO `leaders`( `docket`, `member_id`, `group_id`)
+  VALUES ('$leaderDocket',$leaderMId,$leaderGid)";
+
+  if ($conn->query($leadersql) === TRUE) {
+      header('location:../superAdmin.php');
+  } else {
+      echo "Error: " . $leadersql . "<br>" . $conn->error;
+  }
+  // $conn->close();
+}
+
+    function testimonial($idn){
+      $conne = new mysqli('localhost', 'root', '', 'masenocu_db');
+      // Check connection
+
+      if ($conne->connect_error) {
+          die("Connection failed: " . $conne->connect_error);
+      }
+     $approve="allow".$idn;
+     $disapprove="discard".$idn;
+     // var_dump($conne);
+     if(isset($_POST[$approve])){
+     $sql = "UPDATE `testimonials` SET `state`='allowed' WHERE `id`='$idn' ";
+     if ($conne->query($sql) === TRUE) {
+       header('location:../superAdmin.php');
+     } else {
+         echo "Error updating record: " . $conne->error;
+         }
+       }else if(isset($_POST[$disapprove])){
+         $sql = "DELETE FROM `testimonials` WHERE `id`='$idn' ";
+           if ($conne->query($sql) === TRUE) {
+             $message = "You have succesfully updated";
+               echo "<script type='text/javascript'>alert('$message');</script>";
+           }else {
+               echo "Error updating record: " . $conne->error;
+           }
+           }
+       }
 
 
+       // semester theme
 
+   if(isset($_POST['theme'])){
+     $theme=$_POST['semTheme'];
+     $verse=$_POST['verse'];
+     $semester=$_POST['semester'];
+     $themesql = "INSERT INTO `semester_theme`(`theme`, `bible_verse`, `semester`) VALUES ('$theme','$verse','$semester')";
+
+     if ($conn->query($themesql) === TRUE) {
+       // echo "added succesfully";
+         header('location:../superAdmin.php');
+         echo "<script type='text/javascript'>alert('successfully posted');</script>";
+
+     } else {
+         echo "Error: " . $themesql . "<br>" . $conn->error;
+     }
+     // $conn->close();
+   }
 
  ?>
