@@ -31,20 +31,20 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div style="background-color:#6c5b7b;" class="block-45">
-      <div class="container">
-        <div class="row">
-          <div style = "text-align:center;">
-            <h3 style = "color:white;text-align:center; "> Maseno University Christian Union </h3> 
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Collapsible sermon notification panel -->
+       <!-- end collapsible panel -->
+    
     <header role="banner">
 
-      <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand absolute" href="index.php"><img src = "images/cu.png"/>  </a>
+      <nav style="float: left;"class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <div style="margin: 0px; padding; 0px; width: 100%;" class="container">
+          <a class="navbar-brand absolute" href="index.php">
+            <img src = "images/cu.png"/> 
+          </a>
+          <h3 style = "color:rgb(16, 43, 48);  text-align:center; margin-top: 10px; "> 
+            Maseno  University Christian Union 
+          </h3> 
+
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -58,7 +58,7 @@
                 <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" aria-haspopup="true" aria-expanded="false">Ministries</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="ministry.php?id=mit">Media and IT</a>
-                  <a class="dropdown-item" href="ministry.php?id=mit">Praise and Worship  </a>
+                  <a class="dropdown-item" href="ministry.php?id=praise">Praise and Worship </a>
                   <a class="dropdown-item" href="mministry.php?id=creative">Creative Ministry</a>
                   <a class="dropdown-item" href="ministry.php?id=hospitality">Hospitality</a>
                   <a class="dropdown-item" href="ministry.php?id=instrumentalist">Instrumentalist</a>
@@ -75,7 +75,7 @@
                   <a class="dropdown-item" href="eveteams.php?id=mubet">MUBET</a>
                   <a class="dropdown-item" href="eveteams.php?id=cet">CET</a>
                   <a class="dropdown-item" href="eveteams.php?id=noret">NORET</a>
-                  <a class="dropdown-item" href="eveteams.php?id=mceta">MCETA</a>
+                  <a class="dropdown-item" href="eveteams.php?id=emuseta">EMUSETA</a>
                   <a class="dropdown-item" href="eveteams.php?id=soret">SORET</a>
               </li>
 
@@ -107,6 +107,7 @@
       </nav>
     </header>
     </div>
+
     <!-- <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
     <script src="js/popper.min.js"></script>
