@@ -54,7 +54,7 @@
 
               <!-- prompt user login will come soon -->
                      
-            <li><a onclick="alert('You wil be able to log in soon')"><span class="icon ion-android-lock"></span><span class="text">LogIn</span></a></li>
+            <li><a href="login.php"><span class="icon ion-android-lock"></span><span class="text">LogIn</span></a></li>
           </ul>
           </ul>
         </div>
@@ -64,7 +64,7 @@
       <div class="col-md-12 text-center copyright">
         <p class="float-md-left">
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;<?php echo date('Y'); ?> All rights reserved | This site was created and is maintained with <i class="fa fa-heart" aria-hidden="true"></i> by <a target="_blank" class="text-primary">Maseno CU Media and IT dept.</a>
+          Copyright &copy;<?php echo date('Y'); ?> All rights reserved | This site was created and is maintained with <i class="fa fa-heart" aria-hidden="true"></i> by <a target="_blank" class="text-primary">Maseno CU Media and IT Ministry.</a>
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
         <p class="float-md-right">

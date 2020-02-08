@@ -1,10 +1,25 @@
 .right
 {
+    -webkit-transition-duration: 0.5s; Safari 
+    transition-duration: 0.5s;
     width: 50%;
   background-color: rgb(16, 43, 48);
   padding: 25px 40px;
   overflow: auto;
   margin: auto;
+  margin-top: 50px;
+
+}
+.right:hover
+{
+    width: 50%;
+  background-color: rgb(16, 43, 48);
+  padding: 25px 40px;
+  overflow: auto;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 0px 3px 10px #000000;
+  border-radius: 15px;
 }
 
 .logo-text{
@@ -162,6 +177,14 @@ color: #616E7F;
 font-size: larger;
 border-bottom: 1px solid #4a8385;
  cursor:  pointer;
+}
+.text-final1
+{
+    margin-left: 20px;
+    font-weight: 100;
+    color: #616E7F;
+    font-size: larger;
+    cursor:  pointer;  
 }
 .footer1
 {

@@ -19,8 +19,7 @@ if (mysqli_num_rows($res) > 0)
           <div class="block-17"> <br><br>
             <h1 class="heading mb-4">Living For God.</h1>
             <h1 class="heading mb-4">Ephesians 4:21-24</h1>
-            <!-- <div class="lead">Ephesians 4:21-24 </div><br> -->
-            <p><a href="about.php" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <br> <a href="" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
+              <p><a href="about.php" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <br> <a href="" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
 
           </div>
         </div>

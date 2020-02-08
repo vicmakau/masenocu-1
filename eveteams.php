@@ -5,7 +5,8 @@
       "soret" => "South Rift Evangelical Team",
       "cet" => "Central Evangelical Team",
       "uet" => "Uttermost Evangelistic Team",
-      
+      "mubet" => "Mid Eastern United Brethren Evangelistic Team",
+      "mseta" => "Eastern Movement Student Association",
    );
 
     // Read eveTeams.json
@@ -24,8 +25,8 @@
             <div class="mb-5 element-animate">
               <div class="block-17">
                 <h1 class="heading mb-4">Evangelistic Teams</h1>
-                <div class="lead">Eveangelical Teams are subgroups of the Maseno University Chrisian Union from specific reagions all over the country</div> 
-                <div class="lead">Main aim is to spread the word of God into the ethnoc regions where the members comes from. This proves to be verry effective</div>
+                <div class="lead">Eveangelistic Teams are subgroups of the Maseno University Chrisian Union from specific reagions all over the country</div> 
+                <div class="lead">Main aim is to spread the word of God into the ethnic regions where the members comes from. This proves to be very effective</div>
               </div>
               </div>
             </div>

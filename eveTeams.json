@@ -13,13 +13,7 @@
         "intro": "Lorem Ipsum.",
         "text": "Lorem Ipsum Dolar sit Amet"
     },
-    "noret": {
-        "name": "North Rift Evangelical Team",
-        "logo": "",
-        "image": "",
-        "intro": "Lorem Ipsum",
-        "text": "Lorem Ipsum Dolla sit amet"
-    },
+    
     "soret": {
         "name": "South Rift Evangelical Team",
         "logo": "",
@@ -28,6 +22,7 @@
 
         "text": " As  Christians we have been created for good works ,but more often than not we fall below the standard.Paul dealt with the same issue among the Galatian Christians. He guides them on how to become fruit -bearing Christians .Let us see how we as Christians in our contemporary society can keep in step with the spirit and thereby become fruit-bearing Christian \n Galatians 5:1-6 \n 1. (a.) According to VS 4 how is it possible to fall away from the grace? \n (b) In this regard what advice does Paul give in verse 1(b) \n (C)From what have the Galatians been set free and for what reasons?  \n 2.Why will Christ be of no value  to those who follow the law? 3.Paul says that the only thing that counts is Faith expressing itself through love.What things in our life do we exalt above the fact of our salvation and how would Paul's teaching help us? THE DANGER. Galatians 5:7-15 4.Who and/or what is Paul warning the Galatians against? 5.watch out or you will be destroyed by each other \n verse 15.What do you understand by this statement ? What remedy does Paul give? 6.In what ways are people or groups of people acting as agitators,or using false persuasions to divert believers from the course of Christ? Regards , Brian kibet,  Discipleship Coordinator. God bless you all!! "
     },
+
     "cet": {
         "name": "Central Evangelical Team",
         "logo": "",
@@ -35,13 +30,27 @@
         "intro": "Lorem Ipsum",
         "text": "Lorem Ipsum Dolla sit amet"
     },
-    "emceta": {
-        "name": "Eastert Movement Student Association",
+
+    "mubet": {
+        "name": "Mid-eastern United Brethren Evangelistic Team",
         "logo": "",
         "image": "",
-        "intro": "Lorem Ipsum",
-        "text": "Lorem Ipsum Dolla sit amet"
+        "intro": "The regions covered include Meru, Tharaka Nithi, Isiolo, Laikipia and Marsabit. Our Vision is To know God and make Him known and our mission is winning souls to christ, disciplining them and commissioning them. MUBET  is made up of 11 dockets and each docket is led by a director and all directors make up MUBET executive committee.",
+        "text": "UBET consist of the following ministries: Hospitality, Choir, Praise and Worship, Intercessory,instrumentalist and media & IT. Each ministry is led by a docket head who works in hand with the director. Apart from the docket heads each class has two directors who cordinate them during their activities. The docket heads and class directors all form MUBET subcom. As a family we are united together by love and our objective is Evangelism, missions and leadership training. We ussually have semester activities such as Hikes, coffee night, first years orientation and missions. As a Family we usually have our prayers on Thursday as from 6-7pm in M9 and our Fellowship on Saturday as from 6:30-8:30pm in M7 where we meet praise, worship,pray and hear the word of God."
     },
+
+    "emuseta": {
+        "name": "Eastern Movement Student Association",
+        "logo": "",
+        "image": "",
+        "intro": "We parts of Embu county in whole",
+        "text": "The eveteam usually meets on Thursday for prayers as from 6:30-7:30 and on Saturday for fellowship as from 6-8:30 pmThe eveteam slogan is GO YE. Emuseta has 9 dockets, Chairperson who is the overall leader of the eveteam, Vice chairperson who is in charge of disciplinary issues of the eveteam, he/she is also in charge of time and oversees the issue of instruments. Prayer secretary organises eve team prayers, prayer kesha and prayer retreat and also works hand in hand with other prayer coordinators. Mission coordinator organises mission and inreaches for the family. Board director in charge of all the board ministers. Treasurer the custodian of the eve team money. Secretary, she is the mam of the family, makes and passes notices to members and takes minutes in meetings. Vice secretary, works hand in hand with the secretary. Hospitality director she is the mam of the family, arranges for eve team meetings, prepares budget and eveteam meals during bonding and AGMs and provides water for the speaker."
+    },
+
+
+
+
+
     "noret": {
         "name": "North Rift Evangelical Team",
         "logo": "",
@@ -53,8 +62,8 @@
         "name": "Uttermost Evangelistic Team",
         "logo": "",
         "image": "",
-        "intro": "Most of the areas it majorly cover is the coastal regions and Eastern regios in the Ukambani areas",
-        "text": "Motto: Here I am send me lord ( Isaiah 6:8)Vision: A leader in transforming the lives of people in Kenya by holistic gospel of Christ through the power of the Holy spirit.Area it encompasses; UET is uttermost I.e it is not limited to specific areas but takes the gospel of Christ to whatever areas that the Holy spirit will lead.most of the areas it majorly cover is the coastal regions and Eastern regios in the Ukambani areas. Meetings: UET maseno branch usually have their meetings as follows √.Saturday- main fellowship √Thursday- prayer and fasting day√Sunday- under avocado tree after first service√. Any other day that the CU will fix for the family to meet for ongoing cu prayersActivities:1.EVANGELISM2. Prayers and fasting3. Keshas ( worship experience and prayer keshas)4. Family bonding andHikes5.CU activities (ALL)LEADERS.NAME.                  DOCKET1.Fred obach.           Chairperson2. Stephen mutuku.    Vice Chair3. Richard osanyo.   Secretary4. Mercy Manthi.      V.secretary5. Real mwinzi.        Treasure6. Felix Mutiso.        missions coord7.Ezekiel kaso.      Discipleship Coord8.Joshua kyalo.    Players coord. Serah mutethya.  Hospitality director"
+        "intro": "Most of the areas it majorly cover is the coastal regions and Eastern regions in the Ukambani areas Our motto: Here I am send me lord ( Isaiah 6:8) ",
+        "text": "Vision: A leader in transforming the lives of people in Kenya by holistic gospel of Christ through the power of the Holy spirit. Area it encompasses; UET is uttermost i.e it is not limited to specific areas but takes the gospel of Christ to whatever areas that the Holy spirit will lead. Most of the areas it majorly cover is the Coastal regions and Eastern regions in the Ukambani areas. UET maseno branch usually have their meetings as follows. Saturday- main fellowship. Thursday- prayer and fasting day. Sunday- under avocado tree after first service and any other day that the CU will fix for the family to meet for ongoing cu prayers. Activities includes Evangelism, Prayers and fasting, Keshas ( worship experience and prayer keshas), Family bonding and Hikes."
     }
 
 }    
