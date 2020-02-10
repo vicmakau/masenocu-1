@@ -1,6 +1,10 @@
-<?php 
-  $db = mysqli_connect('localhost', 'root', '', 'masenocu_db', '3306'); 
-  $sql = "SELECT id FROM sermons ORDER BY date DESC LIMIT 1";
+<?php session_start()?>
+<?php
+  $db = mysqli_connect('localhost', 'root', '', 'masenocu_db', '3306');
+  if (!$db) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+  $sql = "SELECT `id` FROM `sermons` ORDER BY `date` DESC LIMIT 1";
   $latest_sermon_id = mysqli_fetch_assoc(mysqli_query($db, $sql))['id'];
 ?>
 <!doctype html>
@@ -23,6 +27,7 @@
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="css/auth.css">
     <!-- separate css for table -->
     <link rel="stylesheet" href="css/sign.css">
     <!-- separate css for login and signup -->
@@ -33,17 +38,15 @@
   <body>
     <!-- Collapsible sermon notification panel -->
        <!-- end collapsible panel -->
-    
+
     <header role="banner">
 
       <nav style="float: left;"class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div style="margin: 0px; padding; 0px; width: 100%;" class="container">
           <a class="navbar-brand absolute" href="index.php">
-            <img src = "images/cu.png"/> 
+            <img src = "images/cu.png"/>
           </a>
-          <h3 style = "color:rgb(16, 43, 48);  text-align:center; margin-top: 10px; "> 
-            Maseno  University Christian Union 
-          </h3> 
+
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -96,10 +99,22 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact</a>
               </li>
-              
+              <?php
+              if(isset($_SESSION['user'])):?>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$_SESSION['user']?></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown05">
+                    <a class="dropdown-item" href="profile.php">Profile</a>
+                    <a class="dropdown-item" href="includes/logout.php">Logout</a>
+                  </div>
+                </li>
+            <?php  else:?>
               <li class="nav-item">
                 <a class="nav-link " href="login.php"><button  class="btn btn-outline-info" >Login</button></a>
               </li>
+            <?php  endif;?>
+
+
             </ul>
 
           </div>
