@@ -1,61 +1,89 @@
 <?php
       include 'includes/header.php';
     ?>
-<!-- Body -->
-<div class="form-1">
-<div class="right">
-            <div class="banner">
-                <span class="sign-in-banner-2">
-                  <a href="login.php">Sign In</a>
+<!-- body -->
 
-                </span>
-                <span class="sign-up-banner-2">
-                  <a href="sign-up.php">Sign up</a>
-                </span>
+<div class="row " style="margin-top:50px">
+  <div class="col-md-2"></div>
+
+  <div class="col-md-8">
+    <div class="form-1">
+    <div class="right">
+                <div class="banner">
+                    <span class="sign-in-banner-2">
+                      <a href="login.php">Sign In</a>
+
+                    </span>
+                    <span class="sign-up-banner-2">
+                      <a href="sign-up.php">Sign up</a>
+                    </span>
+
+                </div>
+                <br>
+                <div class="header-label">
+                    <span class="sign-up-text">
+                        <a href="login.php">Sign In</a>
+                     </span>
+                    <span class="sign-in-text-or">or</span>
+                    <span  class="sign-in-text">Sign Up</span>
+                </div>
+                <form class="form" action="includes/connection.php" method="post">
+                <div class="forms">
+                  <label class="label">FIRST NAME:</label><br>
+                   <input name="memberfirstname" class="text-area" type="text" placeholder="Enter your firstname" required> <br>
+                   <label class="label">LAST NAME:</label><br>
+                    <input name="memberlastname" class="text-area" type="text" placeholder="Enter your lastname" required> <br>
+                    <label class="label">EMAIL</label><br>
+                     <input name="memberemail" class="text-area" type="email" placeholder="eg example@masenocu.com" required> <br>
+                     <label class="label">PHONE</label><br>
+                     <input name="memberphone" class="text-area" type="text" placeholder="eg 07-12-345-678" required> <br>
+                     <div class="">
+                     <label for="groupId">YEAR OF STUDY</label><br>
+                     <select name="memberyos" class="selectpicker text-area" name="activityCategory" id="groupId" >
+                       <option value="1" style="color:black"  > FIRST YEAR</option>
+                       <option value="2" style="color:black"  >SECOND YEAR</option>
+                       <option value="3" style="color:black"  >THIRD YEAR</option>
+                       <option value="4" style="color:black"  >FOUTH YEAR</option>
+                     </select>
+                     </div>
+                     <label class="label">PASSWORD</label><br>
+                      <input type="password" class="text-area" id="psw" name="memberpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                      <div id="message">
+                       <h3>Password must contain the following:</h3>
+                       <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                       <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                       <p id="number" class="invalid">A <b>number</b></p>
+                       <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                     </div><br>
+                     <input type="checkbox" onclick="showPassword()">Show Password <br>
+                     <label class="label" >CONFIRM PASSWORD</label><br>
+                     <input class="text-area" name="memberCpassword" type="password" placeholder="re-type your password to comfirm" required> <br>
+                </div>
+
+                <div class="refuses">
+                    <button  type="submit" name="signup" style="color: white" class="btn btn-primary-white py-3 px-5">Sign Up</button>
+                    <span class="text-final">
+                    <a href="login.php">I have an account</a>
+                    </span>
+                </div>
+              </form>
 
             </div>
-            <br>
-            <div class="header-label">
-                <span class="sign-up-text">
-                    <a href="login.php">Sign In</a>
-                 </span>
-                <span class="sign-in-text-or">or</span>
-                <span  class="sign-in-text">Sign Up</span>
-            </div>
+      </div>
 
 
-            <div class="forms">
-                <label class="label">EMAIL</label><br>
-                 <input class="text-area" type="email" placeholder="eg example@masenocu.com"> <br>
-                 <label class="label">PHONE</label><br>
-                 <input class="text-area" type="text" placeholder="eg 07-12-345-678"> <br>
-                 <label class="label">PASSWORD</label><br>
-                 <input class="text-area" type="password" placeholder="use a strong passsword"> <br>
-                 <label class="label">COFIRM PASSWORD</label><br>
-                 <input class="text-area" type="password" placeholder="re-type you password to comfirm"> <br>
-            </div>
-
-            <div class="refuses">
-                <button style="color: white" class="btn btn-primary-white py-3 px-5">Sign Up</button>
-                <span class="text-final">
-                <a href="login.php">I have an account</a>
-                </span>
-
-            </div>
-
-        </div>
   </div>
-<?php
-//  include 'includes/footer.php';
- ?>
-    <!-- END footer -->
 
-    </div>
+  <div class="col-md-2">  </div>
+
+</div>
 
     <!-- loader -->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
         <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" />
+      </svg></div>
+<script type="text/javascript" src="js/auth.js"></script>
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>

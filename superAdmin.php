@@ -109,7 +109,11 @@ include 'includes/connection.php';
                   </div>
                   <div class="form-group">
                     <label for="pwd">Date</label>
-                    <input type="date" name="activityDate" class="form-control" placeholder="Enter Date" id="pwd" required>>
+                    <input type="date" name="activityDate" class="form-control" placeholder="Enter Date" id="pwd" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Time</label>
+                    <input type="time" name="activityTime" class="form-control" placeholder="Enter time" id="pwd" required>
                   </div>
                   <div class="form-group">
                   <label for="groupId">Select group</label>

@@ -1,49 +1,73 @@
-    <?php 
+    <?php
       include 'includes/header.php';
     ?>
 <!-- Body -->
-<div class="form-1">
-<div class="right">
-            <div class="banner">
-                <span class="sign-in-banner">Sign In</span>
-                <span class="sign-up-banner">
-                   <a href="sign-up.php">Sign up</a>
-                </span>
+<body class="mt-5">
+<div class="row">
+ <div class="col-md-2">
+ </div>
+  <div class="col-md-8">
+    <div class="right">
+      <div class="row">
+         <div class="col-md-7">
+          </div>
+           <div class="col-md-5">
+             <div class="banner">
+               <span class="sign-in-banner">Sign In</span>
+               <span class="sign-up-banner">
+                  <a href="sign-up.php">Sign up</a>
+               </span>
+               </div>
             </div>
-            <br>
-            <div class="header-label">
-                <span class="sign-in-text">Sign In </span>
-                <span class="sign-in-text-or">or</span>
-                <span class="sign-up-text">
-                <a href="sign-up.php">Sign Up</a>
-                </span>
-            </div>
-            
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="header-label">
+              <span class="sign-in-text">Sign In </span>
+              <span class="sign-in-text-or">or</span>
+              <span class="sign-up-text">
+              <a href="sign-up.php">Sign Up</a>
+              </span>
+          </div>
+        </div>
+        <div class="col-md-6">
 
-            <div class="forms">
-
-                 <label class="label">EMAIL/USER-NAME</label><br>
-                 <input class="text-area" type="email" placeholder="eg example@masenocu.com"> <br>
-                 <label class="label">PASSWORD</label><br>
-                 <input class="text-area" type="password" placeholder="use a strong passsword"> <br>
+        </div>
+      </div>
+     <div class="row">
+       <div class="col-md-8 col-xs-12">
+         <form  action="includes/connection.php" method="post">
+         <div class="forms">
+             <label class="label">EMAIL</label><br>
+             <input name="loginemail" class="text-area" type="email" placeholder="eg example@masenocu.com"> <br>
+             <label class="label">PASSWORD</label><br>
+             <input  name="loginpassword" class="text-area" type="password" placeholder="use a strong passsword"> <br>
+         </div>
+        </div>
+      </div>
+       <div class="row">
+         <div class="col-md-4 col-xs-12">
+           <div class="refuses">
+             <button type="submit" name="login" style="color: white"  class="btn btn-primary-white py-3 px-5">Sign In</button>
             </div>
-            
-            <div class="refuses">
-                <button style="color: white"  class="btn btn-primary-white py-3 px-5">Sign In</button>
-                <span class="text-final">
-                  <a href="sign-up.php">I dont have an account</a>
-                </span>
-            
-            </div>
- 
+         </div>
+         <div class="col-md-8  col-xs-12">
+           <span class="text-final">
+            <a href="sign-up.php">I dont have an account</a>
+           </span>
+          </div>
+        </div>
+   </form>
         </div>
   </div>
-<?php
-//  include 'includes/footer.php'; 
- ?>
-    <!-- END footer -->
+ <div class="col-md-2">
+ </div>
+</div>
+  <!-- <div class="form-1"> -->
 
-    </div>
+
+</body>
+
 
     <!-- loader -->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
