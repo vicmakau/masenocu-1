@@ -1,12 +1,5 @@
 <?php
 include("includes/header.php");
-
-$sql = "SELECT * FROM sermons ORDER BY date DESC LIMIT 3";
-$res = mysqli_query($db, $sql);
-$latest_sermons = [];
-if (mysqli_num_rows($res) > 0)
-  while ($row = mysqli_fetch_assoc($res))
-    array_push($latest_sermons, $row);
 ?>
 <!-- END header -->
 
@@ -17,10 +10,18 @@ if (mysqli_num_rows($res) > 0)
 
         <div class="mb-5 element-animate">
           <div class="block-17"> <br><br>
-            <h1 class="heading mb-4">Living For God.</h1>
-            <h1 class="heading mb-4">Ephesians 4:21-24</h1>
-              <p><a href="about.php" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <br> <a href="" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
-
+            <?php
+            $sem_sql = "SELECT * FROM `semester_theme` ORDER by time desc LIMIT 1";
+            $sem_result = mysqli_query($db, $sem_sql);
+            if (mysqli_num_rows($sem_result) > 0) :
+              while($sem_row = mysqli_fetch_assoc($sem_result)):?>
+            <h1 class="heading mb-4"><?= $sem_row['theme']?></h1>
+            <h1 class="heading mb-4"><?= $sem_row['bible_verse']?></h1>
+            <p><a href="about.php" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <br> <a href="" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
+            <?php
+          endwhile;
+          endif;
+          ?>
           </div>
         </div>
 
@@ -28,8 +29,13 @@ if (mysqli_num_rows($res) > 0)
     </div>
   </div>
 </section>
+<?php $sql = "SELECT * FROM sermons ORDER BY date DESC LIMIT 3";
+$res = mysqli_query($db, $sql);
+$latest_sermons = [];
+if (mysqli_num_rows($res) > 0)
+  while ($row = mysqli_fetch_assoc($res))
+    array_push($latest_sermons, $row); ?>
 <section class="block-42 overlap">
-
   <div class="container">
     <div class="row">
       <div class="col-md-12 d-lg-flex">
