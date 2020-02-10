@@ -1,6 +1,4 @@
 <?php
-include("includes/databaseClass.php");
-include("includes/fetchingnews.php");
 include("includes/header.php");
 ?>
 <!-- END header -->
@@ -106,11 +104,11 @@ include("includes/header.php");
             </div>
             <div class="block-38-body">
               <p>A 3rd year taking Education (with IT) (Mathematics and Geography)
-                  My roles are to deputise the chairperson, 
-                  oversee the smooth running of the C.U fellowships, Sunday services and C.U events, 
+                  My roles are to deputise the chairperson,
+                  oversee the smooth running of the C.U fellowships, Sunday services and C.U events,
                   Oversee the activities of MEDIA and IT ministry
-                  <!-- screening church presentations, 
-                  securing venues for all C.U meetings and 
+                  <!-- screening church presentations,
+                  securing venues for all C.U meetings and
                   being in charge of indisciplinary cases in liason with the executive committee. --></p>
             </div>
           </div>
@@ -141,7 +139,7 @@ include("includes/header.php");
             </div>
             <div class="block-38-body">
               <p>Business Administration (Accounting)
-                  My roles are receiving and dibursing all the monies in Christian union under the direction of the executive committee and 
+                  My roles are receiving and dibursing all the monies in Christian union under the direction of the executive committee and
                   Keep books of records of the C.U accounts
                   </p>
             </div>
@@ -360,7 +358,7 @@ include("includes/header.php");
           <div class="text text-center">
             <h3 class="heading"><a href="#">Friday Fellowship</a></h3>
             <p>We hold weekly fellowships on every Friday evening starting from 7.00 p.m to 9.00 p.m at Millenium Hall 15. During these fellowships we get an opportunity to praise and worship God and hear impactful messages from diverse speakers.</p>
-            
+
           </div>
         </div>
       </div>
