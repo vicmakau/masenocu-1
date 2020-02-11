@@ -1,5 +1,5 @@
 <?php
-$id = $mysqli->real_escape_string( $_GET['id']);
+$id = $_GET['id'];
 include 'includes/header.php';
 
 $sql = "SELECT * FROM sermons WHERE id = $id";
