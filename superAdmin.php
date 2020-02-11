@@ -82,8 +82,8 @@ include 'includes/connection.php';
             <li class="tablink" onclick="openEvent(event, 'castMessage')">
               Cast Message
             </li>
-            <li class="tablink" onclick="openEvent(event, 'testimonials')">
-              Review testiomonials
+            <li class="tablink" id="btn" onclick="openEvent(event, 'testimonials')">
+              Review testimonials
             </li>
             <li  class="tablink" onclick="openEvent(event, 'semTheme')">
               Semesters Theme
@@ -357,13 +357,12 @@ include 'includes/connection.php';
                     </thead>
 
                       <?php
-                      $testimonialquery =  "SELECT members.first_name ,testimonials.message , testimonials.id FROM `testimonials` INNER JOIN  members ON members.id=testimonials.member_id";
+                      $testimonialquery =  "SELECT members.first_name ,testimonials.message , testimonials.id FROM `testimonials` INNER JOIN  members ON members.email=testimonials.member_id  WHERE testimonials.state IS NULL ";
                       $testimonial_result = $conn->query($testimonialquery);
                       // include 'includes/connection.php';
 
                       if ($testimonial_result->num_rows > 0) :
                           while($testimonial_row = $testimonial_result->fetch_assoc()):
-                            testimonial($testimonial_row['id'])
                              ?>
                              <tr>
                           <td id="uploadBy"><?= $testimonial_row['first_name'] ?></td>
@@ -371,8 +370,8 @@ include 'includes/connection.php';
                           <td id="">
                             <form class="form" action="includes/connection.php" method="post">
                              <div class="w3-center">
-                               <button type="button" onclick="alert('<?php echo "allow".$testimonial_row['id']; ?>)" name="<?php echo "allow".$testimonial_row['id']; ?>" class="w3-btn w3-white w3-border w3-border-green  w3-round-xlarge">Allow</button>
-                               <button type="button" name="<?php echo "discard".$testimonial_row['id']; ?>" class="w3-btn w3-white w3-border w3-border-red  w3-round-xlarge">Discard</button>
+                               <a href="superAdmin.php?item=testimonial&action=allow&id=<?php echo $testimonial_row['id']; ?>" name="<?php echo "allow".$testimonial_row['id']; ?>" class="w3-btn w3-white w3-border w3-border-green w3-round-xlarge">Allow</a>
+                               <a href="superAdmin.php?item=testimonial&action=decline&id=<?php echo $testimonial_row['id']; ?>" name="<?php echo "discard".$testimonial_row['id']; ?>" class="w3-btn w3-white w3-border w3-border-red w3-round-xlarge">Discard</a>
                              </div>
                             </form>
                           </td>
