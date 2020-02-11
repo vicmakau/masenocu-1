@@ -123,10 +123,14 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
     $loginquery = "SELECT * FROM `members` WHERE `email` = '$loginemail' AND `password` = '$loginpassword'";
     $login_result = $conn->query($loginquery);
     if ($login_result->num_rows > 0) {
-     $_SESSION['user']=$loginemail;
-
+      while ($row = $login_result->fetch_assoc()) {
+        $_SESSION['user']=$loginemail;
+        $_SESSION['id'] = $row['id'];
         header('location:../index.php');
         exit();
+      }
+
+
     }else {
        // echo "0 results";
     }
@@ -158,7 +162,7 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
      echo "<script type='text/javascript'>alert('Image failed upload');</script>";
    }
  }
-// testimonials
+// testimonials approvals
  if (isset($_GET['item']) && $_GET['item'] === 'testimonial') {
    $id = $_GET['id'];
    if ($_GET['action'] === 'allow') {
@@ -172,4 +176,22 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
      exit();
    }
  }
+
+
+// add testimonials
+ if(isset($_POST['sub-testimonial'])){
+   $message=$_POST['testimonial'];
+   $ide =  $_SESSION['user'] ;
+     $testimonialsql="INSERT INTO `testimonials`( `member_id`, `message`) VALUES ('$ide','$message')";
+     if ($conn->query($testimonialsql) === TRUE) {
+       echo "<script type='text/javascript'>alert('Testimonial added succesfully.Please wait for approval.');</script>";
+
+         header('location:../profile.php');
+         exit();
+     } else {
+     // echo "Error: " . $testimonialsql . "<br>" . $conn->error;
+     echo "<script type='text/javascript'>alert('Testimonial failed to upload');</script>";
+    }
+   }
+
  ?>
