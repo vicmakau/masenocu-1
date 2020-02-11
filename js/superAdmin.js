@@ -15,3 +15,14 @@ function openEvent(evt, eventType) {
 
   head.innerHTML=headData;
 }
+
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+$(document).ready(function () {
+  if (getUrlParameter('tab') === "testimonials") $('#btn').click();
+});
