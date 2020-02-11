@@ -240,6 +240,9 @@ color: white;
 
 
 /* edit profile css */
+.body{
+  margin-top: 60px;
+}
 .profile-image{
   border-radius: 50%;
   border: 1px solid grey;
