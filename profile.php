@@ -18,7 +18,7 @@
      // echo "0 results";
 
 ?>
-<body class="body">
+<body class="body w3-center">
   <div class="row">
     <div class="col-md-3">
     </div>
@@ -65,13 +65,13 @@
               </button>
             </p>
             <div class="collapse" id="collapseExample">
-              <form class="form" action="includes/connection.php">
+              <form class="form" method="post" action="includes/connection.php">
               <div class="form-group">
                 <label for="testimonial">Testimonial</label>
                 <textarea class="form-control" name="testimonial" id="testimonial" cols="20" rows="5">
                 </textarea>
               </div>
-              <button class="btn btn-outline-info w-25 btnStyle" type="submit" name="testimonial">Submit</button>
+              <button class="btn btn-outline-info w-25 btnStyle" type="submit" name="sub-testimonial">Submit</button>
               </form>
           </div>
         <!-- collapse ends herer -->
