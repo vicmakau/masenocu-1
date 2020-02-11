@@ -1,6 +1,7 @@
-
 <?php
-session_start();
+if(session_status() == PHP_SESSION_NONE){
+    session_start();
+}
 $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
 
 
@@ -23,6 +24,7 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
   if ($conn->query($sql) === TRUE) {
     // echo "added succesfully";
       header('location:../superAdmin.php');
+      exit();
   } else {
       echo "Error: " . $sql . "<br>" . $conn->error;
   }
@@ -64,41 +66,12 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
 
     if ($conn->query($leadersql) === TRUE) {
         header('location:../superAdmin.php');
+          exit();
     } else {
         echo "Error: " . $leadersql . "<br>" . $conn->error;
     }
   // $conn->close();
   }
-
-  function testimonial($idn){
-      $conne = new mysqli('localhost', 'root', '', 'masenocu_db');
-      // Check connection
-
-      if ($conne->connect_error) {
-          die("Connection failed: " . $conne->connect_error);
-      }
-     $approve="allow".$idn;
-     $disapprove="discard".$idn;
-     // var_dump($conne);
-     if(isset($_POST[$approve])){
-     $sql = "UPDATE `testimonials` SET `state`='allowed' WHERE `id`='$idn' ";
-     if ($conne->query($sql) === TRUE) {
-       header('location:../superAdmin.php');
-     } else {
-         echo "Error updating record: " . $conne->error;
-         }
-       }else if(isset($_POST[$disapprove])){
-         $sql = "DELETE FROM `testimonials` WHERE `id`='$idn' ";
-           if ($conne->query($sql) === TRUE) {
-             $message = "You have succesfully updated";
-               echo "<script type='text/javascript'>alert('$message');</script>";
-           }else {
-               echo "Error updating record: " . $conne->error;
-           }
-           }
-       }
-
-
        // semester theme
 
   if(isset($_POST['theme'])){
@@ -132,9 +105,11 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
       if ($conn->query($membersql) === TRUE) {
         // echo "added succesfully";
           header('location:../login.php');
+          exit();
       } else {
+      echo "Error: " . $membersql . "<br>" . $conn->error;
           header('location:../sign-up.php');
-          echo "Error: " . $membersql . "<br>" . $conn->error;
+          exit();
       }
     }else{
       header('location:../sign-up.php');
@@ -143,7 +118,6 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
   }
 
   if (isset($_POST['login'])) {
-     echo "0 results";
     $loginemail = $_POST['loginemail'];
     $loginpassword =  $_POST['loginpassword'];
     $loginquery = "SELECT * FROM `members` WHERE `email` = '$loginemail' AND `password` = '$loginpassword'";
@@ -152,6 +126,7 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
      $_SESSION['user']=$loginemail;
 
         header('location:../index.php');
+        exit();
     }else {
        // echo "0 results";
     }
@@ -181,6 +156,20 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
 
    }else{
      echo "<script type='text/javascript'>alert('Image failed upload');</script>";
+   }
+ }
+// testimonials
+ if (isset($_GET['item']) && $_GET['item'] === 'testimonial') {
+   $id = $_GET['id'];
+   if ($_GET['action'] === 'allow') {
+     $sql = "UPDATE testimonials SET state = 'allowed' WHERE id = $id";
+   } else if ($_GET['action'] === 'decline') {
+     $sql = "DELETE FROM testimonials WHERE id = $id";
+   }
+
+   if ($conn->query($sql) === TRUE) {
+     header('location:superAdmin.php?tab=testimonials');
+     exit();
    }
  }
  ?>
