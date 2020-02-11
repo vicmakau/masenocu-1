@@ -39,9 +39,9 @@
          <form  action="includes/connection.php" method="post">
          <div class="forms">
              <label class="label">EMAIL</label><br>
-             <input name="loginemail" class="text-area" type="email" placeholder="eg example@masenocu.com"> <br>
+             <input name="loginemail" class="text-area" type="email" placeholder="eg example@masenocu.com" required> <br>
              <label class="label">PASSWORD</label><br>
-             <input  name="loginpassword" class="text-area" type="password" placeholder="use a strong passsword"> <br>
+             <input  name="loginpassword" class="text-area" type="password" placeholder="use a strong passsword" required> <br>
          </div>
         </div>
       </div>

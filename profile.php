@@ -1,6 +1,3 @@
-<style media="screen">
-
-</style>
 <?php
   include 'includes/header.php';
   include 'includes/connection.php';
@@ -21,7 +18,7 @@
      // echo "0 results";
 
 ?>
-<body class="body">
+<body class="body w3-center">
   <div class="row">
     <div class="col-md-3">
     </div>
@@ -62,22 +59,19 @@
           <a class="nav-link " onclick="openForm()"><button  class="btn btn-outline-info w-25 btnStyle"> Edit Profile </button></a>
         </div>
         <hr>
-
-        <!-- collapse for testmial -->
-
-                    <p>
-                <button class="btn btn-outline-info w-50 btnStyle" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Add Testimonial
+        <p>
+         <button class="btn btn-outline-info w-50 btnStyle" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Add Testimonial
               </button>
             </p>
             <div class="collapse" id="collapseExample">
-              <form class="form">
+              <form class="form" method="post" action="includes/connection.php">
               <div class="form-group">
                 <label for="testimonial">Testimonial</label>
                 <textarea class="form-control" name="testimonial" id="testimonial" cols="20" rows="5">
                 </textarea>
               </div>
-              <button class="btn btn-outline-info w-25 btnStyle" type="submit" >Submit</button>
+              <button class="btn btn-outline-info w-25 btnStyle" type="submit" name="sub-testimonial">Submit</button>
               </form>
           </div>
         <!-- collapse ends herer -->

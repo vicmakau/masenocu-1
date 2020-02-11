@@ -1,6 +1,8 @@
-<?php session_start()?>
+<?php if(session_status() == PHP_SESSION_NONE){
+        session_start();
+}?>
 <?php
-  $db = mysqli_connect('localhost', 'root', '', 'masenocu_db', '3306');
+  $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
   if (!$db) {
     die("Connection failed: " . mysqli_connect_error());
 }
@@ -110,7 +112,8 @@
                 </li>
             <?php  else:?>
               <li class="nav-item">
-                <a class="nav-link " href="login.php"><button  class="btn btn-outline-info" >Login</button></a>
+                <a class="nav-link" href="login.php">Login</a>
+                <!-- <a class="nav-link " href="login.php"><button type="button" class="btn btn-outline-info" >Login</button></a> -->
               </li>
             <?php  endif;?>
 
