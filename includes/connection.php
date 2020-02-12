@@ -1,10 +1,8 @@
 <?php
-if(session_status() == PHP_SESSION_NONE){
-    session_start();
-}
-$conn = new mysqli('localhost', 'root', '', 'masenocu_db');
+if(!session_id()) session_start();
+// $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
 
-
+$conn = new mysqli('localhost', 'id12540611_masenocu', 'masenocu', 'id12540611_masenocu_db');
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
@@ -90,6 +88,7 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
      }
      // $conn->close();
    }
+
   if(isset($_POST['signup'])){
     $memberfirstname=$_POST['memberfirstname'];
     $memberlastname=$_POST['memberlastname'];
@@ -126,8 +125,10 @@ $conn = new mysqli('localhost', 'root', '', 'masenocu_db');
       while ($row = $login_result->fetch_assoc()) {
         $_SESSION['user']=$loginemail;
         $_SESSION['id'] = $row['id'];
+        if(isset($_SESSION['user'])){
         header('location:../index.php');
         exit();
+        }
       }
 
 
