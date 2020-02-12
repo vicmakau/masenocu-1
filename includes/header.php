@@ -44,7 +44,7 @@ if(!session_id()) session_start();
     <header role="banner">
 
       <nav style="float: left;"class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-        <div style="margin: 0px; padding; 0px; width: 100%;" class="container">
+        <div style="margin: 0px; padding: 0px; width: 100%;" class="container">
           <a class="navbar-brand absolute" href="index.php">
             <img src = "images/cu.png"/>
           </a>
