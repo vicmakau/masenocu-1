@@ -1,6 +1,10 @@
 <?php
   include 'includes/header.php';
-  include 'includes/connection.php';
+  // include 'includes/connection.php';
+  $conn = new mysqli('localhost', 'id12540611_masenocu', 'masenocu', 'id12540611_masenocu_db');
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
   $user= $_SESSION['user'];
   $profilquery = "SELECT * FROM `members` WHERE `email` ='$user'";
   $profil_result = $conn->query($profilquery);
@@ -18,7 +22,7 @@
      // echo "0 results";
 
 ?>
-<body class="body w3-center">
+<body class="body w3-center" style="margin-top:55px">
   <div class="row">
     <div class="col-md-3">
     </div>
