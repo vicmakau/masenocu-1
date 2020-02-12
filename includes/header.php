@@ -1,8 +1,8 @@
-<?php if(session_status() == PHP_SESSION_NONE){
-        session_start();
-}?>
 <?php
-  $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
+if(!session_id()) session_start();
+// $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
+
+  $db = mysqli_connect('localhost', 'id12540611_masenocu', 'masenocu', 'id12540611_masenocu_db');
   if (!$db) {
     die("Connection failed: " . mysqli_connect_error());
 }
