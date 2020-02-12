@@ -1,10 +1,7 @@
 <?php
   include 'includes/header.php';
-  // include 'includes/connection.php';
-  $conn = new mysqli('localhost', 'id12540611_masenocu', 'masenocu', 'id12540611_masenocu_db');
-    if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    }
+  include 'includes/serverconnection.php';
+
   $user= $_SESSION['user'];
   $profilquery = "SELECT * FROM `members` WHERE `email` ='$user'";
   $profil_result = $conn->query($profilquery);
