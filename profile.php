@@ -1,6 +1,7 @@
 <?php
   include 'includes/header.php';
-  include 'includes/connection.php';
+  include 'includes/serverconnection.php';
+
   $user= $_SESSION['user'];
   $profilquery = "SELECT * FROM `members` WHERE `email` ='$user'";
   $profil_result = $conn->query($profilquery);
@@ -18,7 +19,7 @@
      // echo "0 results";
 
 ?>
-<body class="body w3-center">
+<body class="body w3-center" style="margin-top:55px">
   <div class="row">
     <div class="col-md-3">
     </div>
