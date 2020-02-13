@@ -52,11 +52,11 @@ include 'includes/loginAdmin.php';
             <div class="container"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><img src="assets/img/cu.png">Maseno Christian Union</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div
                     class="collapse navbar-collapse" id="navcol-1">
-                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Maseno CU | Admin Panel&nbsp;</strong></p>
+                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Maseno CU | <?=$_SESSION['admin']?>&nbsp;</strong></p>
                     <?php
                     if(isset($_SESSION['admin'])):?>
                     <span class="ml-auto navbar-text actions">
-                      <a class="btn btn-light action-button" role="button" href=""><strong><?=$_SESSION['admin']?></strong></a></span>
+                      <a class="btn btn-light action-button" role="button" href=""><strong>LogOut</strong></a></span>
                   <?php  else:?>
                     <?php echo "
                     <script type="."text/javascript".">
