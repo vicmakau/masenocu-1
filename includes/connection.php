@@ -115,7 +115,7 @@ include 'serverconnection.php';
       echo "Password mismatch" ;
     }
   }
-
+//  user login backend
   if (isset($_POST['login'])) {
     $loginemail = $_POST['loginemail'];
     $loginpassword =  md5($_POST['loginpassword']);
@@ -130,13 +130,30 @@ include 'serverconnection.php';
         exit();
         }
       }
-
-
     }else {
        // echo "0 results";
     }
+  }
 
 
+  // admin login backend
+  if (isset($_POST['adminlogin'])) {
+    $adminemail = $_POST['adminemail'];
+    $adminpassword =  md5($_POST['adminpassword']);
+    $adminquery = "SELECT * FROM `members` WHERE `email` = '$adminemail' AND `password` = '$adminpassword' AND  `role`='admin'";
+    $admin_result = $conn->query($adminquery);
+    if ($admin_result->num_rows > 0) {
+      while ($row = $admin_result->fetch_assoc()) {
+        $_SESSION['user']=$adminemail;
+        $_SESSION['id'] = $row['id'];
+        if(isset($_SESSION['user'])){
+        header('location:../index.php');
+        exit();
+        }
+      }
+    }else {
+       // echo "0 results";
+    }
   }
 
 
