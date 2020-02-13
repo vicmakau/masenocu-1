@@ -18,7 +18,6 @@ include 'includes/connection.php';
     <link rel="stylesheet" href="assets/css/styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -30,6 +29,8 @@ include 'includes/connection.php';
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/sign.css">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 
@@ -41,17 +42,36 @@ include 'includes/connection.php';
     <link rel="stylesheet" href="css/superAdmin.css">
 
 </head>
+<?php
+include 'includes/loginAdmin.php';
+ ?>
 
-
-<body class="super-admin-body" >
+<body class="super-admin-body">
     <div class="div-holder">
         <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button" style="background-color:#6c5b7b;height:100px;">
             <div class="container"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><img src="assets/img/cu.png">Maseno Christian Union</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div
                     class="collapse navbar-collapse" id="navcol-1">
-                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Maseno CU | Admin Panel&nbsp;</strong></p><span class="ml-auto navbar-text actions"> <a class="btn btn-light action-button" role="button" href="#"><strong>Log Out</strong></a></span></div>
-    </div>
-    </nav>
+                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Maseno CU | <?=$_SESSION['admin']?>&nbsp;</strong></p>
+                    <?php
+                    if(isset($_SESSION['admin'])):?>
+                    <span class="ml-auto navbar-text actions">
+                      <a class="btn btn-light action-button" role="button" href=""><strong>LogOut</strong></a></span>
+                  <?php  else:?>
+                    <?php echo "
+                    <script type="."text/javascript".">
+                      document.getElementById('adminLogin').style.display='block';
+                      document.getElementById('span').style.display='none';
+                    </script>;" ?>
+                    <!-- <span class="" > -->
+                      <button type="button"  onclick="document.getElementById('adminLogin').style.display='block'"
+                      class="btn ml-auto navbar-text actions btn-outline-info btn-light action-button" >Login</button>
+                      <!-- <button type="button" class="btn btn-outline-info btn-light action-button" >Login</button> -->
+                  <?php  endif;?>
+
+                </div>
+            </div>
+        </nav>
     </div>
     <div class="container w3-border tab-View " >
         <div class="w3-center">
@@ -256,7 +276,7 @@ include 'includes/connection.php';
                     $user_result = $conn->query($userquery);
                     if ($user_result->num_rows > 0) :
                         while($user_row = $user_result->fetch_assoc()) :?>
-                        <option data-tokens="" value="<?= $user_row['id'] ?>"><?= $user_row['email'] ?></option>
+                        <option data-tokens=""  value="<?= $user_row['id'] ?>"><?= $user_row['email'] ?></option>
                     <?php
                     endwhile;
                     endif;
