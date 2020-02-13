@@ -144,10 +144,10 @@ include 'serverconnection.php';
     $admin_result = $conn->query($adminquery);
     if ($admin_result->num_rows > 0) {
       while ($row = $admin_result->fetch_assoc()) {
-        $_SESSION['user']=$adminemail;
-        $_SESSION['id'] = $row['id'];
+        $_SESSION['admin']= $adminemail;
+        // $_SESSION['id'] = $row['id'];
         if(isset($_SESSION['user'])){
-        header('location:../index.php');
+        header('location:../superAdmin.php');
         exit();
         }
       }

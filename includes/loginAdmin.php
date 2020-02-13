@@ -1,7 +1,7 @@
-<div id="id01" class="w3-modal ">
+<div id="adminLogin" class="w3-modal ">
 <div class="w3-modal-content">
-  <header class="w3-container w3-brown">
-    <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">×</span>
+  <header class="w3-container w3-brown w3-center">
+    <span onclick="document.getElementById('adminLogin').style.display='none'" class="w3-closebtn">×</span>
     <h2>Admin login section</h2>
   </header>
   <div class="w3-container">
