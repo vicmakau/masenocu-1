@@ -49,7 +49,9 @@
          <div class="col-md-4 col-xs-12">
            <div class="refuses">
              <button type="submit" name="login" style="color: white"  class="btn btn-primary-white py-3 px-5">Sign In</button>
+
             </div>
+             <a href="#">Forgot Password</a>
          </div>
        </form>
 
