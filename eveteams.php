@@ -74,7 +74,10 @@
       </div>
     </section>
 <!-- leader -->
-<h1 class="heading mb-4">Leadership</h1>
+
+
+
+<!-- <h1 class="heading mb-4">Leadership</h1>
 
 <table class="table table-borderless table-hover">
             <tr>
@@ -88,8 +91,8 @@
                 <td>Contact  designs</td>
             </tr>
           </table>
-<!-- events -->
-<h1 class="heading mb-4">Activities</h1>
+<!- events -->
+<!-- <h1 class="heading mb-4">Activities</h1>
 
 <table class="table table-borderless table-hover">
             <tr>
@@ -102,7 +105,9 @@
                 <td>Date date</td>
                 <td>This is an Activity this is an activity</td>
             </tr>
-          </table>
+          </table> --> -->
+
+          <!-- activities and leadership section ends here -->
 
     <?php include 'includes/footer.php'; ?>
     <!-- END footer -->

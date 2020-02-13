@@ -29,8 +29,8 @@ include("includes/header.php");
       <div class="col-md-6 order-md-2">
         <div class="block-16">
           <figure>
-            <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid img-shadow">
-            <a href="#" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
+            <img src="images/masenoCU.jpg" alt="Image placeholder" class="img-fluid img-shadow">
+            
           </figure>
         </div>
       </div>
@@ -130,7 +130,7 @@ include("includes/header.php");
               <p class="block-38-subheading">Secretary</p>
             </div>
             <div class="block-38-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+              <p>Pursuing holiness. </p>
             </div>
           </div>
         </div>
@@ -259,7 +259,7 @@ include("includes/header.php");
               <p class="block-38-subheading">Hospitality Director</p>
             </div>
             <div class="block-38-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+              <p>Pursuing holiness </p>
             </div>
           </div>
         </div>
