@@ -64,12 +64,14 @@ $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="ministry.php?id=mit">Media and IT</a>
                   <a class="dropdown-item" href="ministry.php?id=praise">Praise and Worship </a>
-                  <a class="dropdown-item" href="mministry.php?id=creative">Creative Ministry</a>
+                  <a class="dropdown-item" href="ministry.php?id=creative">Creative Ministry</a>
                   <a class="dropdown-item" href="ministry.php?id=hospitality">Hospitality</a>
                   <a class="dropdown-item" href="ministry.php?id=instrumentalist">Instrumentalist</a>
                   <a class="dropdown-item" href="ministry.php?id=sunday-school">Sunday School</a>
                   <a class="dropdown-item" href="ministry.php?id=discipleship">Discipleship</a>
                   <a class="dropdown-item" href="ministry.php?id=intercessory">Intercessory</a>
+                  <a class="dropdown-item" href="ministry.php?id=discipleship">Discipleship</a>
+                  <a class="dropdown-item" href="ministry.php?id=highschool">High School</a>
               </li>
               <li class="nav-item dropdown" class="nav-link" href="ministry.php">
                 <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eve Teams</a>
