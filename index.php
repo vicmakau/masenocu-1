@@ -45,17 +45,17 @@ if (mysqli_num_rows($res) > 0)
           <div class="block-42-title mx-2">
             <a href="sermon-single.php?id=<?php echo $latest_sermons[0]['id']; ?>"><strong><?php echo $latest_sermons[0]['title']; ?></strong></a>
           </div>
-          <div class="block-42-meta">By  
+          <div class="block-42-meta">By
           <strong>
-              <?php 
-                echo $latest_sermons[0]['speaker']; 
+              <?php
+                echo $latest_sermons[0]['speaker'];
                ?>
               </strong> Posted on
-                 <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $latest_sermons[0]['date'])->format('F j, Y'); 
-                  ?> 
-              </div> 
+                 <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $latest_sermons[0]['date'])->format('F j, Y');
+                  ?>
+              </div>
         </div>
-        <div class="block-42-icons ml-auto"> 
+        <div class="block-42-icons ml-auto">
           <a href="<?php echo $latest_sermons[0]['video']; ?>" class="fa fa-video-camera pl-0"></a>
           <a href="<?php echo $latest_sermons[0]['audio']; ?>" class="fa fa-headphones"></a>
           <a href="<?php echo $latest_sermons[0]['document']; ?>" class="fa fa-book"></a>
@@ -189,7 +189,7 @@ if (mysqli_num_rows($res) > 0)
             <h3 class="heading"><a href="#">Creative Ministry</a></h3>
             <p> We explore the word of God, delivering our talents through arts and entertainment.</p>
             <p><a href="ministry.php?id=creative">Read more</a>
-                  
+
           </div>
         </div>
       </div>
@@ -344,60 +344,52 @@ if (mysqli_num_rows($res) > 0)
     <!-- begin -->
     <div class="block-13">
       <div class="nonloop-block-13 owl-carousel">
+        <?php
+        $sermonsql = "SELECT * FROM `testimonials` ORDER BY RAND() LIMIT 3";
+        $resultset = mysqli_query($db, $sermonsql);
+        if (mysqli_num_rows($resultset) > 0) {
+             while($data = mysqli_fetch_assoc($resultset)) {
+              $messageid = $data['message'];
+              $memberId = $data['member_id'];
+             // select member
+             $memsql = "SELECT * FROM `members` WHERE `email` ='$memberId'";
+             $resultdata = mysqli_query($db, $memsql);
+             if (mysqli_num_rows($resultdata) > 0) :
+                 while($data = mysqli_fetch_assoc($resultdata)) :
+                   $image="images/".$data['picture'];
+                   $fullname=$data['first_name']." ".$data['last_name'];
+                   ?>
+                 <div class="item">
+                   <div class="block-33">
+                     <div class="text mb-5">
+                       <blockquote>
+                         <p>&rdquo; <?= $messageid ?> &ldquo;</p>
+                       </blockquote>
+                     </div>
+                     <div class="vcard d-flex">
+                       <div class="image align-self-center ml-auto order-2 ml-3">
+                         <a data-flickr-embed="true" href="" title="booban"><img src="<?=$image ?? 'images/avatar.jpg' ?>" class="rounded-circle" alt="booban" style="height:50px;width:50px;border-radius:50%;"></a>
+                         <!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" target="_blank"></script> -->
+                       </div>
+                       <div class="name-text align-self-center ml-auto order-1 text-right">
+                         <h2 class="heading"><?= $fullname ?></h2>
+                         <span class="meta">Eveteam</span>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+      <?php endwhile;
+      else :
+        echo "string";
 
-        <div class="item">
-          <div class="block-33">
-            <div class="text mb-5">
-              <blockquote>
-                <p>&rdquo; I've been a devoted Christian all along. Coming to this Christian union has been of great impact to my life. It has helped me keeping the zeal and containment in the Lord. Its a nice place for everyone to connect with God &ldquo;</p>
-              </blockquote>
-            </div>
-            <div class="vcard d-flex">
-              <div class="image align-self-center ml-auto order-2 ml-3">
-                <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104509532/in/dateposted-public/" title="booban"><img src="https://live.staticflickr.com/65535/49104509532_4c19dd89b7.jpg" alt="booban"></a>
-                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" target="_blank"></script>
-              </div>
-              <div class="name-text align-self-center ml-auto order-1 text-right">
-                <h2 class="heading">Simon Nyongesa</h2>
-                <span class="meta">WESO</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="block-33">
-            <div class="text mb-5">
-              <blockquote>
-                <p>&rdquo; A friend took me to the church. Thats when I met my salvation. By the grace of the Saviour Jesus christ, I acknowldge to be saved, and this is the place I keep growing my faith. I expect to grow more in faith as days goes by. Indeed thats my quest &ldquo;</p>
-              </blockquote>
-            </div>
-            <div class="vcard d-flex">
-              <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_1.jpg" alt="Person here" target="_blank"></div>
-              <div class="name-text align-self-center ml-auto order-1 text-right">
-                <h2 class="heading">Maria Nkatha</h2>
-                <span class="meta">CET</span>
-              </div>
-            </div>
-          </div>
-        </div>
+             endif;
+             // select member
+            }
+        } else {
+        echo '<div class="w3-center"><h1>No testimony</h1></div>';
+        }
 
-
-        <div class="item">
-          <div class="block-33">
-            <div class="text mb-5">
-              <blockquote>
-                <p>&rdquo; The CU has given me confidence. I can testify Christ wherever I am. The missions and inreaches has helped me groW to another level. I have grown alot the way I associate with other people. Even outside church. I am not as I was before. &ldquo;</p>
-              </blockquote>
-            </div>
-            <div class="vcard d-flex">
-              <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_2.jpg" alt="Person here"></div>
-              <div class="name-text align-self-center ml-auto order-1 text-right">
-                <h2 class="heading">Vicky Makau</h2>
-                <span class="meta">UET</span>
-              </div>
-            </div>
-          </div>
-        </div>
+         ?>
       </div>
     </div>
   </div>

@@ -19,7 +19,7 @@
      // echo "0 results";
 
 ?>
-<body class="body w3-center" style="margin-top:55px">
+<body class="body w3-center" style="margin-top:60px">
   <div class="row">
     <div class="col-md-3">
     </div>
@@ -57,7 +57,7 @@
 
         </div>
         <div class="w3-center mt-5">
-          <a class="nav-link " onclick="openForm()"><button  class="btn btn-outline-info w-25 btnStyle"> Edit Profile </button></a>
+          <a class="nav-link " onclick="openForm()"><button  class="btn btn-outline-info w-40 btnStyle"> Edit Profile </button></a>
         </div>
         <hr>
         <p>
@@ -86,13 +86,13 @@
 
   <!-- pop up login -->
   <div class="form-popup" id="myForm">
-  <form method="POST" action="includes/connection.php" enctype="multipart/form-data" class="form-container">
+  <form method="POST" action="includes/connection.php" autocomplete="off" enctype="multipart/form-data" class="form-container">
     <h1>Edit</h1>
 
     <label for="email"><b></b></label>
     <input type="file" class="form-control" name="image" required>
 
-    <label for="course"><b>Password</b></label>
+    <label for="course"><b>Course</b></label>
     <input type="text" placeholder="Enter your Course" name="course" required>
 
     <button type="submit" name="edit" class="btn">Finish</button>

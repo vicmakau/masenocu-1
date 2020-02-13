@@ -36,7 +36,7 @@
       </div>
      <div class="row">
        <div class="col-md-8 col-xs-12">
-         <form  action="includes/connection.php" method="post">
+         <form  action="includes/connection.php" method="post" autocomplete="off">
          <div class="forms">
              <label class="label">EMAIL</label><br>
              <input name="loginemail" class="text-area" type="email" placeholder="eg example@masenocu.com" required> <br>
@@ -49,7 +49,7 @@
          <div class="col-md-4 col-xs-12">
            <div class="refuses">
              <button type="submit" name="login" style="color: white"  class="btn btn-primary-white py-3 px-5">Sign In</button>
-            </div>            
+            </div>
          </div>
        </form>
 

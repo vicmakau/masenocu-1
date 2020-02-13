@@ -1,30 +1,45 @@
-<?php 
-  $feedback = "masenocu015@gmail.com";
+<?php
+  // $feedback = "simonnyongesa6@gmail.com";
   include 'includes/header.php';
-  if (isset($_POST['message'])) {
-    extract($_POST);
-    $name = filter_var($name, FILTER_SANITIZE_STRING);
-    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-    $message = filter_var($field, FILTER_SANITIZE_STRING);
-    $subject = "Maseno CU Site Feedback";
-    $mail = buildMail($name, $phone, $email, $message);
-    sendMail($to, $subject, $mail);
-  }
+ if (isset($_POST['sendmessage'])) {
+  // email with html
 
-  function buildMail($name, $phone, $email, $message) {
-    $name == ''? '[Undefined]': $name;
-    $phone == ''? '[Undefined]': $phone;
-    return 
-      "New feedback recieved from $email. <br>" +
-      "Name: $name <br> Phone: $phone <br>" +
-      "Message: <br> $message";
-  }
+// Multiple recipients
+  $fetchedMessage = $_POST['messageToSend'];
+  $mobile         = $_POST['phone'];
+  $email          = $_POST['email'];
+  $name           = $_POST['name'];
+  $to             = 'simonnyongesa6@gmail.com'; // note the comma
 
-  function sendMail($to, $subject, $mail) { 
-    $headers = 'From: noreply@masenocu.com';
-    $parameters = "";
-    mail($to, $subject, $mail, [$headers], [$parameters]);
-  }
+// Subject
+$subject = 'Feedback from site';
+
+// Message
+$message = '
+<html>
+<head>
+  <title>Member feedback</title>
+</head>
+<body>
+  <h3>Phone: '.$mobile.'</h3></br>
+  <h3>Name :'.$name.' </h3></br>
+  <p>'.$fetchedMessage.' </p>
+  </body>
+</html>
+';
+
+// To send HTML mail, the Content-type header must be set
+$headers[] = 'MIME-Version: 1.0';
+$headers[] = 'Content-type: text/html; charset=iso-8859-1';
+
+// Additional headers
+// $headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
+$headers[] = 'Reply-To:<'.$email.'>';
+$headers[] = 'From: <'.$email.'>';
+// Mail it
+mail($to, $subject, $message, implode("\r\n", $headers));
+echo '<script type="text/javascript">alert("Message sent successfully");</script>';
+}
 ?>
 
  <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);">
@@ -48,7 +63,7 @@
    <div class="container">
      <div class="row">
        <div class="col-md-8 pr-md-5">
-         <form method="post">
+         <form method="post" action="">
            <div class="row">
              <div class="col-md-4 form-group">
                <label for="name">Name</label>
@@ -64,14 +79,20 @@
              </div>
            </div>
            <div class="row">
-             <div class="col-md-12 form-group">
-               <label for="message">Write Message</label>
-               <textarea name="message" id="message" name="message" class="form-control py-2" cols="30" rows="8" placeholder="Write your message here..." required></textarea>
+             <div class="col-md-8  col-xs-12 form-group m-2">
+               <label for="message">Write your message</label>
+               <textarea class="form-control" name="messageToSend" rows="5" cols="80" placeholder="Enter message here..." required></textarea>
              </div>
            </div>
+           <!-- <div class="row">
+             <div class="col-md-12 form-group">
+               <label for="message">Write Message</label>
+               <textarea name="message"  class="form-control py-2" cols="30" rows="8" placeholder="Write your message here..." required></textarea>
+             </div> -->
+           <!-- </div> -->
            <div class="row">
              <div class="col-md-6 form-group">
-               <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+               <input type="submit" value="Send Message" name="sendmessage" class="btn btn-primary py-3 px-5">
              </div>
            </div>
          </form>

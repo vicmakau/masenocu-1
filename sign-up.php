@@ -27,7 +27,7 @@
                     <span class="sign-in-text-or">or</span>
                     <span  class="sign-in-text">Sign Up</span>
                 </div>
-                <form class="form" action="includes/connection.php" method="post">
+                <form class="form" action="includes/connection.php" method="post" autocomplete="off">
                 <div class="forms">
                   <label class="label">FIRST NAME:</label><br>
                    <input name="memberfirstname" class="text-area" type="text" placeholder="Enter your firstname" required> <br>
@@ -48,9 +48,9 @@
                      </div>
                      <label class="label">PASSWORD</label><br>
                       <input type="password" class="text-area" id="psw" name="memberpassword" >
-                       <input type="checkbox" onclick="showPassword()">Show Password <br>
                      <label class="label" >CONFIRM PASSWORD</label><br>
-                     <input class="text-area" name="memberCpassword" type="password" placeholder="re-type your password to comfirm" required> <br>
+                     <input class="text-area" id="cpsw" name="memberCpassword" type="password" placeholder="re-type your password to confirm" required> <br>
+                     <input type="checkbox" onclick="showPassword()">Show Password <br>
                 </div>
 
                 <div class="refuses">
