@@ -30,7 +30,7 @@ include("includes/header.php");
         <div class="block-16">
           <figure>
             <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid img-shadow">
-            <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
+            <a href="#" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
           </figure>
         </div>
       </div>
@@ -73,7 +73,7 @@ include("includes/header.php");
               <p class="block-38-subheading">C.U Patron</p>
             </div>
             <div class="block-38-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+              <p>Persuing holiness </p>
             </div>
           </div>
         </div>
@@ -83,7 +83,9 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104315926/in/dateposted-public/" title="IMG_8557"><img src="https://live.staticflickr.com/65535/49104315926_53a9a68e7b.jpg" width="500" height="333" alt="IMG_8557"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/chair.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Martin Mwathi</h3>
               <p class="block-38-subheading">Chairperson</p>
             </div>
@@ -98,7 +100,9 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49103811328/in/dateposted-public/" title="IMG_8586"><img src="https://live.staticflickr.com/65535/49103811328_a6ef5d0aa3.jpg" width="500" height="333" alt="IMG_8586"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/vc.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Andrew Mwendwa</h3>
               <p class="block-38-subheading">Vice Chairperson</p>
             </div>
@@ -119,7 +123,9 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104690486/in/dateposted-public/" title="_MG_8606"><img src="https://live.staticflickr.com/65535/49104690486_11c859c4b3.jpg" width="500" height="333" alt="_MG_8606"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/sec.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Evelyn Njoki Wainaina</h3>
               <p class="block-38-subheading">Secretary</p>
             </div>
@@ -133,7 +139,9 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104328211/in/dateposted-public/" title="IMG_8596"><img src="https://live.staticflickr.com/65535/49104328211_c1d68d4363.jpg" width="500" height="333" alt="IMG_8596"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/treasurer.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Naphtali Njaga</h3>
               <p class="block-38-subheading">Treasurer</p>
             </div>
@@ -151,7 +159,9 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49103813703/in/dateposted-public/" title="IMG_8585"><img src="https://live.staticflickr.com/65535/49103813703_7f8026ab50.jpg" width="500" height="333" alt="IMG_8585"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/unanimas.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Mwenda Godfrey</h3>
               <p class="block-38-subheading">Missions Coordinator</p>
             </div>
@@ -172,7 +182,9 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104326621/in/dateposted-public/" title="_MG_8567"><img src="https://live.staticflickr.com/65535/49104326621_0f9ca7e65d.jpg" width="500" height="333" alt="_MG_8567"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/vs.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Zipporah Kyeni Mwenga</h3>
               <p class="block-38-subheading">Vice Secretary</p>
             </div>
@@ -187,12 +199,14 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104407966/in/dateposted-public/" title="_MG_8564"><img src="https://live.staticflickr.com/65535/49104407966_d5e2b2ef51.jpg" width="500" height="333" alt="_MG_8564"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/maangi.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Job Maangi</h3>
               <p class="block-38-subheading">Bible study Coordinator</p>
             </div>
             <div class="block-38-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+              <p>Abounding with love </p>
             </div>
           </div>
         </div>
@@ -202,7 +216,9 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49053301956/in/dateposted-public/" title="Board Dir"><img src="https://live.staticflickr.com/65535/49053301956_60fafe5d02.jpg" width="500" height="333" alt="Board Dir"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="" alt="">
+              </div>
               <h3 class="block-38-heading">Julius Ochieng</h3>
               <p class="block-38-subheading">Board Director</p>
             </div>
@@ -219,7 +235,9 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104380296/in/dateposted-public/" title="_MG_8561(1)"><img src="https://live.staticflickr.com/65535/49104380296_79a23b7045.jpg" width="500" height="333" alt="_MG_8561(1)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/missions.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Ezra Kipkoech Ngetich.</h3>
               <p class="block-38-subheading">Discipleship Coordinator</p>
             </div>
@@ -234,7 +252,9 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104298451/in/dateposted-public/" title="IMG_8592"><img src="https://live.staticflickr.com/65535/49104298451_80746cb7d8.jpg" width="500" height="333" alt="IMG_8592"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/hospitality.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Abigael Naliaka</h3>
               <p class="block-38-subheading">Hospitality Director</p>
             </div>
@@ -249,12 +269,14 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104325321/in/dateposted-public/" title="_MG_8570"><img src="https://live.staticflickr.com/65535/49104325321_36d0b00c85.jpg" width="500" height="333" alt="_MG_8570"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/prayercod.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Keziah Inyele</h3>
               <p class="block-38-subheading">Prayer Coordinator</p>
             </div>
             <div class="block-38-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+              <p>Pursuing holiness </p>
             </div>
           </div>
         </div>
