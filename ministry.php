@@ -27,7 +27,7 @@
             <div class="mb-5 element-animate">
               <div class="block-17">
                 <h1 class="heading mb-4">Ministries</h1>
-                <div class="lead">Ministries provides service to the church through devotion. We do all the the church activities pertaining the welfare of the brethrens and all inclusions</div>
+                <div class="lead">Ministries provides service to the church through devotion. We do all the church activities pertaining the welfare of the brethrens and all inclusions</div>
               </div>
             </div>
             
