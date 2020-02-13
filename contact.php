@@ -8,8 +8,10 @@
   $fetchedMessage = $_POST['messageToSend'];
   $mobile         = $_POST['phone'];
   $email          = $_POST['email'];
+  $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+  $email = filter_var($email, FILTER_VALIDATE_EMAIL);
   $name           = $_POST['name'];
-  $to             = 'simonnyongesa6@gmail.com'; // note the comma
+  $to             = 'mwkariuki2e@gmail.com'; // note the comma
 
 // Subject
 $subject = 'Feedback from site';
@@ -36,9 +38,17 @@ $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 // $headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
 $headers[] = 'Reply-To:<'.$email.'>';
 $headers[] = 'From: <'.$email.'>';
+if (!$email) {
+  echo '<script type="text/javascript">alert("Email does not exist.");</script>';
+ }else{
+  if (mail($to, $subject, $message, implode("\r\n", $headers))) {
+        echo '<script type="text/javascript">alert("Message sent successfully");</script>';
+  }else {
+    echo '<script type="text/javascript">alert("Not sent");</script>';
+
+  }
+}
 // Mail it
-mail($to, $subject, $message, implode("\r\n", $headers));
-echo '<script type="text/javascript">alert("Message sent successfully");</script>';
 }
 ?>
 
@@ -67,7 +77,7 @@ echo '<script type="text/javascript">alert("Message sent successfully");</script
            <div class="row">
              <div class="col-md-4 form-group">
                <label for="name">Name</label>
-               <input type="text" id="name" name="name" class="form-control py-2" placeholder="e.g John Doe">
+               <input type="text" id="name" name="name" class="form-control py-2" placeholder="e.g John ">
              </div>
              <div class="col-md-4 form-group">
                <label for="phone">Phone</label>
