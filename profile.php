@@ -92,7 +92,7 @@
     <label for="email"><b></b></label>
     <input type="file" class="form-control" name="image" required>
 
-    <label for="course"><b>Password</b></label>
+    <label for="course"><b>Course</b></label>
     <input type="text" placeholder="Enter your Course" name="course" required>
 
     <button type="submit" name="edit" class="btn">Finish</button>
