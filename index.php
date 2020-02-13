@@ -68,11 +68,11 @@ if (mysqli_num_rows($res) > 0)
 
 <section class="site-section">
   <div class="container">
-    <div tyle=" margin: 0px; " class="row align-items-center">
+    <div  class="row align-items-center">
       <div class="col-md-6 order-md-2">
-        <div style="height: max-content; width: max-content;"class="block-16">
+        <div class="block-16">
           <figure>
-            <img style=" height: 400px; " src="images/masenoCU.jpg" alt="Image placeholder" class="img-fluid img-shadow">
+            <img  src="images/masenoCU.jpg" alt="Image placeholder" class="img-fluid img-shadow">
           </figure>
         </div>
       </div>
@@ -146,7 +146,7 @@ if (mysqli_num_rows($res) > 0)
     <div class="row">
       <div class="col-md-12">
         <div class="section-heading">
-          <h2 class="heading">Church Ministry</h2>
+          <h2 class="heading">Church Ministries</h2>
         </div>
       </div>
     </div>
@@ -162,8 +162,8 @@ if (mysqli_num_rows($res) > 0)
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Media and IT</a></h3>
-            <p> Covers technical activities including videography,photography,projection and publicity. </p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p> Covers technical activities including videography, photography, projection and publicity. </p>
+            <p><a href="ministry.php?id=mit">Read More</a></p>
           </div>
         </div>
       </div>
@@ -175,7 +175,7 @@ if (mysqli_num_rows($res) > 0)
           <div class="text text-center">
             <h3 class="heading"><a href="#">Praise and Worship Ministry</a></h3>
             <p> We are called to serve using our voices,leading in praise and worship. </p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=praise">Read More</a></p>
           </div>
         </div>
       </div>
@@ -188,7 +188,8 @@ if (mysqli_num_rows($res) > 0)
           <div class="text text-center">
             <h3 class="heading"><a href="#">Creative Ministry</a></h3>
             <p> We explore the word of God, delivering our talents through arts and entertainment.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=creative">Read more</a>
+                  
           </div>
         </div>
       </div>
@@ -196,12 +197,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=hospitality"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Hospitality Ministry</a></h3>
-            <p> Cordinates members welfare ,catering and ushering as well as nurturing into resoponsible adults.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p> Cordinates members welfare ,catering and ushering as well as nurturing into responsible adults.</p>
+            <p><a href="ministry.php?id=hospitality">Read More</a></p>
           </div>
         </div>
       </div>
