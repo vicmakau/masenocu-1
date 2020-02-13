@@ -80,7 +80,7 @@
 
             <!-- table display -->
 
-            <table class="table table-borderless table-hover">
+            <!-- <table class="table table-borderless table-hover">
             <tr>
                 <th>Docket</th>
                 <th>Name</th>
@@ -91,12 +91,18 @@
                 <td>Name Name</td>
                 <td>Contact  designs</td>
             </tr>
-          </table>
-<!-- events -->
-<h1 class="heading mb-4">Activities</h1>
+          </table> -->
 
-<table class="table table-borderless table-hover">
-            <tr>
+
+                <!-- activities and leadership ends here -->
+
+<!-- events -->
+
+
+        <!-- <h1 class="heading mb-4">Activities</h1>
+
+        <table class="table table-borderless table-hover">
+             <tr>
                 <th>Activity</th>
                 <th>Date</th>
                 <th>Summary</th>
@@ -107,7 +113,7 @@
                 <td>This is an Activity this is an activity</td>
             </tr>
           </table>
-          </div>
+          </div> -->
           
         </div>
       </div>

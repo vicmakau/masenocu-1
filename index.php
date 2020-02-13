@@ -45,9 +45,17 @@ if (mysqli_num_rows($res) > 0)
           <div class="block-42-title mx-2">
             <a href="sermon-single.php?id=<?php echo $latest_sermons[0]['id']; ?>"><strong><?php echo $latest_sermons[0]['title']; ?></strong></a>
           </div>
-          <div class="block-42-meta">Posted on <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $latest_sermons[0]['date'])->format('F j, Y'); ?>, <strong><?php echo $latest_sermons[0]['speaker']; ?></strong> </div>
+          <div class="block-42-meta">By  
+          <strong>
+              <?php 
+                echo $latest_sermons[0]['speaker']; 
+               ?>
+              </strong> Posted on
+                 <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $latest_sermons[0]['date'])->format('F j, Y'); 
+                  ?> 
+              </div> 
         </div>
-        <div class="block-42-icons ml-auto">
+        <div class="block-42-icons ml-auto"> 
           <a href="<?php echo $latest_sermons[0]['video']; ?>" class="fa fa-video-camera pl-0"></a>
           <a href="<?php echo $latest_sermons[0]['audio']; ?>" class="fa fa-headphones"></a>
           <a href="<?php echo $latest_sermons[0]['document']; ?>" class="fa fa-book"></a>
@@ -60,11 +68,11 @@ if (mysqli_num_rows($res) > 0)
 
 <section class="site-section">
   <div class="container">
-    <div class="row align-items-center">
+    <div tyle=" margin: 0px; " class="row align-items-center">
       <div class="col-md-6 order-md-2">
-        <div class="block-16">
+        <div style="height: max-content; width: max-content;"class="block-16">
           <figure>
-            <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-9/50777239_603421963436284_4389557804596199424_n.jpg?_nc_cat=110&_nc_oc=AQn-iWrqopvF6gPwgR0URNjObQxqSB2z4ZNeRd_wgwXCm3Y3XD0beuIy0xozz8pgkvc&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=82d12530a575823bd10725a93127d406&oe=5E57F8D0" alt="Image placeholder" class="img-fluid img-shadow">
+            <img style=" height: 400px; " src="images/masenoCU.jpg" alt="Image placeholder" class="img-fluid img-shadow">
           </figure>
         </div>
       </div>
