@@ -4,7 +4,7 @@
  <div class="col-md-4">
 <div id="adminLogin" class="w3-modal ">
 <div class="w3-modal-content">
-  <header class="w3-container  w3-center" style="background:#4d004d;opacity:0.7">
+  <header class="w3-container  w3-center" style="background:#39004d">
     <span onclick="document.getElementById('adminLogin').style.display='none'" id="span" class="w3-closebtn">×</span>
     <h2 class="w3-text-white">Admin login section</h2>
   </header>
