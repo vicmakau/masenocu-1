@@ -1,5 +1,7 @@
 <?php
 include 'includes/connection.php';
+include 'includes/loginAdmin.php';
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -253,7 +255,7 @@ include 'includes/connection.php';
                 <form action="includes/connection.php" method="post">
                   <div class="form-group">
                   <label for="groupId">Select group</label>
-                  <select class="selectpicker form-control" id="groupId"  name="leaderGid">
+                  <select class="selectpicker form-control" id="groupId" data-live-search="true"  name="leaderGid">
                     <?php
                     $groupquery = "SELECT * FROM `groups`";
                     $group_result = $conn->query($groupquery);
