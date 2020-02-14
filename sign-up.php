@@ -46,6 +46,19 @@
                        <option value="4" style="color:black"  >4TH</option>
                      </select>
                      </div>
+                     <div class="">
+                     <label for="eveteam">EVE TEAM</label><br>
+                     <select name="eveteam" class="selectpicker text-area" name="activityCategory" id="eveteam" >
+                       <option value="1" style="color:black"  >CET</option>
+                       <option value="2" style="color:black"  >WESO</option>
+                       <option value="3" style="color:black"  >NET</option>
+                       <option value="3" style="color:black"  >SORET</option>
+                       <option value="4" style="color:black"  >MUBET</option>
+                       <option value="5" style="color:black"  >EMUSETA</option>
+                       <option value="6" style="color:black"  >NORET</option>
+                       <option value="7" style="color:black"  >UET</option>
+                     </select>
+                     </div>
                      <label class="label">PASSWORD</label><br>
                       <input type="password" class="text-area" id="psw" name="memberpassword" >
                       <label class="label" >CONFIRM PASSWORD</label><br>
@@ -88,7 +101,6 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
-
     <script src="js/jquery.magnific-popup.min.js"></script>
 
     <script src="js/main.js"></script>
