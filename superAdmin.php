@@ -49,9 +49,27 @@ include 'includes/connection.php';
             <div class="container"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><img src="assets/img/cu.png">Maseno Christian Union</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div
                     class="collapse navbar-collapse" id="navcol-1">
-                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Maseno CU | Admin Panel&nbsp;</strong></p><span class="ml-auto navbar-text actions"> <a class="btn btn-light action-button" role="button" href="#"><strong>Log Out</strong></a></span></div>
-    </div>
-    </nav>
+                    <?php
+                    if(isset($_SESSION['admin'])):?>
+                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Maseno CU | <?=$_SESSION['admin']?>&nbsp;</strong></p>
+                    <!-- <span class="ml-auto navbar-text actions"> -->
+                      <a class="btn ml-auto  btn-light action-button" role="button" href="includes/adminlogout.php"><strong>LogOut</strong></a>
+                    <!-- </span> -->
+                  <?php  else:?>
+                    <?php echo "
+                    <script type="."text/javascript".">
+                      document.getElementById('adminLogin').style.display='block';
+                      document.getElementById('span').style.display='none';
+                    </script>;" ?>
+                    <!-- <span class="" > -->
+                      <button type="button"  onclick="document.getElementById('adminLogin').style.display='block'"
+                      class="btn ml-auto navbar-text actions btn-outline-info btn-light action-button" >Login</button>
+                      <!-- <button type="button" class="btn btn-outline-info btn-light action-button" >Login</button> -->
+                  <?php  endif;?>
+
+                </div>
+            </div>
+        </nav>
     </div>
     <div class="container w3-border tab-View " >
         <div class="w3-center">
