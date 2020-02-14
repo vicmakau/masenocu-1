@@ -66,7 +66,7 @@
         <p class="float-md-right">
           <a href="https://www.facebook.com/masenocu/" target="_blank" class="fa fa-facebook w3-xxlarge p-2"></a>
           <a href="https://twitter.com/maseno_cu" target="_blank" class="fa fa-twitter w3-xxlarge p-2 "></a>
-          <!-- <a href="#" class="fa fa-linkedin p-2"></a> -->
+          <a href="https://youtube.com/channel/UCXdeiqhkrIENty_ejKcT-Yg" target="_blank" class="fa fa-youtube w3-xxlarge p-2"></a>
           <!-- <a href="#" class="fa fa-instagram p-2"></a> -->
         </p>
       </div>
