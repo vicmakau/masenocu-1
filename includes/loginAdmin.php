@@ -1,8 +1,12 @@
+<div class="row container">
+  <div class="col-md-3">
+  </div>
+ <div class="col-md-4">
 <div id="adminLogin" class="w3-modal ">
 <div class="w3-modal-content">
-  <header class="w3-container w3-brown w3-center">
-    <span onclick="document.getElementById('adminLogin').style.display='none'" class="w3-closebtn">×</span>
-    <h2>Admin login section</h2>
+  <header class="w3-container  w3-center" style="background:#4d004d;opacity:0.7">
+    <span onclick="document.getElementById('adminLogin').style.display='none'" id="span" class="w3-closebtn">×</span>
+    <h2 class="w3-text-white">Admin login section</h2>
   </header>
   <div class="w3-container">
   <form class="w3-container" action="includes/connection.php" method="post">
@@ -20,11 +24,13 @@
 </div>
 
   </form>
-
-
   </div>
   <footer class="w3-container w3-pale-red w3-center">
     <p>Maseno university christian union</p>
   </footer>
+</div>
+</div>
+</div>
+<div class="col-md-3">
 </div>
 </div>

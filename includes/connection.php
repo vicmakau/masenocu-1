@@ -146,7 +146,7 @@ include 'serverconnection.php';
       while ($row = $admin_result->fetch_assoc()) {
         $_SESSION['admin']= $adminemail;
         // $_SESSION['id'] = $row['id'];
-        if(isset($_SESSION['user'])){
+        if(isset($_SESSION['admin'])){
         header('location:../superAdmin.php');
         exit();
         }
