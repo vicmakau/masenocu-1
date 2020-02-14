@@ -1,5 +1,6 @@
     <?php
       include 'includes/header.php';
+      // include 'includes/connection.php';
     ?>
 <!-- Body -->
 <body class="mt-5">
@@ -7,12 +8,11 @@
  <div class="col-md-2">
  </div>
   <div class="col-md-8">
-    <div class="right">
+    <div class="right container">
       <div class="row">
-         <div class="col-md-7">
-          </div>
+          <div class="col-md-7"></div>
            <div class="col-md-5">
-             <div class="banner">
+              <div class="banner">
                <span class="sign-in-banner">Sign In</span>
                <span class="sign-up-banner">
                   <a href="sign-up.php">Sign up</a>
@@ -30,13 +30,11 @@
               </span>
           </div>
         </div>
-        <div class="col-md-6">
-
-        </div>
+        <div class="col-md-6"> </div>
       </div>
      <div class="row">
        <div class="col-md-8 col-xs-12">
-         <form  action="includes/connection.php" method="post" autocomplete="off">
+         <form  action="" method="post" autocomplete="off">
          <div class="forms">
              <label class="label">EMAIL</label><br>
              <input name="loginemail" class="text-area" type="email" placeholder="eg example@masenocu.com" required> <br>
@@ -60,6 +58,9 @@
             <a href="sign-up.php">I dont have an account</a>
            </span>
           </div>
+          <div class="alert alert-danger" id="target" role="alert" style="display:none;">An error occured</div>
+          <script type="text/javascript">
+          </script>
         </div>
         </div>
   </div>
