@@ -57,10 +57,32 @@ if(isset($_POST['sermon'])){
     $leaderGid=$_POST['leaderGid'];
     $leaderMId=(int)$_POST['leaderMId'];
     $leaderDocket=$_POST['leaderDocket'];
-    $leadersql = "INSERT INTO `leaders`( `docket`, `member_id`, `group_id`)
-    VALUES ('$leaderDocket',$leaderMId,$leaderGid)";
+    $leadersql = "INSERT INTO `leaders`( `docket`, `user_data`, `group_id`)
+    VALUES ('$leaderDocket','$leaderMId',$leaderGid)";
 
     if ($conn->query($leadersql) === TRUE) {
+      echo '<script type="text/javascript">alert("Added Succesfully");
+             window.location.replace("../superAdmin.php?tab=Leadership");
+           </script>';
+          exit;
+    } else {
+        // echo "Error: " . $leadersql . "<br>" . $conn->error;
+        echo '<script type="text/javascript">alert("An error occured");
+        window.location.replace("../superAdmin.php?tab=Leadership");
+        </script>';
+    }
+  // $conn->close();
+  }
+
+  // add ministry leaders
+  if(isset($_POST['minLeaders'])){
+    $minGid=$_POST['minGid'];
+    $minMId=$_POST['minMId'];
+    $minDocket=$_POST['minDocket'];
+    $minsql = "INSERT INTO `leaders`( `docket`, `user_data`, `group_id`)
+    VALUES ('$minDocket','$minMId',$minGid)";
+
+    if ($conn->query($minsql) === TRUE) {
       echo '<script type="text/javascript">alert("Added Succesfully");
              window.location.replace("../superAdmin.php?tab=Leadership");
            </script>';
@@ -103,11 +125,10 @@ if(isset($_POST['sermon'])){
     $memberyos=$_POST['memberyos'];
     $eveteam=$_POST['eveteam'];
     $memberphone=$_POST['memberphone'];
-    $memberpassword=$_POST['memberpassword'];
-    $memberpassword=$_POST['memberpassword'];
-    $memberCpassword=$_POST['memberCpassword'];
+    $memberpassword=md5($_POST['memberpassword']);
+    $memberCpassword=md5($_POST['memberCpassword']);
     if($memberpassword == $memberCpassword){
-  	$sql_e = "SELECT * FROM members WHERE email='$memberemail'";
+  	$sql_e = "SELECT * FROM `members` WHERE email='$memberemail'";
   	$res_e = mysqli_query($conn, $sql_e);
 
   	if (mysqli_num_rows($res_e) > 0) {
@@ -136,13 +157,13 @@ if(isset($_POST['sermon'])){
 //  Members login backend
   if (isset($_POST['login'])) {
     $loginemail = $_POST['loginemail'];
-    $loginpassword =  $_POST['loginpassword'];
+    $loginpassword = md5( $_POST['loginpassword']);
     $loginquery = "SELECT * FROM `members` WHERE `email` = '$loginemail' AND `password` = '$loginpassword'";
     $login_result = $conn->query($loginquery);
     if ($login_result->num_rows > 0) {
       while ($row = $login_result->fetch_assoc()) {
         $_SESSION['user']=$loginemail;
-        header('location:../index.php');
+        header('location:index.php');
         exit;
       }
     }else {

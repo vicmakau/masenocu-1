@@ -91,7 +91,10 @@ include 'includes/loginAdmin.php';
               Sermon
             </li>
             <li class="tablink" id="btn" onclick="openEvent(event, 'Leadership')">
-              Leadership
+               EveT Leadership
+            </li>
+            <li class="tablink" id="btn" onclick="openEvent(event, 'Ministry')">
+               Ministry
             </li>
             <li  class="tablink" id="btn" onclick="openEvent(event, 'gallery')">
             Gallery
@@ -218,7 +221,8 @@ include 'includes/loginAdmin.php';
 
           <div id="castMessage" class="w3-container  event w3-animate-left">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-1"></div>
+              <div class="col-md-10">
                 <form action="">
                   <div class="form-group">
                   <label for="groupId">Select Receiver</label>
@@ -246,18 +250,15 @@ include 'includes/loginAdmin.php';
 
           <div id="Leadership" class="w3-container event w3-animate-left">
             <div class="row">
-              <div class="col-md-3">
-                <div class=" w3-border">
-                  <img src="images/cu.png" class="activity-image" alt="" height="300">
-                </div>
+              <div class="col-md-1">
               </div>
-              <div class="col-md-8">
+              <div class="col-md-10">
                 <form action="includes/connection.php" method="post">
                   <div class="form-group">
                   <label for="groupId">Select group</label>
                   <select class="selectpicker form-control" id="groupId" data-live-search="true"  name="leaderGid">
                     <?php
-                    $groupquery = "SELECT * FROM `groups`";
+                    $groupquery = "SELECT * FROM `groups` WHERE `type`='eveteam'";
                     $group_result = $conn->query($groupquery);
                     if ($group_result->num_rows > 0) :
                         while($group_row = $group_result->fetch_assoc()) :?>
@@ -287,9 +288,22 @@ include 'includes/loginAdmin.php';
                   <div class="form-group">
                   <label for="groupId">Docket</label>
                   <select class="selectpicker form-control" data-live-search="true" id="groupId" name="leaderDocket">
-                    <option data-tokens="" value="chairman">Chairman</option>
-                    <option data-tokens="" value="treasurer">Treasurer</option>
-                    <option data-tokens="" value="hospitality">Hospitality</option>
+                    <option data-tokens="" value="CHAIRPERSON">CHAIRPERSON</option>
+                    <option data-tokens="" value="VICE CHAIRPERSON">VICE CHAIRPERSON</option>
+                    <option data-tokens="" value="SECRETARY">SECRETARY</option>
+                    <option data-tokens="" value="TREASURER">TREASURER</option>
+                    <option data-tokens="" value="MISSIONS COORDINATOR">MISSIONS COORDINATOR</option>
+                    <option data-tokens="" value="VICE SECRETARY">VICE SECRETARY</option>
+                    <option  data-tokens="" value="BIBLE STUDY COORDINATOR">BIBLE STUDY COORDINATOR</option>
+                    <option  data-tokens="" value="BOARD DIRECTOR">BOARD DIRECTOR</option>
+                    <option  data-tokens="" value="DISCIPLESHIP COORDINATOR">DISCIPLESHIP COORDINATOR</option>
+                    <option  data-tokens="" value="HOSPITALITY DIRECTOR">HOSPITALITY DIRECTOR</option>
+                    <option value="" data-tokens>PRAYER COORDINATOR</option>
+
+
+
+
+
                   </select>
                   </div>
                   <div class="w3-center">
@@ -366,6 +380,9 @@ include 'includes/loginAdmin.php';
 
           <div id="testimonials" class="w3-container event w3-animate-left">
             <div class="row">
+              <div class="col-md-1">
+
+              </div>
               <div class="col-md-10">
                 <table class="w3-table w3-striped w3-bordered w3-card-4">
                     <thead>
@@ -410,11 +427,7 @@ include 'includes/loginAdmin.php';
 
           <div id="semTheme" class="w3-container event w3-animate-left">
             <div class="row">
-              <div class="col-md-3">
-                <div class=" w3-border">
-                  <img src="images/cu.png" class="activity-image" alt="" height="300">
-                </div>
-              </div>
+              <div class="col-md-1"></div>
               <div class="col-md-8">
                 <form action="includes/connection.php" method="post">
                   <div class="form-group">
@@ -435,6 +448,58 @@ include 'includes/loginAdmin.php';
                 </form>
               </div>
             </div>
+          </div>
+
+          <div id="Ministry" class="w3-container event w3-animate-left">
+            <div class="row">
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-10">
+                <form action="includes/connection.php" method="post">
+                  <div class="form-group">
+                  <label for="groupId">Select group</label>
+                  <select class="selectpicker form-control" id="groupId" data-live-search="true"  name="minGid">
+                    <?php
+                    $groupquery = "SELECT * FROM `groups` WHERE `type`='ministry'";
+                    $group_result = $conn->query($groupquery);
+                    if ($group_result->num_rows > 0) :
+                        while($group_row = $group_result->fetch_assoc()) :?>
+                        <option data-tokens="" value="<?= $group_row['id'] ?>"><?= $group_row['name'] ?></option>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
+                  </select>
+                  </div>
+                  <div class="form-group">
+                  <label for="groupId">Person</label>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId"  name="minMId">
+                    <?php
+                    $userquery = "SELECT * FROM `members`";
+                    $user_result = $conn->query($userquery);
+                    if ($user_result->num_rows > 0) :
+                        while($user_row = $user_result->fetch_assoc()) :?>
+                        <option data-tokens="" value="<?= $user_row['id'] ?>"><?= $user_row['email'] ?></option>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
+
+                  </select>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="usr">Docket</label>
+                        <input type="text" class="form-control" name="minDocket" id="usr">
+                      </div>
+                  <div class="w3-center">
+                    <button type="submit" name="minLeaders" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
