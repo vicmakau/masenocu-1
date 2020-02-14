@@ -103,8 +103,9 @@ if(isset($_POST['sermon'])){
     $memberyos=$_POST['memberyos'];
     $eveteam=$_POST['eveteam'];
     $memberphone=$_POST['memberphone'];
-    $memberpassword=md5($_POST['memberpassword']);
-    $memberCpassword=md5($_POST['memberCpassword']);
+    $memberpassword=$_POST['memberpassword'];
+    $memberpassword=$_POST['memberpassword'];
+    $memberCpassword=$_POST['memberCpassword'];
     if($memberpassword == $memberCpassword){
   	$sql_e = "SELECT * FROM members WHERE email='$memberemail'";
   	$res_e = mysqli_query($conn, $sql_e);
@@ -135,7 +136,7 @@ if(isset($_POST['sermon'])){
 //  Members login backend
   if (isset($_POST['login'])) {
     $loginemail = $_POST['loginemail'];
-    $loginpassword =  md5($_POST['loginpassword']);
+    $loginpassword =  $_POST['loginpassword'];
     $loginquery = "SELECT * FROM `members` WHERE `email` = '$loginemail' AND `password` = '$loginpassword'";
     $login_result = $conn->query($loginquery);
     if ($login_result->num_rows > 0) {
@@ -170,6 +171,8 @@ if(isset($_POST['sermon'])){
        window.location.replace("../superAdmin.php");
       </script>';
     }
+
+
   }
   // edit profile
   if (isset($_POST['edit'])){

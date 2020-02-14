@@ -30,7 +30,7 @@ include("includes/header.php");
         <div class="block-16">
           <figure>
             <img src="images/masenoCU.jpg" alt="Image placeholder" class="img-fluid img-shadow">
-
+            
           </figure>
         </div>
       </div>
