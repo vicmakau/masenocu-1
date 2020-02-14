@@ -40,15 +40,15 @@
 
     <section class="site-section bg-light">
       <div class="container">
-        <div class="row">
+        <div  class="row">
           <div class="col-md-4">
             <div class="block-36">
-              <h3 class="block-36-heading">Ministries</h3>
+              <h3  class="block-36-heading">Ministries</h3>
               <ul>
               
                 <?php foreach ($ministries as $id => $name) : ?>
                   <li <?= (isset($_GET['id'])) && ($_GET['id'] == $id) ? 'class="active disabled"' : '' ?>>
-                    <a href="ministry.php?id=<?= $id; ?>"><?= $name; ?></a>
+                    <a href="ministry.php?id=<?= $id; ?>#route-zero"><?= $name; ?></a>
                   </li>
                 <?php endforeach; ?>
               </ul>
@@ -56,16 +56,17 @@
             </div>
             
           </div>
-          <div class="col-md-8 pl-md-5">
+          <div  class="col-md-8 pl-md-5">
 
 
 
             <?php if (isset($_GET['id'])) :
               $ministry_id = $_GET['id'];
               $ministry = $ministry_descriptions->$ministry_id; ?>
-              <div class="section-heading">
-                <h2 class="heading"><?= $ministry->name; ?></h2>
+              <div id="route-zero"  class="section-heading">
+                <h2  class="heading"><?= $ministry->name; ?></h2>
               </div>
+              
 
                 
 
@@ -73,9 +74,7 @@
               <p><img src="<?= $ministry->image; ?>" alt="<?= $ministry->name; ?>" class="img-fluid"></p>
               <!-- director pics -->
 
-              
-
-              <p><?= $ministry->text; ?></p>
+               <p><?= $ministry->text; ?></p>
             <?php endif; ?>
 
             <!-- table display -->

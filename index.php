@@ -17,7 +17,7 @@ include("includes/header.php");
               while($sem_row = mysqli_fetch_assoc($sem_result)):?>
             <h1 class="heading mb-4"><?= $sem_row['theme']?></h1>
             <h1 class="heading mb-4"><?= $sem_row['bible_verse']?></h1>
-            <p><a href="about.php" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <br> <a href="" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
+            <p><a href="about.php" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <br> <a href="contact.php#map" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
             <?php
           endwhile;
           endif;
@@ -158,7 +158,7 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49671095_590680258043788_8824584078608039936_n.jpg?_nc_cat=111&_nc_ohc=rDCKJhB-e08AQm5pBk3d5EoDPnrbgKc7xB_sUZfsnWcO4COvL3WJniAig&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=cd93cd292d7da10cb2a7d3f8bc0c4770&oe=5E4E9106" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=mit#route-zero"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49671095_590680258043788_8824584078608039936_n.jpg?_nc_cat=111&_nc_ohc=rDCKJhB-e08AQm5pBk3d5EoDPnrbgKc7xB_sUZfsnWcO4COvL3WJniAig&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=cd93cd292d7da10cb2a7d3f8bc0c4770&oe=5E4E9106" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Media and IT</a></h3>
@@ -173,9 +173,9 @@ if (mysqli_num_rows($res) > 0)
             <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49575841_590680248043789_2850377306805895168_n.jpg?_nc_cat=108&_nc_ohc=_pfxAry3C_wAQmceNT40qF-SQY5VbmS5Ys-eCxYinOnb4V6dBpQioWmPQ&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=6101f1751f64ee82df1f076d53557aea&oe=5E87E5FF" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
-            <h3 class="heading"><a href="#">Praise and Worship Ministry</a></h3>
+            <h3 class="heading"><a href="ministry.php?id=praise#route-zero">Praise and Worship Ministry</a></h3>
             <p> We are called to serve using our voices,leading in praise and worship. </p>
-            <p><a href="ministry.php?id=praise">Read More</a></p>
+            <p><a href="ministry.php?id=praise#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -183,12 +183,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c116.0.200.200a/p200x200/49664823_590680311377116_8953141232985440256_o.jpg?_nc_cat=107&_nc_ohc=JbWA7iGxSVcAQnYkwmsDfjod14J05GDtljPOzWvfYk0yaPdzbSuxqXS0Q&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=343e0e66cbb6abff7f91dc66582cc7bd&oe=5E4E2C77" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=creative#route-zero"><img src="images/ministries/creative.jpg" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Creative Ministry</a></h3>
             <p> We explore the word of God, delivering our talents through arts and entertainment.</p>
-            <p><a href="ministry.php?id=creative">Read more</a>
+            <p><a href="ministry.php?id=creative#route-zero">Read more</a>
 
           </div>
         </div>
@@ -197,12 +197,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="ministry.php?id=hospitality"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=hospitality#route-zero"><img src="images/ministries/hospi.png" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Hospitality Ministry</a></h3>
             <p> Cordinates members welfare ,catering and ushering as well as nurturing into responsible adults.</p>
-            <p><a href="ministry.php?id=hospitality">Read More</a></p>
+            <p><a href="ministry.php?id=hospitality#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -210,12 +210,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=highschool#route-zero"><img src="images/cu.png" alt="images/cu.png" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">High School Ministry</a></h3>
             <p>We want to help middle school and high school students thrive in their spiritual journey.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=highschool#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -223,12 +223,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49620968_590680288043785_7400181088540164096_n.jpg?_nc_cat=110&_nc_ohc=uhUc6RUT5LsAQmUz7XfD_cfDJOlmImIhHPY-3MYk8VDKTnrJ40NYVB70w&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=cb8abb89b17de6c7a0dec5735145e7e9&oe=5E4DBFAF" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=instrumentalist#route-zero"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49620968_590680288043785_7400181088540164096_n.jpg?_nc_cat=110&_nc_ohc=uhUc6RUT5LsAQmUz7XfD_cfDJOlmImIhHPY-3MYk8VDKTnrJ40NYVB70w&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=cb8abb89b17de6c7a0dec5735145e7e9&oe=5E4DBFAF" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Instrumentalists Ministry</a></h3>
             <p>Participation through gospel music, training and setting up of Instruments .</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=instrumentalist#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -236,12 +236,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=sunday-school#route-zero"><img src="images/cu.png" alt="" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Sunday School Ministry</a></h3>
             <p>Teaching, Giving, Directing and Sharing Knowledge of Jesus Christ to Children.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=sunday-school#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -249,12 +249,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="#"><img src="images/cu.png" alt="images/cu.png" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Discipleship Ministry</a></h3>
             <p>We spread the good news,teach the word and reaching souls through missions and evangelism.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=sunday-school#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -262,12 +262,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=intercessory#route-zero"><img src="images/cu.png" alt="images/cu.png" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Intercessory Ministry</a></h3>
             <p>We have fellowship through prayer presenting needs and petitions individually and the church as a whole.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=intercessory#route-zero">Read More</a></p>
           </div>
         </div>
       </div>

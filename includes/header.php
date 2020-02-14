@@ -21,6 +21,8 @@ $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
       type="image/png"
       href="images/cu.png">
     <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <!-- separate css for table -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/w3.css">
@@ -30,12 +32,13 @@ $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/pagination.css">
     <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- separate css for table -->
     <link rel="stylesheet" href="css/sign.css">
     <!-- separate css for login and signup -->
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!-- Collapsible sermon notification panel -->

@@ -249,33 +249,46 @@ color: white;
 }
 .profile-name{
   text-transform: uppercase;
-  color: #4a919c;
-  font-weight: bold;
-}
-.profile-email{
+  color: #044d77;
+  font-weight: 400;
+  font-size: 36px;
+} 
+.profile-email{ 
   color: #009ab2;
-}#property{
-  color: black;
+  font-weight: 200;
+  font-size: 20px;
+  }
+  .profile-label
+  {
+    color:#2B2B2B;
+    font-weight: 450;
+  }
+
+#property{
+  color: rgb(211, 9, 9)24, 28, 28);
   font: 30px;
-  font-weight: bold;
+  /* font-weight: bold; */
 
 }
 .hr1{
-  color: black;
+  color: rgb(0, 85, 74);
+  
 }
 .p-wrapper{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
+  
 }
-.btnStyle
+/* .btnStyle
 {
   color: #4a919c;
-}
-.btnStyle:hover
+} */
+/* .btnStyle:hover 
 {
   color: white;
+} */
+ popup 
+{box-sizing: border-box;
 }
-/* popup */
-{box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
@@ -324,7 +337,7 @@ color: white;
 }
 
 /* Set a style for the submit/login button */
-.form-container .btn {
+/* .form-container .btn {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
@@ -333,14 +346,15 @@ color: white;
   width: 100%;
   margin-bottom:10px;
   opacity: 0.8;
-}
+} */
 
 /* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
+
+/* .form-container .cancel {
+  background-color: red; */
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+/* .form-container .btn:hover, .open-button:hover {
   opacity: 1;
-}
+} */

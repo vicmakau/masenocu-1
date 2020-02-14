@@ -8,10 +8,8 @@
   $fetchedMessage = $_POST['messageToSend'];
   $mobile         = $_POST['phone'];
   $email          = $_POST['email'];
-  $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-  $email = filter_var($email, FILTER_VALIDATE_EMAIL);
   $name           = $_POST['name'];
-  $to             = 'mwkariuki2e@gmail.com'; // note the comma
+  $to             = 'simonnyongesa6@gmail.com'; // note the comma
 
 // Subject
 $subject = 'Feedback from site';
@@ -38,17 +36,9 @@ $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 // $headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
 $headers[] = 'Reply-To:<'.$email.'>';
 $headers[] = 'From: <'.$email.'>';
-if (!$email) {
-  echo '<script type="text/javascript">alert("Email does not exist.");</script>';
- }else{
-  if (mail($to, $subject, $message, implode("\r\n", $headers))) {
-        echo '<script type="text/javascript">alert("Message sent successfully");</script>';
-  }else {
-    echo '<script type="text/javascript">alert("Not sent");</script>';
-
-  }
-}
 // Mail it
+mail($to, $subject, $message, implode("\r\n", $headers));
+echo '<script type="text/javascript">alert("Message sent successfully");</script>';
 }
 ?>
 
@@ -77,7 +67,7 @@ if (!$email) {
            <div class="row">
              <div class="col-md-4 form-group">
                <label for="name">Name</label>
-               <input type="text" id="name" name="name" class="form-control py-2" placeholder="e.g John ">
+               <input type="text" id="name" name="name" class="form-control py-2" placeholder="e.g John Doe">
              </div>
              <div class="col-md-4 form-group">
                <label for="phone">Phone</label>
@@ -140,6 +130,12 @@ if (!$email) {
                <a href="https://twitter.com/maseno_cu" target="_blank">
                  <i class="fa fa-twitter px-3" aria-hidden="true"></i>
                  <span class="text">@maseno_cu</span>
+                </a>
+              </li>
+              <li>
+               <a href="https://www.youtube.com/channel/UCXdeiqhkrIENty_ejKcT-Yg" target="_blank">
+                 <i class="fa ion-social-youtube px-3" aria-hidden="true"></i>
+                 <span class="text">Maseno University Christian Union</span>
                 </a>
               </li>
            </ul>

@@ -48,18 +48,16 @@
                      </div>
                      <label class="label">PASSWORD</label><br>
                       <input type="password" class="text-area" id="psw" name="memberpassword" >
-                      <label class="label" >CONFIRM PASSWORD</label><br>
-                     <input class="text-area" id="cpsw" name="memberCpassword" type="password" placeholder="re-type your password " required> <br>
+                     <label class="label" >CONFIRM PASSWORD</label><br>
+                     <input class="text-area" id="cpsw" name="memberCpassword" type="password" placeholder="re-type your password to confirm" required> <br>
                      <input type="checkbox" onclick="showPassword()">Show Password <br>
                 </div>
 
-                <div class="refuses row">
-                  <div class="col-md-5 col-xs-12 ">
+                <div class="refuses">
                     <button  type="submit" name="signup" style="color: white" class="btn btn-primary-white py-3 px-5">Sign Up</button>
-                  </div>
-                  <div class="col-md-7 col-xs-12">
-                    <span class="text-final"><a href="login.php">I have an account</a></span>
-                  </div>
+                    <span class="text-final">
+                    <a href="login.php">I have an account</a>
+                    </span>
                 </div>
               </form>
 
