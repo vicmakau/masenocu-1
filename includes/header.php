@@ -1,5 +1,6 @@
 <?php
-if(!session_id()) session_start();
+// if(!session_id()) session_start();
+include 'connection.php';
 $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
 
   // $db = mysqli_connect('localhost', 'id12540611_masenocu', 'masenocu', 'id12540611_masenocu_db');

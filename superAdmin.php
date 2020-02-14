@@ -82,28 +82,28 @@ include 'includes/connection.php';
                  <h5>Admin Panel</h5>
 
           <ul style="margin-right:10px; margin-left: 0px;">
-            <li  class="tablink" onclick="openEvent(event, 'Activities')">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'Activities')">
               Activities
             </li>
-            <li  class="tablink" onclick="openEvent(event, 'sermon')">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'sermon')">
               Sermon
             </li>
-            <li class="tablink" onclick="openEvent(event, 'Leadership')">
+            <li class="tablink" id="btn" onclick="openEvent(event, 'Leadership')">
               Leadership
             </li>
-            <li  class="tablink"  onclick="openEvent(event, 'gallery')">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'gallery')">
             Gallery
             </li>
-            <li  class="tablink" onclick="openEvent(event, 'upload')">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'upload')">
               Upload Documents
             </li>
-            <li class="tablink" onclick="openEvent(event, 'castMessage')">
+            <li class="tablink" id="btn" onclick="openEvent(event, 'castMessage')">
               Cast Message
             </li>
             <li class="tablink" id="btn" onclick="openEvent(event, 'testimonials')">
               Review testimonials
             </li>
-            <li  class="tablink" onclick="openEvent(event, 'semTheme')">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'semTheme')">
               Semesters Theme
             </li>
           </ul>

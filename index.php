@@ -345,7 +345,7 @@ if (mysqli_num_rows($res) > 0)
     <div class="block-13">
       <div class="nonloop-block-13 owl-carousel">
         <?php
-        $sermonsql = "SELECT * FROM `testimonials` ORDER BY RAND() LIMIT 3";
+        $sermonsql = "SELECT * FROM `testimonials` WHERE `state` IS NOT NULL ORDER BY RAND() LIMIT 3 ";
         $resultset = mysqli_query($db, $sermonsql);
         if (mysqli_num_rows($resultset) > 0) {
              while($data = mysqli_fetch_assoc($resultset)) {
