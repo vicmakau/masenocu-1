@@ -90,7 +90,7 @@ include("includes/header.php");
               <p class="block-38-subheading">Chairperson</p>
             </div>
             <div class="block-38-body">
-              <p> I am in my 3rd year pursuing bachelor of science medical biotechnology..my main roles are presiding over all exec meetings,,and all AGM meetings unless prevented by illness.. I link the executive committee with the advisory committee,, </p>
+              <p> I am in my 3rd year pursuing bachelor of science medical biotechnology. My main roles are presiding over all exec meetings, and all AGM meetings unless prevented by illness. I link the executive committee with the advisory committee. </p>
             </div>
           </div>
         </div>
@@ -108,12 +108,9 @@ include("includes/header.php");
             </div>
             <div class="block-38-body">
               <p>A 3rd year taking Education (with IT) (Mathematics and Geography)
-                  My roles are to deputise the chairperson,
-                  oversee the smooth running of the C.U fellowships, Sunday services and C.U events,
+                  My roles are to deputise the chairperson, oversee the smooth running of the C.U fellowships, Sunday services and C.U events,
                   Oversee the activities of MEDIA and IT ministry
-                  <!-- screening church presentations,
-                  securing venues for all C.U meetings and
-                  being in charge of indisciplinary cases in liason with the executive committee. --></p>
+                  
             </div>
           </div>
         </div>
@@ -146,9 +143,7 @@ include("includes/header.php");
               <p class="block-38-subheading">Treasurer</p>
             </div>
             <div class="block-38-body">
-              <p>Business Administration (Accounting)
-                  My roles are receiving and dibursing all the monies in Christian union under the direction of the executive committee and
-                  Keep books of records of the C.U accounts
+              <p>Taking Business Administration (Accounting). My roles are receiving and dibursing all the monies in Christian union under the direction of the executive committee and keeping the  books of records of the CU accounts and all monetary activities.
                   </p>
             </div>
           </div>
@@ -166,13 +161,8 @@ include("includes/header.php");
               <p class="block-38-subheading">Missions Coordinator</p>
             </div>
             <div class="block-38-body">
-              <p>Course:Actuarial science with IT.
-                Am a third year.
-                I'm the Missions Coordinator.
-                Roles: organizing CU missions,ground work,spiritual mapping.
-                Overseeing the progress of Evangelistic teams.
-                Organizing In-reach around the school.
-                Representing Exec in the outreach committee. </p>
+              <p>Course: Actuarial science with IT.
+                I am third year. My major role includes organizing CU missions, ground work, spiritual mapping and  overseeing the progress of Evangelistic teams. I also organizing In-reaches around the school . I do Represent the Exec in the outreach committee. </p>
             </div>
           </div>
         </div>
@@ -189,7 +179,7 @@ include("includes/header.php");
               <p class="block-38-subheading">Vice Secretary</p>
             </div>
             <div class="block-38-body">
-              <p>I am a second year from the school of Education arts (French $History) . I am currently the Vice Secretary. My roles are :1.Deputising the secretary 2.Act as an exec rep in the 2nd yrs committee 3.Coordinate all the activities of the specialized Committee</p>
+              <p>I am a second year from the school of Education arts (French $History) . I am currently the Vice Secretary. My roles are deputising the secretary, acting as an exec rep for the Second Years committee and coordinating all the activities for the specialized Committee</p>
             </div>
           </div>
         </div>
@@ -206,7 +196,7 @@ include("includes/header.php");
               <p class="block-38-subheading">Bible study Coordinator</p>
             </div>
             <div class="block-38-body">
-              <p>Abounding with love </p>
+              <p>Abounding in love </p>
             </div>
           </div>
         </div>
@@ -224,8 +214,7 @@ include("includes/header.php");
             </div>
             <div class="block-38-body">
               <p>
-              I am a third year student in the school of agriculture and food security taking a course in Bsc.Soil science and plant nutrition(with IT).
-               My responsibility include; coordinating the activities of praise and worship, choir, instrumentalist and creative ministries </p>
+              I am a third year student in the school of agriculture and food security taking a course in Bsc. Soil science and plant nutrition(with IT). My responsibility includes coordinating the activities of praise and worship, choir, instrumentalist and creative ministries </p>
             </div>
           </div>
         </div>
@@ -242,7 +231,7 @@ include("includes/header.php");
               <p class="block-38-subheading">Discipleship Coordinator</p>
             </div>
             <div class="block-38-body">
-              <p>I am in  year 3 of my studies  , a Royal, from the school of Education ,pursuing Bachelor of Education Arts with ITRoles:Nurturing new believers , ensuring growth of members through discipleship teachings and mentorship programmes. </p>
+              <p>I am in  year 3 of my studies, a Royal, from the school of Education pursuing Bachelor of Education Arts with IT. Roles are Nurturing new believers, ensuring growth of members through discipleship teachings and mentorship programmes. </p>
             </div>
           </div>
         </div>
@@ -298,7 +287,7 @@ include("includes/header.php");
           </div>
           <div class="block-43-text">
             <h3 class="block-43-heading">Discipleship</h3>
-            <p>Deepening and strengthening the spiritual life of its members by study of the bible, by prayers and Christian fellowship.Also encouraging consistent and responsible church membership.</p>
+            <p>Deepening and strengthening the spiritual life of its members by study of the bible, by prayers and Christian fellowship. Also encouraging consistent and responsible church membership.</p>
           </div>
         </div>
       </div>
@@ -341,7 +330,7 @@ include("includes/header.php");
           </div>
           <div class="block-43-text">
             <h3 class="block-43-heading">Mission</h3>
-            <p>Preparing Christian students to take good news to all nations of the world and to play an active role in the communities where they live. .</p>
+            <p>Preparing Christian students to take good news to all nations of the world and to play an active role in the communities where they live. </p>
           </div>
         </div>
       </div>

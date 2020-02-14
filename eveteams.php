@@ -53,25 +53,25 @@
             </div>
           </div>
           <div class="col-md-8 pl-md-5">
-            <?php if (isset($_GET['id'])) :
+            <?php if (isset($_GET['id'])):
+            $evimage="images/EveTeams/";
               $eveTeam_id = $_GET['id'];
               $eveTeam = $eveTeam_description->$eveTeam_id; ?>
               <div class="section-heading">
                 <h2 class="heading"><?= $eveTeam->name; ?></h2>
               </div>
               <p><?= $eveTeam->intro; ?></p>
-              <p><img src="<?= $eveTeam->image; ?>" alt="<?= $eveTeam->name; ?>" class="img-fluid"></p>
-
-
-              <!-- director pics -->
-
-             
-                    </div>
+              <div class="w3-center">
+              <p><img  style="width: 150px;" src="<?= "images/EveTeams/".$eveTeam->logo; ?>" alt="<?= $eveTeam->name; ?>" class="img-fluid"></p>
+              </div>
+              
               <p><?= $eveTeam->text; ?></p>
             <?php endif; ?>
           </div>
         </div>
       </div>
+            </div>
+              
     </section>
 <!-- leader -->
 
