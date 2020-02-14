@@ -50,7 +50,7 @@
                   <li <?= (isset($_GET['id'])) && ($_GET['id'] == $id) ? 'class="active disabled"' : '' ?>>
                     <a href="ministry.php?id=<?= $id; ?>#route-zero"><?= $name; ?></a>
                   </li>
-                <?php endforeach; ?>
+                <?php endforeach; ?> 
               </ul>
               
             </div>
@@ -58,21 +58,24 @@
           </div>
           <div  class="col-md-8 pl-md-5">
 
+            <?php 
+               if (isset($_GET['id'])) :
+                  $ministryImage="images/ministries/";  //declare function to catch the path
+                  $ministry_id = $_GET['id'];
+                  $ministry = $ministry_descriptions->$ministry_id; 
+            ?>
 
-
-            <?php if (isset($_GET['id'])) :
-              $ministry_id = $_GET['id'];
-              $ministry = $ministry_descriptions->$ministry_id; ?>
               <div id="route-zero"  class="section-heading">
                 <h2  class="heading"><?= $ministry->name; ?></h2>
               </div>
-              
+               <p><?= $ministry->intro; ?></p>
 
-                
-
-              <p><?= $ministry->intro; ?></p>
-              <p><img src="<?= $ministry->image; ?>" alt="<?= $ministry->name; ?>" class="img-fluid"></p>
-              <!-- director pics -->
+              <div class="w3-center">
+              <p>
+              <!-- concatinate the path with the image name here, plus some styles -->
+              <img  style="width: 150px;" src="<?= "images/ministries/".$ministry->logo; ?>" alt="<?= $ministry->name; ?>" alt="<?= $ministry->name; ?>" class="img-fluid">
+              </p>
+              </div>
 
                <p><?= $ministry->text; ?></p>
             <?php endif; ?>

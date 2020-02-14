@@ -53,10 +53,14 @@
             </div>
           </div>
           <div class="col-md-8 pl-md-5">
-            <?php if (isset($_GET['id'])):
+
+            <?php 
+            if (isset($_GET['id'])):
             $evimage="images/EveTeams/";
               $eveTeam_id = $_GET['id'];
-              $eveTeam = $eveTeam_description->$eveTeam_id; ?>
+              $eveTeam = $eveTeam_description->$eveTeam_id 
+            ?>
+            
               <div class="section-heading">
                 <h2 class="heading"><?= $eveTeam->name; ?></h2>
               </div>
