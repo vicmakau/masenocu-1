@@ -45,15 +45,33 @@ $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "U
   <!-- separate css for table -->
   <link rel="stylesheet" href="css/sign.css">
   <!-- separate css for login and signup -->
-
+  <link rel="stylesheet" href="css/additive.css">
   <!-- Theme Style -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
-  <!-- Collapsible sermon notification panel -->
+<!-- Collapsible sermon notification panel -->
+<div id="sermon-upcoming" class="w3-center  text-white fixed-top" style="background-color: #036d84;  margin-top: 99px; height: max-content;  position: -webkit-sticky;">
+    <span>Upcoming Sermons:      </span> 
+    <span> FRIDAY FELLOWSHIP: </span>
+    <span></span>  <!--topic here-->
+    <span>BY </span>  
+    <span></span>  <!--speaker here-->
+    <span>TIME</span>  
+    <span></span>  <!--time here-->
+    <span>  |   </span>
+    <span> FRIDAY FELLOWSHIP: </span>
+    <span></span>  <!--topic here-->
+    <span>BY </span>  
+    <span></span>  <!--speaker here-->
+    <span>TIME</span>  
+    <span></span>  <!--time here-->
+    <span class="closeBtn ion-android-close"></span>
+  </div>
   <!-- end collapsible panel -->
 
+<body>
+  
+<div class="edited">
   <header role="banner">
 
     <nav style="float: left;" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
@@ -127,6 +145,8 @@ $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "U
     </nav>
 
   </header>
+
+  </div> <!--end of edited-->
   </div>
 
   <!-- <script src="js/jquery-3.2.1.min.js"></script>
