@@ -65,7 +65,7 @@ if(isset($_POST['sermon'])){
       // echo "Error: " . $sermonsql . "<br>" . $conn->error;
       echo '<script type="text/javascript">alert("An error occured");
       window.location.replace("../superAdmin.php?tab=sermon");
-      </script>';;
+      </script>';
   }
   // $conn->close();
 }
@@ -175,21 +175,20 @@ if(isset($_POST['sermon'])){
 //  Members login backend
   if (isset($_POST['login'])) {
     $loginemail = $_POST['loginemail'];
-    $loginpassword = md5( $_POST['loginpassword']);
-    $loginquery = "SELECT * FROM `members` WHERE `email` = '$loginemail' AND `password` = '$loginpassword'";
+    $loginpassword = md5($_POST['loginpassword']);
+    $loginquery = "SELECT * FROM `members` WHERE `email` = '$loginemail' AND `password` = '$loginpassword' LIMIT 1";
     $login_result = $conn->query($loginquery);
+
     if ($login_result->num_rows > 0) {
-      while ($row = $login_result->fetch_assoc()) {
-        $_SESSION['user']=$loginemail;
-        header('location:../index.php');
-        exit;
-      }
+      $row = $login_result->fetch_assoc();
+      $_SESSION['user_id'] = $row['id'];
+      $_SESSION['user']=$loginemail;
+      header('location:index.php');
+      exit;
     }else {
       echo '<script type="text/javascript">alert("Login failed.Try again");
        window.location.replace("../login.php");
       </script>';
-      // header('location:../login.php');
-        exit;
     }
   }
 
@@ -215,29 +214,48 @@ if(isset($_POST['sermon'])){
   }
   // edit profile
   if (isset($_POST['edit'])){
-   $email=$_SESSION['user'];
-   $course = mysqli_real_escape_string($conn,$_POST['course']);
-   $image = $_FILES['userimage']['name'];
-   $target = "../images/".basename($image);
-   $imagename=basename($image);
-    $file_size =$_FILES['userimage']['size'];
-    $file_tmp =$_FILES['userimage']['tmp_name'];
-    $file_type=$_FILES['userimage']['type'];
-    $file_ext=strtolower(end(explode('.',$image)));
-    $extensions= array("jpeg","jpg","png");
-    if(in_array($file_ext,$extensions)=== false){
-       echo '<script type="text/javascript">alert("extension not allowed, please choose a JPEG or PNG file.");
-              window.location.replace("../profile.php");
-            </script>';
-    }else{
-      if($file_size > 2097152){
-        echo '<script type="text/javascript">alert("File size must be excately 2 MB");
-                    window.location.replace("../profile.php");
-                </script>';
-      }else{
-        move_uploaded_file($file_tmp,$target);
-        $sql = "UPDATE `members` SET `picture`='$imagename' , `course`='$course' WHERE `email`='$email'";
+    $user_id = $_SESSION['user_id'];
+    $email=$_SESSION['user'];
 
+    // Image
+    if (isset($_FILES['userimage']['name'])) {
+      $image = $_FILES['userimage']['name'];
+      $target = "../images/".basename($image);
+      $imagename=basename($image);
+      $file_size =$_FILES['userimage']['size'];
+      $file_tmp =$_FILES['userimage']['tmp_name'];
+      $file_type=$_FILES['userimage']['type'];
+      $file_ext=strtolower(end(explode('.',$image)));
+      $extensions= array("jpeg","jpg","png");
+      if(in_array($file_ext,$extensions)=== false){
+        echo '<script type="text/javascript">alert("extension not allowed, please choose a JPEG or PNG file.");
+                window.location.replace("../profile.php");
+              </script>';
+      }else{
+        if($file_size > 2097152){
+          echo '<script type="text/javascript">alert("File size must be exactly 2 MB");
+                      window.location.replace("../profile.php");
+                  </script>';
+        }else{
+          move_uploaded_file($file_tmp,$target);
+          $sql = "UPDATE `members` SET `picture`='$imagename' WHERE `email`='$email'";
+
+          if ($conn->query($sql) === TRUE) {
+            header('location:../profile.php');
+            // echo "<script type='text/javascript'>alert('Record updated successfully');</script>";
+          } else {
+            echo '<script type="text/javascript">alert("An error occured");
+            window.location.replace("../profile.php");
+            </script>';
+          }
+        }
+      }
+    }
+
+    // Course
+    if (isset($_POST['course'])){
+      $course = mysqli_real_escape_string($conn,$_POST['course']);
+      $sql = "UPDATE `members` SET `course`='$course' WHERE `email`='$email'";
       if ($conn->query($sql) === TRUE) {
         header('location:../profile.php');
         // echo "<script type='text/javascript'>alert('Record updated successfully');</script>";
@@ -245,10 +263,53 @@ if(isset($_POST['sermon'])){
         echo '<script type="text/javascript">alert("An error occured");
         window.location.replace("../profile.php");
         </script>';
-       }
       }
     }
-   }
+
+    // Eve Team
+    if (isset($_POST['eveteam'])){
+      $eveteam = mysqli_real_escape_string($conn,$_POST['eveteam']);
+      $sql = "UPDATE `members` SET `eve_team_id`=$eveteam WHERE `email`='$email'";
+      if ($conn->query($sql) === TRUE) {
+        header('location:../profile.php');
+        // echo "<script type='text/javascript'>alert('Record updated successfully');</script>";
+      } else {
+        echo '<script type="text/javascript">alert("An error occured");
+        window.location.replace("../profile.php");
+        </script>';
+      }
+    }
+
+
+
+    // Ministries
+    $sql = "DELETE FROM `member_ministries` WHERE `member_id` = $user_id";
+    if ($conn->query($sql) === TRUE) {
+      header('location:../profile.php');
+      // echo "<script type='text/javascript'>alert('Record updated successfully');</script>";
+    } else {
+      echo '<script type="text/javascript">alert("An error occured");
+      window.location.replace("../profile.php");
+      </script>';
+    }
+
+    if (isset($_POST['minGid'])) {
+      foreach($_POST['minGid'] as $ministry) {
+        $sql = "INSERT INTO  `member_ministries` VALUES (NULL, $user_id, $ministry)";
+        if ($conn->query($sql) === TRUE) {
+          header('location:../profile.php');
+          // echo "<script type='text/javascript'>alert('Record updated successfully');</script>";
+        } else {
+          echo '<script type="text/javascript">alert("An error occured");
+          window.location.replace("../profile.php");
+          </script>';
+          break;
+        }
+      }
+    }
+  }
+
+
 // testimonials approvals
  if (isset($_GET['item']) && $_GET['item'] === 'testimonial') {
    $id = $_GET['id'];
@@ -285,5 +346,3 @@ if(isset($_POST['sermon'])){
      // echo "<script type='text/javascript'>alert('Testimonial failed to upload');</script>";
     }
    }
-
- ?>

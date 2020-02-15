@@ -1,5 +1,5 @@
 <?php
-if (!session_id()) session_start();
+include 'connection.php';
 $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
 
 // $db = mysqli_connect('localhost', 'id12540611_masenocu', 'masenocu', 'id12540611_masenocu_db');
@@ -42,6 +42,8 @@ $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "U
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/pagination.css">
   <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
   <!-- separate css for table -->
   <link rel="stylesheet" href="css/sign.css">
   <!-- separate css for login and signup -->
@@ -50,27 +52,27 @@ $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "U
   <link rel="stylesheet" href="css/style.css">
 </head>
 <!-- Collapsible sermon notification panel -->
-<div id="sermon-upcoming" class="w3-center  text-white fixed-top" style="background-color: #036d84;  margin-top: 99px; height: max-content;  position: -webkit-sticky;">
-    <span>Upcoming Sermons:      </span> 
+<div id="sermon-upcoming" class="w3-center  text-white fixed-top" style="background-color: #036d84;  margin-top: 99px; height: max-content;  position: -webkit-sticky;z-index:0;">
+    <span>Upcoming Sermons:      </span>
     <span> FRIDAY FELLOWSHIP: </span>
     <span></span>  <!--topic here-->
-    <span>BY </span>  
+    <span>BY </span>
     <span></span>  <!--speaker here-->
-    <span>TIME</span>  
+    <span>TIME</span>
     <span></span>  <!--time here-->
     <span>  |   </span>
     <span> FRIDAY FELLOWSHIP: </span>
     <span></span>  <!--topic here-->
-    <span>BY </span>  
+    <span>BY </span>
     <span></span>  <!--speaker here-->
-    <span>TIME</span>  
+    <span>TIME</span>
     <span></span>  <!--time here-->
     <span class="closeBtn ion-android-close"></span>
   </div>
   <!-- end collapsible panel -->
 
 <body>
-  
+
 <div class="edited">
   <header role="banner">
 

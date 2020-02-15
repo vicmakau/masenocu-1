@@ -1,9 +1,9 @@
 <?php
   include 'includes/header.php';
   include 'includes/serverconnection.php';
-  include 'includes/editprofile.php';
 
   $user= $_SESSION['user'];
+  $user_id = $_SESSION['user_id'];
   $profilquery = "SELECT * FROM `members` WHERE `email` ='$user'";
   $profil_result = $conn->query($profilquery);
   if ($profil_result->num_rows > 0) {
@@ -17,8 +17,28 @@
     $dbimage="images/".$row['picture'];
    }
   }
+
+  $sql = "SELECT name FROM groups WHERE id = $memberteam";
+  $eve_team_result = $conn->query($sql);
+  if ($eve_team_result->num_rows > 0) {
+    $row=$eve_team_result->fetch_assoc();
+    $membereveteam=$row['name'];
+  }
+
+  $member_ministries = [];
+  $member_ministry_ids = [];
+  $sql = "SELECT groups.id, groups.name AS name from member_ministries LEFT JOIN groups ON member_ministries.ministry_id = groups.id WHERE member_id = $user_id"; 
+  $ministries_result = $conn->query($sql);
+  if ($ministries_result->num_rows > 0) {
+    while($row=$ministries_result->fetch_assoc()){
+      array_push($member_ministry_ids, $row['id']);
+      array_push($member_ministries, $row['name']);
+    }
+  }
+  $member_ministries = implode(', ', $member_ministries);
      // echo "0 results";
 
+  include 'includes/editprofile.php';
 ?>
 <body class="body w3-center" style="margin-top:60px">
   <div class="row">
@@ -41,24 +61,24 @@
             </div>
             <div class="p-wrapper">
               <label class="profile-label" for="property "> Course </label>
-              <p  id="property"> <?= $membercourse ?? 'Edit to add' ?></p>
+              <p  id="property"> <?= $membercourse === ''? 'Edit to add': $membercourse ?></p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="p-wrapper">
-               <label class="profile-label" for="property "> Ministry</label>
-               <p  id="property"> <?= $memberteam ?? 'Edit to add' ?></p>
+               <label class="profile-label" for="property "> Eve Team</label>
+               <p  id="property"> <?= $membereveteam ?? 'Edit to add' ?></p>
              </div>
              <div class="p-wrapper">
-                <label   class="profile-label"for="property "> Eve team</label>
-                <p   id="property"> <?= $memberteam ?? 'Edit to add' ?></p>
+                <label   class="profile-label"for="property "> Ministries</label>
+                <p   id="property"> <?= $member_ministries === ''? 'Edit to add': $member_ministries; ?></p>
               </div>
 
           </div>
 
         </div>
         <div class="w3-center mt-3 ">
-          <a class="nav-link " onclick="openForm("ll")"><button  class="btn btn-outline-info w-40 btnStyle"  data-toggle="modal" data-target="#myModal"> Edit Profile </button></a>
+          <a class="nav-link"><button  class="btn btn-outline-info w-40 btnStyle"  data-toggle="modal" data-target="#myModal"> Edit Profile </button></a>
         </div>
 
         <p>
