@@ -1,5 +1,5 @@
 <?php
-if (!session_id()) session_start();
+include 'connection.php';
 $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
 
 // $db = mysqli_connect('localhost', 'id12540611_masenocu', 'masenocu', 'id12540611_masenocu_db');
@@ -42,6 +42,8 @@ $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "U
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/pagination.css">
   <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
   <!-- separate css for table -->
   <link rel="stylesheet" href="css/sign.css">
   <!-- separate css for login and signup -->
@@ -50,27 +52,26 @@ $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "U
   <link rel="stylesheet" href="css/style.css">
 </head>
 <!-- Collapsible sermon notification panel -->
-<div id="sermon-upcoming" class="w3-center  text-white fixed-top" style="background-color: #036d84;  margin-top: 99px; height: max-content;  position: -webkit-sticky;">
-    <span>Upcoming Sermons:      </span> 
+<div id="sermon-upcoming" class="w3-center  text-white fixed-top" style="background-color: #036d84;  margin-top: 99px; height: max-content;  position: -webkit-sticky;z-index:0;display:none">
+    <span>Upcoming Sermons:      </span>
     <span> FRIDAY FELLOWSHIP: </span>
     <span></span>  <!--topic here-->
-    <span>BY </span>  
+    <span>BY </span>
     <span></span>  <!--speaker here-->
-    <span>TIME</span>  
+    <span>TIME</span>
     <span></span>  <!--time here-->
     <span>  |   </span>
     <span> FRIDAY FELLOWSHIP: </span>
     <span></span>  <!--topic here-->
-    <span>BY </span>  
+    <span>BY </span>
     <span></span>  <!--speaker here-->
-    <span>TIME</span>  
+    <span>TIME</span>
     <span></span>  <!--time here-->
     <span class="closeBtn ion-android-close"></span>
   </div>
   <!-- end collapsible panel -->
 
-<body>
-  
+<body onLoad="myFunctionPop()">>
 <div class="edited">
   <header role="banner">
 
@@ -79,6 +80,9 @@ $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "U
         <a class="navbar-brand absolute" href="index.php">
           <img src="images/cu.png" />
         </a>
+      <!-- pop up message -->
+      <?php include 'sermon-pop.php' ?>
+      <!-- pop up message -->
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -147,7 +151,9 @@ $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "U
   </header>
 
   </div> <!--end of edited-->
+  <!-- <img src="images/avatar.jp" alt=""> -->
   </div>
+
 
   <!-- <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>

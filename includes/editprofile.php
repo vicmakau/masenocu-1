@@ -37,7 +37,7 @@
             $group_result = $conn->query($groupquery);
             if ($group_result->num_rows > 0) :
                 while($group_row = $group_result->fetch_assoc()) :?>
-                <option data-tokens="" style="color:black" value="<?= $group_row['id'] ?>"><?= $group_row['name'] ?></option>
+                <option data-tokens="" style="color:black" value="<?= $group_row['id'] ?>" <?php if ($group_row['id'] == $memberteam) echo "selected"; ?>><?= $group_row['name'] ?></option>
             <?php
             endwhile;
             endif;
@@ -47,13 +47,13 @@
 <!-- Select your ministries -->
           <div class="form-group mb-3">
           <label for="groupId">Select Your ministries</label>
-          <select class="selectpicker " id="groupId" name="minGid" multiple>
+          <select class="selectpicker " id="groupId" name="minGid[]" multiple>
             <?php
             $groupquery = "SELECT * FROM `groups` WHERE `type`='ministry'";
             $group_result = $conn->query($groupquery);
             if ($group_result->num_rows > 0) :
                 while($group_row = $group_result->fetch_assoc()) :?>
-                <option  value="<?= $group_row['id'] ?>"><?= $group_row['name'] ?></option>
+                <option  value="<?= $group_row['id']?>" <?php if (in_array($group_row['id'], $member_ministry_ids)) echo "selected"; ?>><?= $group_row['name'] ?></option>
             <?php
             endwhile;
             endif;
