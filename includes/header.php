@@ -34,6 +34,8 @@ $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
     <link rel="stylesheet" href="css/pagination.css">
     <link rel="stylesheet" href="css/auth.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 
     <!-- separate css for table -->
     <link rel="stylesheet" href="css/sign.css">
