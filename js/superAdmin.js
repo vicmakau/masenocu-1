@@ -25,4 +25,16 @@ function getUrlParameter(name) {
 
 $(document).ready(function () {
   if (getUrlParameter('tab') === "testimonials") $('#btn').click();
+  if (getUrlParameter('tab') === "Activities") $('#btn').click();
+  if (getUrlParameter('tab') === "sermon") $('#btn').click();
+  if (getUrlParameter('tab') === "castMessage") $('#btn').click();
+  if (getUrlParameter('tab') === "Leadership") $('#btn').click();
+  if (getUrlParameter('tab') === "semTheme") $('#btn').click();
+
+
+
+
+
+
+
 });

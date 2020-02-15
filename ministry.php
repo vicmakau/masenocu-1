@@ -25,7 +25,7 @@
             <div class="mb-5 element-animate">
               <div class="block-17">
                 <h1 class="heading mb-4">Ministries</h1>
-                <div class="lead">Ministries provides service to the church through devotion. We do all the the church activities pertaining the welfare of the brethrens and all inclusions</div>
+                <div class="lead">Ministries provides service to the church through devotion. We do all the church activities pertaining the welfare of the brethrens and all inclusions</div>
               </div>
             </div>
 
@@ -37,28 +37,30 @@
 
     <section class="site-section bg-light">
       <div class="container">
-        <div class="row">
+        <div  class="row">
           <div class="col-md-4">
             <div class="block-36">
-              <h3 class="block-36-heading">Ministries</h3>
+              <h3  class="block-36-heading">Ministries</h3>
               <ul>
 
                 <?php foreach ($ministries as $id => $name) : ?>
                   <li <?= (isset($_GET['id'])) && ($_GET['id'] == $id) ? 'class="active disabled"' : '' ?>>
-                    <a href="ministry.php?type=ministry&id=<?= $id; ?>"><?= $name; ?></a>
+                    <a href="ministry.php?id=<?= $id; ?>#route-zero"><?= $name; ?></a>
                   </li>
-                <?php endforeach; ?>
+                <?php endforeach; ?> 
               </ul>
 
             </div>
 
           </div>
-          <div class="col-md-8 pl-md-5">
+          <div  class="col-md-8 pl-md-5">
 
-            <?php if (isset($_GET['id'])) : ?>
+            <?php if (isset($_GET['id'])) :
+                  $ministryImage="images/ministries/"; ?>
               <div class="section-heading">
                 <h2 class="heading"><?php echo $ministry->name; ?></h2>
               </div>
+               <p><?= $ministry->intro; ?></p>
 
               <!-- <p><?php // echo $ministry->intro; 
                       ?></p> -->
@@ -86,7 +88,6 @@
               </table>
             <?php endif; ?>
           </div>
-
         </div>
       </div>
 

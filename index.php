@@ -45,7 +45,15 @@ if (mysqli_num_rows($res) > 0)
           <div class="block-42-title mx-2">
             <a href="sermon-single.php?id=<?php echo $latest_sermons[0]['id']; ?>"><strong><?php echo $latest_sermons[0]['title']; ?></strong></a>
           </div>
-          <div class="block-42-meta">Posted on <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $latest_sermons[0]['date'])->format('F j, Y'); ?>, <strong><?php echo $latest_sermons[0]['speaker']; ?></strong> </div>
+          <div class="block-42-meta">By
+          <strong>
+              <?php
+                echo $latest_sermons[0]['speaker'];
+               ?>
+              </strong> Posted on
+                 <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $latest_sermons[0]['date'])->format('F j, Y');
+                  ?>
+              </div>
         </div>
         <div class="block-42-icons ml-auto">
           <a href="<?php echo $latest_sermons[0]['video']; ?>" class="fa fa-video-camera pl-0"></a>
@@ -60,11 +68,11 @@ if (mysqli_num_rows($res) > 0)
 
 <section class="site-section">
   <div class="container">
-    <div class="row align-items-center">
+    <div  class="row align-items-center">
       <div class="col-md-6 order-md-2">
         <div class="block-16">
           <figure>
-            <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-9/50777239_603421963436284_4389557804596199424_n.jpg?_nc_cat=110&_nc_oc=AQn-iWrqopvF6gPwgR0URNjObQxqSB2z4ZNeRd_wgwXCm3Y3XD0beuIy0xozz8pgkvc&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=82d12530a575823bd10725a93127d406&oe=5E57F8D0" alt="Image placeholder" class="img-fluid img-shadow">
+            <img  src="images/masenoCU.jpg" alt="Image placeholder" class="img-fluid img-shadow">
           </figure>
         </div>
       </div>
@@ -138,7 +146,7 @@ if (mysqli_num_rows($res) > 0)
     <div class="row">
       <div class="col-md-12">
         <div class="section-heading">
-          <h2 class="heading">Church Ministry</h2>
+          <h2 class="heading">Church Ministries</h2>
         </div>
       </div>
     </div>
@@ -150,12 +158,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49671095_590680258043788_8824584078608039936_n.jpg?_nc_cat=111&_nc_ohc=rDCKJhB-e08AQm5pBk3d5EoDPnrbgKc7xB_sUZfsnWcO4COvL3WJniAig&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=cd93cd292d7da10cb2a7d3f8bc0c4770&oe=5E4E9106" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=mit#route-zero"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49671095_590680258043788_8824584078608039936_n.jpg?_nc_cat=111&_nc_ohc=rDCKJhB-e08AQm5pBk3d5EoDPnrbgKc7xB_sUZfsnWcO4COvL3WJniAig&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=cd93cd292d7da10cb2a7d3f8bc0c4770&oe=5E4E9106" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Media and IT</a></h3>
-            <p> Covers technical activities including videography,photography,projection and publicity. </p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p> Covers technical activities including videography, photography, projection and publicity. </p>
+            <p><a href="ministry.php?id=mit">Read More</a></p>
           </div>
         </div>
       </div>
@@ -165,9 +173,9 @@ if (mysqli_num_rows($res) > 0)
             <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49575841_590680248043789_2850377306805895168_n.jpg?_nc_cat=108&_nc_ohc=_pfxAry3C_wAQmceNT40qF-SQY5VbmS5Ys-eCxYinOnb4V6dBpQioWmPQ&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=6101f1751f64ee82df1f076d53557aea&oe=5E87E5FF" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
-            <h3 class="heading"><a href="#">Praise and Worship Ministry</a></h3>
+            <h3 class="heading"><a href="ministry.php?id=praise#route-zero">Praise and Worship Ministry</a></h3>
             <p> We are called to serve using our voices,leading in praise and worship. </p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=praise#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -175,12 +183,13 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c116.0.200.200a/p200x200/49664823_590680311377116_8953141232985440256_o.jpg?_nc_cat=107&_nc_ohc=JbWA7iGxSVcAQnYkwmsDfjod14J05GDtljPOzWvfYk0yaPdzbSuxqXS0Q&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=343e0e66cbb6abff7f91dc66582cc7bd&oe=5E4E2C77" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=creative#route-zero"><img src="images/ministries/creative.jpg" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Creative Ministry</a></h3>
             <p> We explore the word of God, delivering our talents through arts and entertainment.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=creative#route-zero">Read more</a>
+
           </div>
         </div>
       </div>
@@ -188,12 +197,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=hospitality#route-zero"><img src="images/ministries/hospi.png" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Hospitality Ministry</a></h3>
-            <p> Cordinates members welfare ,catering and ushering as well as nurturing into resoponsible adults.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p> Cordinates members welfare ,catering and ushering as well as nurturing into responsible adults.</p>
+            <p><a href="ministry.php?id=hospitality#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -201,12 +210,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=highschool#route-zero"><img src="images/cu.png" alt="images/cu.png" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">High School Ministry</a></h3>
             <p>We want to help middle school and high school students thrive in their spiritual journey.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=highschool#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -214,12 +223,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49620968_590680288043785_7400181088540164096_n.jpg?_nc_cat=110&_nc_ohc=uhUc6RUT5LsAQmUz7XfD_cfDJOlmImIhHPY-3MYk8VDKTnrJ40NYVB70w&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=cb8abb89b17de6c7a0dec5735145e7e9&oe=5E4DBFAF" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=instrumentalist#route-zero"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/p200x200/49620968_590680288043785_7400181088540164096_n.jpg?_nc_cat=110&_nc_ohc=uhUc6RUT5LsAQmUz7XfD_cfDJOlmImIhHPY-3MYk8VDKTnrJ40NYVB70w&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=cb8abb89b17de6c7a0dec5735145e7e9&oe=5E4DBFAF" alt="Maseno Cu" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Instrumentalists Ministry</a></h3>
             <p>Participation through gospel music, training and setting up of Instruments .</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=instrumentalist#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -227,12 +236,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=sunday-school#route-zero"><img src="images/cu.png" alt="" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Sunday School Ministry</a></h3>
             <p>Teaching, Giving, Directing and Sharing Knowledge of Jesus Christ to Children.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=sunday-school#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -240,12 +249,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="#"><img src="images/cu.png" alt="images/cu.png" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Discipleship Ministry</a></h3>
             <p>We spread the good news,teach the word and reaching souls through missions and evangelism.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=sunday-school#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -253,12 +262,12 @@ if (mysqli_num_rows($res) > 0)
       <div class="item">
         <div class="block-20">
           <figure>
-            <a href="#"><img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.0-0/c25.0.200.200a/p200x200/49778645_590289881416159_584297499955560448_n.jpg?_nc_cat=107&_nc_ohc=F-nhgCRav50AQkb6wc7XZBpV1ocUIgXMnKe7sg5d5iNnB5G0bf0TY7tSw&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=194c4b109a89a5ab8dcfab426bed77b6&oe=5E43D405" alt="Maseno Cu" class="img-fluid"></a>
+            <a href="ministry.php?id=intercessory#route-zero"><img src="images/cu.png" alt="images/cu.png" class="img-fluid"></a>
           </figure>
           <div class="text text-center">
             <h3 class="heading"><a href="#">Intercessory Ministry</a></h3>
             <p>We have fellowship through prayer presenting needs and petitions individually and the church as a whole.</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+            <p><a href="ministry.php?id=intercessory#route-zero">Read More</a></p>
           </div>
         </div>
       </div>
@@ -330,60 +339,52 @@ if (mysqli_num_rows($res) > 0)
     <!-- begin -->
     <div class="block-13">
       <div class="nonloop-block-13 owl-carousel">
+        <?php
+        $sermonsql = "SELECT * FROM `testimonials` WHERE `state` IS NOT NULL ORDER BY RAND() LIMIT 3 ";
+        $resultset = mysqli_query($db, $sermonsql);
+        if (mysqli_num_rows($resultset) > 0) {
+             while($data = mysqli_fetch_assoc($resultset)) {
+              $messageid = $data['message'];
+              $memberId = $data['member_id'];
+             // select member
+             $memsql = "SELECT * FROM `members` WHERE `email` ='$memberId'";
+             $resultdata = mysqli_query($db, $memsql);
+             if (mysqli_num_rows($resultdata) > 0) :
+                 while($data = mysqli_fetch_assoc($resultdata)) :
+                   $image="images/".$data['picture'];
+                   $fullname=$data['first_name']." ".$data['last_name'];
+                   ?>
+                 <div class="item">
+                   <div class="block-33">
+                     <div class="text mb-5">
+                       <blockquote>
+                         <p>&rdquo; <?= $messageid ?> &ldquo;</p>
+                       </blockquote>
+                     </div>
+                     <div class="vcard d-flex">
+                       <div class="image align-self-center ml-auto order-2 ml-3">
+                         <a data-flickr-embed="true" href="" title="booban"><img src="<?=$image ?? 'images/avatar.jpg' ?>" class="rounded-circle" alt="booban" style="height:50px;width:50px;border-radius:50%;"></a>
+                         <!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" target="_blank"></script> -->
+                       </div>
+                       <div class="name-text align-self-center ml-auto order-1 text-right">
+                         <h2 class="heading"><?= $fullname ?></h2>
+                         <span class="meta">Eveteam</span>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+      <?php endwhile;
+      else :
+        echo "string";
 
-        <div class="item">
-          <div class="block-33">
-            <div class="text mb-5">
-              <blockquote>
-                <p>&rdquo; I've been a devoted Christian all along. Coming to this Christian union has been of great impact to my life. It has helped me keeping the zeal and containment in the Lord. Its a nice place for everyone to connect with God &ldquo;</p>
-              </blockquote>
-            </div>
-            <div class="vcard d-flex">
-              <div class="image align-self-center ml-auto order-2 ml-3">
-                <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104509532/in/dateposted-public/" title="booban"><img src="https://live.staticflickr.com/65535/49104509532_4c19dd89b7.jpg" alt="booban"></a>
-                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8" target="_blank"></script>
-              </div>
-              <div class="name-text align-self-center ml-auto order-1 text-right">
-                <h2 class="heading">Simon Nyongesa</h2>
-                <span class="meta">WESO</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="block-33">
-            <div class="text mb-5">
-              <blockquote>
-                <p>&rdquo; A friend took me to the church. Thats when I met my salvation. By the grace of the Saviour Jesus christ, I acknowldge to be saved, and this is the place I keep growing my faith. I expect to grow more in faith as days goes by. Indeed thats my quest &ldquo;</p>
-              </blockquote>
-            </div>
-            <div class="vcard d-flex">
-              <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_1.jpg" alt="Person here" target="_blank"></div>
-              <div class="name-text align-self-center ml-auto order-1 text-right">
-                <h2 class="heading">Maria Nkatha</h2>
-                <span class="meta">CET</span>
-              </div>
-            </div>
-          </div>
-        </div>
+             endif;
+             // select member
+            }
+        } else {
+        echo '<div class="w3-center"><h1>No testimony</h1></div>';
+        }
 
-
-        <div class="item">
-          <div class="block-33">
-            <div class="text mb-5">
-              <blockquote>
-                <p>&rdquo; The CU has given me confidence. I can testify Christ wherever I am. The missions and inreaches has helped me groW to another level. I have grown alot the way I associate with other people. Even outside church. I am not as I was before. &ldquo;</p>
-              </blockquote>
-            </div>
-            <div class="vcard d-flex">
-              <div class="image align-self-center ml-auto order-2 ml-3"><img src="images/person_2.jpg" alt="Person here"></div>
-              <div class="name-text align-self-center ml-auto order-1 text-right">
-                <h2 class="heading">Vicky Makau</h2>
-                <span class="meta">UET</span>
-              </div>
-            </div>
-          </div>
-        </div>
+         ?>
       </div>
     </div>
   </div>

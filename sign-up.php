@@ -27,7 +27,7 @@
                     <span class="sign-in-text-or">or</span>
                     <span  class="sign-in-text">Sign Up</span>
                 </div>
-                <form class="form" action="includes/connection.php" method="post">
+                <form class="form" action="includes/connection.php" method="post" autocomplete="off">
                 <div class="forms">
                   <label class="label">FIRST NAME:</label><br>
                    <input name="memberfirstname" class="text-area" type="text" placeholder="Enter your firstname" required> <br>
@@ -40,24 +40,30 @@
                      <div class="">
                      <label for="groupId">YEAR OF STUDY</label><br>
                      <select name="memberyos" class="selectpicker text-area" name="activityCategory" id="groupId" >
-                       <option value="1" style="color:black"  > FIRST YEAR</option>
-                       <option value="2" style="color:black"  >SECOND YEAR</option>
-                       <option value="3" style="color:black"  >THIRD YEAR</option>
-                       <option value="4" style="color:black"  >FOUTH YEAR</option>
+                       <option value="1" style="color:black"  >1ST</option>
+                       <option value="2" style="color:black"  >2ND</option>
+                       <option value="3" style="color:black"  >3RD</option>
+                       <option value="4" style="color:black"  >4TH</option>
+                     </select>
+                     </div>
+                     <div class="">
+                     <label for="eveteam">EVE TEAM</label><br>
+                     <select name="eveteam" class="selectpicker text-area" name="activityCategory" id="eveteam" >
+                       <option value="1" style="color:black"  >CET</option>
+                       <option value="2" style="color:black"  >WESO</option>
+                       <option value="3" style="color:black"  >NET</option>
+                       <option value="3" style="color:black"  >SORET</option>
+                       <option value="4" style="color:black"  >MUBET</option>
+                       <option value="5" style="color:black"  >EMUSETA</option>
+                       <option value="6" style="color:black"  >NORET</option>
+                       <option value="7" style="color:black"  >UET</option>
                      </select>
                      </div>
                      <label class="label">PASSWORD</label><br>
-                      <input type="password" class="text-area" id="psw" name="memberpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-                      <div id="message">
-                       <h3>Password must contain the following:</h3>
-                       <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                       <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                       <p id="number" class="invalid">A <b>number</b></p>
-                       <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-                     </div><br>
-                     <input type="checkbox" onclick="showPassword()">Show Password <br>
+                      <input type="password" class="text-area" id="psw" name="memberpassword" >
                      <label class="label" >CONFIRM PASSWORD</label><br>
-                     <input class="text-area" name="memberCpassword" type="password" placeholder="re-type your password to comfirm" required> <br>
+                     <input class="text-area" id="cpsw" name="memberCpassword" type="password" placeholder="re-type your password to confirm" required> <br>
+                     <input type="checkbox" onclick="showPassword()">Show Password <br>
                 </div>
 
                 <div class="refuses">
@@ -93,7 +99,6 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
-
     <script src="js/jquery.magnific-popup.min.js"></script>
 
     <script src="js/main.js"></script>

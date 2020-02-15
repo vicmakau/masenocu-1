@@ -29,8 +29,8 @@ include("includes/header.php");
       <div class="col-md-6 order-md-2">
         <div class="block-16">
           <figure>
-            <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid img-shadow">
-            <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
+            <img src="images/masenoCU.jpg" alt="Image placeholder" class="img-fluid img-shadow">
+            
           </figure>
         </div>
       </div>
@@ -73,7 +73,7 @@ include("includes/header.php");
               <p class="block-38-subheading">C.U Patron</p>
             </div>
             <div class="block-38-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+              <p>Persuing holiness </p>
             </div>
           </div>
         </div>
@@ -83,12 +83,14 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104315926/in/dateposted-public/" title="IMG_8557"><img src="https://live.staticflickr.com/65535/49104315926_53a9a68e7b.jpg" width="500" height="333" alt="IMG_8557"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/chair.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Martin Mwathi</h3>
               <p class="block-38-subheading">Chairperson</p>
             </div>
             <div class="block-38-body">
-              <p> I am in my 3rd year pursuing bachelor of science medical biotechnology..my main roles are presiding over all exec meetings,,and all AGM meetings unless prevented by illness.. I link the executive committee with the advisory committee,, </p>
+              <p> I am in my 3rd year pursuing bachelor of science medical biotechnology. My main roles are presiding over all exec meetings, and all AGM meetings unless prevented by illness. I link the executive committee with the advisory committee. </p>
             </div>
           </div>
         </div>
@@ -98,18 +100,17 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49103811328/in/dateposted-public/" title="IMG_8586"><img src="https://live.staticflickr.com/65535/49103811328_a6ef5d0aa3.jpg" width="500" height="333" alt="IMG_8586"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/vc.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Andrew Mwendwa</h3>
               <p class="block-38-subheading">Vice Chairperson</p>
             </div>
             <div class="block-38-body">
               <p>A 3rd year taking Education (with IT) (Mathematics and Geography)
-                  My roles are to deputise the chairperson,
-                  oversee the smooth running of the C.U fellowships, Sunday services and C.U events,
+                  My roles are to deputise the chairperson, oversee the smooth running of the C.U fellowships, Sunday services and C.U events,
                   Oversee the activities of MEDIA and IT ministry
-                  <!-- screening church presentations,
-                  securing venues for all C.U meetings and
-                  being in charge of indisciplinary cases in liason with the executive committee. --></p>
+                  
             </div>
           </div>
         </div>
@@ -119,12 +120,14 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104690486/in/dateposted-public/" title="_MG_8606"><img src="https://live.staticflickr.com/65535/49104690486_11c859c4b3.jpg" width="500" height="333" alt="_MG_8606"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/sec.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Evelyn Njoki Wainaina</h3>
               <p class="block-38-subheading">Secretary</p>
             </div>
             <div class="block-38-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+              <p>I am a 3rd year taking bachelors degree in Geography and Natural Resources Management with IT. My roles includes dealing with  all correspondences of the CU, issuing notices and keeping records for the CU . I am also an exec rep in the elders committee. </p>
             </div>
           </div>
         </div>
@@ -133,14 +136,14 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104328211/in/dateposted-public/" title="IMG_8596"><img src="https://live.staticflickr.com/65535/49104328211_c1d68d4363.jpg" width="500" height="333" alt="IMG_8596"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-              <h3 class="block-38-heading">Naphtali Njaga</h3>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/treasurer.jpg" alt="">
+              </div>
+              <h3 class="block-38-heading">Naftali Njanga</h3>
               <p class="block-38-subheading">Treasurer</p>
             </div>
             <div class="block-38-body">
-              <p>Business Administration (Accounting)
-                  My roles are receiving and dibursing all the monies in Christian union under the direction of the executive committee and
-                  Keep books of records of the C.U accounts
+              <p>Taking Business Administration (Accounting), 3rd year. My roles are receiving and disbursing all the monies in Christian union under the direction of the executive committee and keeping the  books of records of the CU accounts and all monetary activities.
                   </p>
             </div>
           </div>
@@ -151,18 +154,15 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49103813703/in/dateposted-public/" title="IMG_8585"><img src="https://live.staticflickr.com/65535/49103813703_7f8026ab50.jpg" width="500" height="333" alt="IMG_8585"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/unanimas.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Mwenda Godfrey</h3>
               <p class="block-38-subheading">Missions Coordinator</p>
             </div>
             <div class="block-38-body">
-              <p>Course:Actuarial science with IT.
-                Am a third year.
-                I'm the Missions Coordinator.
-                Roles: organizing CU missions,ground work,spiritual mapping.
-                Overseeing the progress of Evangelistic teams.
-                Organizing In-reach around the school.
-                Representing Exec in the outreach committee. </p>
+              <p>Course: Actuarial science with IT.
+                I am third year. My major role includes organizing CU missions, ground work, spiritual mapping and  overseeing the progress of Evangelistic teams. I also organizing In-reaches around the school . I do Represent the Exec in the outreach committee. </p>
             </div>
           </div>
         </div>
@@ -172,12 +172,14 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104326621/in/dateposted-public/" title="_MG_8567"><img src="https://live.staticflickr.com/65535/49104326621_0f9ca7e65d.jpg" width="500" height="333" alt="_MG_8567"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/vs.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Zipporah Kyeni Mwenga</h3>
               <p class="block-38-subheading">Vice Secretary</p>
             </div>
             <div class="block-38-body">
-              <p>I am a second year from the school of Education arts (French $History) . I am currently the Vice Secretary. My roles are :1.Deputising the secretary 2.Act as an exec rep in the 2nd yrs committee 3.Coordinate all the activities of the specialized Committee</p>
+              <p>I am a second year from the school of Education arts (French $History) . I am currently the Vice Secretary. My roles are deputising the secretary, acting as an exec rep for the Second Years committee and coordinating all the activities for the specialized Committee</p>
             </div>
           </div>
         </div>
@@ -187,12 +189,14 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104407966/in/dateposted-public/" title="_MG_8564"><img src="https://live.staticflickr.com/65535/49104407966_d5e2b2ef51.jpg" width="500" height="333" alt="_MG_8564"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/maangi.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Job Maangi</h3>
               <p class="block-38-subheading">Bible study Coordinator</p>
             </div>
             <div class="block-38-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+              <p>Taking Bachelors Arts and Social Sciences, a third year. Roles are, seeking and suggesting about relevant bible study materials to be used by the CU, organizing members into bible study groups together with the bible study committee and co-ordinating BEST-P  </p>
             </div>
           </div>
         </div>
@@ -202,14 +206,15 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49053301956/in/dateposted-public/" title="Board Dir"><img src="https://live.staticflickr.com/65535/49053301956_60fafe5d02.jpg" width="500" height="333" alt="Board Dir"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="" alt="">
+              </div>
               <h3 class="block-38-heading">Julius Ochieng</h3>
               <p class="block-38-subheading">Board Director</p>
             </div>
             <div class="block-38-body">
               <p>
-              I am a third year student in the school of agriculture and food security taking a course in Bsc.Soil science and plant nutrition(with IT).
-               My responsibility include; coordinating the activities of praise and worship, choir, instrumentalist and creative ministries </p>
+              I am a third year student in the school of agriculture and food security taking a course in Bsc. Soil science and plant nutrition(with IT). My responsibility includes coordinating the activities of praise and worship, choir, instrumentalist and creative ministries </p>
             </div>
           </div>
         </div>
@@ -219,12 +224,14 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104380296/in/dateposted-public/" title="_MG_8561(1)"><img src="https://live.staticflickr.com/65535/49104380296_79a23b7045.jpg" width="500" height="333" alt="_MG_8561(1)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/missions.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Ezra Kipkoech Ngetich.</h3>
               <p class="block-38-subheading">Discipleship Coordinator</p>
             </div>
             <div class="block-38-body">
-              <p>I am in  year 3 of my studies  , a Royal, from the school of Education ,pursuing Bachelor of Education Arts with ITRoles:Nurturing new believers , ensuring growth of members through discipleship teachings and mentorship programmes. </p>
+              <p>I am in  year 3 of my studies, a Royal, from the school of Education pursuing Bachelor of Education Arts with IT. Roles are Nurturing new believers, ensuring growth of members through discipleship teachings and mentorship programmes. </p>
             </div>
           </div>
         </div>
@@ -234,12 +241,14 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104298451/in/dateposted-public/" title="IMG_8592"><img src="https://live.staticflickr.com/65535/49104298451_80746cb7d8.jpg" width="500" height="333" alt="IMG_8592"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/hospitality.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Abigael Naliaka</h3>
               <p class="block-38-subheading">Hospitality Director</p>
             </div>
             <div class="block-38-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+              <p>Bachelor of Education Arts, Kiswahili and Music. My  duties includes being in charge of order in the church and collection of offering, preparing meals for the speakers and the whole church when necessary and well-being of the church members especially when the semester is in the corner.</p>
             </div>
           </div>
         </div>
@@ -249,12 +258,14 @@ include("includes/header.php");
         <div class="block-38 text-center">
           <div class="block-38-img">
             <div class="block-38-header">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/185427252@N03/49104325321/in/dateposted-public/" title="_MG_8570"><img src="https://live.staticflickr.com/65535/49104325321_36d0b00c85.jpg" width="500" height="333" alt="_MG_8570"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            <div style="height: 150px; width: 150px;"class="pcs-place-holder">
+                <img style="height: 150px; width: 150px;" src="images/exec/prayercod.jpg" alt="">
+              </div>
               <h3 class="block-38-heading">Keziah Inyele</h3>
               <p class="block-38-subheading">Prayer Coordinator</p>
             </div>
             <div class="block-38-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+              <p>Pursuing holiness </p>
             </div>
           </div>
         </div>
@@ -276,7 +287,7 @@ include("includes/header.php");
           </div>
           <div class="block-43-text">
             <h3 class="block-43-heading">Discipleship</h3>
-            <p>Deepening and strengthening the spiritual life of its members by study of the bible, by prayers and Christian fellowship.Also encouraging consistent and responsible church membership.</p>
+            <p>Deepening and strengthening the spiritual life of its members by study of the bible, by prayers and Christian fellowship. Also encouraging consistent and responsible church membership.</p>
           </div>
         </div>
       </div>
@@ -319,7 +330,7 @@ include("includes/header.php");
           </div>
           <div class="block-43-text">
             <h3 class="block-43-heading">Mission</h3>
-            <p>Preparing Christian students to take good news to all nations of the world and to play an active role in the communities where they live. .</p>
+            <p>Preparing Christian students to take good news to all nations of the world and to play an active role in the communities where they live. </p>
           </div>
         </div>
       </div>

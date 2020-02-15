@@ -53,13 +53,14 @@
             </div>
           </div>
           <div class="col-md-8 pl-md-5">
-            <?php if (isset($_GET['id'])) : ?>
+            <?php if (isset($_GET['id'])) : 
+            $evimage="images/EveTeams/"; ?>            
               <div class="section-heading">
                 <h2 class="heading"><?= $eve_team->name; ?></h2>
               </div>
               <!-- <p><?php // echo $eveTeam->intro; 
                       ?></p> -->
-              <!-- <p><img src="<?php // echo $eveTeam->image; 
+              <p><img src="<?php // echo $eveTeam->image; 
                                 ?>" alt="<?php // echo $eveTeam->name; 
                                           ?>" class="img-fluid"></p> -->
 
@@ -85,8 +86,9 @@
           </div>
         </div>
       </div>
+            </div>
+              
     </section>
-    <!-- leader -->
 
     <?php include 'includes/footer.php'; ?>
     <!-- END footer -->

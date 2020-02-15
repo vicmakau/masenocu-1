@@ -1,0 +1,11 @@
+.btn-hover-style
+{
+    -webkit-transition-duration: 0; Safari 
+    transition-duration: 0.5s;
+}
+
+.btn-hover-style:hover
+{
+font-weight: 500;
+color: #24aae1;
+}

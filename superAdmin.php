@@ -1,5 +1,7 @@
 <?php
 include 'includes/connection.php';
+include 'includes/loginAdmin.php';
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -49,9 +51,27 @@ include 'includes/connection.php';
             <div class="container"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><img src="assets/img/cu.png">Maseno Christian Union</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div
                     class="collapse navbar-collapse" id="navcol-1">
-                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Maseno CU | Admin Panel&nbsp;</strong></p><span class="ml-auto navbar-text actions"> <a class="btn btn-light action-button" role="button" href="#"><strong>Log Out</strong></a></span></div>
-    </div>
-    </nav>
+                    <?php
+                    if(isset($_SESSION['admin'])):?>
+                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Maseno CU | <?=$_SESSION['admin']?>&nbsp;</strong></p>
+                    <!-- <span class="ml-auto navbar-text actions"> -->
+                      <a class="btn ml-auto  btn-light action-button" role="button" href="includes/adminlogout.php"><strong>LogOut</strong></a>
+                    <!-- </span> -->
+                  <?php  else:?>
+                    <?php echo "
+                    <script type="."text/javascript".">
+                      document.getElementById('adminLogin').style.display='block';
+                      document.getElementById('span').style.display='none';
+                    </script>;" ?>
+                    <!-- <span class="" > -->
+                      <button type="button"  onclick="document.getElementById('adminLogin').style.display='block'"
+                      class="btn ml-auto navbar-text actions btn-outline-info btn-light action-button" >Login</button>
+                      <!-- <button type="button" class="btn btn-outline-info btn-light action-button" >Login</button> -->
+                  <?php  endif;?>
+
+                </div>
+            </div>
+        </nav>
     </div>
     <div class="container w3-border tab-View " >
         <div class="w3-center">
@@ -64,28 +84,28 @@ include 'includes/connection.php';
                  <h5>Admin Panel</h5>
 
           <ul style="margin-right:10px; margin-left: 0px;">
-            <li  class="tablink" onclick="openEvent(event, 'Activities')">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'Activities')">
               Activities
             </li>
-            <li  class="tablink" onclick="openEvent(event, 'sermon')">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'sermon')">
               Sermon
             </li>
-            <li class="tablink" onclick="openEvent(event, 'Leadership')">
+            <li class="tablink" id="btn" onclick="openEvent(event, 'Leadership')">
               Leadership
             </li>
-            <li  class="tablink"  onclick="openEvent(event, 'gallery')">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'gallery')">
             Gallery
             </li>
-            <li  class="tablink" onclick="openEvent(event, 'upload')">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'upload')">
               Upload Documents
             </li>
-            <li class="tablink" onclick="openEvent(event, 'castMessage')">
+            <li class="tablink" id="btn" onclick="openEvent(event, 'castMessage')">
               Cast Message
             </li>
             <li class="tablink" id="btn" onclick="openEvent(event, 'testimonials')">
               Review testimonials
             </li>
-            <li  class="tablink" onclick="openEvent(event, 'semTheme')">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'semTheme')">
               Semesters Theme
             </li>
           </ul>
@@ -235,7 +255,7 @@ include 'includes/connection.php';
                 <form action="includes/connection.php" method="post">
                   <div class="form-group">
                   <label for="groupId">Select group</label>
-                  <select class="selectpicker form-control" id="groupId"  name="leaderGid">
+                  <select class="selectpicker form-control" id="groupId" data-live-search="true"  name="leaderGid">
                     <?php
                     $groupquery = "SELECT * FROM `groups`";
                     $group_result = $conn->query($groupquery);

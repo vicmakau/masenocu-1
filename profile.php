@@ -19,7 +19,7 @@
      // echo "0 results";
 
 ?>
-<body class="body w3-center" style="margin-top:55px">
+<body class="body w3-center" style="margin-top:60px">
   <div class="row">
     <div class="col-md-3">
     </div>
@@ -35,33 +35,33 @@
         <div class="row">
           <div class="col-md-6">
             <div class="p-wrapper">
-              <label for="property "> Phone</label>
-              <p id="property"> <?= $memberphone ?> </p>
+              <label class="profile-label" class="profile-labe1" for="property "> Phone</label>
+              <p  id="property"> <?= $memberphone ?> </p>
             </div>
             <div class="p-wrapper">
-              <label for="property "> Course </label>
-              <p id="property"> <?= $membercourse ?? 'Not added' ?></p>
+              <label class="profile-label" for="property "> Course </label>
+              <p  id="property"> <?= $membercourse ?? 'Edit to add' ?></p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="p-wrapper">
-               <label for="property "> Ministry</label>
-               <p id="property"> <?= $memberteam ?? 'You belong to any' ?></p>
+               <label class="profile-label" for="property "> Ministry</label>
+               <p  id="property"> <?= $memberteam ?? 'Edit to add' ?></p>
              </div>
              <div class="p-wrapper">
-                <label for="property "> Eve team</label>
-                <p id="property"> <?= $memberteam ?? 'You belong to any' ?></p>
+                <label   class="profile-label"for="property "> Eve team</label>
+                <p   id="property"> <?= $memberteam ?? 'Edit to add' ?></p>
               </div>
 
           </div>
 
         </div>
-        <div class="w3-center mt-5">
-          <a class="nav-link " onclick="openForm()"><button  class="btn btn-outline-info w-25 btnStyle"> Edit Profile </button></a>
+        <div class="w3-center mt-3 ">
+          <a class="nav-link " onclick="openForm()"><button  class="btn btn-outline-info w-40 btnStyle"> Edit Profile </button></a>
         </div>
-        <hr>
+        
         <p>
-         <button class="btn btn-outline-info w-50 btnStyle" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+         <button class="btn btn-outline-info w-30  mt-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             Add Testimonial
               </button>
             </p>
@@ -86,17 +86,17 @@
 
   <!-- pop up login -->
   <div class="form-popup" id="myForm">
-  <form method="POST" action="includes/connection.php" enctype="multipart/form-data" class="form-container">
+  <form method="POST" action="includes/connection.php" autocomplete="off" enctype="multipart/form-data" class="form-container">
     <h1>Edit</h1>
 
     <label for="email"><b></b></label>
     <input type="file" class="form-control" name="image" required>
 
-    <label for="course"><b>Password</b></label>
+    <label for="course"><b>Course</b></label>
     <input type="text" placeholder="Enter your Course" name="course" required>
 
-    <button type="submit" name="edit" class="btn">Finish</button>
-    <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+    <button type="submit" name="edit" class="btn btn-outline-info w-40 btnStyle">Finish</button>
+    <button type="submit" class="btn btn-outline-info w-40 btnStyle" onclick="closeForm()">Close</button>
   </form>
 </div>
   <!-- pop up login -->

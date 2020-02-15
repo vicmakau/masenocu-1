@@ -73,14 +73,14 @@ $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "U
               <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item dropdown" class="nav-link">
-              <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" aria-haspopup="true" aria-expanded="false">Ministries</a>
+              <a class="nav-link dropdown-toggle btn-hover-style" href="ministry.php" id="dropdown04" aria-haspopup="true" aria-expanded="false">Ministries</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
                 <?php foreach ($ministries as $k => $ministry) : ?>
                   <a class="dropdown-item" href="ministry.php?&id=<?php echo $k; ?>"><?php echo $ministry; ?></a>
                 <?php endforeach; ?>
             </li>
             <li class="nav-item dropdown" class="nav-link" href="ministry.php">
-              <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eve Teams</a>
+              <a class="nav-link dropdown-toggle btn-hover-style" href="ministry.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eve Teams</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
                 <?php foreach ($eveTeams as $k => $eveTeam) : ?>
                   <a class="dropdown-item" href="eveteams.php?id=<?php echo $k; ?>"><?php echo $eveTeam; ?></a>
@@ -107,8 +107,7 @@ $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "U
             <?php
             if (isset($_SESSION['user'])) : ?>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= '' //$_SESSION['user']
-                                                                                                                                              ?></a>
+                <a class="nav-link dropdown-toggle" href="" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $_SESSION['user']?></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
                   <a class="dropdown-item" href="profile.php">Profile</a>
                   <a class="dropdown-item" href="includes/logout.php">Logout</a>
