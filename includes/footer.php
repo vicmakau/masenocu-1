@@ -6,34 +6,24 @@
         <div class="row">
           <div class="col-md-6">
             <ul class="list-unstyled">
-                  <li><a href="ministry.php?id=mit">Media and IT</a></li>
-                  <li><a   href="ministry.php?id=praise">Praise and Worship  </a></li>
-                  <li><a   href="ministry.php?id=creative">Creative Ministry</a></li>
-                  <li><a   href="ministry.php?id=hospitality">Hospitality</a></li>
-                  <li><a   href="ministry.php?id=instrumentalist">Instrumentalist</a></li>
-                  <li><a   href="ministry.php?id=sunday-school">Sunday School</a></li>
-                  <li><a   href="ministry.php?id=discipleship">Discipleship</a></li>
-                  <li><a   href="ministry.php?id=intercessory">Intercessory</a></li>
-                  <hr width="100px">
-                  <li><a href="about.php">About Us</a></li>
+              <?php foreach ($ministries as $k => $ministry) : ?>
+                <li><a href="ministry.php?id=<?php echo $k; ?>"><?php echo $ministry; ?></a></li>
+              <?php endforeach; ?>
+              <hr width="100px">
+              <li><a href="about.php">About Us</a></li>
             </ul>
             <!-- adding eve teams quick links -->
 
           </div>
           <div class="col-md-4">
-                <ul class="list-unstyled">
-                      <li><a  href="eveteams.php?id=weso">WESO</a> </li>
-                      <li><a  href="eveteams.php?id=net">NET</a> </li>
-                      <li><a  href="eveteams.php?id=uet">UET</a></li>
-                      <li><a  href="eveteams.php?id=mubet">MUBET</a></li>
-                      <li><a  href="eveteams.php?id=cet">CET</a></li>
-                      <li><a  href="eveteams.php?id=noret">NORET</a></li>
-                      <li><a  href="eveteams.php?id=mceta">MCETA</a></li>
-                      <li><a  href="eveteams.php?id=soret">SORET</a></li>
-                      <hr width="100px">
-                      <li><a href="contact.php">Contact</a></li>
-                </ul>
-              </div>
+            <ul class="list-unstyled">
+              <?php foreach ($eveTeams as $k => $eve_team) : ?>
+                <li><a href="eveteams.php?id=<?php echo $k; ?>"><?php echo $eve_team; ?></a></li>
+              <?php endforeach; ?>
+              <hr width="100px">
+              <li><a href="contact.php">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -49,7 +39,9 @@
           <ul>
             <li><span class="icon ion-android-pin"></span><span class="text">P.O BOX 416, MASENO, KENYA</span></li>
             <li><a href="tel:+254-797-484-904"><span class="icon ion-ios-telephone"></span><span class="text">+254-797-484-904</span></a></li>
+
             <li><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=masenocu015@gmail.com"><span class="icon ion-android-mail"></span><span class="text">masenocu015@gmail.com</span></a></li>
+
             <li><a href="login.php"><span class="icon ion-android-lock"></span><span class="text">LogIn</span></a></li>
           </ul>
           </ul>
