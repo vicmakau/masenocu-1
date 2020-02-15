@@ -65,7 +65,6 @@ if (mysqli_num_rows($res) > 0)
     </div>
   </div>
 </section>
-
 <section class="site-section">
   <div class="container">
     <div  class="row align-items-center">
@@ -428,6 +427,17 @@ if (mysqli_num_rows($res) > 0)
 <script src="js/jquery.magnific-popup.min.js"></script>
 
 <script src="js/main.js"></script>
+<script > 
+    var closeBtn = document.getElementsByClassName('closeBtn')[0];
+    var area92 = document.getElementById('sermon-upcoming');
+    closeBtn.addEventListener('click', closeModal);
+
+    function closeModal(){
+        area92.style.display = 'none';
+    }
+    
+</script>
+
 </body>
 
 </html>
