@@ -5,25 +5,43 @@ include 'serverconnection.php';
 if(isset($_POST['activity'])){
   $actiTitle=$_POST['activityTitle'];
   $actiDate=$_POST['activityDate'];
-  $actiCategory=$_POST['activityCategory'];
+  $category=$_POST['cate'];
   $actiVenue=$_POST['activityVenue'];
   $actiSummary=$_POST['activitySummary'];
   $actiTime=$_POST['activityTime'];
-
-  $sql = "INSERT INTO `activities`(`title`, `description`, `date`, `venue`, `category`)
-   VALUES ('$actiTitle','$actiSummary','$actiDate $actiTime','$actiVenue','$actiCategory')";
-
-  if ($conn->query($sql) === TRUE) {
-    echo '<script type="text/javascript">alert("Activity Added successfully");
-               window.location.replace("../superAdmin.php?tab=Activities");
-         </script>';
-      exit;
-  } else {
-    echo '<script type="text/javascript">alert("An error occured");
-    window.location.replace("../superAdmin.php?tab=Activities");
-    </script>';
-  }
-  // $conn->close();
+  $image = $_FILES['image']['name'];
+  $target = "../images/".basename($image);
+  $imagename=basename($image);
+   $file_size =$_FILES['image']['size'];
+   $file_tmp =$_FILES['image']['tmp_name'];
+   $file_type=$_FILES['image']['type'];
+   $file_ext=strtolower(end(explode('.',$image)));
+   $extensions= array("jpeg","jpg","png");
+   if(in_array($file_ext,$extensions)=== false){
+      echo '<script type="text/javascript">alert("extension not allowed, please choose a JPEG or PNG file.");
+      window.location.replace("../superAdmin.php?tab=Activities");
+      </script>';
+   }else{
+     if($file_size > 2097152){
+       echo '<script type="text/javascript">alert("File size must be excately 2 MB");
+       window.location.replace("../superAdmin.php?tab=Activities");
+       </script>';
+     }else{
+       move_uploaded_file($file_tmp,$target);
+       $sql = "INSERT INTO `activities`(`title`, `description`, `date`, `venue`, `category`, `image`)
+       VALUES ('$actiTitle','$actiSummary','$actiDate $actiTime','$actiVenue','$category','$imagename')";
+         if ($conn->query($sql) === TRUE) {
+           echo '<script type="text/javascript">alert("Activity Added successfully");
+                      window.location.replace("../superAdmin.php?tab=Activities");
+                </script>';
+             exit;
+         } else {
+           echo '<script type="text/javascript">alert("An error occured");
+           window.location.replace("../superAdmin.php?tab=Activities");
+           </script>';
+         }
+     }
+   }
 }
 // Edit sermon php
 if(isset($_POST['sermon'])){
@@ -163,7 +181,7 @@ if(isset($_POST['sermon'])){
     if ($login_result->num_rows > 0) {
       while ($row = $login_result->fetch_assoc()) {
         $_SESSION['user']=$loginemail;
-        header('location:index.php');
+        header('location:../index.php');
         exit;
       }
     }else {
@@ -198,25 +216,38 @@ if(isset($_POST['sermon'])){
   // edit profile
   if (isset($_POST['edit'])){
    $email=$_SESSION['user'];
-   $image = $_FILES['image']['name'];
    $course = mysqli_real_escape_string($conn,$_POST['course']);
+   $image = $_FILES['userimage']['name'];
    $target = "../images/".basename($image);
    $imagename=basename($image);
-   $sql = "UPDATE `members` SET `picture`='$imagename' , `course`='$course' WHERE `email`='$email'";
+    $file_size =$_FILES['userimage']['size'];
+    $file_tmp =$_FILES['userimage']['tmp_name'];
+    $file_type=$_FILES['userimage']['type'];
+    $file_ext=strtolower(end(explode('.',$image)));
+    $extensions= array("jpeg","jpg","png");
+    if(in_array($file_ext,$extensions)=== false){
+       echo '<script type="text/javascript">alert("extension not allowed, please choose a JPEG or PNG file.");
+              window.location.replace("../profile.php");
+            </script>';
+    }else{
+      if($file_size > 2097152){
+        echo '<script type="text/javascript">alert("File size must be excately 2 MB");
+                    window.location.replace("../profile.php");
+                </script>';
+      }else{
+        move_uploaded_file($file_tmp,$target);
+        $sql = "UPDATE `members` SET `picture`='$imagename' , `course`='$course' WHERE `email`='$email'";
 
-   if ($conn->query($sql) === TRUE) {
-     header('location:../profile.php');
-     // echo "<script type='text/javascript'>alert('Record updated successfully');</script>";
-   } else {
-    echo "Error updating record: " . $conn->error;
+      if ($conn->query($sql) === TRUE) {
+        header('location:../profile.php');
+        // echo "<script type='text/javascript'>alert('Record updated successfully');</script>";
+      } else {
+        echo '<script type="text/javascript">alert("An error occured");
+        window.location.replace("../profile.php");
+        </script>';
+       }
+      }
     }
-   if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-   $msg = "Image uploaded successfully";
-   echo "<script type='text/javascript'>alert('Image uploaded successfully');</script>";
-
-   }else{
-     echo "<script type='text/javascript'>alert('Image failed upload');</script>";
-   }
    }
 // testimonials approvals
  if (isset($_GET['item']) && $_GET['item'] === 'testimonial') {
