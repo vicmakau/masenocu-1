@@ -14,14 +14,14 @@ include("includes/header.php");
             $sem_sql = "SELECT * FROM `semester_theme` ORDER by time desc LIMIT 1";
             $sem_result = mysqli_query($db, $sem_sql);
             if (mysqli_num_rows($sem_result) > 0) :
-              while($sem_row = mysqli_fetch_assoc($sem_result)):?>
-            <h1 class="heading mb-4"><?= $sem_row['theme']?></h1>
-            <h1 class="heading mb-4"><?= $sem_row['bible_verse']?></h1>
-            <p><a href="about.php" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <br> <a href="contact.php#map" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
+              while ($sem_row = mysqli_fetch_assoc($sem_result)) : ?>
+                <h1 class="heading mb-4"><?= $sem_row['theme'] ?></h1>
+                <h1 class="heading mb-4"><?= $sem_row['bible_verse'] ?></h1>
+                <p><a href="about.php" class="btn btn-primary-white py-3 px-5">About Us</a> <br> <br> <a href="" class="text-white ml-4"> <span class="ion-ios-location mr-2"></span> Visit Our Church</a></p>
             <?php
-          endwhile;
-          endif;
-          ?>
+              endwhile;
+            endif;
+            ?>
           </div>
         </div>
 
@@ -288,9 +288,9 @@ if (mysqli_num_rows($res) > 0)
 
         <?php foreach ($latest_sermons as $i => $sermon) : ?>
           <div class="block-44 d-flex mb-3">
-            <div class="block-44-image"><img src="images/image_tall_<?php echo $i + 1; ?>.jpg" alt="Image placeholder"></div>
+            <div class="block-44-image"><img src="images/image_tall_<?php echo $i + 1; ?>.jpg" alt="<?php echo $sermon['title']; ?>"></div>
             <div class="block-44-text">
-              <h3 class="block-44-heading"><a href="sermon-single.php?id=<?php echo $sermon['id']; ?>"><?php echo $sermon['title']; ?>]</a></h3>
+              <h3 class="block-44-heading"><a href="sermon-single.php?id=<?php echo $sermon['id']; ?>"><?php echo $sermon['title']; ?></a></h3>
               <div class="block-44-meta">Posted on <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $sermon['date'])->format('F j, Y'); ?>, <?php echo $sermon['speaker']; ?></div>
               <div class="block-44-icons">
                 <a href="<?php echo $sermon['video']; ?>" class="fa fa-video-camera"></a>
@@ -307,25 +307,20 @@ if (mysqli_num_rows($res) > 0)
           <h2 class="heading">Latest Events</h2>
         </div>
 
-        <div class="block-44 d-flex mb-3">
-          <div class="block-44-image"><img src="images/image_tall_4_large.jpg" alt="Image placeholder"></div>
-          <div class="block-44-text">
-            <h3 class="block-44-heading"><a href="#">Leaders Training</a></h3>
-            <div class="block-44-meta mb-2">November 9th 2019, The whole church: leaders</div>
-            <p>A session to bring the newly selected leaders into norms and customs of the church, dedicating them unto God for service</p>
-            <!-- <p><a href="#">Read More</a></p> -->
+        <?php $sql = "SELECT activities.id, activities.title, activities.description, activities.date, activities.venue, activities.category, gallery.link AS link FROM activities LEFT JOIN gallery ON activities.gallery_id = gallery.id ORDER BY date DESC LIMIT 2";
+        $res = mysqli_query($db, $sql);
+        if (mysqli_num_rows($res) > 0)
+          while ($activity_row = mysqli_fetch_assoc($res)) : ?>
+          <div class="block-44 d-flex mb-3">
+            <div class="block-44-image"><img src="<?php echo $activity_row['link']; ?>" alt="<?php echo $activity_row['title']; ?>"></div>
+            <div class="block-44-text">
+              <h3 class="block-44-heading"><a href="#"><?php echo $activity_row['title']; ?></a></h3>
+              <div class="block-44-meta mb-2"><?php echo DateTime::createFromFormat('Y-m-d H:i:s', $activity_row['date'])->format('F j, Y'); ?>, <?php echo $activity_row['venue']; ?></div>
+              <p><?php echo strlen($activity_row['description']) > 120? substr($activity_row['description'], 0, 119) . '…': $activity_row['description']; ?></p>
+              <!-- <p><a href="#">Read More</a></p> -->
+            </div>
           </div>
-        </div>
-
-        <div class="block-44 d-flex mb-3">
-          <div class="block-44-image"><img src="images/image_tall_5_large.jpg" alt="Image placeholder"></div>
-          <div class="block-44-text">
-            <h3 class="block-44-heading"><a href="#">Zions weekend</a></h3>
-            <div class="block-44-meta mb-2">November 16, 2019|Zions </div>
-            <p>The Zions(4th Years) to participate actively in the curch because it their weekend</p>
-            <!-- <p><a href="#">Read More</a></p> -->
-          </div>
-        </div>
+        <?php endwhile; ?>
       </div>
     </div>
   </div>

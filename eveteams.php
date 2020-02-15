@@ -1,20 +1,20 @@
-    <?php include 'includes/header.php';
-    $eveTeams = array(
-      "weso" => "Western Student Outreach",
-      "net" => "Nyanza Evangelical Team",
-      "soret" => "South Rift Evangelical Team",
-      "cet" => "Central Evangelical Team",
-      "uet" => "Uttermost Evangelistic Team",
-      "mubet" => "Mid Eastern United Brethren Evangelistic Team",
-      "mseta" => "Eastern Movement Student Association",
-   );
+    <?php
+    include 'includes/header.php';
 
-    // Read eveTeams.json
-    $filename = "eveTeams.json";
-    $configfile = fopen($filename, 'r') or die("Unable to open config file $filename");
-    $json = fread($configfile, filesize($filename));
-    fclose($configfile);
-    $eveTeam_description = json_decode($json);
+    if (isset($_GET['id'])) {
+      $groups = [];
+      $sql = "SELECT * FROM groups WHERE type = 'eve_team'";
+      $res = mysqli_query($db, $sql);
+      while ($row = mysqli_fetch_assoc($res))
+        array_push($groups, $row);
+      $eve_team = (object) $groups[$_GET['id']];
+
+      $leaders = [];
+      $sql = "SELECT leaders.id, leaders.docket, leaders.member_id, leaders.group_id, members.first_name, members.last_name, members.phone, members.email FROM leaders LEFT JOIN members on leaders.member_id = members.id WHERE group_id = {$eve_team->id}";
+      $res = mysqli_query($db, $sql) or die(mysqli_error($db));
+      while ($row = mysqli_fetch_assoc($res))
+        array_push($leaders, $row);
+    }
     ?>
 
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/image_1.jpg);">
@@ -25,14 +25,14 @@
             <div class="mb-5 element-animate">
               <div class="block-17">
                 <h1 class="heading mb-4">Evangelistic Teams</h1>
-                <div class="lead">Eveangelistic Teams are subgroups of the Maseno University Chrisian Union from specific reagions all over the country</div> 
+                <div class="lead">Eveangelistic Teams are subgroups of the Maseno University Chrisian Union from specific reagions all over the country</div>
                 <div class="lead">Main aim is to spread the word of God into the ethnic regions where the members comes from. This proves to be very effective</div>
               </div>
-              </div>
             </div>
-
           </div>
+
         </div>
+      </div>
       </div>
     </section>
     <!-- END section -->
@@ -44,7 +44,7 @@
             <div class="block-36">
               <h3 class="block-36-heading">Eve Teams Links</h3>
               <ul>
-                       <?php foreach ($eveTeams as $id => $name) : ?>
+                <?php foreach ($eveTeams as $id => $name) : ?>
                   <li <?= (isset($_GET['id'])) && ($_GET['id'] == $id) ? 'class="active disabled"' : 'disabled' ?>>
                     <a href="eveteams.php?id=<?= $id; ?>"><?= $name; ?></a>
                   </li>
@@ -53,23 +53,35 @@
             </div>
           </div>
           <div class="col-md-8 pl-md-5">
-
-            <?php 
-            if (isset($_GET['id'])):
-            $evimage="images/EveTeams/";
-              $eveTeam_id = $_GET['id'];
-              $eveTeam = $eveTeam_description->$eveTeam_id 
-            ?>
-            
+            <?php if (isset($_GET['id'])) : 
+            $evimage="images/EveTeams/"; ?>            
               <div class="section-heading">
-                <h2 class="heading"><?= $eveTeam->name; ?></h2>
+                <h2 class="heading"><?= $eve_team->name; ?></h2>
               </div>
-              <p><?= $eveTeam->intro; ?></p>
-              <div class="w3-center">
-              <p><img  style="width: 150px;" src="<?= "images/EveTeams/".$eveTeam->logo; ?>" alt="<?= $eveTeam->name; ?>" class="img-fluid"></p>
-              </div>
-              
-              <p><?= $eveTeam->text; ?></p>
+              <!-- <p><?php // echo $eveTeam->intro; 
+                      ?></p> -->
+              <p><img src="<?php // echo $eveTeam->image; 
+                                ?>" alt="<?php // echo $eveTeam->name; 
+                                          ?>" class="img-fluid"></p> -->
+
+              <p><?= $eve_team->description; ?></p>
+
+              <h1 class="heading mb-4">Leadership</h1>
+
+              <table class="table table-borderless table-hover">
+                <tr>
+                  <th>Docket</th>
+                  <th>Name</th>
+                  <th>Contact</th>
+                </tr>
+                <?php foreach ($leaders as $leader) : ?>
+                  <tr>
+                    <td><?php echo $leader['docket']; ?></td>
+                    <td><?php echo "{$leader['first_name']} {$leader['last_name']}"; ?></td>
+                    <td><?php echo $leader['phone']; ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </table>
             <?php endif; ?>
           </div>
         </div>
@@ -77,41 +89,6 @@
             </div>
               
     </section>
-<!-- leader -->
-
-
-
-<!-- <h1 class="heading mb-4">Leadership</h1>
-
-<table class="table table-borderless table-hover">
-            <tr>
-                <th>Docket</th>
-                <th>Name</th>
-                <th>Contact</th>
-            </tr>
-            <tr>
-                <td>Director</td>
-                <td>Name Name</td>
-                <td>Contact  designs</td>
-            </tr>
-          </table>
-<!- events -->
-<!-- <h1 class="heading mb-4">Activities</h1>
-
-<table class="table table-borderless table-hover">
-            <tr>
-                <th>Activity</th>
-                <th>Date</th>
-                <th>Summary</th>
-            </tr>
-            <tr>
-                <td>Acitvity 1</td>
-                <td>Date date</td>
-                <td>This is an Activity this is an activity</td>
-            </tr>
-          </table> --> -->
-
-          <!-- activities and leadership section ends here -->
 
     <?php include 'includes/footer.php'; ?>
     <!-- END footer -->
