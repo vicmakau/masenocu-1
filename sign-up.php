@@ -39,7 +39,7 @@
                      <input name="memberphone" class="text-area" type="text" placeholder="eg 07-12-345-678" required> <br>
                      <div class="">
                      <label for="groupId">YEAR OF STUDY</label><br>
-                     <select name="memberyos" class="selectpicker text-area"  id="groupId" >
+                     <select name="memberyos" class=" text-area"  id="groupId" >
                        <option value="1" style="color:black"  >1ST</option>
                        <option value="2" style="color:black"  >2ND</option>
                        <option value="3" style="color:black"  >3RD</option>
@@ -48,7 +48,7 @@
                      </div>
                      <div class="">
                      <label for="eveteam">EVE TEAM</label><br>
-                     <select name="eveteam" class="selectpicker text-area"  id="eveteam" >
+                     <select name="eveteam" class=" text-area"  id="eveteam" >
                        <?php
                        $groupquery = "SELECT * FROM `groups` WHERE `type`='eve_team'";
                        $group_result = $conn->query($groupquery);
