@@ -7,7 +7,6 @@ include("includes/header.php");
   <div class="container">
     <div class="row align-items-center justify-content-center site-hero-inner">
       <div class="col-md-8 text-center">
-
         <div class="mb-5 element-animate">
           <div class="block-17"> <br><br>
             <?php
@@ -415,6 +414,13 @@ if (mysqli_num_rows($res) > 0)
 <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
     <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
     <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
+    <script>
+    // When the user clicks on div, open the popup
+    function myFunctionPop() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery-migrate-3.0.0.js"></script>
