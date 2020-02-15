@@ -352,7 +352,8 @@ color: white;
 .preview-uploaded{
     border: 3px transparent dashed;}
 .preview-uploaded>p{
-    display: none;}
+    display: none;
+  }
 
 /* pop up  */
 .popup {
