@@ -129,3 +129,12 @@ function handleFiles(files) {
     reader.onload = (function(aImg) {return function(e) {aImg.src = e.target.result; }; })(img);
     reader.readAsDataURL(file);
 }
+
+ 
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
+var area92 = document.getElementById('sermon-upcoming');
+closeBtn.addEventListener('click', closeModal);
+
+function closeModal(){
+    area92.style.display = 'none';
+}
