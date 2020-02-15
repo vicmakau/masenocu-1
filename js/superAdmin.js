@@ -30,11 +30,6 @@ $(document).ready(function () {
   if (getUrlParameter('tab') === "castMessage") $('#btn').click();
   if (getUrlParameter('tab') === "Leadership") $('#btn').click();
   if (getUrlParameter('tab') === "semTheme") $('#btn').click();
-
-
-
-
-
-
+  if (getUrlParameter('tab') === "Ministry") $('#btn').click();
 
 });

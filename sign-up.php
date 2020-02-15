@@ -39,7 +39,7 @@
                      <input name="memberphone" class="text-area" type="text" placeholder="eg 07-12-345-678" required> <br>
                      <div class="">
                      <label for="groupId">YEAR OF STUDY</label><br>
-                     <select name="memberyos" class="selectpicker text-area" name="activityCategory" id="groupId" >
+                     <select name="memberyos" class="selectpicker text-area"  id="groupId" >
                        <option value="1" style="color:black"  >1ST</option>
                        <option value="2" style="color:black"  >2ND</option>
                        <option value="3" style="color:black"  >3RD</option>
@@ -48,15 +48,17 @@
                      </div>
                      <div class="">
                      <label for="eveteam">EVE TEAM</label><br>
-                     <select name="eveteam" class="selectpicker text-area" name="activityCategory" id="eveteam" >
-                       <option value="1" style="color:black"  >CET</option>
-                       <option value="2" style="color:black"  >WESO</option>
-                       <option value="3" style="color:black"  >NET</option>
-                       <option value="3" style="color:black"  >SORET</option>
-                       <option value="4" style="color:black"  >MUBET</option>
-                       <option value="5" style="color:black"  >EMUSETA</option>
-                       <option value="6" style="color:black"  >NORET</option>
-                       <option value="7" style="color:black"  >UET</option>
+                     <select name="eveteam" class="selectpicker text-area"  id="eveteam" >
+                       <?php
+                       $groupquery = "SELECT * FROM `groups` WHERE `type`='eve_team'";
+                       $group_result = $conn->query($groupquery);
+                       if ($group_result->num_rows > 0) :
+                           while($group_row = $group_result->fetch_assoc()) :?>
+                           <option data-tokens="" style="color:black" value="<?= $group_row['id'] ?>"><?= $group_row['name'] ?></option>
+                       <?php
+                       endwhile;
+                       endif;
+                       ?>
                      </select>
                      </div>
                      <label class="label">PASSWORD</label><br>

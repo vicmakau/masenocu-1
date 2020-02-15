@@ -30,7 +30,7 @@
       <div class="col-md-6 col-lg-3 ">
         <h3 class="heading">Events</h3>
         <?php
-        
+
         ?>
       </div>
       <div class="col-md-6 col-lg-3 ">
@@ -39,7 +39,8 @@
           <ul>
             <li><span class="icon ion-android-pin"></span><span class="text">P.O BOX 416, MASENO, KENYA</span></li>
             <li><a href="tel:+254-797-484-904"><span class="icon ion-ios-telephone"></span><span class="text">+254-797-484-904</span></a></li>
-            <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">masenocu015@gmail.com</span></a></li>
+
+            <li><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=masenocu015@gmail.com"><span class="icon ion-android-mail"></span><span class="text">masenocu015@gmail.com</span></a></li>
 
             <li><a href="login.php"><span class="icon ion-android-lock"></span><span class="text">LogIn</span></a></li>
           </ul>

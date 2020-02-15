@@ -252,8 +252,8 @@ color: white;
   color: #044d77;
   font-weight: 400;
   font-size: 36px;
-} 
-.profile-email{ 
+}
+.profile-email{
   color: #009ab2;
   font-weight: 200;
   font-size: 20px;
@@ -272,21 +272,21 @@ color: white;
 }
 .hr1{
   color: rgb(0, 85, 74);
-  
+
 }
 .p-wrapper{
   border-bottom: 1px solid grey;
-  
+
 }
 /* .btnStyle
 {
   color: #4a919c;
 } */
-/* .btnStyle:hover 
+/* .btnStyle:hover
 {
   color: white;
 } */
- popup 
+ popup
 {box-sizing: border-box;
 }
 
@@ -336,25 +336,20 @@ color: white;
   outline: none;
 }
 
-/* Set a style for the submit/login button */
-/* .form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-} */
-
-/* Add a red background color to the cancel button */
-
-/* .form-container .cancel {
-  background-color: red; */
-}
-
-/* Add some hover effects to buttons */
-/* .form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-} */
+/* prview image */
+#preview{
+    margin-top: 16px;
+    height: 150px;
+    width: 150;
+  }
+.preview-empty{
+    border-radius: 16px;
+    border: 3px lightblue dashed;}
+.preview-empty>p{
+    margin: auto;
+    padding: 32px;
+    color: white;}
+.preview-uploaded{
+    border: 3px transparent dashed;}
+.preview-uploaded>p{
+    display: none;}

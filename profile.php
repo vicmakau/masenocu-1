@@ -1,6 +1,7 @@
 <?php
   include 'includes/header.php';
   include 'includes/serverconnection.php';
+  include 'includes/editprofile.php';
 
   $user= $_SESSION['user'];
   $profilquery = "SELECT * FROM `members` WHERE `email` ='$user'";
@@ -57,9 +58,9 @@
 
         </div>
         <div class="w3-center mt-3 ">
-          <a class="nav-link " onclick="openForm()"><button  class="btn btn-outline-info w-40 btnStyle"> Edit Profile </button></a>
+          <a class="nav-link " onclick="openForm("ll")"><button  class="btn btn-outline-info w-40 btnStyle"  data-toggle="modal" data-target="#myModal"> Edit Profile </button></a>
         </div>
-        
+
         <p>
          <button class="btn btn-outline-info w-30  mt-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             Add Testimonial
@@ -74,8 +75,7 @@
               </div>
               <button class="btn btn-outline-info w-25 btnStyle" type="submit" name="sub-testimonial">Submit</button>
               </form>
-          </div>
-        <!-- collapse ends herer -->
+          </div>        <!-- collapse ends herer -->
 
       </div>
     </div>
@@ -84,21 +84,7 @@
 
   </div>
 
-  <!-- pop up login -->
-  <div class="form-popup" id="myForm">
-  <form method="POST" action="includes/connection.php" autocomplete="off" enctype="multipart/form-data" class="form-container">
-    <h1>Edit</h1>
 
-    <label for="email"><b></b></label>
-    <input type="file" class="form-control" name="image" required>
-
-    <label for="course"><b>Course</b></label>
-    <input type="text" placeholder="Enter your Course" name="course" required>
-
-    <button type="submit" name="edit" class="btn btn-outline-info w-40 btnStyle">Finish</button>
-    <button type="submit" class="btn btn-outline-info w-40 btnStyle" onclick="closeForm()">Close</button>
-  </form>
-</div>
   <!-- pop up login -->
   <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
     <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
