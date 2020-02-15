@@ -348,7 +348,7 @@ color: white;
 .preview-empty>p{
     margin: auto;
     padding: 32px;
-    color: white;}
+    color: blue;}
 .preview-uploaded{
     border: 3px transparent dashed;}
 .preview-uploaded>p{
