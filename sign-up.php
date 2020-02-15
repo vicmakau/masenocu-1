@@ -36,7 +36,7 @@
                     <label class="label">EMAIL</label><br>
                      <input name="memberemail" class="text-area" type="email" placeholder="eg example@masenocu.com" required> <br>
                      <label class="label">PHONE</label><br>
-                     <input name="memberphone" class="text-area" type="text" placeholder="eg 07-12-345-678" required> <br>
+                     <input name="memberphone" class="text-area" type="tel" placeholder="eg 0700000000" pattern="[0-9]{10}" required> <br>
                      <div class="">
                      <label for="groupId">YEAR OF STUDY</label><br>
                      <select name="memberyos" class=" text-area"  id="groupId" >
@@ -62,7 +62,7 @@
                      </select>
                      </div>
                      <label class="label">PASSWORD</label><br>
-                      <input type="password" class="text-area" id="psw" name="memberpassword" >
+                      <input type="password" class="text-area" id="psw" name="memberpassword" minlength="6" >
                      <label class="label" >CONFIRM PASSWORD</label><br>
                      <input class="text-area" id="cpsw" name="memberCpassword" type="password" placeholder="re-type your password to confirm" required> <br>
                      <input type="checkbox" onclick="showPassword()">Show Password <br>
