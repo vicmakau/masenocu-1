@@ -9,6 +9,11 @@ include 'includes/loginAdmin.php';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+      <link rel="icon"
+      type="image/png"
+      href="images/cu.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <title>MasenoChristianUnion</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -39,6 +44,7 @@ include 'includes/loginAdmin.php';
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sign.css">
     <!-- super admin css -->
     <link rel="stylesheet" href="css/superAdmin.css">
 
@@ -91,7 +97,10 @@ include 'includes/loginAdmin.php';
               Sermon
             </li>
             <li class="tablink" id="btn" onclick="openEvent(event, 'Leadership')">
-              Leadership
+               EveT Leadership
+            </li>
+            <li class="tablink" id="btn" onclick="openEvent(event, 'Ministry')">
+               Ministry
             </li>
             <li  class="tablink" id="btn" onclick="openEvent(event, 'gallery')">
             Gallery
@@ -117,12 +126,14 @@ include 'includes/loginAdmin.php';
           <div id="Activities" class="w3-container event w3-animate-left">
             <div class="row">
               <div class="col-md-3">
-                <div class=" w3-border">
-                  <img src="images/cu.png" class="activity-image" alt="" height="300">
-                </div>
+                <div class="d-flex preview-empty" id="preview"><img src="" alt="" id="preview_img"><p><strong>No images selectd</strong></p></div>
+
+                <form action="includes/connection.php" enctype="multipart/form-data" method="post">
+                  <div class="form-group">
+                    <label for="image">My image:</label>
+                    <input class="" type="file" name="image" id="new_pic" accept=".png, .jpg" onchange="handleFiles(this.files)"></div>
               </div>
               <div class="col-md-8">
-                <form action="includes/connection.php" method="post">
                   <div class="form-group">
                     <label for="title">Title:</label>
                     <input type="text" name="activityTitle" class="form-control" placeholder="Enter Title" id="email" required>
@@ -137,10 +148,11 @@ include 'includes/loginAdmin.php';
                   </div>
                   <div class="form-group">
                   <label for="groupId">Select group</label>
-                  <select class="selectpicker form-control" name="activityCategory" id="groupId">
-                    <option value="Christian Union">Christian Union</option>
-                    <option value="Eve Teams">Eve Teams</option>
-                    <option value="Ministry">Ministry</option>
+                  <select name="cate" class="selectpicker form control"  id="groupId" required>
+                    <option value="Christian Union" style="color:black"> Christian Union </option>
+                    <option value="Eveteam" style="color:black"  >Eveteam</option>
+                    <option value="Ministry" style="color:black"  >Ministry</option>
+                    <!-- <option value="4" style="color:black"  >4TH</option> -->
                   </select>
                   </div>
                   <div class="form-group">
@@ -162,12 +174,10 @@ include 'includes/loginAdmin.php';
 
           <div id="sermon" class="w3-container event w3-animate-left">
             <div class="row">
-              <div class="col-md-3">
-                <div class=" w3-border">
-                  <img src="images/cu.png" class="activity-image" alt="" height="300">
-                </div>
+              <div class="col-md-1">
+
               </div>
-              <div class="col-md-8">
+              <div class="col-md-9">
                 <form action="includes/connection.php" method="post">
                   <div class="form-group">
                     <label for="title">Title:</label>
@@ -218,7 +228,8 @@ include 'includes/loginAdmin.php';
 
           <div id="castMessage" class="w3-container  event w3-animate-left">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-1"></div>
+              <div class="col-md-10">
                 <form action="">
                   <div class="form-group">
                   <label for="groupId">Select Receiver</label>
@@ -246,18 +257,15 @@ include 'includes/loginAdmin.php';
 
           <div id="Leadership" class="w3-container event w3-animate-left">
             <div class="row">
-              <div class="col-md-3">
-                <div class=" w3-border">
-                  <img src="images/cu.png" class="activity-image" alt="" height="300">
-                </div>
+              <div class="col-md-1">
               </div>
-              <div class="col-md-8">
+              <div class="col-md-10">
                 <form action="includes/connection.php" method="post">
                   <div class="form-group">
                   <label for="groupId">Select group</label>
                   <select class="selectpicker form-control" id="groupId" data-live-search="true"  name="leaderGid">
                     <?php
-                    $groupquery = "SELECT * FROM `groups`";
+                    $groupquery = "SELECT * FROM `groups` WHERE `type`='eve_team'";
                     $group_result = $conn->query($groupquery);
                     if ($group_result->num_rows > 0) :
                         while($group_row = $group_result->fetch_assoc()) :?>
@@ -287,9 +295,17 @@ include 'includes/loginAdmin.php';
                   <div class="form-group">
                   <label for="groupId">Docket</label>
                   <select class="selectpicker form-control" data-live-search="true" id="groupId" name="leaderDocket">
-                    <option data-tokens="" value="chairman">Chairman</option>
-                    <option data-tokens="" value="treasurer">Treasurer</option>
-                    <option data-tokens="" value="hospitality">Hospitality</option>
+                    <option data-tokens="" value="CHAIRPERSON">CHAIRPERSON</option>
+                    <option data-tokens="" value="VICE CHAIRPERSON">VICE CHAIRPERSON</option>
+                    <option data-tokens="" value="SECRETARY">SECRETARY</option>
+                    <option data-tokens="" value="TREASURER">TREASURER</option>
+                    <option data-tokens="" value="MISSIONS COORDINATOR">MISSIONS COORDINATOR</option>
+                    <option data-tokens="" value="VICE SECRETARY">VICE SECRETARY</option>
+                    <option  data-tokens="" value="BIBLE STUDY COORDINATOR">BIBLE STUDY COORDINATOR</option>
+                    <option  data-tokens="" value="BOARD DIRECTOR">BOARD DIRECTOR</option>
+                    <option  data-tokens="" value="DISCIPLESHIP COORDINATOR">DISCIPLESHIP COORDINATOR</option>
+                    <option  data-tokens="" value="HOSPITALITY DIRECTOR">HOSPITALITY DIRECTOR</option>
+                    <option value="" data-tokens>PRAYER COORDINATOR</option>
                   </select>
                   </div>
                   <div class="w3-center">
@@ -366,6 +382,9 @@ include 'includes/loginAdmin.php';
 
           <div id="testimonials" class="w3-container event w3-animate-left">
             <div class="row">
+              <div class="col-md-1">
+
+              </div>
               <div class="col-md-10">
                 <table class="w3-table w3-striped w3-bordered w3-card-4">
                     <thead>
@@ -410,11 +429,7 @@ include 'includes/loginAdmin.php';
 
           <div id="semTheme" class="w3-container event w3-animate-left">
             <div class="row">
-              <div class="col-md-3">
-                <div class=" w3-border">
-                  <img src="images/cu.png" class="activity-image" alt="" height="300">
-                </div>
-              </div>
+              <div class="col-md-1"></div>
               <div class="col-md-8">
                 <form action="includes/connection.php" method="post">
                   <div class="form-group">
@@ -437,6 +452,58 @@ include 'includes/loginAdmin.php';
             </div>
           </div>
 
+          <div id="Ministry" class="w3-container event w3-animate-left">
+            <div class="row">
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-10">
+                <form action="includes/connection.php" method="post">
+                  <div class="form-group">
+                  <label for="groupId">Select group</label>
+                  <select class="selectpicker form-control" id="groupId" data-live-search="true"  name="minGid">
+                    <?php
+                    $groupquery = "SELECT * FROM `groups` WHERE `type`='ministry'";
+                    $group_result = $conn->query($groupquery);
+                    if ($group_result->num_rows > 0) :
+                        while($group_row = $group_result->fetch_assoc()) :?>
+                        <option data-tokens="" value="<?= $group_row['id'] ?>"><?= $group_row['name'] ?></option>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
+                  </select>
+                  </div>
+                  <div class="form-group">
+                  <label for="groupId">Person</label>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId"  name="minMId">
+                    <?php
+                    $userquery = "SELECT * FROM `members`";
+                    $user_result = $conn->query($userquery);
+                    if ($user_result->num_rows > 0) :
+                        while($user_row = $user_result->fetch_assoc()) :?>
+                        <option data-tokens="" value="<?= $user_row['id'] ?>"><?= $user_row['email'] ?></option>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
+
+                  </select>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="usr">Docket</label>
+                        <input type="text" class="form-control" name="minDocket" id="usr">
+                      </div>
+                  <div class="w3-center">
+                    <button type="submit" name="minLeaders" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
       </div>
       </div>
@@ -444,8 +511,11 @@ include 'includes/loginAdmin.php';
 
    <?php
 
-		   include("includes/footer.php");
+		   // include("includes/footer.php");
 		?>
+    <script type="text/javascript" src="js/auth.js">
+
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="js/superAdmin.js"></script>
 
