@@ -1,7 +1,7 @@
 <?php
   include 'includes/header.php';
   include 'includes/serverconnection.php';
-  include 'includes/editprofile.php';
+  // include 'includes/editprofile.php';
 
   $user= $_SESSION['user'];
   $profilquery = "SELECT * FROM `members` WHERE `email` ='$user'";
@@ -24,7 +24,7 @@
   <div class="row">
     <div class="col-md-3">
     </div>
-    <div class="col-md-6  pt-5" style="">
+    <div class="col-md-6  pt-5" >
       <div class="">
         <div class="w3-center" >
           <div class="" >
@@ -101,6 +101,11 @@
 <script src="js/jquery.stellar.min.js"></script>
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
 
 <script src="js/main.js"></script>
 </body>
