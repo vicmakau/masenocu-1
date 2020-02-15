@@ -22,7 +22,7 @@ $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
       type="image/png"
       href="images/cu.png">
     <link rel="stylesheet" href="css/bootstrap.css">
-    
+
     <!-- separate css for table -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -64,7 +64,7 @@ $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
                 <a class="nav-link" href="index.php">Home</a>
               </li>
               <li class="nav-item dropdown" class="nav-link" >
-                <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" aria-haspopup="true" aria-expanded="false">Ministries</a>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" aria-haspopup="true" aria-expanded="false">Ministries</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="ministry.php?id=mit">Media and IT</a>
                   <a class="dropdown-item" href="ministry.php?id=praise">Praise and Worship </a>
