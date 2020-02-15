@@ -127,7 +127,7 @@ include("includes/header.php");
               <p class="block-38-subheading">Secretary</p>
             </div>
             <div class="block-38-body">
-              <p>Pursuing holiness. </p>
+              <p>I am a 3rd year taking bachelors degree in Geography and Natural Resources Management with IT. My roles includes dealing with  all correspondences of the CU, issuing notices and keeping records for the CU . I am also an exec rep in the elders committee. </p>
             </div>
           </div>
         </div>
@@ -139,11 +139,11 @@ include("includes/header.php");
             <div style="height: 150px; width: 150px;"class="pcs-place-holder">
                 <img style="height: 150px; width: 150px;" src="images/exec/treasurer.jpg" alt="">
               </div>
-              <h3 class="block-38-heading">Naphtali Njaga</h3>
+              <h3 class="block-38-heading">Naftali Njanga</h3>
               <p class="block-38-subheading">Treasurer</p>
             </div>
             <div class="block-38-body">
-              <p>Taking Business Administration (Accounting). My roles are receiving and dibursing all the monies in Christian union under the direction of the executive committee and keeping the  books of records of the CU accounts and all monetary activities.
+              <p>Taking Business Administration (Accounting), 3rd year. My roles are receiving and disbursing all the monies in Christian union under the direction of the executive committee and keeping the  books of records of the CU accounts and all monetary activities.
                   </p>
             </div>
           </div>
@@ -196,7 +196,7 @@ include("includes/header.php");
               <p class="block-38-subheading">Bible study Coordinator</p>
             </div>
             <div class="block-38-body">
-              <p>Abounding in love </p>
+              <p>Taking Bachelors Arts and Social Sciences, a third year. Roles are, seeking and suggesting about relevant bible study materials to be used by the CU, organizing members into bible study groups together with the bible study committee and co-ordinating BEST-P  </p>
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@ include("includes/header.php");
               <p class="block-38-subheading">Hospitality Director</p>
             </div>
             <div class="block-38-body">
-              <p>Pursuing holiness </p>
+              <p>Bachelor of Education Arts, Kiswahili and Music. My  duties includes being in charge of order in the church and collection of offering, preparing meals for the speakers and the whole church when necessary and well-being of the church members especially when the semester is in the corner.</p>
             </div>
           </div>
         </div>

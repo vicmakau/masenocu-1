@@ -37,8 +37,9 @@ $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
 
     <!-- separate css for table -->
     <link rel="stylesheet" href="css/sign.css">
-    <!-- separate css for login and signup -->
-
+      
+    <!--additives any additiona css are here -->
+    <link rel="stylesheet" href="css/additive.css">
     <!-- Theme Style -->
   </head>
   <body>
@@ -63,22 +64,21 @@ $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
               <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home</a>
               </li>
-              <li class="nav-item dropdown" class="nav-link" >
-                <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" aria-haspopup="true" aria-expanded="false">Ministries</a>
+              <li class="nav-item dropdown  " class="nav-link" >
+                <a class="nav-link dropdown-toggle btn-hover-style" href="ministry.php" id="dropdown04" aria-haspopup="true" aria-expanded="false">Ministries</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="ministry.php?id=mit">Media and IT</a>
                   <a class="dropdown-item" href="ministry.php?id=praise">Praise and Worship </a>
-                  <a class="dropdown-item" href="ministry.php?id=creative">Creative Ministry</a>
+                  <a class="dropdown-item" href="ministry.php?id=creative">Creative</a>
                   <a class="dropdown-item" href="ministry.php?id=hospitality">Hospitality</a>
                   <a class="dropdown-item" href="ministry.php?id=instrumentalist">Instrumentalist</a>
                   <a class="dropdown-item" href="ministry.php?id=sunday-school">Sunday School</a>
                   <a class="dropdown-item" href="ministry.php?id=discipleship">Discipleship</a>
                   <a class="dropdown-item" href="ministry.php?id=intercessory">Intercessory</a>
-                  <a class="dropdown-item" href="ministry.php?id=discipleship">Discipleship</a>
                   <a class="dropdown-item" href="ministry.php?id=highschool">High School</a>
               </li>
               <li class="nav-item dropdown" class="nav-link" href="ministry.php">
-                <a class="nav-link dropdown-toggle" href="ministry.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eve Teams</a>
+                <a class="nav-link dropdown-toggle btn-hover-style" href="ministry.php" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eve Teams</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="eveteams.php?id=weso">WESO</a>
                   <a class="dropdown-item" href="eveteams.php?id=net">NET</a>
@@ -91,7 +91,7 @@ $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="sermon.php" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sermons</a>
+                <a class="nav-link dropdown-toggle btn-hover-style" href="sermon.php" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sermons</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
                   <a class="dropdown-item" href="sermon-single.php?id=<?php echo $latest_sermon_id; ?>">Latest Sermon</a>
                   <a class="dropdown-item" href="sermon.php">Past Sermons</a>
@@ -99,13 +99,13 @@ $db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="events.php">Events</a>
+                <a class="nav-link btn-hover-style" href="events.php">Events</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.php">About</a>
+                <a class="nav-link btn-hover-style" href="about.php">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.php">Contact</a>
+                <a class="nav-link btn-hover-style" href="contact.php">Contact</a>
               </li>
               <?php
               if(isset($_SESSION['user'])):?>
