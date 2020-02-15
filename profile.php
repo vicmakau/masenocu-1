@@ -1,7 +1,7 @@
 <?php
   include 'includes/header.php';
   include 'includes/serverconnection.php';
-  // include 'includes/editprofile.php';
+  include 'includes/editprofile.php';
 
   $user= $_SESSION['user'];
   $profilquery = "SELECT * FROM `members` WHERE `email` ='$user'";
