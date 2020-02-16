@@ -305,12 +305,12 @@ if (mysqli_num_rows($res) > 0)
           <h2 class="heading">Latest Events</h2>
         </div>
 
-        <?php $sql = "SELECT activities.id, activities.title, activities.description, activities.date, activities.venue, activities.category, gallery.link AS link FROM activities LEFT JOIN gallery ON activities.gallery_id = gallery.id ORDER BY date DESC LIMIT 2";
+        <?php $sql = "SELECT activities.id, activities.title, activities.description, activities.date, activities.venue, activities.category,  activities.image AS link FROM activities LEFT JOIN gallery ON activities.gallery_id = gallery.id ORDER BY date DESC LIMIT 2";
         $res = mysqli_query($db, $sql);
         if (mysqli_num_rows($res) > 0)
           while ($activity_row = mysqli_fetch_assoc($res)) : ?>
           <div class="block-44 d-flex mb-3">
-            <div class="block-44-image"><img src="<?php echo $activity_row['link']; ?>" alt="<?php echo $activity_row['title']; ?>"></div>
+            <div class="block-44-image"><img src="<?php echo "images/".$activity_row['link']; ?>" alt="<?php echo $activity_row['title']; ?>"></div>
             <div class="block-44-text">
               <h3 class="block-44-heading"><a href="#"><?php echo $activity_row['title']; ?></a></h3>
               <div class="block-44-meta mb-2"><?php echo DateTime::createFromFormat('Y-m-d H:i:s', $activity_row['date'])->format('F j, Y'); ?>, <?php echo $activity_row['venue']; ?></div>
