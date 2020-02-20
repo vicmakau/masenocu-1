@@ -183,7 +183,7 @@ if(isset($_POST['sermon'])){
       $row = $login_result->fetch_assoc();
       $_SESSION['user_id'] = $row['id'];
       $_SESSION['user']=$loginemail;
-      header('location:../index.php');
+      header('location:./index.php');
       exit;
     }else {
       echo '<script type="text/javascript">alert("Login failed.Try again");

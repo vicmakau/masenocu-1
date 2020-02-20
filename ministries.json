@@ -34,6 +34,15 @@
         "intro": "We want to help middle school and high school students thrive in  their spiritual journey.",
         "text": ""
     },
+
+    "choir": {
+        "name": "hoir",
+        "logo": "choir.jpg",
+        "image": "choir.jpg",
+        "intro": "It  is all about our voices, it praising with adoration.",
+        "text": "Choir Family is a family of love,we have the zeal to worship and praise God through choir songs.Our slogan that motivates us each day is that we are defined by the love of Christ.We have a total of 60 active members.We have a sub-committe of accountability directors who are accountable for every member,our prayer co-ordinators concerned with our prayer life, treasurer and a programmer.We are here to give God all the glory and honor and to thank him for the gifts He has granted us"
+    },
+
     "instrumentalist": {
         "name": "Instrumentalist",
         "logo": "",
@@ -62,4 +71,5 @@
         "intro": "We have fellowship through prayer presenting needs and petitions individually and the church as a whole.",
         "text": "Intercessory Ministry is a prayer ministry formed for the sake of making intercessions for the church. It comprises of all members who have registered through the CU who wish to be part holds and plans prayer meeting for the church. It overlooks the prayer meetings of the church on Wednesdays, Fridays, and Saturdays by appointing facilitators for the same. The intercessory ministry also undertakes the prayer week and prayer week and the prayer Kesha at the beginning of every semester We always have our prayer meetings on Friday and Sundays before the service and Our ministry Fellowship every Tuesday from 6:30 pm - 5.00 pm where We have a prayer and teaching section."
     }
+   
 }

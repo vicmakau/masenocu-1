@@ -1,20 +1,23 @@
-    <?php 
-    include 'includes/header.php';
+    <?php include 'includes/header.php';
+    $ministries = array(
+      "mit" => "Media and IT",
+      "praise" => "Praise and Worship",
+      "creative" => "Creative",
+      "hospitality" => "Hospitality",
+      "high-school" => "High School",
+      "instrumentalist" => "Instrumentalist",
+      "sunday-school" => "Sunday School",
+      "discipleship" => "Discipleship",
+      "intercessory" => "Intercessory",
+      "choir" => "Choir"
+    );
 
-    if (isset($_GET['id'])) {
-      $groups = [];
-      $sql = "SELECT * FROM groups WHERE type = 'ministry'";
-      $res = mysqli_query($db, $sql);
-      while ($row = mysqli_fetch_assoc($res))
-        array_push($groups, $row);
-      $ministry = (object) $groups[$_GET['id']];
-
-      $leaders = [];
-      $sql = "SELECT leaders.id, leaders.docket, leaders.member_id, leaders.group_id, members.first_name, members.last_name, members.phone, members.email FROM leaders LEFT JOIN members on leaders.member_id = members.id WHERE group_id = {$ministry->id}";
-      $res = mysqli_query($db, $sql) or die(mysqli_error($db));
-      while ($row = mysqli_fetch_assoc($res))
-        array_push($leaders, $row);
-    }
+    // Read ministries.json
+    $filename = "ministries.json";
+    $configfile = fopen($filename, 'r') or die("Unable to open config file $filename");
+    $json = fread($configfile, filesize($filename));
+    fclose($configfile);
+    $ministry_descriptions = json_decode($json);
     ?>
 
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);">
@@ -28,6 +31,7 @@
                 <div class="lead">Ministries provides service to the church through devotion. We do all the church activities pertaining the welfare of the brethrens and all inclusions</div>
               </div>
             </div>
+            
 
           </div>
         </div>
@@ -37,60 +41,84 @@
 
     <section class="site-section bg-light">
       <div class="container">
-        <div  class="row">
+        <div class="row">
           <div class="col-md-4">
             <div class="block-36">
-              <h3  class="block-36-heading">Ministries</h3>
+              <h3 class="block-36-heading">Ministries</h3>
               <ul>
-
+              
                 <?php foreach ($ministries as $id => $name) : ?>
                   <li <?= (isset($_GET['id'])) && ($_GET['id'] == $id) ? 'class="active disabled"' : '' ?>>
-                    <a href="ministry.php?id=<?= $id; ?>#route-zero"><?= $name; ?></a>
+                    <a href="ministry.php?id=<?= $id; ?>"><?= $name; ?></a>
                   </li>
-                <?php endforeach; ?> 
+                <?php endforeach; ?>
               </ul>
-
+              
             </div>
-
+            
           </div>
-          <div  class="col-md-8 pl-md-5">
+          <div class="col-md-8 pl-md-5">
+
+
 
             <?php if (isset($_GET['id'])) :
-                  $ministryImage="images/ministries/"; ?>
+              $ministry_id = $_GET['id'];
+              $ministry = $ministry_descriptions->$ministry_id; ?>
               <div class="section-heading">
-                <h2 class="heading"><?php echo $ministry->name; ?></h2>
+                <h2 class="heading"><?= $ministry->name; ?></h2>
               </div>
-               <p><?= $ministry->intro; ?></p>
 
-              <!-- <p><?php // echo $ministry->intro; 
-                      ?></p> -->
-              <!-- <p><img src="<?php // echo $ministry->image; 
-                                ?>" alt="<?php // echo $ministry->name; 
-                                          ?>" class="img-fluid"></p> -->
+                
+
+              <p><?= $ministry->intro; ?></p>
+              <p><img src="<?= $ministry->image; ?>" alt="<?= $ministry->name; ?>" class="img-fluid"></p>
               <!-- director pics -->
 
-              <p><?= $ministry->description; ?></p>
+              
 
-              <h3>Leadership</h3>
-              <table class="table table-borderless table-hover">
-                <tr>
-                  <th>Docket</th>
-                  <th>Name</th>
-                  <th>Contact</th>
-                </tr>
-                <?php foreach ($leaders as $leader) : ?>
-                  <tr>
-                    <td><?php echo $leader['docket']; ?></td>
-                    <td><?php echo "{$leader['first_name']} {$leader['last_name']}"; ?></td>
-                    <td><?php echo $leader['phone']; ?></td>
-                  </tr>
-                <?php endforeach; ?>
-              </table>
+              <p><?= $ministry->text; ?></p>
             <?php endif; ?>
-          </div>
+
+            <!-- table display -->
+
+            <!-- <table class="table table-borderless table-hover">
+            <tr>
+                <th>Docket</th>
+                <th>Name</th>
+                <th>Contact</th>
+            </tr>
+            <tr>
+                <td>Director</td>
+                <td>Name Name</td>
+                <td>Contact  designs</td>
+            </tr>
+          </table> -->
+
+
+                <!-- activities and leadership ends here -->
+
+<!-- events -->
+
+
+        <!-- <h1 class="heading mb-4">Activities</h1>
+
+        <table class="table table-borderless table-hover">
+             <tr>
+                <th>Activity</th>
+                <th>Date</th>
+                <th>Summary</th>
+            </tr>
+            <tr>
+                <td>Acitvity 1</td>
+                <td>Date date</td>
+                <td>This is an Activity this is an activity</td>
+            </tr>
+          </table>
+          </div> -->
+          
         </div>
       </div>
-
+      
     </section>
 
     <?php include 'includes/footer.php'; ?>
