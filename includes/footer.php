@@ -41,14 +41,8 @@
             <li><a href="tel:+254-797-484-904"><span class="icon ion-ios-telephone"></span><span class="text">+254-797-484-904</span></a></li>
 
             <li><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=masenocu015@gmail.com"><span class="icon ion-android-mail"></span><span class="text">masenocu015@gmail.com</span></a></li>
-            <?php
-            if (isset($_SESSION['user'])) : ?>
-            <li><a href="includes/logout.php"><span class="icon ion-android-lock"></span><span class="text">Logout</span></a></li>
 
-            <?php else : ?>
-              <li><a href="login.php"><span class="icon ion-android-lock"></span><span class="text">LogIn</span></a></li>
-
-            <?php endif; ?>
+            <li><a href="login.php"><span class="icon ion-android-lock"></span><span class="text">LogIn</span></a></li>
           </ul>
           </ul>
         </div>
@@ -70,7 +64,7 @@
       </div>
     </div>
   </div>
-  <script >
+  <script > 
     var closeBtn = document.getElementsByClassName('closeBtn')[0];
     var area92 = document.getElementById('sermon-upcoming');
     closeBtn.addEventListener('click', closeModal);
@@ -78,6 +72,6 @@
     function closeModal(){
         area92.style.display = 'none';
     }
-
+    
 </script>
 </footer>

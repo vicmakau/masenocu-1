@@ -305,7 +305,7 @@ if (mysqli_num_rows($res) > 0)
           <h2 class="heading">Latest Events</h2>
         </div>
 
-        <?php $sql = "SELECT activities.id, activities.title, activities.description, activities.date, activities.venue, activities.category,  activities.image AS link FROM activities LEFT JOIN gallery ON activities.gallery_id = gallery.id ORDER BY date DESC LIMIT 2";
+        <?php $sql = "SELECT activities.id, activities.title, activities.description, activities.date, activities.venue, activities.category, activities.image AS link FROM activities LEFT JOIN gallery ON activities.gallery_id = gallery.id ORDER BY date DESC LIMIT 2";
         $res = mysqli_query($db, $sql);
         if (mysqli_num_rows($res) > 0)
           while ($activity_row = mysqli_fetch_assoc($res)) : ?>

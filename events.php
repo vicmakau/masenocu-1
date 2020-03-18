@@ -23,19 +23,19 @@ include("includes/header.php");
 
 
 
-      <section class="site-section bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="section-heading">
-                <h2 class="heading">Church Ministry</h2>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!--<section class="site-section bg-light">-->
+      <!--  <div class="container">-->
+      <!--    <div class="row">-->
+      <!--      <div class="col-md-12">-->
+      <!--        <div class="section-heading">-->
+      <!--          <h2 class="heading">Church Ministry</h2>-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <!--    </div>-->
+      <!--  </div>-->
 
 
-        <div class="block-13">
+        <div class="block-13 mb-3">
           <div class="nonloop-block-13 owl-carousel">
             <?php
             $event_sql = "SELECT * FROM `activities` ORDER BY date DESC";

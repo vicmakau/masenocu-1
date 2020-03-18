@@ -1,4 +1,4 @@
-    <?php include 'includes/header.php';
+<?php include 'includes/header.php';
     $eveTeams = array(
       "weso" => "Western Student Outreach",
       "net" => "Nyanza Evangelical Team",

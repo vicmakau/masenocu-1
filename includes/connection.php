@@ -1,7 +1,22 @@
 <?php
-if(!session_id()) session_start();
+if(session_status() == PHP_SESSION_NONE) session_start();
 include 'serverconnection.php';
 //
+
+// retrieve sermons from db
+function getSermons($conn){
+  $sql="SELECT `title`, `date`, `video`, `venue`, `speaker` FROM `sermons` order by date desc limit 2";
+  $result=$conn->query($sql);
+  $sermons=array();
+   if ($result->num_rows>0) {
+     while ($val=$result->fetch_assoc()) {    
+      array_push($sermons,$val);
+     }
+   }
+      return $sermons;
+
+}
+
 if(isset($_POST['activity'])){
   $actiTitle=$_POST['activityTitle'];
   $actiDate=$_POST['activityDate'];
@@ -58,9 +73,10 @@ if(isset($_POST['sermon'])){
   VALUES ('$sermonTitle','$sermonSummary','$sermonDate $sermonTime','$sermonVideo','$sermonAudio','$sermonDocument','$sermonVenue','$sermonSpeaker')";
 
   if ($conn->query($sermonsql) === TRUE) {
-    echo '<script type="text/javascript">alert("Uploaded Succesfully");
-    window.location.replace("../superAdmin.php?tab=sermon);
-    </script>';
+    header('location:../superAdmin.php?tab=sermon');
+    // echo '<script type="text/javascript">alert("Uploaded Succesfully");
+    // window.location.replace("superadmin.php?tab=sermon);
+    // </script>';
   } else {
       // echo "Error: " . $sermonsql . "<br>" . $conn->error;
       echo '<script type="text/javascript">alert("An error occured");
@@ -173,7 +189,7 @@ if(isset($_POST['sermon'])){
     }
   }
 //  Members login backend
-  if (isset($_POST['login'])) {
+ if (isset($_POST['login'])) {
     $loginemail = $_POST['loginemail'];
     $loginpassword = md5($_POST['loginpassword']);
     $loginquery = "SELECT * FROM `members` WHERE `email` = '$loginemail' AND `password` = '$loginpassword' LIMIT 1";
@@ -181,10 +197,9 @@ if(isset($_POST['sermon'])){
 
     if ($login_result->num_rows > 0) {
       $row = $login_result->fetch_assoc();
-      $_SESSION['user_id'] = $row['id'];
+      #$_SESSION['user_id'] = $row['id'];
       $_SESSION['user']=$loginemail;
-      header('location:./index.php');
-      exit;
+      header('location:index.php');
     }else {
       echo '<script type="text/javascript">alert("Login failed.Try again");
        window.location.replace("../login.php");
@@ -218,7 +233,7 @@ if(isset($_POST['sermon'])){
     $email=$_SESSION['user'];
 
     // Image
-    if (isset($_FILES['userimage']['name'])) {
+    if (isset($_FILES['userimage']['name']) && empty($_FILES['userimage']['name']) == false) {
       $image = $_FILES['userimage']['name'];
       $target = "../images/".basename($image);
       $imagename=basename($image);
@@ -253,7 +268,7 @@ if(isset($_POST['sermon'])){
     }
 
     // Course
-    if (isset($_POST['course'])){
+    if (isset($_POST['course']) && empty($_POST['course']) ==false){
       $course = mysqli_real_escape_string($conn,$_POST['course']);
       $sql = "UPDATE `members` SET `course`='$course' WHERE `email`='$email'";
       if ($conn->query($sql) === TRUE) {
@@ -295,10 +310,9 @@ if(isset($_POST['sermon'])){
 
     if (isset($_POST['minGid'])) {
       foreach($_POST['minGid'] as $ministry) {
-        $sql = "INSERT INTO  `member_ministries` VALUES (NULL, $user_id, $ministry)";
+        $sql = "INSERT INTO `member_ministries`(`id`, `member_id`, `ministry_id`) VALUES (NULL, $user_id, $ministry)";
         if ($conn->query($sql) === TRUE) {
           header('location:../profile.php');
-          // echo "<script type='text/javascript'>alert('Record updated successfully');</script>";
         } else {
           echo '<script type="text/javascript">alert("An error occured");
           window.location.replace("../profile.php");
@@ -346,3 +360,4 @@ if(isset($_POST['sermon'])){
      // echo "<script type='text/javascript'>alert('Testimonial failed to upload');</script>";
     }
    }
+   ?>

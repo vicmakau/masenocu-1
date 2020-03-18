@@ -1,33 +1,57 @@
 <?php
+if(session_status() == PHP_SESSION_NONE) session_start();
 include 'connection.php';
-$db = mysqli_connect('localhost', 'root', '', 'masenocu_db');
+// $db = mysqli_connect('localhost', 'masenocu', '$aAYhF0GzbsB', 'masenocu_db');
 
-// $db = mysqli_connect('localhost', 'id12540611_masenocu', 'masenocu', 'id12540611_masenocu_db');
+$db = mysqli_connect('localhost', 'root','', 'masenocu_db');
 if (!$db) {
   die("Connection failed: " . mysqli_connect_error());
 }
 $sql = "SELECT `id` FROM `sermons` ORDER BY `date` DESC LIMIT 1";
 $latest_sermon_id = mysqli_fetch_assoc(mysqli_query($db, $sql))['id'];
 
+// $ministries = array(
+//   "Media and IT",
+//   "Praise and Worship",
+//   "Creative",
+//   "Hospitality",
+//   "High School",
+//   "Instrumentalist",
+//   "Sunday School",
+//   "Discipleship",
+//   "Intercessory"
+// );
 $ministries = array(
-  "Media and IT",
-  "Praise and Worship",
-  "Creative",
-  "Hospitality",
-  "High School",
-  "Instrumentalist",
-  "Sunday School",
-  "Discipleship",
-  "Intercessory"
-);
+      "mit" => "Media and IT",
+      "praise" => "Praise and Worship",
+      "creative" => "Creative",
+      "hospitality" => "Hospitality",
+      "high-school" => "High School",
+      "instrumentalist" => "Instrumentalist",
+      "sunday-school" => "Sunday School",
+      "discipleship" => "Discipleship",
+      "intercessory" => "Intercessory",
+      "choir"=>"Choir"
+    );
 
-$eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "UET");
+
+// $eveTeams = array("WESO", "NET", "SORET", "CET", "MUBET", "EMUSETA", "NORET", "UET");
+$eveTeams = array(
+      "weso" => "Western Student Outreach",
+      "net" => "Nyanza Evangelical Team",
+      "soret" => "South Rift Evangelical Team",
+      "cet" => "Central Evangelical Team",
+      "mubet" => "Mid Eastern United Brethren Evangelistic Team",
+      "mseta" => "Eastern Movement Student Association",
+      "noret" => "North Rift Evangelical Team",
+      "uet" => "Uttermost Evangelistic Team",
+   );
 ?>
 <!doctype html>
 <html lang="en">
-<head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Maseno University Christian Union.</title>
-  <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">

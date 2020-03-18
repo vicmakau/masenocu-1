@@ -9,7 +9,7 @@
   $mobile         = $_POST['phone'];
   $email          = $_POST['email'];
   $name           = $_POST['name'];
-  $to             = 'simonnyongesa6@gmail.com'; // note the comma
+  $to             = 'mail@masenocu.org'; // note the comma
 
 // Subject
 $subject = 'Feedback from site';
@@ -17,7 +17,7 @@ $subject = 'Feedback from site';
 // Message
 $message = '
 <html>
-<head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Member feedback</title>
 </head>
 <body>

@@ -1,7 +1,7 @@
-    <?php
-      include 'includes/header.php';
-      include 'includes/connection.php';
-    ?>
+<?php
+  include 'includes/header.php';
+  // include 'includes/connection.php';
+?>
 <!-- Body -->
 <body class="mt-5">
 <div class="row">

@@ -55,8 +55,7 @@ include 'includes/loginAdmin.php';
     <div class="div-holder">
         <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button" style="background-color:#6c5b7b;height:100px;">
             <div class="container"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><img src="assets/img/cu.png">Maseno Christian Union</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div
-                    class="collapse navbar-collapse" id="navcol-1">
+                <div class="collapse navbar-collapse" id="navcol-1">
                     <?php
                     if(isset($_SESSION['admin'])):?>
                     <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Maseno CU | <?=$_SESSION['admin']?>&nbsp;</strong></p>
