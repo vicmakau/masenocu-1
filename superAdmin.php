@@ -1,9 +1,19 @@
+<?php
+include 'includes/connection.php';
+include 'includes/loginAdmin.php';
+
+ ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+      <link rel="icon"
+      type="image/png"
+      href="images/cu.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <title>MasenoChristianUnion</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -26,313 +36,495 @@
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
+
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sign.css">
+    <!-- super admin css -->
+    <link rel="stylesheet" href="css/superAdmin.css">
+
 </head>
 
-<?php
-   include('includes/databaseClass.php');
-   include('includes/insertngNews.php');
-   include('includes/fetchingnews.php');
-  /*  function spl_autoload_register()($class){
-	   include('includes/'.$class.'.php');
-   } */
-   if(isset($_POST['submit'])){
-	   $fname = $_POST['fname'];
-	   $lname = $_POST['lname'];
-	   $title =  $_POST['title'];
-	   $password =  $_POST['password'];
-	   $year =  $_POST['year'];
-	   $sql2 = null;
-	  // inserting the data into the database.
-	   DEFINE('HOST','Localhost:3308');
-   DEFINE('USER','root');
-   DEFINE('PASSWORD','7205');
-   DEFINE('DATABASE','masenocu');
-   $conn = null;
-   // DATABASE CONNECTIVITY.
-   $conn = new MySQLi(HOST,USER,PASSWORD,DATABASE);
-   
-   if($conn -> connect_error){	   
-	   die($conn -> connect_error);	   
-   }
-	  $sql2 = " insert into admindetails (fName,lName,title,servingYear,dateRegistred) values ('" .$fname. "','" .$lname."','".$title."','" .$year."',curdate());";
-	  
-	  $result = ($conn->query($sql2));
-	  
-	  if($result){
-		   echo "<div role=\"dialog\" tabindex=\"-1\" class=\"modal fade show\" style=\"display: block;\">
-    <div class=\"modal-dialog\" role=\"document\">
-        <div class=\"modal-content\">
-            <div class=\"modal-body\">
-                <h3 style=\"color:rgb(247,5,49);\">Congratulations !!!!</h3>
-                <p><strong>User has successfully been added</strong></p>
-            </div>
-            <div class=\"modal-footer\"><a class=\"btn btn-info\" role=\"button\" href=\"superAdmin.php\">Ok.</a></div>
-        </div>
-    </div>
-</div>";
-		 
-	  }
-	  else{
-		  echo "Error was experienced" . $conn-> error ;
-	  }
-   }
-    
-   
-   //checking if the add news submit button has been clicked.
-    if(isset($_POST['submitevent'])){
-	   //echo "entered.";
-	   $subject = $_POST['subject'];
-	   $message = $_POST['message'];
-	   
-	   $insertingNewsObject = new AddNewNews();
-	   
-	   $insertingNewsObject->addnews($subject,$message,"superAdmin.php");
-	   
-	   //$sql2 = "insert into newsboard (adminid,dateposted,subject,message) values (". 1 . " 2014-04-04 ,' " .$subject."','". $message ."');";
-	  /* $sql2 = " insert into newsboard (adminid,datePosted,subject,message) values ( 1 ,'".date("Y-m-d")."','$subject','$message');";
-	   
-	   if($conn -> query($sql2)){
-		   		   echo "<div role=\"dialog\" tabindex=\"-1\" class=\"modal fade show\" style=\"display: block;\">
-    <div class=\"modal-dialog\" role=\"document\">
-        <div class=\"modal-content\">
-            <div class=\"modal-body\">
-                <h3 style=\"color:rgb(247,5,49);\">Congratulations !!!!</h3>
-                <p><strong>You have successfully added an event.</strong></p>
-            </div>
-            <div class=\"modal-footer\"><a class=\"btn btn-info\" role=\"button\" href=\"superAdmin.php\">Ok.</a></div>
-        </div>
-    </div>
-</div>";
-	   }
-	   else{
-		   echo $conn -> error . "This is the error in insertion.";
-	   } */
-	   
-	   
-	   
-   }
-   
 
-?>
-
-
-
-
-<body style="background-color:rgb(249,242,250);">
-    <div style="margin-bottom:110px;">
+<body class="super-admin-body" >
+    <div class="div-holder">
         <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button" style="background-color:#6c5b7b;height:100px;">
             <div class="container"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><img src="assets/img/cu.png">Maseno Christian Union</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div
-                    class="collapse navbar-collapse" id="navcol-1">
-                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Welcome ?? Admin Name ??&nbsp;</strong></p><span class="ml-auto navbar-text actions"> <a class="btn btn-light action-button" role="button" href="#"><strong>Log Out</strong></a></span></div>
-    </div>
-    </nav>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <h3 style="font-family:times new roman;">Super Administrator DashBoard.</h3>
-            </div>
-            <div class="col-3 offset-1 align-self-end mr-md-auto">
-                <div class="dropdown"><button class="btn btn-warning btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><strong>Manage Content</strong></button>
-                    <div class="dropdown-menu dropdown-menu-left" role="menu"><a class="dropdown-item" role="presentation" href="#">Add Users</a><a class="dropdown-item" role="presentation" href="#">Add Posts</a><a class="dropdown-item" role="presentation" href="#">Add Comments</a></div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <?php
+                    if(isset($_SESSION['admin'])):?>
+                    <p class="text-right ml-auto navbar-text" style="color:#ffffff;"><strong>Maseno CU | <?=$_SESSION['admin']?>&nbsp;</strong></p>
+                    <!-- <span class="ml-auto navbar-text actions"> -->
+                      <a class="btn ml-auto  btn-light action-button" role="button" href="includes/adminlogout.php"><strong>LogOut</strong></a>
+                    <!-- </span> -->
+                  <?php  else:?>
+                    <?php echo "
+                    <script type="."text/javascript".">
+                      document.getElementById('adminLogin').style.display='block';
+                      document.getElementById('span').style.display='none';
+                    </script>;" ?>
+                    <!-- <span class="" > -->
+                      <button type="button"  onclick="document.getElementById('adminLogin').style.display='block'"
+                      class="btn ml-auto navbar-text actions btn-outline-info btn-light action-button" >Login</button>
+                      <!-- <button type="button" class="btn btn-outline-info btn-light action-button" >Login</button> -->
+                  <?php  endif;?>
+
                 </div>
             </div>
-        </div>
-        <ol class="breadcrumb" style="background-color:rgb(86,198,198);margin-top:16px;">
-            <li class="breadcrumb-item"><a href="index.php"><span>Home</span></a></li>
-            <li class="breadcrumb-item"><a href="login.php"><span>Login</span></a></li>
-            <li class="breadcrumb-item"><a href="#"><span>Admin Dashboard</span></a></li>
-        </ol>
-        <div class="row">
-<div class="col-md-3">
-    <div class="card">
-        <div class="card-header" style="background:linear-gradient(90deg ,rgba(171,226,101,0.03),rgba(171,226,101,0.03));background-color:#7ef048;">
-            <h5 class="mb-0">Navigation</h5>
-        </div>
-        <div class="card-body" style="color:rgb(0,0,0);">
-            <div class="list-group"><button class="list-group-item list-group-item-action" id = "newMessage" data-target = "#addnews" data-toggle = "modal"><span><strong>New Event.</strong></span></button><button class="list-group-item list-group-item-action" id = "homeMessage"><span><strong>Home Message</strong></span></button><button class="list-group-item list-group-item-action" id = "newstable"><span><strong>News Table</strong></span></button></div>
-        </div>
+        </nav>
     </div>
-</div>
-            <div class="col-md-9">
-                <div class="card">
-                    <div class="card-header" style="background-color:#7ef048;">
-                        <h5 class="mb-0">Frequent Actions.</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col" style="color:rgb(0,0,0);">
-                                <div class="card" style="background:linear-gradient(90deg,rgb(200,100,200) 0%,rgb(153,3,190) 100%);color:rgb(255,255,255);" data-target="#modal" data-toggle="modal">
-                                    <div class="card-body">
-                                        <p style="color:rgb(255,255,255);"><i class="fa fa-user" style="font-size:55px;color:rgb(249,249,249);"></i>&nbsp; &nbsp; <strong>Manage&nbsp;</strong></p>
-                                        <p><strong>Users</strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col" style="color:rgb(0,0,0);"><a href = "managecomments.html">
-                                <div class="card" style="background:linear-gradient(90deg,#3f5efb 0%, #fc466b 100%);">
-                                    <div class="card-body" style="color:rgb(255,255,255);">
-                                        <p><i class="fa fa-comments" style="font-size:55px;"></i>&nbsp; &nbsp; <strong>Manage&nbsp;</strong></p>
-                                        <p><strong>Comments</strong></p>
-                                    </div>
-                                </div></a></div>
-                            <div class="col"><a href = "newsDashboard.php">
-                                <div class="card" style="background:linear-gradient(90deg, #11998e 0%, #38ef7d 100%);">
-                                    <div class="card-body" style="color:rgb(255,255,255);">
-                                        <p><i class="fa fa-newspaper-o" style="font-size:55px;"></i>&nbsp; &nbsp; <strong>Manage&nbsp;</strong></p>
-                                        <p><strong>News /Events&nbsp;</strong></p>
-                                    </div>
-                                </div></a></div>
-                        </div>
-                    </div>
-                </div>
+    <div class="container w3-border tab-View " >
+        <div class="w3-center">
+            <h1 id="head">Welcome to Admin section</h1>
+        </div>
+      <div class="row">
+        <div class="col-md-3"  >
+          <nav class="w3-white   w3-border " style="padding:0px;">
+              <div class="w3-container w3-center w3-card-2">
+                 <h5>Admin Panel</h5>
+
+          <ul style="margin-right:10px; margin-left: 0px;">
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'Activities')">
+              Activities
+            </li>
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'sermon')">
+              Sermon
+            </li>
+            <li class="tablink" id="btn" onclick="openEvent(event, 'Leadership')">
+               EveT Leadership
+            </li>
+            <li class="tablink" id="btn" onclick="openEvent(event, 'Ministry')">
+               Ministry
+            </li>
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'gallery')">
+            Gallery
+            </li>
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'upload')">
+              Upload Documents
+            </li>
+            <li class="tablink" id="btn" onclick="openEvent(event, 'castMessage')">
+              Cast Message
+            </li>
+            <li class="tablink" id="btn" onclick="openEvent(event, 'testimonials')">
+              Review testimonials
+            </li>
+            <li  class="tablink" id="btn" onclick="openEvent(event, 'semTheme')">
+              Semesters Theme
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-md-9">
+        <div>
+
+          <div id="Activities" class="w3-container event w3-animate-left">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="d-flex preview-empty" id="preview"><img src="" alt="" id="preview_img"><p><strong>No images selectd</strong></p></div>
+
+                <form action="includes/connection.php" enctype="multipart/form-data" method="post">
+                  <div class="form-group">
+                    <label for="image">My image:</label>
+                    <input class="" type="file" name="image" id="new_pic" accept=".png, .jpg" onchange="handleFiles(this.files)"></div>
+              </div>
+              <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" name="activityTitle" class="form-control" placeholder="Enter Title" id="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Date</label>
+                    <input type="date" name="activityDate" class="form-control" placeholder="Enter Date" id="pwd" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Time</label>
+                    <input type="time" name="activityTime" class="form-control" placeholder="Enter time" id="pwd" required>
+                  </div>
+                  <div class="form-group">
+                  <label for="groupId">Select group</label>
+                  <select name="cate" class="selectpicker form control"  id="groupId" required>
+                    <option value="Christian Union" style="color:black"> Christian Union </option>
+                    <option value="Eveteam" style="color:black"  >Eveteam</option>
+                    <option value="Ministry" style="color:black"  >Ministry</option>
+                    <!-- <option value="4" style="color:black"  >4TH</option> -->
+                  </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="Venue">Venue</label>
+                    <input type="text" class="form-control" name="activityVenue"placeholder="Entervenue" id="venue" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="Summary">Summary</label>
+                  <textarea id="Summary" class="form-control" name="activitySummary" rows="3" cols="47" placeholder="something here" required></textarea>
+                  </div>
+                  <div class="w3-center">
+                    <button type="submit" name="activity" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
             </div>
-        </div>
-        <h1 style="margin-top:20px;margin-bottom:10px;font-family:&quot;Times New Roman&quot;;">News.</h1>
-        <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover table-dark">
-                <caption>News table.</caption>
-                <thead>
-                    <tr>
-                        <th>Sno</th>
-                        <th>Author</th>
-                        <th>Author Title</th>
-                        <th>Subject</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-				  <tr>
-							<?php
-							
-							
-							    $fechObject = new FetchNews();
-								
-								$fechObject->fetchNewsfuction(1);
-							?>
-					</tr>
-                <tfoot>
-                    <tr>
-                        <td>Sno</td>
-                        <td>Name</td>
-                        <td>Title</td>
-                        <td>Subject</td>
-                        <td>Date</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" style="font-family:times new roman;"><strong>MANAGE USERS.</strong></h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col"><button class="btn btn-success btn-block btn-lg" type="button" id="add" data-toggle="modal" data-target="#modal1"><strong>ADD USER</strong></button></div>
-                        <div class="col"><button class="btn btn-danger btn-block btn-lg" type="button" id="remove" data-toggle="modal" data-target="#modal"><strong>REMOVE USER</strong></button>
-                            <div class="modal fade" role="dialog" tabindex="-1">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Modal Title</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                                        <div class="modal-body">
-                                            <p>The content of your modal.</p>
-                                        </div>
-                                        <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer"><button class="btn btn-primary" type="button" data-dismiss="modal">Close</button></div>
+
+          </div>
+
+          <div id="sermon" class="w3-container event w3-animate-left">
+            <div class="row">
+              <div class="col-md-1">
+
+              </div>
+              <div class="col-md-9">
+                <form action="includes/connection.php" method="post">
+                  <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" name="sermonTitle" class="form-control" placeholder="Enter Title" id="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Date</label>
+                    <input type="date" name="sermonDate"  class="form-control" placeholder="Enter Date" id="pwd" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Time</label>
+                    <input type="time" name="sermonTime"  class="form-control" placeholder="Enter Date" id="pwd" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="Venue">Venue</label>
+                    <input type="text"  name="sermonVenue"  class="form-control" placeholder="Entervenue" id="venue" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="Speaker">Speaker</label>
+                    <input type="text" required name="sermonSpeaker"  class="form-control" placeholder="Entervenue" id="venue" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="audio">Audio url</label>
+                    <input type="text"  name="sermonAudio" class="form-control" placeholder="Enter audio url" id="audio">
+                  </div>
+                  <div class="form-group">
+                    <label for="Video">Video url</label>
+                    <input type="text" name="sermonVideo"  class="form-control" placeholder="Enter Video url" id="Video">
+                  </div>
+                  <div class="form-group">
+                    <label for="pdf">Pdf url</label>
+                    <input type="text" name="sermonDocument"  class="form-control" placeholder="Enter pdf url" id="pdf">
+                  </div>
+                  <div class="form-group">
+                    <label for="Summary">Summary</label>
+                  <textarea id="Summary"  class="form-control" name="sermonSummarry"  rows="3" cols="47" placeholder="something here" required></textarea>
+                  </div>
+                  <div class="w3-center">
+                    <button type="" class="btn btn-primary">Preview</button>
+                    <button type="submit"name="sermon" class="btn btn-primary">Submit</button>
+                  </div>
+
+                </form>
+              </div>
+
             </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" style="font-family:times new roman;"><strong>ADD USER.</strong></h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body">
-                    <form action="superadmin.php" method="post"><label><strong>Names :</strong></label>
-                        <div class="form-group">
-                            <div class="form-row">
-                                <div class="col">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"><span class="input-group-text">First :</span></div><input class="form-control" type="text" name="fname" required="">
-                                        <div class="input-group-append"></div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"><span class="input-group-text">Last :</span></div><input class="form-control" type="text" name="lname" required="">
-                                        <div class="input-group-append"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group"><label><strong>Title:</strong></label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user" style="font-size:26px;"></i></span></div><input class="form-control" type="text" name="title" required="">
-                                <div class="input-group-append"></div>
-                            </div>
-                        </div>
-                        <div class="form-group"><label><strong>Set Password:</strong></label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-key" style="font-size:26px;"></i></span></div><input class="form-control" type="text" name="password" required="">
-                                <div class="input-group-append"></div>
-                            </div>
-                        </div>
-                        <div class="form-group"><label><strong>Year Elected:</strong></label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-calendar" style="font-size:26px;"></i></span></div><input class="form-control" type="text" name="year" required="">
-                                <div class="input-group-append"></div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col"><button class="btn btn-success" type="submit" name = "submit">ADD .</button><button class="btn btn-info" type="button" data-dismiss="modal">Close</button></div>
-                        </div>
+          </div>
+
+          <div id="castMessage" class="w3-container  event w3-animate-left">
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-10">
+                <form action="">
+                  <div class="form-group">
+                  <label for="groupId">Select Receiver</label>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId" multiple>
+                    <option data-tokens="Members">Members</option>
+                    <option data-tokens="Leaders">Leaders</option>
+                  </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="title">Subject</label>
+                    <input type="text" class="form-control" placeholder="Enter Title" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                  <textarea id="message" class="form-control" name="message" rows="3" cols="47" placeholder="something here"></textarea>
+                  </div>
+                  <div class="w3-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div id="Leadership" class="w3-container event w3-animate-left">
+            <div class="row">
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-10">
+                <form action="includes/connection.php" method="post">
+                  <div class="form-group">
+                  <label for="groupId">Select group</label>
+                  <select class="selectpicker form-control" id="groupId" data-live-search="true"  name="leaderGid">
+                    <?php
+                    $groupquery = "SELECT * FROM `groups` WHERE `type`='eve_team'";
+                    $group_result = $conn->query($groupquery);
+                    if ($group_result->num_rows > 0) :
+                        while($group_row = $group_result->fetch_assoc()) :?>
+                        <option data-tokens="" value="<?= $group_row['id'] ?>"><?= $group_row['name'] ?></option>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
+                  </select>
+                  </div>
+                  <div class="form-group">
+                  <label for="groupId">Person</label>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId"  name="leaderMId">
+                    <?php
+                    $userquery = "SELECT * FROM `members`";
+                    $user_result = $conn->query($userquery);
+                    if ($user_result->num_rows > 0) :
+                        while($user_row = $user_result->fetch_assoc()) :?>
+                        <option data-tokens="" value="<?= $user_row['id'] ?>"><?= $user_row['email'] ?></option>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
+
+                  </select>
+                  </div>
+                  <div class="form-group">
+                  <label for="groupId">Docket</label>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId" name="leaderDocket">
+                    <option data-tokens="" value="CHAIRPERSON">CHAIRPERSON</option>
+                    <option data-tokens="" value="VICE CHAIRPERSON">VICE CHAIRPERSON</option>
+                    <option data-tokens="" value="SECRETARY">SECRETARY</option>
+                    <option data-tokens="" value="TREASURER">TREASURER</option>
+                    <option data-tokens="" value="MISSIONS COORDINATOR">MISSIONS COORDINATOR</option>
+                    <option data-tokens="" value="VICE SECRETARY">VICE SECRETARY</option>
+                    <option  data-tokens="" value="BIBLE STUDY COORDINATOR">BIBLE STUDY COORDINATOR</option>
+                    <option  data-tokens="" value="BOARD DIRECTOR">BOARD DIRECTOR</option>
+                    <option  data-tokens="" value="DISCIPLESHIP COORDINATOR">DISCIPLESHIP COORDINATOR</option>
+                    <option  data-tokens="" value="HOSPITALITY DIRECTOR">HOSPITALITY DIRECTOR</option>
+                    <option value="" data-tokens>PRAYER COORDINATOR</option>
+                  </select>
+                  </div>
+                  <div class="w3-center">
+                    <button type="submit" name="Leaders" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div id="gallery" class="w3-container event w3-animate-left">
+            <div class="row">
+              <div class="col-md-3">
+                <div class=" w3-border">
+                  <img src="images/cu.png" class="activity-image" alt="" height="300">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <form action="">
+                  <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" placeholder="Enter Title" id="email">
+                  </div>
+                    <div class="form-group">
+                      <form class="form" enctype="multipart/form-data" method="post">
+                        <label for="files">Select your files</label>
+                        <input type="file"  class="form-control" placeholder="" id="files">
+                      </form>
+                    </div>
+                  <div class="form-group">
+                    <label for="Venue">Venue</label>
+                    <input type="text" class="form-control" placeholder="Entervenue" id="venue">
+                  </div>
+                  <div class="w3-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div id="upload" class="w3-container event w3-animate-left">
+            <div class="row">
+              <div class="col-md-3">
+                <div class=" w3-border">
+                  <img src="images/cu.png" class="activity-image" alt="" height="300">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <form action="">
+                  <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" placeholder="Enter Title" id="email">
+                  </div>
+                  <div class="form-group">
+                    <form class="form" enctype="multipart/form-data" method="post">
+                      <label for="files">Select your files</label>
+                      <input type="file"  class="form-control" placeholder="" id="files">
                     </form>
-                </div>
-                <div class="modal-footer"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="Summary">Summary</label>
+                  <textarea id="Summary" class="form-control" name="Summary" rows="3" cols="47" placeholder="something here"></textarea>
+                  </div>
+                  <div class="w3-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
             </div>
-        </div>
-    </div>
-	
-	<div role="dialog" tabindex="-1" class="modal fade" id="addnews">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color:#f9d44f;">
-                <h4 class="modal-title">Add Event ...</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-            <div class="modal-body" style="background-color:#f9d44f;">
-                <form action="superAdmin.php" method="post">
-                    <div class="form-group"><label><strong>Subject:</strong></label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div><input type="text" name="subject" placeholder="subject" class="form-control" style="background-color:#f7eaba;" />
-                            <div class="input-group-append"></div>
-                        </div>
+          </div>
+
+          <div id="testimonials" class="w3-container event w3-animate-left">
+            <div class="row">
+              <div class="col-md-1">
+
+              </div>
+              <div class="col-md-10">
+                <table class="w3-table w3-striped w3-bordered w3-card-4">
+                    <thead>
+                    <tr class="w3-blue">
+                      <th>Uploaded by</th>
+                      <th>Message</th>
+                      <th>Admin</th>
+                    </tr>
+                    </thead>
+
+                      <?php
+                      $testimonialquery =  "SELECT members.first_name ,testimonials.message , testimonials.id FROM `testimonials` INNER JOIN  members ON members.email=testimonials.member_id  WHERE testimonials.state IS NULL ";
+                      $testimonial_result = $conn->query($testimonialquery);
+                      // include 'includes/connection.php';
+
+                      if ($testimonial_result->num_rows > 0) :
+                          while($testimonial_row = $testimonial_result->fetch_assoc()):
+                             ?>
+                             <tr>
+                          <td id="uploadBy"><?= $testimonial_row['first_name'] ?></td>
+                          <td id="message"><?= $testimonial_row['message'] ?>  </td>
+                          <td id="">
+                            <form class="form" action="includes/connection.php" method="post">
+                             <div class="w3-center">
+                               <a href="superAdmin.php?item=testimonial&action=allow&id=<?php echo $testimonial_row['id']; ?>" name="<?php echo "allow".$testimonial_row['id']; ?>" class="w3-btn w3-white w3-border w3-border-green w3-round-xlarge">Allow</a>
+                               <a href="superAdmin.php?item=testimonial&action=decline&id=<?php echo $testimonial_row['id']; ?>" name="<?php echo "discard".$testimonial_row['id']; ?>" class="w3-btn w3-white w3-border w3-border-red w3-round-xlarge">Discard</a>
+                             </div>
+                            </form>
+                          </td>
+                        </tr>
+                      <?php
+                      endwhile;
+                      endif;
+                      ?>
+
+                    </table>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div id="semTheme" class="w3-container event w3-animate-left">
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-8">
+                <form action="includes/connection.php" method="post">
+                  <div class="form-group">
+                    <label for="title">Theme</label>
+                    <input type="text" name="semTheme" class="form-control" placeholder="Enter Semesters theme" id="email" required>
+                  </div>
+                    <div class="form-group">
+                        <label for="bibleVerse">from</label>
+                        <input type="text" name="verse" class="form-control" placeholder="From bible verse" id="bibleVerse" required>
                     </div>
-                    <div class="form-group"><label><strong>Message :</strong></label><textarea rows="7" name="message" placeholder="message" class="form-control" style="background-color:#f7eaba;"></textarea></div><button class="btn btn-success btn-block" type="submit" name="submitevent"><strong>ADD EVENT.</strong></button></form>
+                    <div class="form-group">
+                        <label for="semester">Semester</label>
+                        <input type="text" name="semester" class="form-control" placeholder="SEM 2 2020" id="semester" required>
+                    </div>
+                    <div class="w3-center">
+                      <button type="submit"  name="theme" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+              </div>
             </div>
-            <div class="modal-footer" style="background-color:#f9d44f;"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
+          </div>
+
+          <div id="Ministry" class="w3-container event w3-animate-left">
+            <div class="row">
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-10">
+                <form action="includes/connection.php" method="post">
+                  <div class="form-group">
+                  <label for="groupId">Select group</label>
+                  <select class="selectpicker form-control" id="groupId" data-live-search="true"  name="minGid">
+                    <?php
+                    $groupquery = "SELECT * FROM `groups` WHERE `type`='ministry'";
+                    $group_result = $conn->query($groupquery);
+                    if ($group_result->num_rows > 0) :
+                        while($group_row = $group_result->fetch_assoc()) :?>
+                        <option data-tokens="" value="<?= $group_row['id'] ?>"><?= $group_row['name'] ?></option>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
+                  </select>
+                  </div>
+                  <div class="form-group">
+                  <label for="groupId">Person</label>
+                  <select class="selectpicker form-control" data-live-search="true" id="groupId"  name="minMId">
+                    <?php
+                    $userquery = "SELECT * FROM `members`";
+                    $user_result = $conn->query($userquery);
+                    if ($user_result->num_rows > 0) :
+                        while($user_row = $user_result->fetch_assoc()) :?>
+                        <option data-tokens="" value="<?= $user_row['id'] ?>"><?= $user_row['email'] ?></option>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
+
+                  </select>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="usr">Docket</label>
+                        <input type="text" class="form-control" name="minDocket" id="usr">
+                      </div>
+                  <div class="w3-center">
+                    <button type="submit" name="minLeaders" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
+      </div>
+      </div>
     </div>
-</div>
 
    <?php
-		
-		   include("includes/footer.php");
-		?>
 
+		   // include("includes/footer.php");
+		?>
+    <script type="text/javascript" src="js/auth.js">
+
+    </script>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="js/superAdmin.js"></script>
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
     <script src="assets/js/modalHide.js"></script>
 </body>
 

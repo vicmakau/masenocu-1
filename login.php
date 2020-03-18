@@ -1,108 +1,95 @@
 <?php
-include('includes/databaseConnectivity.php');
-    include("includes/databaseClass.php");
-	include("includes/fetchingnews.php");
-if($_SERVER['REQUEST_METHOD'] == "POST"){
-	$error = null;
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	
-	echo $username;
-	echo $password;
-	
-	
-	$sql = "select id from login where username ='". $username ."' and password ='". $password . "';";
-	
-	if($conn-> query($sql)){
-		echo "query fine";
-		
-		$result = $conn-> query($sql);
-		
-		$number = $result->num_rows;
-		echo $number;
-		
-		if($number == 1){
-			header('Location:superAdmin.php');
-		}
-		else{
-			// SETTIN THE ARRAY IF AN ERROR IS EXPERIENCED.
-			$error = array();
-			array_push($error, "Wrong Credentials.");
-
-		}
-	}
-	else{
-		
-		echo $conn->error ."error registered.";
-	}
-}
+  include 'includes/header.php';
+  // include 'includes/connection.php';
 ?>
-<!DOCTYPE html>
-<html>
+<!-- Body -->
+<body class="mt-5">
+<div class="row">
+ <div class="col-md-2">
+ </div>
+  <div class="col-md-8">
+    <div class="right container">
+      <div class="row">
+          <div class="col-md-7"></div>
+           <div class="col-md-5">
+              <div class="banner">
+               <span class="sign-in-banner">Sign In</span>
+               <span class="sign-up-banner">
+                  <a href="sign-up.php">Sign up</a>
+               </span>
+               </div>
+            </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="header-label">
+              <span class="sign-in-text">Sign In </span>
+              <span class="sign-in-text-or">or</span>
+              <span class="sign-up-text">
+              <a href="sign-up.php">Sign Up</a>
+              </span>
+          </div>
+        </div>
+        <div class="col-md-6"> </div>
+      </div>
+     <div class="row">
+       <div class="col-md-8 col-xs-12">
+         <form  action="" method="post" autocomplete="off">
+         <div class="forms">
+             <label class="label">EMAIL</label><br>
+             <input name="loginemail" class="text-area" type="email" placeholder="eg example@masenocu.com" required> <br>
+             <label class="label">PASSWORD</label><br>
+             <input  name="loginpassword" class="text-area" type="password" placeholder="use a strong passsword" required> <br>
+         </div>
+        </div>
+      </div>
+       <div class="row">
+         <div class="col-md-4 col-xs-12">
+           <div class="refuses">
+             <button type="submit" name="login" style="color: white"  class="btn btn-primary-white py-3 px-5">Sign In</button>
+            </div>
+         </div>
+       </form>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MasenoChristianUnion</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/Drag--Drop-Upload-Form.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
-    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-<title>Maseno university christian union Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <div class="col-md-8  col-xs-12">
+           <span class="text-final">
+            <a href="sign-up.php">I dont have an account</a>
+           </span>
+          </div>
+          <div class="alert alert-danger" id="target" role="alert" style="display:none;">An error occured</div>
+          <script type="text/javascript">
+          </script>
+        </div>
+        </div>
+  </div>
+ <div class="col-md-2">
+ </div>
+</div>
+  <!-- <div class="form-1"> -->
 
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-
-    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body style="background-color:rgb(249,242,250);">
-    <div style="margin-bottom:0px;">
-        <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button" style="background-color:#6c5b7b;height:100px;">
-            <div class="container"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><img src="assets/img/cu.png">Maseno Christian Union</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div
-                    class="collapse navbar-collapse" id="navcol-1">
-                    
-    </div>
-    </nav>
-    </div>
-    <div class="login-dark" style="background-image:url(&quot;assets/img/church2.jpeg&quot;);">
-        <form action="login.php" method="post">
-            <h2 class="text-center" style="font-family:times new roman;color:rgb(249,249,249);">Log In Page</h2>
-			 <?php
-			     if(isset($error)){
-                      echo "<div class=\"alert alert-danger\">
-  <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
-  $error[0]
-</div>";					 
-				 }
-			 ?>
-            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group"><input class="form-control" type="text" name="username" required="" placeholder="username"></div>
-            <div class="form-group"><input class="form-control" type="password" name="password" required="" placeholder="Password"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot">Forgot your email or password?</a></form>
-    </div>
-        <?php
-		   include("includes/footer.php");
-		?>
-    <!-- END f
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
-</html>
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
+    <script src="js/auth.js"></script>
+        
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/main.js"></script>
+    </body>
+
+    </html>

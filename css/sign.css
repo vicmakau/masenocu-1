@@ -1,0 +1,423 @@
+.right
+{
+    -webkit-transition-duration: 0.5s; Safari
+    transition-duration: 0.5s;
+    /* width: 50%; */
+  background-color: rgb(16, 43, 48);
+  padding: 25px 40px;
+  overflow: auto;
+  /* margin: auto; */
+  margin-top: 80px;
+
+}
+.right:hover
+{
+    /* width: 50%; */
+  background-color: rgb(16, 43, 48);
+  padding: 25px 40px;
+  overflow: auto;
+  /* margin: auto; */
+  margin-top: 80px;
+  box-shadow: 0px 3px 10px #000000;
+  border-radius: 15px;
+}
+
+.logo-text{
+/* border-radius: 50%; */
+width: 100%;
+height: 50%;
+margin: auto;
+float: left;
+}
+
+.left
+{
+    width: 50%;
+  background-color: #66DAC7;
+}
+
+.banner
+{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+
+}
+
+.sign-in-banner
+{
+    background-color: #5ED0C0 ;
+    border-radius: 20px 0 0 20px;
+    padding: 10px 20px 10px 20px;
+    margin: none;
+    color: white;
+
+}
+.sign-up-banner-2
+{
+    background-color: #5ED0C0 ;
+    border-radius:0px 20px 20px 0px;
+    padding: 10px 20px 10px 20px;
+    margin: none;
+    color: white;
+
+}
+.sign-up-banner
+{
+    background-color: #4a5b73;
+    border-radius: 0px 20px 20px 0px;
+    padding: 5px;
+    margin: none;
+    padding: 10px 20px 10px 20px;
+    color: #9DA6B1
+}
+.sign-in-banner-2
+{
+    background-color: #4a5b73;
+    border-radius:  20px 0px 0px 20px;
+    padding: 5px;
+    margin: none;
+    padding: 10px 20px 10px 20px;
+    color: #9DA6B1
+}
+.header-label
+{
+    margin-bottom: 20px;
+}
+/* Style the container for inputs */
+
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+.sign-in-text
+{
+    font-size: 32px;
+    color: white;
+    /* font-weight: 100; */
+    cursor: pointer;
+
+}
+.sign-in-text-or
+{
+    color: rgb(53, 93, 119);
+    font-size: 24px;
+    margin: 15px;
+
+}
+
+.sign-up-text
+{
+    font-size: 32px;
+    color: rgb(77, 99, 114);
+
+    font-weight: 200;
+    border-bottom: 1px solid #4a8385;
+    cursor: pointer;
+}
+.sign-up-text:hover
+{
+    font-size: 32px;
+    color: rgb(77, 99, 114);
+
+    font-weight: 200;
+    border-bottom: 0px
+    cursor: pointer;
+}
+.forms
+{
+    color: white;
+    margin-bottom:  20px;
+}
+.text-area
+{
+    width: 85%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid #445366;
+    font-size: 1em;
+    font-weight: 300;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+
+.text-area::placeholder
+ {
+    color: #616E7F;
+ }
+.agree
+{
+    margin: 20px 0 20px 0;
+    font-weight: 100;
+    color: #616E7F;
+    font-size: larger;
+    font-stretch: wider;
+}
+.terms
+{
+    border-bottom: 1px solid #4a8385;
+    cursor:  pointer;
+    color: white;
+}
+.sign-in-btn
+{
+    background-color: #66DAC7;
+    font-size: large;
+    color: #ffffff;
+    border-radius: 40px;
+    width: 200px;
+    height: 50px;
+    /* box-shadow: 2px 2px 10px grey; */
+    border-width: 0px;
+    cursor: pointer;
+
+}
+.text-final
+{
+margin-left: 20px;
+font-weight: 100;
+color: #616E7F;
+font-size: larger;
+border-bottom: 1px solid #4a8385;
+ cursor:  pointer;
+}
+.text-final1
+{
+    margin-left: 20px;
+    font-weight: 100;
+    color: #616E7F;
+    font-size: larger;
+    cursor:  pointer;
+}
+.footer1
+{
+    color: #616E7F;
+    margin-top: 50px ;
+
+}
+a:hover
+{
+color: white;
+
+}
+
+
+
+/* edit profile css */
+.body{
+  margin-top: 60px;
+}
+.profile-image{
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+.profile-name{
+  text-transform: uppercase;
+  color: #044d77;
+  font-weight: 400;
+  font-size: 36px;
+}
+.profile-email{
+  color: #009ab2;
+  font-weight: 200;
+  font-size: 20px;
+  }
+  .profile-label
+  {
+    color:#2B2B2B;
+    font-weight: 450;
+  }
+
+#property{
+  color: rgb(211, 9, 9)24, 28, 28);
+  font: 30px;
+  /* font-weight: bold; */
+
+}
+.hr1{
+  color: rgb(0, 85, 74);
+
+}
+.p-wrapper{
+  border-bottom: 1px solid grey;
+
+}
+/* .btnStyle
+{
+  color: #4a919c;
+} */
+/* .btnStyle:hover
+{
+  color: white;
+} */
+ popup
+{box-sizing: border-box;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #ccccff;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* prview image */
+#preview{
+    margin-top: 16px;
+    height: 150px;
+    width: 150;
+  }
+.preview-empty{
+    border-radius: 16px;
+    border: 3px lightblue dashed;}
+.preview-empty>p{
+    margin: auto;
+    padding: 32px;
+    color: blue;}
+.preview-uploaded{
+    border: 3px transparent dashed;}
+.preview-uploaded>p{
+    display: none;
+  }
+
+/* pop up  */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: 0px 3px 10px #000000;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #044d77;
+  opacity: 75%;
+  color: #fff;
+  /* height: 200px; */
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  /* bottom: 50%; */
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  box-shadow: 0px 3px 10px #000000;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+.upcoming-sermon1
+{
+  background-color: #044d77;
+  height: 30px;
+  width: max-content;
+  font-weight: 400;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 0.75;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 0.75 ;}
+}
